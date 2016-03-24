@@ -1,0 +1,40 @@
+@import "singularitygs";
+@import "breakpoint";
+@import "../variables/variables";
+
+@include add-grid(12);
+@include add-gutter(0);
+@include add-guttertyle('split');
+@include sgs-change('debug', true);
+
+body{
+    @include background-grid($color: grey);
+}
+.l-page{
+    margin:auto;
+    max-width: $max;
+
+}
+.l-off{
+    background-color: red;
+    display: block;
+    @include grid-span(12,1);
+
+    @include breakpoint($laptop){
+        @include grid-span(6,1);
+
+        //display: none;
+    }
+}
+
+.l-footer{
+    background-color: blue;
+    height:50px;
+    display: block;
+    @include grid-span(12,1);
+    @include breakpoint($laptop){
+        @include grid-span(6,7);
+
+        //display: none;
+    }
+}
