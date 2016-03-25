@@ -5,9 +5,10 @@
     "sass:dev": "./node_modules/.bin/gulp",
     "sass:prod": "./node_modules/.bin/gulp sass:prod",
     "postinstall": "find node_modules -type f -name '*.info' | xargs rm"
-
   },
-  "dependencies": {},
+  "dependencies": {
+    "ftpsync": "^0.1.10"
+  },
   "devDependencies": {
     "breakpoint-sass": "^2.6.1",
     "compass-mixins": "^0.12.7",

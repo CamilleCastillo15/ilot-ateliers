@@ -2,39 +2,261 @@
 @import "breakpoint";
 @import "../variables/variables";
 
+@font-face {
+    font-family: "SourceSansProSemiBold";
+    src: url(../fonts/SourceSansPro-Semibold.ttf);
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "SourceSansProSemiBoldItalic";
+    src: url(../fonts/SourceSansPro-SemiboldItalic.ttf);
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "SourceSansProRegular";
+    src: url(../fonts/SourceSansPro-Regular.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SourceSansProLight";
+    src: url(../fonts/SourceSansPro-Light.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SourceSansProExtraLight";
+    src: url(../fonts/SourceSansPro-ExtraLight.ttf);
+    font-style: normal;
+}
+
 @include add-grid(12);
 @include add-gutter(0);
-@include add-guttertyle('split');
+//@include add-guttertyle('split');
 @include sgs-change('debug', true);
 
 body{
-    @include background-grid($color: grey);
+    
 }
-.l-page{
-    margin:auto;
-    max-width: $max;
+
+a {
+    &:hover, &:link, &:active, &:visited {
+        color: black;
+        text-decoration: none;
+    } 
+}
+
+.l-header {
+    background-image: url(../images/u44.png);
+    height: 2211px;     
+    
+    .burger {
+        
+        -webkit-transition: all 2.5s;
+        -moz-transition: all 2.5s;
+        transition: all 2.5s;
+        top: 50px;
+        left: 64vw;
+        position: fixed;
+        width: 108.15px;
+        height: 65.81px;
+        cursor: pointer;  
+        
+        $offsetX : 37.099998px;
+        $offsetY : 20.4px;
+        $offsetY_2 : 16.5px;
+        $offsetY_3 : 24.4px;
+        $widthX: 11.8px;
+
+        -webkit-transition: all 2500ms;
+        -moz-transition: all 2500ms;
+        transition: all 2500ms;
+
+            /*  
+            &.h{       
+                opacity: 0;
+            } 
+            */
+
+            #burger_1{
+                transform: rotate(0deg) ;
+                transition: all 200ms linear;
+                transform-origin : $offsetX+($widthX/2) $offsetY;
+            }
+            #burger_3{
+                transform: rotate(0deg) ;
+                transition: all 200ms linear;
+                transform-origin : $offsetX+($widthX/2) $offsetY_3;
+            }
+            &.o {
+                 #burger_1{
+                    transform: translate(0.2px,0px) rotate(45deg);
+                }
+                 #burger_2{
+                   opacity:0;
+                }
+                 #burger_3{
+                    transform: translate(-0.2px, (-($offsetY_3 - $offsetY_2)/2)) rotate(-45deg) ;
+                }
+                #g10 {
+                    transform: translate(-0.1px,0);
+                }
+            }
+        
+    }
 
 }
+
+.l-page{
+    @include background-grid($color: grey);
+    
+    margin:auto;
+    max-width: $max;
+    
+}
+
+.l-content {
+    background-color: yellow;
+    height:2337px;
+}
+
 .l-off{
-    background-color: red;
+    background-color: green;
     display: block;
     @include grid-span(12,1);
 
     @include breakpoint($laptop){
-        @include grid-span(6,1);
+        
+        //@include grid-span(6,1);
 
         //display: none;
     }
+    
+    position: fixed;
+    top: 0;
+    width:250px;
+    
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+    
+    &.h {
+        
+        visibility: hidden;
+        left: -250px;
+    }
+    
+    &.o {
+        
+    left: 0px;
+/*     -webkit-transform:translate3d(260px, 0, 0);
+    -moz-transform:translate3d(260px, 0, 0);
+    -o-transform:translate3d(260px, 0, 0);
+    transform:translate3d(260px, 0, 0); */
+        
+    }
+    
 }
 
 .l-footer{
-    background-color: blue;
-    height:50px;
+    background-color: #4b4b4b;
+    text-align:center;
     display: block;
+    margin:0 auto;
+    height:90px;
+    //font-family: 'Source Sans Pro', sans-serif;
+    font: 17px 'SourceSansProRegular', sans-serif;
+    text-transform: uppercase;
+    a {
+        &:hover, &:link, &:active, &:visited {
+            color: #05aa88;
+        } 
+    }
+    color: #05aa88;
     @include grid-span(12,1);
+    
+    .menu {
+        
+        text-align:center;
+        
+        li {
+            content:"|";
+            display: inline;
+        }
+        
+    }
+    
     @include breakpoint($laptop){
-        @include grid-span(6,7);
+        //@include grid-span(6,7);
 
         //display: none;
     }
+}
+
+
+.l-map {
+    
+    @include grid-span(12,1);
+    
+    .bloc1 {
+        
+        background-color: cyan;
+        height:341px;
+        
+        //@include grid-span(12,1);
+        @include breakpoint($laptop){
+            
+            @include grid-span(6,7);
+
+        }
+        
+    }
+    
+    .bloc2 {
+        
+        background-color: #00a886;
+        height:620px;
+        padding-top:60px;
+        
+        @include breakpoint($laptop){
+            
+            @include grid-span(6,7);
+
+        }
+        
+        .text {
+            
+            color: #ffffff;
+            font: 23px 'SourceSansProLight', sans-serif;
+            text-align: center;
+            
+            .gros {
+                
+                font: 35px 'SourceSansProSemiBold', sans-serif;
+                text-transform: uppercase;
+                
+            }
+            
+            .petit {
+                
+                font-size: 15px;
+                
+            }
+            
+            .tel {
+            
+                width:1.05em;
+                
+            }
+            
+        }
+        
+    }
+
+    display: block;
+    
 }

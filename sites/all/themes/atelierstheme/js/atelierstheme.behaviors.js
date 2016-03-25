@@ -57,4 +57,43 @@
     }
   };
 
+    console.log("le js");
+    
+    $( document ).ready(function() {
+        console.log( "ready!" );
+        
+        var burger = document.getElementsByClassName("burger")[0];
+        console.log(burger);
+    
+         /*burger.click(function() {
+          console.log("burger clicked");
+        });*/
+        
+        var toggle = 1;
+        
+        $(".burger").on( "click", function() {
+            console.log("burger clicked");
+            
+            var burger = document.getElementsByClassName("burger")[0];
+            var l_off = document.getElementsByClassName("l-off")[0];
+            
+            if(toggle == 1){
+                
+                burger.setAttribute("class", "burger o");
+                l_off.setAttribute("class", "l-off o");
+                toggle = 0;
+                
+            }else {
+                
+                 burger.setAttribute("class", "burger");
+                l_off.setAttribute("class", "l-off h");
+                toggle = 1;
+                
+            }
+           
+            
+        });
+
+    });
+    
 })(jQuery);
