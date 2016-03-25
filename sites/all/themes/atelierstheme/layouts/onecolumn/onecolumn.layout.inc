@@ -7,8 +7,7 @@ template = onecolumn-layout
 regions[header] = Header
 regions[content] = Content
 regions[services] = Services
-regions[map-block1]     = Map-block1
-regions[map-block2]     = Map-block2
+regions[map]     =  Map
 regions[footer]     = Footer
 regions[off]        = Off Canvas
 

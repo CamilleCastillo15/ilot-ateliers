@@ -1,0 +1,16 @@
+body{
+    font-family: arial;
+
+}
+p{
+    &.wdefault{
+        font-size:1em;
+        color: black;
+    }
+}
+h1{
+    &.wtitle{
+        font-size:2em;
+
+    }
+}

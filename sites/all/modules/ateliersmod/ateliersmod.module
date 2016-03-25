@@ -1,0 +1,148 @@
+<?php
+
+/**
+ * @file
+ * A block module that displays a footer
+ */
+function ateliersmod_help($path, $arg) {
+  switch ($path) {
+    case "admin/help#ateliersmod":
+      return '<p>'.t("Module qui contient des blocks pour le site ateliers de l'îlot").'</p>';
+      break;
+  }
+ }
+function ateliersmod_permission() {
+    return array(
+        'access ateliersmod admin' => array(
+            'title' => "Acceder à l'interface d'administration du site ateliers"
+        )
+    );
+}
+
+function ateliersmod_menu() {	
+    $items = array();
+    $items['admin/settings/ateliers'] = array(
+        'title' => 'Configuration du site' ,
+        'description' => 'Configuration de l\'adresse, du google map, etc..',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('ateliersmod_admin'),        
+        'access arguments' => array('access ateliersmod admin'),
+        'type' => MENU_NORMAL_ITEM,
+    );
+	return $items;
+}
+function ateliersmod_admin() {
+    $theme = drupal_get_path("theme","atelierstheme");
+    dpm($theme."/css/wysiwyg.css");
+    drupal_add_css($theme."/css/admin.css");
+    $form = array();
+    $form['ateliersmod_fsadress'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Paramétrage de l\'adresse'),
+        '#collapsible' => TRUE, // Added
+        '#collapsed' => FALSE,  // Added
+    );
+    $form['ateliersmod_fsgoogle'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Paramétrage du google map'),
+        '#collapsible' => TRUE, // Added
+        '#collapsed' => FALSE,  // Added
+    );
+   
+   $defaults = array(
+    'value' => '',
+    'format' => 'full_html',
+    );
+    
+   
+    $var1 = variable_get('ateliersmod_fsadress_text');
+    $form['ateliersmod_fsadress']['ateliersmod_fsadress_text'] = array(
+        '#type' => 'text_format',
+        '#title' => t('Texte du bloc'),
+        '#format' => $var1["format"],
+        '#default_value' =>$var1["value"],
+        '#description' => t("Texte présent dans le footer du site"),
+        '#required' => FALSE,
+       
+    );
+    $var2 = variable_get('ateliersmod_fsgoogle_text');    
+    $form['ateliersmod_fsgoogle']['ateliersmod_fsgoogle_text'] = array(
+        '#type' => 'text_format',
+        '#title' => t('Texte du bloc'),
+        '#format' =>  $var2["format"],
+        '#default_value' =>$var2["value"],
+        '#description' => t("Texte présent dans le footer du site"),
+        '#required' => FALSE,
+    );
+    
+    
+/*
+    $form['submit'] = array(
+    '#type' => 'submit', 
+    '#value' => t('Submit'),
+  );*/
+  return system_settings_form($form);
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function ateliersmod_block_info() {
+  $blocks['ateliersmod_address'] = array(
+    'info' => t('Ateliers block adresse'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+  );
+  $blocks['ateliersmod_map'] = array(
+    'info' => t('Ateliers block map'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+  );
+ 
+  return $blocks;
+}
+
+
+/**
+  * Implementation of hook_block_view().
+  */
+function ateliersmod_block_view($delta='') {
+	$block = array();
+	switch ($delta) {
+		case 'ateliersmod_address':
+			$block['subject'] = "";//t('Block Name 1');
+			$block['content']['ateliersmod_address'] = array(
+		        '#theme' => 'ateliersmod_address'
+	       );            
+		break;
+        case 'ateliersmod_map':
+			$block['subject'] = "";//t('Block Name 1');
+			$block['content']['ateliersmod_map'] = array(
+		        '#theme' => 'ateliersmod_map'
+	       );            
+		break;
+    }
+    return $block;
+}
+
+function ateliersmod_theme($existing, $type, $theme, $path){
+  $themez = drupal_get_path("theme",$GLOBALS['theme']);
+  $bodyaddress = variable_get('ateliersmod_fsadress_text');
+
+  return array(
+    'ateliersmod_address' => array(
+      'template' => 'templates/ateliersmod_address',
+      'variables'=> array('ateliers_theme' => $themez, 'body' => check_markup($bodyaddress["value"],$bodyaddress["format"]) )
+    ),
+    'ateliersmod_map' => array(
+      'template' => 'templates/ateliersmod_map',
+      'variables'=> array('ateliers_theme' => $themez)
+    )
+   
+  );
+}
+/*
+function zapimod_preprocess_html(&$variables) {
+    drupal_add_css(drupal_get_path('module', 'zapimod') . '/css/zapimod.css');
+}*/
+
+
+
