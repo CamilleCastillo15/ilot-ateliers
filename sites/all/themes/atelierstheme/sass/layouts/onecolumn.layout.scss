@@ -52,7 +52,8 @@ a {
 
 .l-header {
     background-image: url(../images/u44.png);
-    height: 2211px;     
+    background-size: 100% 100%;
+    background-repeat: no-repeat;     
     
     .burger {
         
@@ -133,7 +134,7 @@ a {
         
         //@include grid-span(6,1);
 
-        //display: none;
+        display: none;
     }
     
     position: fixed;
@@ -219,9 +220,7 @@ a {
     .bloc2 {
         
         background-color: #00a886;
-        height:620px;
-        padding-top:60px;
-        
+        padding:60px 0;
         @include breakpoint($laptop){
             
             @include grid-span(6,7);

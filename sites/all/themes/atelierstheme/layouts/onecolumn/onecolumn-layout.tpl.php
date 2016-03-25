@@ -3,7 +3,8 @@
 
    <div <?php print $attributes;?>>
     <header class="l-header">
-        <img class="tel" src="<?php print $theme; ?>/images/logo.png" alt="telephone" title="telephone" />
+       <?php print $variables["ateliers_theme"]; ?>
+        <img class="header-img" src="<?php print $variables["ateliers_theme"]; ?>/images/u44.png" alt="header" title="header" />
         Test de test de test
         <div class="burger h">
             <svg x="0px" y="0px" viewBox="0 0 108.15 65.812498" width="100%" height="100%">
@@ -37,6 +38,7 @@
 </div>
 <footer class="l-footer" >
     <?php print render($page['footer']); ?>
+    Test de test de test
 </footer>
 <div class="l-off h">
     <?php print render($page['off']); ?>

@@ -1,9 +1,8 @@
 <div class="bloc2">
     <div class="text">
-       <?php
-            print $variables["body"]; ?>    <?php
-
-        /*
+        
+        <?php print $variables["ateliers_theme"]; ?>
+        
         <div class="gros">
 
             Vous êtes un particulier ?
@@ -13,8 +12,7 @@
         </div>
 
         <br /> Nous vous accueillons du lundi au vendredi,
-        <br /> de 8h30 à 18h
-        <br />
+        <br /> <?php print $variables["body"]; ?> 
         <br /> ZA Montières - Espace Alliance
         <br /> 30 route d'Abbeville
         <br /> 80 000 Amiens
@@ -31,9 +29,7 @@
         <br /> les-ateliers@ilot.asso.fr
 
         <br /> ateliers.ilot.asso.fr
-       */?>
+       
     </div>
-
-
 
 </div>
