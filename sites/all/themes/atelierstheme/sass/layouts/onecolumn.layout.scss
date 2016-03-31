@@ -61,33 +61,74 @@ a {
         margin: 0 auto;
         position: relative;
     
+    .picto_ateliers {
+        
+        height:auto;
+        width:15vw; 
+
+            @include breakpoint($tablet) {
+
+                width:7.5em;
+
+            }
+        
+        &.menuiserie {
+        
+           @include breakpoint($mobiles) {
+
+               margin:0 12vw;        
+            }
+
+            @include breakpoint($mobilem) {
+
+              margin:0 12vw;     
+            }
+
+            @include breakpoint($mobilel) {
+
+               margin:0 12vw;      
+            }
+
+            @include breakpoint($tablet) {
+
+                margin:0 96px; 
+
+            }
+        
+        }
+        
+    }
+    
+ 
+    
     .block-w {
         
-        font-family: PermanentMarker;
+        
         color: white;
-        font-size: 35px;
+        
         text-align: center;
-        padding-top:30px;
         
         position:absolute;
         display: block;
         background: rgba(255,255,255,0.25);
+        
         left: 0;
         right: 0;
+        
+        padding-top:30px;
         margin-left: auto;
         margin-right: auto;
         
         @include breakpoint($mobiles) {
 
-            top: 229%;
-            height:300px;
+            top:80vw;
+            height:358px;
             width:300px;
             
         }
         
         @include breakpoint($mobilem) {
             
-            top: 229%;
             height:350x;
             width:350px;
             
@@ -95,7 +136,6 @@ a {
         
         @include breakpoint($mobilel) {
             
-            top: 300%;
             height:85vw;
             width:85vw;
             
@@ -103,12 +143,161 @@ a {
         
         @include breakpoint($tablet) {
 
-            top: 350%;
+            top:600px;
             height:650px;
             width:650px;
             
         }
         
+        .par-bienvenue {
+            
+            font-family: 'SourceSansProLight';
+            font-size: 4vw;
+            margin:10vw 0;
+
+            @include breakpoint($tablet) {
+
+                font-size: 30px;
+                margin:80px 0;
+
+            }
+            
+        }
+        
+        .title-bienvenue {
+            
+            font-family: PermanentMarker;
+            font-size: 9vw;
+
+            @include breakpoint($tablet) {
+
+                font-size: 60px;
+
+            }
+            
+        }
+        
+        .container-title-pictos {
+            
+            position: relative;
+            margin-top: 5vw;
+            
+            .title-pictos {
+
+                font-family: 'SourceSansProRegular';
+                text-transform: uppercase;
+                position: absolute;
+                
+                @include breakpoint($mobiles) {
+
+                    
+                    &.auto_bleue {
+
+                        margin-left: 8vw;
+
+                    }
+
+                    &.menuiserie {
+
+                        margin-left: 34vw;
+
+                    }
+
+
+                    &.ilot_gourmand {
+
+                        margin-left: 60vw;
+
+                    }
+                    
+                    font-size: 2.5vw;
+
+                }
+
+                @include breakpoint($mobilem) {
+
+                   
+                    &.auto_bleue {
+
+                        margin-left: 8vw;
+
+                    }
+
+                    &.menuiserie {
+
+                        margin-left: 34vw;
+
+                    }
+
+
+                    &.ilot_gourmand {
+
+                        margin-left: 60vw;
+
+                    }
+                    
+                    font-size: 2.5vw;
+
+                }
+
+                @include breakpoint($mobilel) {
+
+                    
+                    &.auto_bleue {
+
+                        margin-left: 8vw;
+
+                    }
+
+                    &.menuiserie {
+
+                        margin-left: 34vw;
+
+                    }
+
+
+                    &.ilot_gourmand {
+
+                        margin-left: 60vw;
+
+                    }
+                    
+                    font-size: 2.5vw;
+
+                }
+
+                @include breakpoint($tablet) {
+
+                    &.auto_bleue {
+
+                        margin-left: 59px;
+
+                    }
+
+                    &.menuiserie {
+
+                        margin-left: 267px;
+
+                    }
+
+
+                    &.ilot_gourmand {
+
+                        margin-left: 477px;
+
+                    }
+                    
+                    font-size: 17.48px;
+
+                }
+
+
+            }
+            
+            
+        }
+        
+
     }
     
     @include breakpoint($laptop) {
@@ -128,7 +317,7 @@ a {
 
         }  
         
-        position:absolute;
+        //position:absolute;
         
     }
     
@@ -136,9 +325,11 @@ a {
         
             position: absolute;
             /* float: left; */
-            left: 22vw;
-            top: 42%;
-        
+            top: 20vw;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+
         @include breakpoint($mobiles){
 
             width: 14em;
@@ -172,6 +363,7 @@ a {
         width: 108.15px;
         height: 65.81px;
         cursor: pointer;  
+        z-index:1000;
         
         $offsetX : 37.099998px;
         $offsetY : 20.4px;
@@ -228,7 +420,7 @@ a {
 
 .l-content {
     background-color: yellow;
-    height:2337px;
+    //height:2337px;
 }
 
 .l-off{
@@ -363,5 +555,55 @@ a {
     }
 
     display: block;
+    
+}
+
+.home-services {
+    
+    .text {
+        
+        text-align: center;
+        font-family: 'SourceSansProRegular';
+        margin:127px 0 50px 0;
+        
+        .title {
+            
+                font-family: 'SourceSansProSemiBold';
+                margin:25px 0;
+                text-transform: uppercase;
+        }
+        
+    }
+    
+    .container {
+        
+        position: relative;
+        
+        .picto_ateliers {
+        
+            width:9em;
+            height:auto;
+            display: block;
+            top:0;
+            left:0;
+            margin: -100px auto;
+            display: block;
+
+        }
+        
+    }
+    
+    .plus {
+        
+        text-transform: uppercase;
+        background-color: #00a886;
+        padding:10px;
+        width:200px;
+        text-align: center;
+        margin: 0 auto;
+        color:white;
+        
+    }
+
     
 }

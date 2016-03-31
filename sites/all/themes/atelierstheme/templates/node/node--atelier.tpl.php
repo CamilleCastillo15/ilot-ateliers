@@ -1,4 +1,5 @@
 <?php
+
 $ftitle = field_view_field("node",$node,'field_title');
 $picto = field_view_field("node",$node,'field_picto');
 $image = field_view_field("node",$node,'field_image');
