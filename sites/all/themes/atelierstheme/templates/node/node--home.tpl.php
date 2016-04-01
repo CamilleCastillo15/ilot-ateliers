@@ -1,15 +1,25 @@
-<?php 
-  $styles  = drupal_get_css();
+  $image = field_get_items("node",$node,'field_image');<?php 
+
+    $styles  = drupal_get_css();
+
+    $body_actu = field_view_field("node",$node,'field_body_actu');
+    $body = field_view_field("node",$node,'field_body_actu');
+
+    $gallerie = field_get_items("node",$node,'field_image_multi');
+    $image = field_get_items("node",$node,'field_image');
+
+    $view = views_get_view('actus');
+
+    $view->set_display('blockhome');
+    
+    $view->execute();
+
+    $result = $view->result;
+
+    dpm($result);
+   
+
  ?>
-  
-   <head>
-    <?php// print $styles; ?>
-    <?php/*
-        function atelierstheme_preprocess_html(&$vars) {
-          drupal_add_css('../' . $theme . '/css/atelierstheme.css');
-        }*/
-       ?>
-</head>
        
         <?php $theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
           
@@ -81,6 +91,59 @@
         </div>
         
     </header>
+    
+    <div class="home-body-actu">
+       <?php 
+        
+         foreach($result as $key => $value){ ?>
+               <div class="actu"> <?php
+                
+                $n = node_load($value->nid);
+                $im = field_view_field("node",$n,'field_image');
+                print render($im);
+                dpm($n); ?>
+                </div>
+        <?php    }?>
 
+     
+    </div>
+
+
+<div class="home-gallerie">
+        <div class="homegallerie-big">
+            <?php
+                foreach($gallerie as $key => $value){ ?>
+                    <div class="homegallerie-image">
+                        <?php
+                            $imagea = field_view_value('node', $node, 'field_image_multi', $value);
+                            print render($imagea);
+                        ?>
+                    </div>
+                <?php
+                }
+
+            ?>
+        </div>
+        <div class="atelier-home-thumbnails">
+             <?php foreach($gallerie as $key => $value){ ?>
+                <div class="atelier-home-image">
+                    <?php
+                        $imagea = field_view_value('node', $node, 'field_image_multi', $value,array(
+                            'type' => 'image',
+                            'settings' => array(
+                                'image_style' => 'gallerie_thumb',
+                            ),
+                        ));
+                        print render($imagea);
+                    ?>
+                </div>
+            <?php } ?>
+        </div>
+        
+    </div>
+           
+    <div class="home-image-solidarite">
+            <?php print render($image); ?>
+    </div>
 
            
