@@ -558,6 +558,12 @@ a {
     
 }
 
+.home {
+    
+    
+    
+}
+
 .home-services {
     
     .text {
@@ -729,4 +735,123 @@ a {
         background-color:#f7941d;
     }
     
+}
+
+.bloc_don {
+    
+    font-family: 'SourceSansProRegular';
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    padding: 5vw 2vw;
+    color: #9D2537;
+    text-align: center;
+    width: 62vw;
+    
+    .don-img {
+        
+        width:15vw;
+        float:left;
+        margin:0vw 0vw;
+        display: inline-block;
+        
+    }
+    
+    .text {
+        
+        padding:4vw 0 0 7vw;
+        display: inline-block;
+        
+        .title-don {
+        
+            font-family: PermanentMarker;
+            font-size: 4vw;
+            display: inline-block;
+
+
+        }
+        
+        .asso {
+            
+            padding-top:3vw;
+            
+        }
+        
+        .formulaire {
+        
+            font-family: 'SourceSansProLight';
+            display: inline;
+            background-color: #9D2537;
+            padding: 2vw 3vw;
+            color: white;
+            margin: -10vw 0vw 0vw 22vw;
+            position: absolute;
+
+        }
+        
+    }
+
+}
+
+.autres_services {
+    
+    @include grid-span(12,1);
+    
+    background-color: white;
+    text-align: center;
+    padding:5vw;
+    
+    h1 {
+        
+        text-transform: uppercase;
+        font-family: 'SourceSansProRegular';
+        font-size: 4vw;
+        
+    }
+    
+    .img-pictos {
+        
+        .picto_ateliers {
+            
+            width: 15vw;
+            margin: 7vw 7vw 2vw 7vw;
+            
+        }
+        
+    }
+    
+        .container-title-pictos {
+
+        position: relative;
+        /* margin-top: 2vw; */
+        font-size: 2.5vw;
+            
+        .auto_bleue {
+
+            margin-left: 9vw;
+
+        }
+            
+        .menuiserie {
+
+            margin-left: 15vw;
+
+        }
+        
+        .ilot_gourmand {
+
+            margin-left: 12vw;
+
+        }
+
+        .title-pictos {
+
+            font-family: 'SourceSansProRegular';
+            text-transform: uppercase;
+            float: left;
+
+
+        }
+
+    }
+
 }

@@ -85,7 +85,6 @@
 
                 </p>
                 
-                
             </div>
             
         </div>
@@ -109,38 +108,6 @@
     </div>
 
 
-<div class="home-gallerie">
-        <div class="homegallerie-big">
-            <?php
-                foreach($gallerie as $key => $value){ ?>
-                    <div class="homegallerie-image">
-                        <?php
-                            $imagea = field_view_value('node', $node, 'field_image_multi', $value);
-                            print render($imagea);
-                        ?>
-                    </div>
-                <?php
-                }
-
-            ?>
-        </div>
-        <div class="atelier-home-thumbnails">
-             <?php foreach($gallerie as $key => $value){ ?>
-                <div class="atelier-home-image">
-                    <?php
-                        $imagea = field_view_value('node', $node, 'field_image_multi', $value,array(
-                            'type' => 'image',
-                            'settings' => array(
-                                'image_style' => 'gallerie_thumb',
-                            ),
-                        ));
-                        print render($imagea);
-                    ?>
-                </div>
-            <?php } ?>
-        </div>
-        
-    </div>
            
     <div class="home-image-solidarite">
             <?php print render($image); ?>

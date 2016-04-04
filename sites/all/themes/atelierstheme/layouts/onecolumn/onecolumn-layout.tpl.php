@@ -1,21 +1,21 @@
-  <?php $theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
+<?php $theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
    
-   <div <?php print $attributes;?>>
-    
+<div <?php print $attributes;?>>
+
     <div class="clear"></div>
-    
+
      <?php print render($page['header']); ?>
-    
+
     <div class="l-content">
         <?php print render($tabs); ?>
         <?php print $messages; ?>
         <?php print render($page['content']); ?>
     </div>
-    
-   <div class="l-services">
-         <?php print render($page['services']); ?>
-   </div>
 
+</div>
+
+<div class="l-services">
+     <?php print render($page['services']); ?>
 </div>
 
 <div class="l-map">
