@@ -39,15 +39,16 @@
             </svg>
         </div>
         
-
-
-         <img class="header-img" src="../<?php print $theme; ?>/images/u44.png" alt="header" title="header" />
+        <div class="menu-web"></div>
+        
+         <img class="header-img-mobile" src="../<?php print $theme; ?>/images/bkg_home_mobile.png" alt="header" title="header" />
+         <img class="header-img-web" src="../<?php print $theme; ?>/images/bkg_home_web.png" alt="header" title="header" />
         
           <img class="logo-img" src="../<?php print $theme; ?>/images/logo.png" alt="logo" title="logo" />
            
            <div class="block-w">
             
-            <h2 class="title-bienvenue">Bienvenue aux <br />ateliers de l'îlot! </h2>
+            <h2 class="title-bienvenue">Bienvenue aux ateliers de l'îlot! </h2>
             
             
             <p class="par-bienvenue">
@@ -58,13 +59,13 @@
                 
             </p>
             
-                <img class="picto_ateliers atelier_bleu" src="../<?php print $theme; ?>/images/picto_atelier_bleu.png" alt="MerdegLayers" />
+                <img class="picto_ateliers atelier_bleu" src="../<?php print $theme; ?>/images/auto_bleue_logo.svg" alt="MerdegLayers" />
 
 
-                <img class="picto_ateliers menuiserie" src="../<?php print $theme; ?>/images/picto_menuiserie.png" alt="MerdegLayers" />
+                <img class="picto_ateliers menuiserie" src="../<?php print $theme; ?>/images/menuiserie_logo.svg" alt="MerdegLayers" />
 
 
-                <img class="picto_ateliers cuisine" src="../<?php print $theme; ?>/images/picto_cuisine.png" alt="MerdegLayers" />
+                <img class="picto_ateliers cuisine" src="../<?php print $theme; ?>/images/ilot_gourmand_logo.svg" alt="MerdegLayers" />
             
             <br />
             

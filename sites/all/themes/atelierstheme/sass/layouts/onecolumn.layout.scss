@@ -58,8 +58,18 @@ a {
 
 .l-header {
     
+    
         margin: 0 auto;
         position: relative;
+    
+    @include breakpoint($laptop) {
+
+        background-image: url(../images/bkg_home_web.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        position:absolute;
+        
+    } 
     
     .picto_ateliers {
         
@@ -69,6 +79,12 @@ a {
             @include breakpoint($tablet) {
 
                 width:7.5em;
+
+            }
+        
+            @include breakpoint($laptop) {
+
+                width:9vw;
 
             }
         
@@ -94,6 +110,13 @@ a {
                 margin:0 96px; 
 
             }
+            
+            @include breakpoint($laptop) {
+
+                margin: 0 2vw;
+                margin-top: 3vw;
+
+            }
         
         }
         
@@ -102,7 +125,6 @@ a {
  
     
     .block-w {
-        
         
         color: white;
         
@@ -149,11 +171,31 @@ a {
             
         }
         
+        @include breakpoint($laptop) {
+        
+            top: 13vw;
+            height: 23vw;
+            width: 76vw;
+            
+        }
+
         .par-bienvenue {
             
             font-family: 'SourceSansProLight';
             font-size: 4vw;
             margin:10vw 0;
+            
+            @include breakpoint($mobilem) {
+            
+                text-align: center;
+
+            }
+            
+            @include breakpoint($laptop) {
+            
+                text-align: left;
+
+            }
 
             @include breakpoint($tablet) {
 
@@ -161,6 +203,14 @@ a {
                 margin:80px 0;
 
             }
+            
+            @include breakpoint($laptop) {
+
+                font-size: 1.9vw;
+                margin: 5vw 3vw;
+                float: left;
+
+            }      
             
         }
         
@@ -175,21 +225,35 @@ a {
 
             }
             
+            @include breakpoint($laptop) {
+
+                text-align: left;
+                margin: 0 3vw;
+                font-size: 3vw;
+
+            }
+            
         }
         
         .container-title-pictos {
             
             position: relative;
-            margin-top: 5vw;
+            
+            @include breakpoint($laptop) {
+                
+                margin-top: 2vw;
+                
+            }
             
             .title-pictos {
 
                 font-family: 'SourceSansProRegular';
                 text-transform: uppercase;
-                position: absolute;
                 
                 @include breakpoint($mobiles) {
 
+                    position: absolute;
+                    margin-top: 5vw;
                     
                     &.auto_bleue {
 
@@ -289,6 +353,33 @@ a {
                     font-size: 17.48px;
 
                 }
+                
+                @include breakpoint($laptop) {
+                    
+                        margin-top: 1vw;
+                        position: relative;
+                        float:left;
+                        margin:0;
+                        font-size: 1.3vw;
+                        
+                        &.auto_bleue {
+ 
+                            margin-left: 5vw;
+                        
+                        }
+
+                        &.menuiserie {
+
+                            margin-left: 4vw;
+                        }
+
+
+                        &.ilot_gourmand {
+
+                            margin-left: 2vw;
+                        }
+                    
+                }
 
 
             }
@@ -299,16 +390,7 @@ a {
 
     }
     
-    @include breakpoint($laptop) {
-
-        background-image: url(../images/u44.png);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        position:absolute;
-        
-    } 
-    
-    .header-img {
+    .header-img-mobile {
         
         @include breakpoint($laptop) {
             
@@ -322,53 +404,80 @@ a {
     
     .logo-img {
         
-            position: absolute;
-            /* float: left; */
-            top: 20vw;
-            margin: 0 auto;
-            left: 0;
-            right: 0;
+        position: absolute;
+        /* float: left; */
+        left: 0;
+        right: 0;
 
         @include breakpoint($mobiles){
 
             width: 14em;
+            top: 20vw;
+            margin: 0 auto;
+            
         }
         
         @include breakpoint($mobilem){
 
             width: 16em;
+            
         }
         
         @include breakpoint($mobilel){
 
             width: 22em;
+            
         }
         
         @include breakpoint($tablet){
 
             width: 25em;
+            
+        }
+        
+        @include breakpoint($laptop){
+
+            margin: 0 ;
+            top: 2vw;
+            width: 8vw;
+            
         }
         
     }
     
     .burger {
         
+        @include breakpoint($laptop){
+           
+            
+            display: none;
+            
+        }
+
         -webkit-transition: all 2.5s;
         -moz-transition: all 2.5s;
         transition: all 2.5s;
         top: 50px;
         left: 64vw;
         position: fixed;
-        width: 108.15px;
-        height: 65.81px;
+        
+        width: 14vw;
+        height: auto;
+        
         cursor: pointer;  
         z-index:1000;
         
-        $offsetX : 37.099998px;
+        /* $offsetX : 37.099998px;
         $offsetY : 20.4px;
         $offsetY_2 : 16.5px;
         $offsetY_3 : 24.4px;
-        $widthX: 11.8px;
+        $widthX: 11.8px; */
+        
+        $offsetX : 27.7px;
+        $offsetY : 33.4px;
+        $offsetY_2 : 39.1px;
+        $offsetY_3 : 44.8px;
+        $widthX: 58.1441px;
 
         -webkit-transition: all 2500ms;
         -moz-transition: all 2500ms;
@@ -380,39 +489,70 @@ a {
             } 
             */
 
-            #burger_1{
-                transform: rotate(0deg) ;
-                transition: all 200ms linear;
-                transform-origin : $offsetX+($widthX/2) $offsetY;
+        circle {
+            
+            opacity:0.3;
+            
+        }
+        
+        #burger_1{
+            transform: rotate(0deg) ;
+            transition: all 200ms linear;
+            transform-origin : $offsetX+($widthX/2) $offsetY; 
+            fill:white;
+        }
+
+        #burger_2 {
+            fill:white;
+        }
+
+        #burger_3{
+            transform: rotate(0deg) ;
+            transition: all 200ms linear;
+            transform-origin : $offsetX+($widthX/2) $offsetY_3;
+            fill:white;
+        }
+
+        &.o {
+             #burger_1{
+                transform: translate(0.2px,0px) rotate(45deg);
+
             }
-            #burger_3{
-                transform: rotate(0deg) ;
-                transition: all 200ms linear;
-                transform-origin : $offsetX+($widthX/2) $offsetY_3;
+
+             #burger_2{
+               opacity:0;
             }
-            &.o {
-                 #burger_1{
-                    transform: translate(0.2px,0px) rotate(45deg);
-                    fill:white;
-                }
-                 #burger_2{
-                   opacity:0;
-                  fill:white;
-                }
-                 #burger_3{
-                    transform: translate(-0.2px, (-($offsetY_3 - $offsetY_2)/2)) rotate(-45deg) ;
-                    fill:white;
-                }
-                #g10 {
-                    transform: translate(-0.1px,0);
-                }
+
+             #burger_3{
+                transform: translate(-0.2px, (-($offsetY_3 - $offsetY_2)/2)) rotate(-45deg) ;
             }
+
+            #g10 {
+                transform: translate(-0.1px,0);
+            }
+
+        }
+        
+    }
+    
+    .menu-web {
+        
+        height: 9vw;
+        background-color: white;
+        display: none;
+        
+        @include breakpoint($laptop){
+
+            display: block;
+            
+        }
         
     }
 
 }
 
 .l-page{
+    
     @include background-grid($color: grey);
     
     margin:auto;
@@ -440,7 +580,8 @@ a {
     
     position: fixed;
     top: 0;
-    width:250px;
+    width: 60vw;
+    height: 154vw;
     
     -webkit-transition: all 500ms ease-in;
     -moz-transition: all 500ms ease-in;
@@ -461,6 +602,13 @@ a {
     transform:translate3d(260px, 0, 0); */
         
     }
+    
+    li.leaf {
+        
+        margin-top: 14vw;
+        
+    }
+        
     
 }
 
@@ -569,6 +717,28 @@ a {
 
 .home-services {
     
+
+    .header-img {
+        
+        margin-bottom: 7vw;
+        
+    }
+    
+    .title-services {
+        
+        font-family: PermanentMarker;
+        font-size: 12vw;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 19vw;
+        color: white;
+        
+    }
+
     .text {
         
         text-align: center;
@@ -770,7 +940,6 @@ a {
             font-size: 4vw;
             display: inline-block;
 
-
         }
         
         .asso {
@@ -851,7 +1020,6 @@ a {
             font-family: 'SourceSansProRegular';
             text-transform: uppercase;
             float: left;
-
 
         }
 

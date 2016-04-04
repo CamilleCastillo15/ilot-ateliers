@@ -6,9 +6,9 @@
 
     <div class="img-pictos">
 
-        <img class="picto_ateliers atelier_bleu" src="../<?php print $theme; ?>/images/picto_atelier_bleu.png" alt="MerdegLayers" />
-        <img class="picto_ateliers menuiserie" src="../<?php print $theme; ?>/images/picto_menuiserie.png" alt="MerdegLayers" />
-        <img class="picto_ateliers cuisine" src="../<?php print $theme; ?>/images/picto_cuisine.png" alt="MerdegLayers" />
+        <img class="picto_ateliers atelier_bleu" src="../<?php print $theme; ?>/images/auto_bleue_logo.svg" alt="MerdegLayers" />
+        <img class="picto_ateliers menuiserie" src="../<?php print $theme; ?>/images/menuiserie_logo.svg" alt="MerdegLayers" />
+        <img class="picto_ateliers cuisine" src="../<?php print $theme; ?>/images/ilot_gourmand_logo.svg" alt="MerdegLayers" />
 
     </div>
 

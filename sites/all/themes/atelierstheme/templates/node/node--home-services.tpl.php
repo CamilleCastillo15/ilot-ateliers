@@ -4,6 +4,8 @@
             
             <img src="images/Calque-1.png">
             
+            <h1 class="title-services">Nos services</h1>
+            
             <img class="header-img" src="../<?php print $theme; ?>/images/header_home_services.png" alt="header" title="header" />
             
             <img src="../<?php print $theme; ?>/images/bkg_auto_bleue_home.png" alt="auto bleue" title="auto bleue">
@@ -48,10 +50,11 @@
                     
                 </p>
                 
-                 La menuiserie entretient, rénove ou conçoit sur mesure
+                     La menuiserie entretient, rénove ou conçoit sur mesure
                     des meubles (tables, chaises, bibliothèques...) mais aussi des planchers, des volets ou des escaliers.
-
-                    Vous pouvez aussi faire appel √† notre équipe pour des travaux d'aérogommage, pour un meuble en bois, une pièce métallique ou une façade !
+                    <br />
+                    <br />
+                    Vous pouvez aussi faire appel à notre équipe pour des travaux d'aérogommage, pour un meuble en bois, une pièce métallique ou une façade !
  
                 <br />
                 <br />
