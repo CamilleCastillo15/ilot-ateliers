@@ -27,17 +27,20 @@
 
        <header class="l-header">
         <div class="burger h">
-            <svg x="0px" y="0px" viewBox="0 0 108.15 65.812498" width="100%" height="100%">
-                <g id="Calque_1" transform="matrix(2,0,0,2,-0.6,-2.2500009)" style="stroke-width:0.74999999;stroke-miterlimit:4;stroke-dasharray:none">
-                    <g id="g8" style="stroke-width:0.74999999;stroke-miterlimit:4;stroke-dasharray:none">
-                        <rect x="37.099998" y="20.4" id="burger_1" class="st1" width="11.8" height="0.80000001" id="rect18" style="fill:black;stroke-width:0.74999999;stroke-miterlimit:4;stroke-dasharray:none" />
-                        <rect x="37.099998" y="16.5" id="burger_2" class="st1" width="11.8" height="0.80000001" id="rect20" style="fill:black;stroke-width:0.74999999;stroke-miterlimit:4;stroke-dasharray:none" />
-                        <rect x="37.099998" y="24.4" id="burger_3" class="st1" width="11.8" height="0.80000001" id="rect22" style="fill:black;stroke-width:0.74999999;stroke-miterlimit:4;stroke-dasharray:none" />
-                    </g>
-                </g>
+            <svg id="Calque_1" data-name="Calque 1" viewBox="0 0 55.4 55.4">
+                <circle class="cls-1" cx="27.7" cy="27.7" r="27.7"/>
+                <path class="cls-2" id="burger_1"
+                d="M31,33H2.7a1.06,1.06,0,0,0,0,2H31a0.85,0.85,0,0,0,.7-1C31.7,33.4,31.5,33,31,33Z"
+                transform="translate(10.8 5.7)"/>
+                <path class="cls-2" id="burger_2"
+                d="M2.7,11H31a0.85,0.85,0,0,0,.7-1c0-.6-0.2-1-0.7-1H2.7A0.85,0.85,0,0,0,2,10,0.85,0.85,0,0,0,2.7,11Z" transform="translate(10.8 5.7)"/>
+                <path class="cls-2" id="burger_3"
+                d="M31,21H2.7A0.85,0.85,0,0,0,2,22a0.85,0.85,0,0,0,.7,1H31a0.85,0.85,0,0,0,.7-1C31.7,21.4,31.5,21,31,21Z" transform="translate(10.8 5.7)"/>
             </svg>
         </div>
         
+
+
          <img class="header-img" src="../<?php print $theme; ?>/images/u44.png" alt="header" title="header" />
         
           <img class="logo-img" src="../<?php print $theme; ?>/images/logo.png" alt="logo" title="logo" />
@@ -107,8 +110,6 @@
      
     </div>
 
-
-           
     <div class="home-image-solidarite">
             <?php print render($image); ?>
     </div>

@@ -1,4 +1,5 @@
 <div class="bloc2">
+
     <div class="text">
         
         <?php print $variables["ateliers_theme"]; ?>
