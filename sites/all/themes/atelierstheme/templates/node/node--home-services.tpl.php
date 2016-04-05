@@ -6,13 +6,13 @@
             
             <h1 class="title-services">Nos services</h1>
             
-            <img class="header-img" src="../<?php print $theme; ?>/images/header_home_services.png" alt="header" title="header" />
+            <img class="header-img mobile" src="../<?php print $theme; ?>/images/header_home_services.png" alt="header" title="header" />
             
-            <img src="../<?php print $theme; ?>/images/bkg_auto_bleue_home.png" alt="auto bleue" title="auto bleue">
+            <img class="auto_bleue_mobile" src="../<?php print $theme; ?>/images/bkg_auto_bleue_home.png" alt="auto bleue" title="auto bleue">
             
             <div class="container picto">
                 
-                <img class="picto_ateliers atelier_bleu" src="../<?php print $theme; ?>/images/picto_atelier_bleu.png" alt="MerdegLayers" />
+                <img class="picto_ateliers atelier_bleu" src="../<?php print $theme; ?>/images/auto_bleue_logo.svg" alt="MerdegLayers" />
                  
             </div>
             
@@ -33,11 +33,11 @@
                 
             </div>
             
-            <img src="../<?php print $theme; ?>/images/bkg_menuiserie_home.png" alt="menuiserie" title="menuiserie">
+            <img class="menuserie_mobile" src="../<?php print $theme; ?>/images/bkg_menuiserie_home.png" alt="menuiserie" title="menuiserie">
             
             <div class="container picto">
             
-                 <img class="picto_ateliers menuiserie" src="../<?php print $theme; ?>/images/picto_menuiserie.png" alt="MerdegLayers" />
+                 <img class="picto_ateliers menuiserie" src="../<?php print $theme; ?>/images/menuiserie_logo.svg" alt="MerdegLayers" />
              
             </div>
             
@@ -67,11 +67,11 @@
                 
             </div>
             
-            <img src="../<?php print $theme; ?>/images/bkg_ilot_gourmand_home.png" alt="îlot gourmand" title="îlot gourmand">
+            <img class="ilot_gourmand_mobile" src="../<?php print $theme; ?>/images/bkg_ilot_gourmand_home.png" alt="îlot gourmand" title="îlot gourmand">
             
             <div class="container picto">
             
-                <img class="picto_ateliers cuisine" src="../<?php print $theme; ?>/images/picto_cuisine.png" alt="MerdegLayers" />
+                <img class="picto_ateliers cuisine" src="../<?php print $theme; ?>/images/ilot_gourmand_logo.svg" alt="MerdegLayers" />
             
             </div>
             

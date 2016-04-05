@@ -722,6 +722,53 @@ a {
         
         margin-bottom: 7vw;
         
+        &.mobile {
+            
+            display: block;
+            
+            @include breakpoint($laptop){
+             
+                display: none;
+                
+            }
+            
+        }
+        
+    }
+    
+    .auto_bleue_mobile {
+        
+        display: block;
+        
+        @include breakpoint($laptop){
+
+            display: none;
+
+        }
+        
+    }
+    
+    .menuserie_mobile {
+        
+        display: block;
+        
+        @include breakpoint($laptop){
+
+            display: none;
+
+        }
+        
+    }
+    
+    .ilot_gourmand_mobile {
+        
+        display: block;
+        
+        @include breakpoint($laptop){
+
+            display: none;
+
+        }
     }
     
     .title-services {
