@@ -1,6 +1,30 @@
-.presentation{
+.presentation{   
+    
+    .text-presentation{
+        
+        padding: 3vw 5vw;
+        
+    }
+    
+    .atelier-gallerie-big {
+        
+        text-align: center;
+        
+            img {
+
+                margin:4vw;
+                width:9vw;
+
+            }
+
+            img:nth-child(2){
+
+                width:6vw;
+
+            }
+            
+        }
+        
+    }
 
 
-
-
-}

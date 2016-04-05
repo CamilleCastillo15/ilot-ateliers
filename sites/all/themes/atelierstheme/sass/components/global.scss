@@ -1,0 +1,54 @@
+@import "breakpoint";
+@import "../variables/variables";
+
+body {
+    
+    font-family: 'SourceSansProRegular';
+    
+}
+
+.bkg-blanc {
+    
+    background-color:white;
+    
+}
+
+.text-presentation {
+    
+    font-size:15px;
+    padding:4vw;
+    
+     @include breakpoint($laptop) {
+         
+            font-size:1.5vw;
+         
+        }
+    
+     @include breakpoint($laptopxl) {
+         
+            font-size:23px;
+         
+        }
+    
+        h1 {
+        
+           text-transform: uppercase;
+           font-family: 'SourceSansProSemiBold';
+           font-size:20px;
+            
+            @include breakpoint($laptop) {
+                
+                font-size:2vw;
+                
+            }
+
+             @include breakpoint($laptopxl) {
+                 
+                font-size:30px;
+
+            }
+            
+           padding: 1.5vw 0; 
+
+        }
+}

@@ -1,0 +1,145 @@
+@import "breakpoint";
+@import "../variables/variables";
+@import "../variables/mixin";
+
+.home-services {
+    
+    .container-containers {
+        
+        @include breakpoint($laptop) {
+            
+                width: 84vw;
+                /* float: left; */
+                height: 55vw;
+                margin: 8vw auto;
+            
+        }
+        
+    }
+    
+    .container {
+        
+        @include breakpoint($laptop) {
+            
+            width: 27vw;
+            float: left;
+            height: 55vw;
+            margin: 0 0.5vw;
+            background-color: #f7f7f7;
+            position: relative;
+            
+        }
+        
+    }
+
+    .header-img {
+        
+        margin-bottom: 7vw;
+        
+    } 
+    
+    .title-services {
+        
+        font-family: PermanentMarker;
+        font-size: 12vw;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 19vw;
+        color: white;
+        
+    }
+    
+    .text {
+        
+        text-align: center;
+        font-family: 'SourceSansProRegular';
+        margin: 127px 0 50px 0;
+        .title {
+            
+            font-family: 'SourceSansProSemiBold';
+            margin: 25px 0;
+            text-transform: uppercase;
+            
+        }
+        
+    }
+    
+        
+    .picto_ateliers {
+
+        width: 9em;
+        height: auto;
+        display: block;
+        top: 0;
+        left: 0;
+        margin: -100px auto;
+        display: block;
+
+    }
+    
+    .plus {
+        
+        text-transform: uppercase;
+        background-color: #00a886;
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+        margin: 0 auto;
+        color: white;
+    }
+    
+    .pictotitlecontainer {
+
+        width:100%;
+        position: relative;
+
+        .image {
+            
+             width:100%;
+            
+            @include breakpoint($laptop) {
+
+               margin-top:51%;
+                
+            }
+
+        }
+
+        .pictotitle {
+
+            @include translate(-50%,-50%);
+            position:absolute;
+            top: 70%;
+            left: 50%;
+            width: 19vw;
+            
+            @include breakpoint($laptop) {
+
+               position: absolute;
+               top:-132%;
+                width:7vw;
+                
+            }
+
+        }
+
+    }
+    
+    .wtitle {
+        
+        @include breakpoint($laptop) {
+            
+             @include translate(-50%,-50%);
+             position: absolute;
+             top: 21%;
+             left: 50%;
+             font-size: 1.5vw;
+        }
+        
+    }
+    
+}

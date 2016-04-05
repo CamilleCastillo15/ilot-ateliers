@@ -1,105 +1,143 @@
+<?php
+
+    $img_fond = field_view_field("node",$node,'field_image_fond');
+
+    $view = views_get_view('ateliers');
+    $view->execute();
+
+    $result = $view->result;
+
+    //dpm($result);
+    
+    $img_auto_bleue = field_view_field("node",$node,'field_image_auto_bleue');
+    $img_menuiserie = field_view_field("node",$node,'field_image_menuiserie');
+    $img_ilot_gourmand = field_view_field("node",$node,'field_image_ilot_gourmand');
+
+    $auto_bleue_text = field_view_field("node",$node,'field_auto_bleue');
+    $menuiserie_text = field_view_field("node",$node,'field_menuiserie');
+    $ilot_gourmand_text = field_view_field("node",$node,'field_ilot_gourmand');
+
+    $auto_bleue_picto = field_view_field("node",$node,'field_picto_auto_bleue');
+    $menuiserie_picto = field_view_field("node",$node,'field_picto_menuiserie');
+    $ilot_gourmand_picto = field_view_field("node",$node,'field_picto_ilot_gourmand');
+
+ ?>
+         
         <?php $theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
-          
-        <div class="home-services">
+        
+        <div class="home-services bkg-blanc"> 
             
-            <img src="images/Calque-1.png">
-            
-            <h1 class="title-services">Nos services</h1>
-            
-            <img class="header-img" src="../<?php print $theme; ?>/images/header_home_services.png" alt="header" title="header" />
-            
-            <img src="../<?php print $theme; ?>/images/bkg_auto_bleue_home.png" alt="auto bleue" title="auto bleue">
-            
-            <div class="container picto">
-                
-                <img class="picto_ateliers atelier_bleu" src="../<?php print $theme; ?>/images/picto_atelier_bleu.png" alt="MerdegLayers" />
-                 
+            <div class="imagetitle">
+                <div class="image"><?php print render($img_fond); ?></div>
+                <div class="title">Nos Services</div>
             </div>
             
-             <div class="text">
-                
-                
-                <p class="title">
-                    
-                    auto bleue
-                    
-                </p>
-                
-                 Auto Bleue, le garage de l'Îlot, travaille aussi bien pour des particuliers  <br />
-                 (voitures et utilitaires) que pour des professionnels (flotte automobile). <br />
-                 <br />
- 
-                Devis gratuit sous 48 heures.
-                
-            </div>
-            
-            <img src="../<?php print $theme; ?>/images/bkg_menuiserie_home.png" alt="menuiserie" title="menuiserie">
-            
-            <div class="container picto">
-            
-                 <img class="picto_ateliers menuiserie" src="../<?php print $theme; ?>/images/picto_menuiserie.png" alt="MerdegLayers" />
-             
-            </div>
-            
-            <div class="text">
-                
-                
-                <p class="title">
-                    
-                    La menuiserie
-                    
-                </p>
-                
-                     La menuiserie entretient, rénove ou conçoit sur mesure
-                    des meubles (tables, chaises, bibliothèques...) mais aussi des planchers, des volets ou des escaliers.
-                    <br />
-                    <br />
-                    Vous pouvez aussi faire appel à notre équipe pour des travaux d'aérogommage, pour un meuble en bois, une pièce métallique ou une façade !
- 
-                <br />
-                <br />
-               
-                <div class="plus">
-                    
-                    en savoir plus    > 
-                    
+            <div class="container-containers">
+                  <?php 
+        
+                    foreach($result as $key => $value){ ?>
+                       
+                       <div class="container"> 
+                        
+                            <?php
+
+                                    $n = node_load($value->nid);
+                                    $im = field_view_field("node",$n,'field_image_presentation');
+                                    $tx = field_view_field("node",$n,'field_texte_presentation');
+                                    $picto = field_view_field("node",$n,'field_picto');
+                                    $title = field_view_field("node",$n,'field_title');
+                     
+                                    echo "<div class=\"pictotitlecontainer\">";
+                                        echo "<div class=\"image\">";
+                                            print render($im);
+                                        echo "</div>";
+                                        echo "<div class=\"pictotitle\">";
+                                            print render($picto);
+                                        echo "</div>";
+                                    echo "</div>";
+                                    echo "<div class=\"text-presentation\">";
+                                        print render($tx);
+                                    echo "</div>";
+                                ?>
+
+                            </div>
+                        
+                        <?php    }?>
+        <?php /*
+        
+                <div class="container c-auto-bleue">
+
+                    <?php print render($img_auto_bleue); ?>
+
+                    <div class="container-picto">
+
+                        <?php print render($auto_bleue_picto); ?> 
+
+                    </div>
+
+                     <div class="text-presentation">
+
+                        <?php print render($auto_bleue_text); ?>
+
+                    </div>
+
+                </div>
+
+                <div class="container c-menuiserie">
+
+                    <?php print render($img_menuiserie); ?>
+
+                    <div class="container-picto">
+
+                         <?php print render($menuiserie_picto); ?>
+
+                    </div>
+
+                    <div class="text-presentation">
+
+                        <?php print render($menuiserie_text); ?>
+
+                        <div class="plus">
+
+                            en savoir plus    > 
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="container c-ilot-gourmand">
+
+                    <?php print render($img_ilot_gourmand); ?>
+
+                    <div class="container-picto">
+
+                        <?php print render($ilot_gourmand_picto); ?> 
+
+                    </div>
+
+                     <div class="text-presentation">
+
+                        <?php print render($ilot_gourmand_text); ?>
+
+                        <div class="plus">
+
+                            en savoir plus    > 
+
+                        </div>
+
+                    </div>
+
                 </div>
                 
-            </div>
+            */ 
+            ?>
             
-            <img src="../<?php print $theme; ?>/images/bkg_ilot_gourmand_home.png" alt="îlot gourmand" title="îlot gourmand">
-            
-            <div class="container picto">
-            
-                <img class="picto_ateliers cuisine" src="../<?php print $theme; ?>/images/picto_cuisine.png" alt="MerdegLayers" />
-            
-            </div>
-            
-             <div class="text">
-                
-                
-                <p class="title">
-                    
-                    L'îlot gourmand
-                    
-                </p>
-                
-                 L'Îlot gourmand, c'est un peu plus qu'un restaurant.
- 
-                C'est aussi une cuisine centrale au service des collectivités, et une activité de traiteur pour vos fêtes et réceptions.
-                
-                <br />
-                <br />
-                 
-                <div class="plus">
-                    
-                    en savoir plus    >
-                    
-                </div>
-                
             </div>
             
         </div>
+        
 
 
            

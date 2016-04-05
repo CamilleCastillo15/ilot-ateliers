@@ -202,9 +202,10 @@
         width: 25em;
     }
     @include breakpoint($laptop) {
-        margin: 0;
-        top: 2vw;
-        width: 8vw;
+//        margin: 0;
+//        top: 2vw;
+//        width: 8vw;
+        display: none;
     }
 }
 
