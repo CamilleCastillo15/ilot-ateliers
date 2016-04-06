@@ -43,6 +43,9 @@
                             <?php
 
                                     $n = node_load($value->nid);
+                        
+                                    $link =drupal_get_path_alias("node/".$value->nid);
+                        
                                     $im = field_view_field("node",$n,'field_image_presentation');
                                     $tx = field_view_field("node",$n,'field_texte_presentation');
                                     $picto = field_view_field("node",$n,'field_picto');
@@ -59,14 +62,12 @@
                                     echo "<div class=\"text-presentation\">";
                                         print render($tx);
                                     echo "</div>";
-                                    echo "<div class=\"plus\">";
-                                    echo"en savoir plus    ";
-                                    echo "<img class=\"f_g_droite\" src=\"../".$theme."/images/f_blanches/f_droite.svg\" alt=\"logo\" title=\"logo\" />";
-                                    echo "</div>";
+                        
+                                    print l("en savoir plus<img class=\"f_g_droite\" src=\"../".$theme."/images/f_blanches/f_droite.svg\" alt=\"logo\" title=\"logo\" >",$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));                    
                                     
-                                ?>
+                                 ?>
 
-                            </div>
+                </div>
                         
                         <?php    }?>
                         

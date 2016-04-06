@@ -245,9 +245,19 @@ a {
     
     .reseaux {
         
-        width:5vw;
+        /* width:5vw;
+           margin:0 auto; */
+        
         display: block;
-        margin:0 auto;
+        text-align: center;
+        padding-top:2vw;
+        
+        img {
+            
+            width: 5vw;
+            margin-right: 2vw;
+            
+        }
         
     }
     

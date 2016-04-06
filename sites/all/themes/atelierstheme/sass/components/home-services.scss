@@ -17,20 +17,28 @@
         
     }
     
-    .container {
+    .container-containers {
         
-        @include breakpoint($laptop) {
-            
-            width: 27vw;
-            float: left;
-            height: 55vw;
-            margin: 0 0.5vw;
-            background-color: #f7f7f7;
-            position: relative;
-            
+        padding-top: 4vw;
+        
+        .container {
+        
+            @include breakpoint($laptop) {
+
+                width: 27vw;
+                float: left;
+                height: 55vw;
+                margin: 0 0.5vw;
+                background-color: #f7f7f7;
+                position: relative;
+
+            }
+
         }
         
     }
+    
+
 
     .header-img {
         
@@ -84,6 +92,7 @@
     
     .plus {
         
+        display: block;
         text-transform: uppercase;
         background-color: #00a886;
         padding: 10px;
@@ -125,7 +134,12 @@
             position:absolute;
             top: 70%;
             left: 50%;
-            width: 19vw;
+            
+            img {
+                
+                width: 19vw;
+                
+            }
             
             @include breakpoint($laptop) {
 
