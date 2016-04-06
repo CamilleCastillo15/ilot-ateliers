@@ -33,6 +33,7 @@
             </div>
             
             <div class="container-containers">
+                  
                   <?php 
         
                     foreach($result as $key => $value){ ?>
@@ -58,81 +59,18 @@
                                     echo "<div class=\"text-presentation\">";
                                         print render($tx);
                                     echo "</div>";
+                                    echo "<div class=\"plus\">";
+                                    echo"en savoir plus    ";
+                                    echo "<img class=\"f_g_droite\" src=\"../".$theme."/images/f_blanches/f_droite.svg\" alt=\"logo\" title=\"logo\" />";
+                                    echo "</div>";
+                                    
                                 ?>
 
                             </div>
                         
                         <?php    }?>
-        <?php /*
-        
-                <div class="container c-auto-bleue">
-
-                    <?php print render($img_auto_bleue); ?>
-
-                    <div class="container-picto">
-
-                        <?php print render($auto_bleue_picto); ?> 
-
-                    </div>
-
-                     <div class="text-presentation">
-
-                        <?php print render($auto_bleue_text); ?>
-
-                    </div>
-
-                </div>
-
-                <div class="container c-menuiserie">
-
-                    <?php print render($img_menuiserie); ?>
-
-                    <div class="container-picto">
-
-                         <?php print render($menuiserie_picto); ?>
-
-                    </div>
-
-                    <div class="text-presentation">
-
-                        <?php print render($menuiserie_text); ?>
-
-                        <div class="plus">
-
-                            en savoir plus    > 
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="container c-ilot-gourmand">
-
-                    <?php print render($img_ilot_gourmand); ?>
-
-                    <div class="container-picto">
-
-                        <?php print render($ilot_gourmand_picto); ?> 
-
-                    </div>
-
-                     <div class="text-presentation">
-
-                        <?php print render($ilot_gourmand_text); ?>
-
-                        <div class="plus">
-
-                            en savoir plus    > 
-
-                        </div>
-
-                    </div>
-
-                </div>
-                
-            */ 
-            ?>
+                        
+                    <img src="images/MergedLayers.png">
             
             </div>
             

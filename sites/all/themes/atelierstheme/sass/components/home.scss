@@ -61,7 +61,7 @@
         width: 650px;
     }
     @include breakpoint($laptop) {
-        top: 13vw;
+        top: 6vw;
         height: 23vw;
         width: 76vw;
     }
@@ -189,7 +189,7 @@
     right: 0;
     @include breakpoint($mobiles) {
         width: 14em;
-        top: 20vw;
+        top: 30vw;
         margin: 0 auto;
     }
     @include breakpoint($mobilem) {

@@ -3,8 +3,7 @@
 $ftitle = field_view_field("node",$node,'field_title');
 $picto = field_view_field("node",$node,'field_picto');
 
-$bkg_mobile = field_view_field("node",$node,'field_image_mobile');
-$bkg_web = field_view_field("node",$node,'field_image_pc');
+$img = field_view_field("node",$node,'field_image');
 
 $body = field_view_field("node",$node,'body');
 $gallerie = field_get_items("node",$node,'field_image_multi');
@@ -25,20 +24,14 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
 </a>
 */?>
 
-<?php print ($bkg_mobile); ?>
-
 <div class="atelier">
-
-    <div class="atelier-header">
-        <div class="atelier-header-bg-mobile">
-            <div class="atelier-header-bg-img"><?php print render($bkg_mobile); ?></div>
+   
+    <div class="atelier-header pictotitlecontainer">
+        <div class="atelier-header-bg image">
+            <?php print render($img); ?>
         </div>
-        <div class="atelier-header-bg-web">
-            <div class="atelier-header-bg-img"><?php print render($bkg_web); ?></div>
-        </div>
-        <div class="picto"><?php print render($picto); ?></div>
+        <div class="picto pictotitle"><?php print render($picto); ?></div>
         <div class="title"><?php print render($ftitle); ?></div>
-        <div class="block-orange"></div>
     </div>
     
     <div class="atelier-body atelier-color">

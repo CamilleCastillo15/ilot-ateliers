@@ -48,7 +48,7 @@
             <img class="picto_ateliers menuiserie" src="../<?php print $theme; ?>/images/menuiserie_logo.svg" alt="MerdegLayers" />
             <img class="picto_ateliers cuisine" src="../<?php print $theme; ?>/images/ilot_gourmand_logo.svg" alt="MerdegLayers" />
 
-               <?php 
+               <?php /*
 
                         foreach($result as $key => $value){ ?>
 
@@ -77,7 +77,7 @@
 
                                 </div>
 
-                <?php    }?>
+                <?php    }*/?>
        
         <br />
 

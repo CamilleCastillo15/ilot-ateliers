@@ -22,11 +22,11 @@ a {
     display: none;
     margin: 0 auto;
     position: relative;
-    background-color: red;
+    background-color: white;
     
     @include grid-span(12, 1);
     
-    @include breakpoint($tablet) {
+    @include breakpoint($laptop) {
         display: block;
         /*
             background-image: url(../images/bkg_home_web.png);
@@ -37,10 +37,11 @@ a {
     }
     
     .menu {
-        
-        width:38vw;
-        margin:0 auto;
+    
         text-transform: uppercase;
+        padding: 1vw;
+        text-align: center;
+        font-size: 1.25vw;
         
         .leaf {
             
@@ -51,12 +52,27 @@ a {
         
     }
     
+    
+    .logo {
+        
+        width:10vw;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top:1.5vw;
+        left:0;
+        right:66vw;
+        
+    }
+    
 }
 
 .burger {
+    
     @include breakpoint($tablet) {
         display: none;
     }
+    
     -webkit-transition: all 2.5s;
     -moz-transition: all 2.5s;
     transition: all 2.5s;
@@ -67,56 +83,83 @@ a {
     height: auto;
     cursor: pointer;
     z-index:1000;
+    
     /* $offsetX : 37.099998px;
         $offsetY : 20.4px;
         $offsetY_2 : 16.5px;
         $offsetY_3 : 24.4px;
         $widthX: 11.8px; */
-    $offsetX: 27.7px;
-    $offsetY: 33.4px;
-    $offsetY_2: 39.1px;
-    $offsetY_3: 44.8px;
-    $widthX: 58.1441px;
+    
+    $offsetX: 10.8px;
+    $offsetY: 15.7px;
+    $offsetY_2: 31.4px;
+    $offsetY_3: 47.1px;
+    $widthX: 46.7438px;
+    
     -webkit-transition: all 2500ms;
     -moz-transition: all 2500ms;
     transition: all 2500ms;
+    
     /*
-            &.h{       
-                opacity: 0;
-            } 
-            */
+    &.h{       
+        opacity: 0;
+    } 
+    */
+    
     circle {
         opacity: 0.3;
     }
-    #burger_1 {
-        transform: rotate(0deg);
-        transition: all 200ms linear;
-        transform-origin: $offsetX+($widthX/2) $offsetY;
-        fill: white;
-    }
-    #burger_2 {
-        fill: white;
-    }
-    #burger_3 {
-        transform: rotate(0deg);
-        transition: all 200ms linear;
-        transform-origin: $offsetX+($widthX/2) $offsetY_3;
-        fill: white;
-    }
-    &.o {
-        #burger_1 {
-            transform: translate(0.2px, 0px) rotate(45deg);
+    
+     #burger_1 {
+         
+            transform: translate(10.8px, 5.7px) rotate(0deg);
+            transition: all 200ms linear;
+            transform-origin: $widthX/2 $offsetY;
+            fill: white;
         }
+    
+    #burger_2 {
+        
+        transform: translate(10.8px, 5.7px) rotate(0deg);
+        fill: white;
+        
+        }
+    
+    #burger_3 {
+
+            transform: translate(10.8px, 5.7px) rotate(0deg);
+            transition: all 200ms linear;
+            transform-origin: $offsetX+($widthX/2) $offsetY_3;
+            fill: white;
+
+        }
+    
+    &.o {
+        
+        #burger_1 {
+            
+            transform: translate($offsetX+2, 5.7px+($offsetY)/2) rotate(45deg);
+                
+        }
+        
         #burger_2 {
+            
             opacity: 0;
         }
+        
         #burger_3 {
-            transform: translate(-0.2px, (-($offsetY_3 - $offsetY_2)/2)) rotate(-45deg);
+            
+            transform: translate($offsetX+3, -(5.7px+($offsetY_2)/2)) rotate(-45deg);
+            //translate(($offsetX), -($offsetY_3 - $offsetY_2))
+            
         }
+        
         #g10 {
+            
             transform: translate(-0.1px, 0);
+            
         }
-    }
+    } 
 }
 
 .l-page {
@@ -128,28 +171,34 @@ a {
 .l-content {
     //background-color: yellow;
     @include grid-span(12, 1);
+    position: relative;
     //height:2337px;
 }
 
 .l-off {
-    background-color: green;
+    background-color: #4b4b4b;
+    text-transform: uppercase;
     display: block;
+    
     @include grid-span(12, 1);
     @include breakpoint($laptop) {
         //@include grid-span(6,1);
         display: none;
     }
+    
     position: fixed;
     top: 0;
-    width: 60vw;
+    width: 40vw;
     height: 154vw;
     -webkit-transition: all 500ms ease-in;
     -moz-transition: all 500ms ease-in;
     transition: all 500ms ease-in;
+    
     &.h {
         visibility: hidden;
         left: -250px;
     }
+    
     &.o {
         left: 0px;
         /*     -webkit-transform:translate3d(260px, 0, 0);
@@ -157,20 +206,64 @@ a {
     -o-transform:translate3d(260px, 0, 0);
     transform:translate3d(260px, 0, 0); */
     }
+    
     li.leaf {
+        
         margin-top: 14vw;
+        border-bottom:solid 1px white;
+        margin-top: 6vw;
+        border-bottom: solid 1px white;
+        padding-bottom: 20px;
+        list-style-type: none;
+        list-style-image: none;
+        
     }
+    
+    a {
+        
+        color:white;
+        
+    }
+    
+    .logo {
+        
+        width: 24vw;
+        margin: 0 auto;
+        display: block;
+        margin-top: 4vw;
+    }
+    
+    .menu {
+        
+        border: none;
+        list-style: none;
+        text-align: left;
+        margin-left: 4vw;
+        font-size: 2.5vw;
+        
+    }
+    
+    .reseaux {
+        
+        width:5vw;
+        display: block;
+        margin:0 auto;
+        
+    }
+    
 }
 
 .l-footer {
+    
+    position: relative;
     background-color: #4b4b4b;
     text-align: center;
     display: block;
-    margin: 0 auto;
-    height: 90px;
-    //font-family: 'Source Sans Pro', sans-serif;
-    font: 17px 'SourceSansProRegular', sans-serif;
+    font: 2vw 'SourceSansProRegular', sans-serif;
     text-transform: uppercase;
+    
+    padding:3vw;
+    
     a {
         &:hover,
         &:link,
@@ -179,19 +272,45 @@ a {
             color: #05aa88;
         }
     }
+    
     color: #05aa88;
+    
     @include grid-span(12, 1);
+    
     .menu {
+        
         text-align: center;
+        
         li {
             content: "|";
             display: inline;
         }
+        
     }
+    
     @include breakpoint($laptop) {
+        
         //@include grid-span(6,7);
         //display: none;
+        
     }
+    
+    .reseaux {
+        
+            position: absolute;
+            left: 90%;
+            right: 0;
+            top: 41%;
+        
+        img {
+            
+            width:2vw;
+            margin-right: 1vw;
+            
+        }
+        
+    }
+    
 }
 
 .l-map {
@@ -248,80 +367,6 @@ a {
 }
 
 .home {}
-
-.atelier {
-    font-family: 'SourceSansProRegular';
-    font-size: 20px;
-    .atelier-body {
-        line-height: 1.4em;
-        margin-left: 7%;
-        margin-right: 7%;
-        strong {
-            font-weight: 800;
-        }
-        em {
-            font-style: italic;
-        }
-        h1 {
-            font-family: 'SourceSansProSemiBold';
-            text-transform: uppercase;
-            font-size: 35px;
-            margin: 25px 0;
-        }
-        h2 {
-            font-size: 28px;
-            text-transform: uppercase;
-            margin: 25px 0;
-        }
-        ul {
-            margin-left: 15px;
-            li {
-                list-style: disc inside none;
-            }
-        }
-    }
-    .contact {
-        text-transform: uppercase;
-        background-color: #f7941d;
-        color: white;
-        padding: 11px;
-        width: 233px;
-        display: block;
-        margin: 30px auto;
-        text-align: center;
-    }
-    .atelier-header-bg-web {
-        display: none;
-        @include breakpoint($laptop) {
-            display: block;
-        }
-    }
-    .atelier-header-bg-mobile {
-        display: block;
-        @include breakpoint($laptop) {
-            display: none;
-        }
-    }
-    .title {
-        font-size: 4vw;
-        text-transform: uppercase;
-        color: white;
-        text-align: center;
-        margin: 26px 0 0 auto;
-    }
-    .picto {
-        width: 15vw;
-        height: auto;
-        margin: 0 auto;
-        display: block;
-        margin-top: -31vw;
-    }
-    .block-orange {
-        width: 100%;
-        height: 10vw;
-        background-color: #f7941d;
-    }
-}
 
 .bloc_don {
     font-family: 'SourceSansProRegular';
