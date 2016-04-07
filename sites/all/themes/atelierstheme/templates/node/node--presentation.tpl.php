@@ -35,7 +35,7 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
         <div class="atelier-gallerie-big">
             <?php
                 foreach($gallerie as $key => $value){
-                    dpm($value); ?>
+                    ?>
                         <?php
                             $imagea = field_view_value('node', $node, 'field_image_multi', $value);
                             print render($imagea);

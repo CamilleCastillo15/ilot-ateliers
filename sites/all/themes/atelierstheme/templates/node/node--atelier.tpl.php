@@ -10,7 +10,7 @@ $gallerie = field_get_items("node",$node,'field_image_multi');
 $couleur = field_get_items("node",$node,'field_couleur')[0]['rgb'];
 
 drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
-
+drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
 /*
 
 $link = field_get_items("node",$node,'field_link');
@@ -32,6 +32,8 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
         </div>
         <div class="picto pictotitle"><?php print render($picto); ?></div>
         <div class="title"><?php print render($ftitle); ?></div>
+        <div class="triangle-left"></div><!--
+        --><div class="triangle-right"></div>
     </div>
     
     <div class="atelier-body atelier-color">
@@ -41,8 +43,7 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
     <div class="atelier-gallerie">
         <div class="atelier-gallerie-big">
             <?php
-                foreach($gallerie as $key => $value){
-                    dpm($value); ?>
+                foreach($gallerie as $key => $value){ ?>
                     <div class="atelier-gallerie-image">
                         <?php
                             $imagea = field_view_value('node', $node, 'field_image_multi', $value);

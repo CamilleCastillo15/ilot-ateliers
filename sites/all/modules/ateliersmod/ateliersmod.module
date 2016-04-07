@@ -25,15 +25,46 @@ function ateliersmod_menu() {
         'title' => 'Configuration du site' ,
         'description' => 'Configuration de l\'adresse, du google map, etc..',
         'page callback' => 'drupal_get_form',
-        'page arguments' => array('ateliersmod_admin'),        
+        'page arguments' => array('ateliersmod_admin'),    
         'access arguments' => array('access ateliersmod admin'),
+        'type' => MENU_NORMAL_ITEM,
+    );
+     $items['services/%/actus'] = array(
+        'title' => 'Actualités de l\'atelier' ,
+        'description' => 'les actus de l\'atelier',
+        'access callback' => TRUE,
+         'page callback' => 'ateliersmod_pageactus',
+        'page arguments' => array(0,1),        
         'type' => MENU_NORMAL_ITEM,
     );
 	return $items;
 }
+function ateliersmod_pageactus($arg,$hop){
+   
+    
+    $view = views_get_view("atelier_id");
+    $view->set_arguments(array($hop));
+    $view->execute();
+    $result = $view->result;
+    if(count($result)==0){
+        //redirection
+        return "Cet atelier n'existe pas";
+        
+    }else{
+        $result[0];
+        dpm($result[0]->nid);
+        $node = node_load($result[0]->nid);
+        $view = views_embed_view('actus', 'page_1', $result[0]->nid);
+        //return $view;
+        return theme('ateliersmod_actus', array('view' => $view, 'node'=>$node));
+    }
+    
+    //return NULL;
+   // return 'hop '.$arg . " ".$hop;
+}
 function ateliersmod_admin() {
     $theme = drupal_get_path("theme","atelierstheme");
-    dpm($theme."/css/wysiwyg.css");
+    
     drupal_add_css($theme."/css/admin.css");
     $form = array();
     $form['ateliersmod_fsadress'] = array(
@@ -150,6 +181,10 @@ function ateliersmod_theme($existing, $type, $theme, $path){
   $bodyaddress = variable_get('ateliersmod_fsadress_text');
 
   return array(
+    'ateliersmod_actus' => array(
+      'template' => 'templates/ateliersmod_actus', // Change this to the template file name.
+      'variables' => array('id' => NULL), // This is the list of the variables that will be passed to the template file. 
+    ),  
     'ateliersmod_address' => array(
       'template' => 'templates/ateliersmod_address',
       'variables'=> array('ateliers_theme' => $themez, 'body' => check_markup($bodyaddress["value"],$bodyaddress["format"]) )
