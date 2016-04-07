@@ -2,8 +2,6 @@
 
     <div class="text">
         
-        <?php print $variables["ateliers_theme"]; ?>
-        
         <div class="gros">
 
             Vous êtes un particulier ?
@@ -19,7 +17,7 @@
         <br /> 80 000 Amiens
         <br />
 
-        <img class="tel" src="<?php print $variables["ateliers_theme"]; ?>/images/telephone.png" alt="telephone" title="telephone" /> 03 59 99 08 80
+        <img class="tel" src="<?php print $variables["ateliers_theme"]; ?>/images/telephone_vert.svg" alt="telephone" title="telephone" /> 03 59 99 08 80
 
         <div class="petit">
 

@@ -12,8 +12,6 @@
         <?php /*print render($tabs);*/ ?>
         <?php print $messages; ?>
         <?php print render($page['content']); ?>
-
-
     </div>
 
 </div>
@@ -42,7 +40,6 @@
         <img class="twitter" src="../<?php print $theme; ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
         <img class="linkedin" src="../<?php print $theme; ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" />
     </div>
-    
 </div>
 
 <div class="burger h">

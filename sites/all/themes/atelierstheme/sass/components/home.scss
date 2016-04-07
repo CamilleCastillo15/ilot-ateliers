@@ -2,33 +2,79 @@
 @import "../variables/variables";
 
 .picto_ateliers {
-
-    height: auto;
-    width: 15vw;
-    @include breakpoint($tablet) {
-        width: 7.5em;
-    }
-    @include breakpoint($laptop) {
-        width: 9vw;
-    }
-    &.menuiserie {
+    
+    &:hover, &:link, &:active, &:visited {
+        color: white;
+    } 
+    
+    &.ilot_gourmand {
+        
         @include breakpoint($mobiles) {
             margin: 0 12vw;
         }
+
         @include breakpoint($mobilem) {
             margin: 0 12vw;
         }
+
         @include breakpoint($mobilel) {
             margin: 0 12vw;
         }
+
         @include breakpoint($tablet) {
             margin: 0 96px;
         }
+
         @include breakpoint($laptop) {
             margin: 0 2vw;
             margin-top: 3vw;
         }
+        
     }
+    
+//    &.menuiserie {
+//        
+//        img {
+//            
+//            
+//            @include breakpoint($mobiles) {
+//                margin: 0 12vw;
+//            }
+//
+//            @include breakpoint($mobilem) {
+//                margin: 0 12vw;
+//            }
+//
+//            @include breakpoint($mobilel) {
+//                margin: 0 12vw;
+//            }
+//
+//            @include breakpoint($tablet) {
+//                margin: 0 96px;
+//            }
+//
+//            @include breakpoint($laptop) {
+//                margin: 0 2vw;
+//                margin-top: 3vw;
+//            }
+//               
+//        }
+//
+//    }
+
+    img {
+        
+        height: auto;
+        width: 15vw;
+        @include breakpoint($tablet) {
+            width: 7.5em;
+        }
+        @include breakpoint($laptop) {
+            width: 9vw;
+        }
+        
+    }
+
 }
 
 .block-w {
@@ -162,13 +208,13 @@
                 margin: 0;
                 font-size: 1.3vw;
                 &.auto_bleue {
-                    margin-left: 5vw;
+                    margin-left: 2.5vw;
                 }
                 &.menuiserie {
                     margin-left: 4vw;
                 }
                 &.ilot_gourmand {
-                    margin-left: 2vw;
+                    margin-left: 2.5vw;
                 }
             }
         }

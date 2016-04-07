@@ -70,7 +70,7 @@ body {
 
             @include translate(-50%,-50%);
             position:absolute;
-            top: 50%;
+            top: 34%;
             left: 50%;
             
             img {
@@ -85,10 +85,11 @@ body {
 
             @include translate(-50%,-50%);
             position:absolute;
-            top: 80%;
+            top: 70%;
             left: 50%;
             text-transform: uppercase;
             color: white;
+            font-size: 3.5vw;
 
         }
 
