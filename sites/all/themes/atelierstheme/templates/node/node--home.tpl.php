@@ -87,6 +87,7 @@
         
                 echo "</div>";
         
+        
               /*
 
                     <img class="picto_ateliers atelier_bleu" src="../<?php print $theme; ?>/images/auto_bleue_logo.svg" alt="MerdegLayers" />
