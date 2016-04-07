@@ -1,9 +1,35 @@
+@import "singularitygs";
 @import "breakpoint";
 @import "../variables/variables";
 
 .atelier {
     font-family: 'SourceSansProRegular';
     font-size: 20px;
+    .triangle-left{
+        border-bottom-width: 70px;
+        border-bottom-style: solid;
+        border-left: 0px solid transparent;
+        border-right: 90px solid transparent;
+        height: 0;
+        width: 50%;
+        @include grid-span(6,1);
+
+        margin-top: -70px;
+    }
+
+    .triangle-right{
+       @include grid-span(6,7);
+
+        border-bottom-width: 70px;
+        border-bottom-style: solid;
+        border-left: 90px solid transparent;
+        border-right: 0px solid transparent;
+        height: 0;
+        width: 50%;
+        margin-top: -70px;
+    }
+
+
     .atelier-body {
         line-height: 1.4em;
         margin-left: 7%;
