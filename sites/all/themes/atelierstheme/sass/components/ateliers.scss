@@ -4,60 +4,116 @@
 
 .atelier {
     font-family: 'SourceSansProRegular';
-    font-size: 20px;
-    .triangle-left{
-        border-bottom-width: 70px;
+    //font-size: 4vw;
+    
+    .triangle-left {
+        border-bottom-width: 120px;
         border-bottom-style: solid;
         border-left: 0px solid transparent;
-        border-right: 90px solid transparent;
+        border-right: 0px solid transparent;
         height: 0;
         width: 50%;
         @include grid-span(6,1);
 
-        margin-top: -70px;
+        margin-top: -123px;
     }
 
-    .triangle-right{
+    .triangle-right {
        @include grid-span(6,7);
 
-        border-bottom-width: 70px;
+        border-bottom-width: 120px;
         border-bottom-style: solid;
-        border-left: 90px solid transparent;
+        border-left: 0px solid transparent;
         border-right: 0px solid transparent;
         height: 0;
         width: 50%;
-        margin-top: -70px;
+        margin-top: -123px;
+        
     }
 
 
     .atelier-body {
+        
         line-height: 1.4em;
         margin-left: 7%;
         margin-right: 7%;
+        font-size:15px; 
+        
+        @include breakpoint($laptop) {
+
+                font-size:20px;
+
+            }
+
+             @include breakpoint($laptopxl) {
+
+                font-size:25px;
+
+            }
+        
         strong {
             font-weight: 800;
         }
+        
         em {
             font-style: italic;
         }
+        
         h1 {
+            
             font-family: 'SourceSansProSemiBold';
             text-transform: uppercase;
-            font-size: 35px;
+            font-size:20px;
+            
+            @include breakpoint($laptop) {
+
+                font-size:30px;
+
+            }
+
+             @include breakpoint($laptopxl) {
+
+                font-size:35px;
+
+            }
+           
             margin: 25px 0;
         }
+        
         h2 {
-            font-size: 28px;
+            
+            font-size:17px;
+            
+            @include breakpoint($laptop) {
+
+                font-size:22px;
+
+            }
+
+             @include breakpoint($laptopxl) {
+
+                font-size:27px;
+
+            }
+            
             text-transform: uppercase;
             margin: 25px 0;
         }
+        
         ul {
+            
             margin-left: 15px;
+            
             li {
+                
                 list-style: disc inside none;
+                
             }
+            
         }
+        
     }
+    
     .contact {
         text-transform: uppercase;
         background-color: #f7941d;
@@ -106,4 +162,6 @@
         height: 10vw;
         background-color: #f7941d;
     }
+    
+    
 }

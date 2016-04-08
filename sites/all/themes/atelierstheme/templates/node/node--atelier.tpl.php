@@ -1,5 +1,7 @@
 <?php
 
+$title = field_view_field("node",$node,'title');
+
 $ftitle = field_view_field("node",$node,'field_title');
 $picto = field_view_field("node",$node,'field_picto');
 
@@ -34,6 +36,14 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
         <div class="title"><?php print render($ftitle); ?></div>
         <div class="triangle-left"></div><!--
         --><div class="triangle-right"></div>
+        
+        <div class="liens">
+            
+            <a href="/services" class="services">service</a>
+            <a href="<?php print render($title); ?>/actus" class="actualites">actualités</a>
+            
+        </div>
+        
     </div>
     
     <div class="atelier-body atelier-color">
@@ -41,22 +51,32 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
     </div>
     
     <div class="atelier-gallerie">
+       
         <div class="atelier-gallerie-big">
+            
             <?php
+            
                 foreach($gallerie as $key => $value){ ?>
+                   
                     <div class="atelier-gallerie-image">
                         <?php
                             $imagea = field_view_value('node', $node, 'field_image_multi', $value);
                             print render($imagea);
                         ?>
                     </div>
+                    
                 <?php
-                }
+                    
+                    }
 
-            ?>
+                ?>
+            
         </div>
+        
         <div class="atelier-gallerie-thumbnails">
-             <?php foreach($gallerie as $key => $value){ ?>
+             
+            <?php foreach($gallerie as $key => $value){ ?>
+               
                 <div class="atelier-gallerie-image">
                     <?php
                         $imagea = field_view_value('node', $node, 'field_image_multi', $value,array(
@@ -68,7 +88,12 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
                         print render($imagea);
                     ?>
                 </div>
-            <?php } ?>
+            <?php 
+                
+                } 
+            
+            ?>
+            
         </div>
         
     </div>

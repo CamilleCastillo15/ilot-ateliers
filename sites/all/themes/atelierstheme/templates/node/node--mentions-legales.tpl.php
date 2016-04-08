@@ -7,6 +7,6 @@
 
 <div class="text-presentation">
     
-    <?php print render($body); ?>
+    <?php //print render($body); ?>
     
 </div>

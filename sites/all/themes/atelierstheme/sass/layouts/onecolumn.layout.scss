@@ -319,8 +319,10 @@ a {
 
 .burger {
     
-    @include breakpoint($tablet) {
+    @include breakpoint($laptop) {
+        
         display: none;
+        
     }
     
     -webkit-transition: all 2.5s;
@@ -434,10 +436,12 @@ a {
     display: block;
     
     @include grid-span(12, 1);
-    @include breakpoint($laptop) {
+    
+    @include breakpoint($laptopl) {
         //@include grid-span(6,1);
 
         display: none;
+        
     }
     
     position: fixed;
@@ -615,14 +619,29 @@ a {
         
         .text {
             
-            color: #ffffff;
-            font: 23px 'SourceSansProLight', sans-serif;
-            text-align: center;
+            font-family: "SourceSansProLight";
             
-            .gros {
+            color: #ffffff;
+            text-align: center;
+            font-size:3.5vw;
+
+             @include breakpoint($laptop) {
+
+                font-size:1.5vw;
+
+            }
+            
+            h1 {
                 
-                font: 35px 'SourceSansProSemiBold', sans-serif;
+                font-family: "SourceSansProRegular";
                 text-transform: uppercase;
+                font-size:4vw;
+                
+                @include breakpoint($laptop) {
+
+                    font-size:2vw;
+
+                }
                 
             }
             

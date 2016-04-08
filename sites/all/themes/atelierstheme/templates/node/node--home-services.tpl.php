@@ -38,7 +38,7 @@
         
                     foreach($result as $key => $value){ ?>
                        
-                       <div class="container"> 
+                       <div class="container">
                         
                             <?php
 
@@ -63,15 +63,13 @@
                                         print render($tx);
                                     echo "</div>";
                         
-                                    print l("en savoir plus<img class=\"f_g_droite\" src=\"../".$theme."/images/f_blanches/f_droite.svg\" alt=\"logo\" title=\"logo\" >",$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));                    
+                                    print l("en savoir plus<img class=\"f_g_droite\" src=\"".$theme."/images/f_blanches/f_droite.svg\" alt=\"logo\" title=\"logo\" >",$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));                    
                                     
                                  ?>
 
                 </div>
                         
                         <?php    }?>
-                        
-                    <img src="images/MergedLayers.png">
             
             </div>
             

@@ -14,6 +14,12 @@ body {
     
 }
 
+.left {
+    
+    float:left;
+    
+}
+
 .text-presentation {
     
     font-size:15px;
@@ -21,13 +27,13 @@ body {
     
      @include breakpoint($laptop) {
 
-            font-size:1.5vw;
+            font-size:1.25vw;
 
         }
 
-     @include breakpoint($laptopxl) {
+     @include breakpoint($laptopl) {
 
-            font-size:23px;
+            font-size:20px;
 
         }
 
@@ -43,7 +49,7 @@ body {
 
             }
 
-             @include breakpoint($laptopxl) {
+             @include breakpoint($laptopl) {
 
                 font-size:30px;
 
@@ -91,6 +97,31 @@ body {
             color: white;
             font-size: 3.5vw;
 
+        }
+        
+        .liens {
+            
+            @include translate(-50%,-50%);
+            position:absolute;
+            top: 93%;
+            left: 50%;
+            text-transform: uppercase;
+            color: white;
+            font-size: 2vw;
+            width: 50vw;
+            
+            a {
+                
+                color:white;
+                
+            }
+            
+            .actualites {
+                
+                float: right;
+                
+            }
+            
         }
 
     }

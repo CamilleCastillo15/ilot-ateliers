@@ -39,8 +39,8 @@ function ateliersmod_menu() {
     );
 	return $items;
 }
+
 function ateliersmod_pageactus($arg,$hop){
-   
     
     $view = views_get_view("atelier_id");
     $view->set_arguments(array($hop));
@@ -62,6 +62,7 @@ function ateliersmod_pageactus($arg,$hop){
     //return NULL;
    // return 'hop '.$arg . " ".$hop;
 }
+
 function ateliersmod_admin() {
     $theme = drupal_get_path("theme","atelierstheme");
     

@@ -24,7 +24,7 @@
     <?php print render($page['map']); ?>
 </div>
 
-<footer class="l-footer" >
+<footer class="l-footer text-presentation" >
     <?php print render($page['footer']); ?>
     <div class="reseaux">
         <img class="twitter" src="../<?php print $theme; ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
@@ -33,6 +33,7 @@
 </footer>
 
 <div class="l-off h">
+   
     <img class="logo" src="../<?php print $theme; ?>/images/logo.png" alt="logo" title="logo" />
     <?php print render($page['off']); ?>
     
@@ -40,6 +41,7 @@
         <img class="twitter" src="../<?php print $theme; ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
         <img class="linkedin" src="../<?php print $theme; ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" />
     </div>
+    
 </div>
 
 <div class="burger h">
