@@ -1,16 +1,24 @@
 <?php
-
+/*
 $view = views_get_view('actus');
 $view->execute();
-
 $result = $view->result;
+*/
 
 $title = field_view_field("node",$node,'field_title');
-$img = field_view_field("node",$node,'field_image');
-$atelier = field_view_field("node",$node,'field_atelier');
-$body = field_view_field("node",$node,'body');
+$imgactu = field_view_field("node",$node,'field_image');
 
-$couleur = field_get_items("node",$node,'field_couleur')[0]['rgb'];
+$body = field_view_field("node",$node,'body');
+$atelier = field_get_items("node",$node,'field_atelier')[0]["entity"];
+
+$ftitle = field_view_field("node",$atelier,'field_title');
+$picto = field_view_field("node",$node,'field_picto');
+$img = field_view_field("node",$atelier,'field_image');
+
+$couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
+
+drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
+drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
 
 /*
 
@@ -23,8 +31,37 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
     <div class="flag"><?php print render($flag); ?></div>
     <div class="logo"><?php print render($logo); ?></div>
 </a>
-*/
-?>
+*/?>
+
+<div class="atelier">
+
+    <div class="atelier-header pictotitlecontainer">
+
+        <div class="atelier-header-bg image">
+            <?php print render($img); ?>
+        </div>
+
+        <div class="picto pictotitle">
+            <?php print render($picto); ?>
+        </div>
+
+        <div class="title">
+            <?php print render($ftitle); ?>
+        </div>
+        <div class="triangle-left"></div><!--
+        --><div class="triangle-right"></div>
+
+        <div class="liens">
+
+            <a href="/services" class="services">service</a>
+            <a href="<?php print render($title); ?>/actus" class="actualites">actualités</a>
+
+        </div>
+
+    </div>
+
+
+</div>
 
     <div class="atelier actu-detail">
    
@@ -32,7 +69,7 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
               
             <div class="left">
                
-                <?php print render($img); ?>
+                <?php print render($imgactu); ?>
                 
             </div>
                 
