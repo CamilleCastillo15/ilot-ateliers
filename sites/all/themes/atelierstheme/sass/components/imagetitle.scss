@@ -1,17 +1,31 @@
+@import "breakpoint";
 @import "../variables/mixin";
-.imagetitle{
+@import "../variables/fonts";
+@import "../variables/variables";
+
+.imagetitle {
+
     width:100%;
     position: relative;
     .image{
         width:100%;
 
     }
-    .title{
+    .title {
+
         @include translate(-50%,-50%);
         position:absolute;
         font-family: "PermanentMarker";
         color: #ffffff;
-        font-size : 3em;
+
+        font-size: 7.5vw;
+
+        @include breakpoint($laptopl) {
+            font-size: 115px;
+        }
+
+        top: 50%;
+        left: 50%;
 
     }
 

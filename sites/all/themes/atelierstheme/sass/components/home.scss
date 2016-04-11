@@ -3,32 +3,82 @@
 
 .picto_ateliers {
 
-    height: auto;
-    width: 15vw;
-    @include breakpoint($tablet) {
-        width: 7.5em;
+    &:hover, &:link, &:active, &:visited {
+        color: white;
     }
-    @include breakpoint($laptop) {
-        width: 9vw;
-    }
-    &.menuiserie {
+
+    &.ilot_gourmand {
+
         @include breakpoint($mobiles) {
             margin: 0 12vw;
         }
+
         @include breakpoint($mobilem) {
             margin: 0 12vw;
         }
+
         @include breakpoint($mobilel) {
             margin: 0 12vw;
         }
+
         @include breakpoint($tablet) {
             margin: 0 96px;
         }
+
         @include breakpoint($laptop) {
             margin: 0 2vw;
             margin-top: 3vw;
         }
+
     }
+
+//    &.menuiserie {
+//
+//        img {
+//
+//
+//            @include breakpoint($mobiles) {
+//                margin: 0 12vw;
+//            }
+//
+//            @include breakpoint($mobilem) {
+//                margin: 0 12vw;
+//            }
+//
+//            @include breakpoint($mobilel) {
+//                margin: 0 12vw;
+//            }
+//
+//            @include breakpoint($tablet) {
+//                margin: 0 96px;
+//            }
+//
+//            @include breakpoint($laptop) {
+//                margin: 0 2vw;
+//                margin-top: 3vw;
+//            }
+//
+//        }
+//
+//    }
+
+    img {
+
+        height: auto;
+        width: 15vw;
+        @include breakpoint($tablet) {
+            width: 7.5em;
+        }
+        @include breakpoint($laptop) {
+            width: 9vw;
+        }
+        @include breakpoint($laptopl) {
+            width: 150px;
+            margin-top: 14px;
+        }
+
+    }
+
 }
 
 .block-w {
@@ -61,9 +111,14 @@
         width: 650px;
     }
     @include breakpoint($laptop) {
-        top: 13vw;
+        top: 7vw;
         height: 23vw;
         width: 76vw;
+    }
+    @include breakpoint($laptopl) {
+        top: 86px;
+        height: 350px;
+        width: 1200px;
     }
     .par-bienvenue {
         font-family: 'SourceSansProLight';
@@ -84,6 +139,11 @@
             margin: 5vw 3vw;
             float: left;
         }
+        @include breakpoint($laptopl) {
+            //float: left;
+            font-size: 31px;
+            margin: 50px 49px;
+        }
     }
     .title-bienvenue {
         font-family: PermanentMarker;
@@ -96,11 +156,18 @@
             margin: 0 3vw;
             font-size: 3vw;
         }
+        @include breakpoint($laptopl) {
+            margin: 0 50px;
+            font-size: 51px;
+        }
     }
     .container-title-pictos {
         position: relative;
         @include breakpoint($laptop) {
             margin-top: 2vw;
+        }
+        @include breakpoint($laptopl) {
+            margin-top: 17px;
         }
         .title-pictos {
             font-family: 'SourceSansProRegular';
@@ -162,13 +229,26 @@
                 margin: 0;
                 font-size: 1.3vw;
                 &.auto_bleue {
-                    margin-left: 5vw;
+                    margin-left: 2.5vw;
                 }
                 &.menuiserie {
                     margin-left: 4vw;
                 }
                 &.ilot_gourmand {
-                    margin-left: 2vw;
+                    margin-left: 2.5vw;
+                }
+            }
+            @include breakpoint($laptopl) {
+                margin-top: 21px;
+                font-size: 21px;
+                &.auto_bleue {
+                    margin-left: 47px;
+                }
+                &.menuiserie {
+                    margin-left: 48px;
+                }
+                &.ilot_gourmand {
+                    margin-left: 39px;
                 }
             }
         }
@@ -189,7 +269,7 @@
     right: 0;
     @include breakpoint($mobiles) {
         width: 14em;
-        top: 20vw;
+        top: 30vw;
         margin: 0 auto;
     }
     @include breakpoint($mobilem) {
@@ -202,9 +282,10 @@
         width: 25em;
     }
     @include breakpoint($laptop) {
-        margin: 0;
-        top: 2vw;
-        width: 8vw;
+//        margin: 0;
+//        top: 2vw;
+//        width: 8vw;
+        display: none;
     }
 }
 

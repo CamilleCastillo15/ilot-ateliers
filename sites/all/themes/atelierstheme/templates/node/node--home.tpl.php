@@ -26,7 +26,11 @@
         <?php //print $styles; ?>
         
          <img class="header-img-mobile" src="../<?php print $theme; ?>/images/bkg_home_mobile.png" alt="header" title="header" />
+<<<<<<< HEAD
 
+=======
+         
+>>>>>>> origin/master
          <img class="header-img-web" src="../<?php print $theme; ?>/images/bkg_home_web.png" alt="header" title="header" />
         
          <img class="logo-img" src="../<?php print $theme; ?>/images/logo.png" alt="logo" title="logo" />
@@ -44,6 +48,7 @@
 
         </p>
 
+<<<<<<< HEAD
 
             <?php
 
@@ -71,12 +76,45 @@
 
                     foreach($result_ateliers as $key => $value) {
 
+=======
+            
+            <?php 
+        
+                foreach($result_ateliers as $key => $value) { 
+
+                      $n = node_load($value->nid);
+
+                      $link =drupal_get_path_alias("node/".$value->nid);
+                      $picto = field_view_field("node",$n,'field_picto');
+                      $title = field_view_field("node",$n,'field_title');
+                      $class = field_view_field("node",$n,'field_class');
+
+                      $title_render = render($title);
+                      $class_render = render($class);
+                      $picto_render = render($picto);
+
+                      print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers', $class_render))));
+                      $title_render = render($title);
+
+                      // print l($picto_render,$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));
+                                                                 
+                } 
+        
+                echo "<div class=\"container-title-pictos\">";
+        
+                    foreach($result_ateliers as $key => $value) {  
+                        
+>>>>>>> origin/master
                       $n = node_load($value->nid);
 
                       $link =drupal_get_path_alias("node/".$value->nid);
                       $title = field_view_field("node",$n,'field_title');
                       $class = field_view_field("node",$n,'field_class');
+<<<<<<< HEAD
 
+=======
+                        
+>>>>>>> origin/master
                       $title_render = render($title);
                       $class_render = render($class);;
 
@@ -84,6 +122,7 @@
                                 print l($title_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers'))));
                             echo "</p>";
 
+<<<<<<< HEAD
                     }
 
                 echo "</div>";
@@ -95,6 +134,19 @@
 
     <div class="home-body-actu">
 
+=======
+                    } 
+        
+                echo "</div>";
+        
+        
+        ?>
+
+    </div>
+        
+    <div class="home-body-actu">
+      
+>>>>>>> origin/master
        <?php 
         
          foreach($result as $key => $value){ ?>

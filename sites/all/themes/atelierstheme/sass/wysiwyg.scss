@@ -1,4 +1,5 @@
 body{
+
     font-family: arial;
 
 }
@@ -20,7 +21,8 @@ h1{
 h2{
     &.wsubtitle{
         font-size:1.5em;
-        color: #f7941d;
+        color: black;
+        //color: #f7941d;
 
     }
 }

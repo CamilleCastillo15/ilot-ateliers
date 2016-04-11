@@ -1,0 +1,167 @@
+<?php
+
+    $img_fond = field_view_field("node",$node,'field_image_fond');
+
+    $view = views_get_view('ateliers');
+    $view->execute();
+
+    $result = $view->result;
+
+    //dpm($result);
+    
+    $img_auto_bleue = field_view_field("node",$node,'field_image_auto_bleue');
+    $img_menuiserie = field_view_field("node",$node,'field_image_menuiserie');
+    $img_ilot_gourmand = field_view_field("node",$node,'field_image_ilot_gourmand');
+
+    $auto_bleue_text = field_view_field("node",$node,'field_auto_bleue');
+    $menuiserie_text = field_view_field("node",$node,'field_menuiserie');
+    $ilot_gourmand_text = field_view_field("node",$node,'field_ilot_gourmand');
+
+    $auto_bleue_picto = field_view_field("node",$node,'field_picto_auto_bleue');
+    $menuiserie_picto = field_view_field("node",$node,'field_picto_menuiserie');
+    $ilot_gourmand_picto = field_view_field("node",$node,'field_picto_ilot_gourmand');
+
+ ?>
+         
+        <?php $theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
+<<<<<<< HEAD
+          
+        <div class="home-services">
+            
+            <img src="images/Calque-1.png">
+            
+            <h1 class="title-services">Nos services</h1>
+            
+            <img class="header-img mobile" src="../<?php print $theme; ?>/images/header_home_services.png" alt="header" title="header" />
+            
+            <img class="auto_bleue_mobile" src="../<?php print $theme; ?>/images/bkg_auto_bleue_home.png" alt="auto bleue" title="auto bleue">
+            
+            <div class="container picto">
+                
+                <img class="picto_ateliers atelier_bleu" src="../<?php print $theme; ?>/images/auto_bleue_logo.svg" alt="MerdegLayers" />
+                 
+            </div>
+=======
+        
+        <div class="home-services bkg-blanc"> 
+>>>>>>> 469adff
+            
+            <div class="imagetitle">
+                <div class="image"><?php print render($img_fond); ?></div>
+                <div class="title">Nos Services</div>
+            </div>
+            
+<<<<<<< HEAD
+            <img class="menuserie_mobile" src="../<?php print $theme; ?>/images/bkg_menuiserie_home.png" alt="menuiserie" title="menuiserie">
+            
+            <div class="container picto">
+            
+                 <img class="picto_ateliers menuiserie" src="../<?php print $theme; ?>/images/menuiserie_logo.svg" alt="MerdegLayers" />
+             
+            </div>
+            
+            <div class="text">
+                
+                
+                <p class="title">
+                    
+                    La menuiserie
+                    
+                </p>
+                
+                     La menuiserie entretient, rénove ou conçoit sur mesure
+                    des meubles (tables, chaises, bibliothèques...) mais aussi des planchers, des volets ou des escaliers.
+                    <br />
+                    <br />
+                    Vous pouvez aussi faire appel à notre équipe pour des travaux d'aérogommage, pour un meuble en bois, une pièce métallique ou une façade !
+ 
+                <br />
+                <br />
+               
+                <div class="plus">
+                    
+                    en savoir plus    > 
+                    
+=======
+            <div class="container-containers">
+                  
+                  <?php 
+        
+                    foreach($result as $key => $value){ ?>
+                       
+                       <div class="container"> 
+                        
+                            <?php
+
+                                    $n = node_load($value->nid);
+                        
+                                    $link =drupal_get_path_alias("node/".$value->nid);
+                        
+                                    $im = field_view_field("node",$n,'field_image_presentation');
+                                    $tx = field_view_field("node",$n,'field_texte_presentation');
+                                    $picto = field_view_field("node",$n,'field_picto');
+                                    $title = field_view_field("node",$n,'field_title');
+                     
+                                    echo "<div class=\"pictotitlecontainer\">";
+                                        echo "<div class=\"image\">";
+                                            print render($im);
+                                        echo "</div>";
+                                        echo "<div class=\"pictotitle\">";
+                                            print render($picto);
+                                        echo "</div>";
+                                    echo "</div>";
+                                    echo "<div class=\"text-presentation\">";
+                                        print render($tx);
+                                    echo "</div>";
+                        
+                                    print l("en savoir plus<img class=\"f_g_droite\" src=\"../".$theme."/images/f_blanches/f_droite.svg\" alt=\"logo\" title=\"logo\" >",$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));                    
+                                    
+                                 ?>
+
+>>>>>>> 469adff
+                </div>
+                        
+                        <?php    }?>
+                        
+                    <img src="images/MergedLayers.png">
+            
+<<<<<<< HEAD
+            <img class="ilot_gourmand_mobile" src="../<?php print $theme; ?>/images/bkg_ilot_gourmand_home.png" alt="îlot gourmand" title="îlot gourmand">
+            
+            <div class="container picto">
+            
+                <img class="picto_ateliers cuisine" src="../<?php print $theme; ?>/images/ilot_gourmand_logo.svg" alt="MerdegLayers" />
+            
+            </div>
+            
+             <div class="text">
+                
+                
+                <p class="title">
+                    
+                    L'îlot gourmand
+                    
+                </p>
+                
+                 L'Îlot gourmand, c'est un peu plus qu'un restaurant.
+ 
+                C'est aussi une cuisine centrale au service des collectivités, et une activité de traiteur pour vos fêtes et réceptions.
+                
+                <br />
+                <br />
+                 
+                <div class="plus">
+                    
+                    en savoir plus    >
+                    
+                </div>
+                
+=======
+>>>>>>> 469adff
+            </div>
+            
+        </div>
+        
+
+
+           

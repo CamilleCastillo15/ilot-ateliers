@@ -4,7 +4,11 @@
        <img class="logo" src="../<?php print $theme; ?>/images/logo.png" alt="logo" title="logo" />
         <?php print render($page['header']); ?>
 </div>
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/master
 <div <?php print $attributes;?>>
 
     <div class="clear"></div>
@@ -33,15 +37,26 @@
 </footer>
 
 <div class="l-off h">
+<<<<<<< HEAD
 
     <img class="logo" src="../<?php print $theme; ?>/images/logo.png" alt="logo" title="logo" />
     <?php print render($page['off']); ?>
 
+=======
+   
+    <img class="logo" src="../<?php print $theme; ?>/images/logo.png" alt="logo" title="logo" />
+    <?php print render($page['off']); ?>
+    
+>>>>>>> origin/master
     <div class="reseaux">
         <img class="twitter" src="../<?php print $theme; ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
         <img class="linkedin" src="../<?php print $theme; ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" />
     </div>
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/master
 </div>
 
 <div class="burger h">
