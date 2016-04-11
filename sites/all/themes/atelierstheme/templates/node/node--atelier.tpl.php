@@ -50,15 +50,15 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
         <?php print render($body); ?>
     </div>
     
-    <div class="atelier-gallerie">
+    <div class="atelier-gallerie swiper-container">
        
-        <div class="atelier-gallerie-big">
+        <div class="atelier-gallerie-big swiper-wrapper">
             
             <?php
             
                 foreach($gallerie as $key => $value){ ?>
                    
-                    <div class="atelier-gallerie-image">
+                    <div class="atelier-gallerie-image swiper-slide">
                         <?php
                             $imagea = field_view_value('node', $node, 'field_image_multi', $value);
                             print render($imagea);
