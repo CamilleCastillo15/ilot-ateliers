@@ -1,40 +1,66 @@
+<?php
+
+    $styles  = drupal_get_css();
+
+    $view_ateliers = views_get_view('ateliers');
+    $view_ateliers->execute();
+
+    $result_ateliers = $view_ateliers->result;
+
+?>
+
 <div class="autres_services">
 
     <?php $theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
 
-    <h1>autres services</h1>
+        <h1>autres services</h1>
+    
+    <?php  
+              
+          echo "<div class=\"img-pictos\">";
 
-    <div class="img-pictos">
+            foreach($result_ateliers as $key => $value) { 
 
-        <img class="picto_ateliers atelier_bleu" src="../<?php print $theme; ?>/images/auto_bleue_logo.svg" alt="MerdegLayers" />
-        <img class="picto_ateliers menuiserie" src="../<?php print $theme; ?>/images/menuiserie_logo.svg" alt="MerdegLayers" />
-        <img class="picto_ateliers cuisine" src="../<?php print $theme; ?>/images/ilot_gourmand_logo.svg" alt="MerdegLayers" />
+              $n = node_load($value->nid);
 
-    </div>
+              $link =drupal_get_path_alias("node/".$value->nid);
+              $picto = field_view_field("node",$n,'field_picto');
+              $class = field_view_field("node",$n,'field_class');
 
+              $class_render = render($class);
+              $picto_render = render($picto);
 
-    <div class="container-title-pictos">
+                print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers', $class_render))));
 
-        <p class="title-pictos auto_bleue">
+            }
 
-            auto bleue
+          echo "</div>";
 
-        </p>
+          echo "<div class=\"container-title-pictos\">";
 
-         <p class="title-pictos menuiserie">
+            foreach($result_ateliers as $key => $value) { 
 
-            La menuiserie
+              $n = node_load($value->nid);
 
-        </p>
+              $link =drupal_get_path_alias("node/".$value->nid);
+              $picto = field_view_field("node",$n,'field_picto');
+              $title = field_view_field("node",$n,'field_title');
+              $class = field_view_field("node",$n,'field_class');
 
-        <p class="title-pictos ilot_gourmand">
+              $class_render = render($class);
+              $title_render = render($title);
+              $picto_render = render($picto);
+            
+              echo "<div class=\"title-pictos ".$class_render."\">";
+            
+                print l($title_render, $link,array("html"=>true));
+            
+              echo "</div>";
 
-            L'ilôt gourmand
+            }
 
-        </p>
-
-    </div>
+          echo "</div>";
+    
+    ?>
 
 </div>
-
-<img src="images/Calque-2.png"

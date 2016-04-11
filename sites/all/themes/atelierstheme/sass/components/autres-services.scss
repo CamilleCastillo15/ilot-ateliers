@@ -1,0 +1,81 @@
+@import "breakpoint";
+@import "singularitygs";
+@import "../variables/variables";
+
+.autres_services {
+    
+    @include grid-span(12, 1);
+    background-color: white;
+    text-align: center;
+    padding: 5vw;
+    
+    h1 {
+        
+        text-transform: uppercase;
+        font-family: 'SourceSansProRegular';
+        font-size: 4vw;
+        
+        @include breakpoint($laptopl) {
+            font-size: 3vw;
+        }
+        
+    }
+    
+    .img-pictos {
+        
+        @include breakpoint($laptopl) {
+            margin-top: 4vw;
+        }
+        
+        .picto_ateliers {
+            
+            width: 15vw;
+            margin: 7vw 7vw 2vw 7vw;
+            
+            img {
+                
+                width: 12vw;
+                margin-top: 2vw;
+                
+            }
+            
+        }
+        
+    }
+    
+    .container-title-pictos {
+        position: relative;
+        margin-top: 2vw;
+        font-size: 2.5vw;
+            
+        .menuiserie {
+
+                
+                margin-left: 11vw;
+                
+        }
+        
+        .ilot_gourmand {
+
+                
+                margin-left: 9vw;
+                
+        }
+        
+        .auto_bleue {
+
+                margin-left: 9vw;
+
+        }
+
+        .title-pictos {
+
+            font-family: 'SourceSansProRegular';
+            text-transform: uppercase;
+            float: left;
+
+        }
+        
+    }
+    
+}

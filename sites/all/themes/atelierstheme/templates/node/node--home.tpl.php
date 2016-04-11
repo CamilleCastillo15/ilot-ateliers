@@ -26,9 +26,10 @@
         <?php //print $styles; ?>
         
          <img class="header-img-mobile" src="../<?php print $theme; ?>/images/bkg_home_mobile.png" alt="header" title="header" />
+         
          <img class="header-img-web" src="../<?php print $theme; ?>/images/bkg_home_web.png" alt="header" title="header" />
         
-          <img class="logo-img" src="../<?php print $theme; ?>/images/logo.png" alt="logo" title="logo" />
+         <img class="logo-img" src="../<?php print $theme; ?>/images/logo.png" alt="logo" title="logo" />
            
     <div class="block-w">
 
@@ -88,43 +89,12 @@
                 echo "</div>";
         
         
-              /*
-
-                    <img class="picto_ateliers atelier_bleu" src="../<?php print $theme; ?>/images/auto_bleue_logo.svg" alt="MerdegLayers" />
-                    <img class="picto_ateliers menuiserie" src="../<?php print $theme; ?>/images/menuiserie_logo.svg" alt="MerdegLayers" />
-                    <img class="picto_ateliers cuisine" src="../<?php print $theme; ?>/images/ilot_gourmand_logo.svg" alt="MerdegLayers" />
-
-                <br />
-
-                <div class="container-title-pictos">
-
-                    <p class="title-pictos auto_bleue">
-
-                        auto bleue
-
-                    </p>
-
-                     <p class="title-pictos menuiserie">
-
-                        La menuiserie
-
-                    </p>
-
-                    <p class="title-pictos ilot_gourmand">
-
-                        L'ilôt gourmand
-
-                    </p>
-
-                </div>
-
-            */
-        
         ?>
 
     </div>
         
     <div class="home-body-actu">
+      
        <?php 
         
          foreach($result as $key => $value){ ?>
