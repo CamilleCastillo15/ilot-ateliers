@@ -8,7 +8,7 @@
     $result = $view->result;
 
     //dpm($result);
-
+    
     $img_auto_bleue = field_view_field("node",$node,'field_image_auto_bleue');
     $img_menuiserie = field_view_field("node",$node,'field_image_menuiserie');
     $img_ilot_gourmand = field_view_field("node",$node,'field_image_ilot_gourmand');
@@ -22,10 +22,10 @@
     $ilot_gourmand_picto = field_view_field("node",$node,'field_picto_ilot_gourmand');
 
  ?>
-
+         
         <?php $theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
-
-        <div class="home-services bkg-blanc">
+        
+        <div class="home-services bkg-blanc"> 
             
             <div class="imagetitle">
                 <div class="image"><?php print render($img_fond); ?></div>
@@ -33,24 +33,24 @@
             </div>
             
             <div class="container-containers">
-
-                  <?php
-
+                  
+                  <?php 
+        
                     foreach($result as $key => $value){ ?>
-
+                       
                        <div class="container">
-
+                        
                             <?php
 
                                     $n = node_load($value->nid);
-
+                        
                                     $link =drupal_get_path_alias("node/".$value->nid);
-
+                        
                                     $im = field_view_field("node",$n,'field_image_presentation');
                                     $tx = field_view_field("node",$n,'field_texte_presentation');
                                     $picto = field_view_field("node",$n,'field_picto');
                                     $title = field_view_field("node",$n,'field_title');
-
+                     
                                     echo "<div class=\"pictotitlecontainer\">";
                                         echo "<div class=\"image\">";
                                             print render($im);
@@ -62,19 +62,19 @@
                                     echo "<div class=\"text-presentation\">";
                                         print render($tx);
                                     echo "</div>";
-
-                                    print l("en savoir plus<img class=\"f_g_droite\" src=\"".$theme."/images/f_blanches/f_droite.svg\" alt=\"logo\" title=\"logo\" >",$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));
-
+                        
+                                    print l("en savoir plus<img class=\"f_g_droite\" src=\"".$theme."/images/f_blanches/f_droite.svg\" alt=\"logo\" title=\"logo\" >",$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));                    
+                                    
                                  ?>
 
                 </div>
-
+                        
                         <?php    }?>
-
+            
             </div>
             
         </div>
-
+        
 
 
            
