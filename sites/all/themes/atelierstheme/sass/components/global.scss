@@ -25,37 +25,112 @@ body {
     font-size:15px;
     padding:4vw;
 
-     @include breakpoint($laptop) {
+ @include breakpoint($laptop) {
 
-            font-size:1.25vw;
+        font-size:1.25vw;
+
+    }
+
+ @include breakpoint($laptopl) {
+
+        font-size:20px;
+
+    }
+
+    p {
+
+        padding:0 2vw;
+
+    }
+
+    h1 {
+
+       text-transform: uppercase;
+       font-family: 'SourceSansProSemiBold';
+       font-size:20px;
+       padding: 20px 0;
+
+        @include breakpoint($laptop) {
+
+            font-size:25px;
+            padding: 1.5vw 0;
 
         }
 
-     @include breakpoint($laptopl) {
+         @include breakpoint($laptopl) {
+
+            font-size:30px;
+            padding: 25px 0
+
+        }
+
+    }
+
+    h1.wtitle {
+
+       text-transform: uppercase;
+       font-family: 'SourceSansProSemiBold';
+       font-size:20px;
+       padding: 20px 0;
+
+        @include breakpoint($laptop) {
+
+            font-size:25px;
+            padding: 1.5vw 0;
+
+        }
+
+         @include breakpoint($laptopl) {
+
+            font-size:30px;
+            padding: 25px 0
+
+        }
+
+    }
+
+    h2.wsubtitle {
+
+       text-transform: uppercase;
+       font-family: 'SourceSansProSemiBold';
+       font-size:15px;
+       padding: 20px 0;
+
+        @include breakpoint($laptop) {
 
             font-size:20px;
+            padding: 1.5vw 0;
 
         }
 
-        h1 {
+         @include breakpoint($laptopl) {
 
-           text-transform: uppercase;
-           font-family: 'SourceSansProSemiBold';
-           font-size:20px;
+            font-size:25px;
+            padding: 25px 0;
 
-            @include breakpoint($laptop) {
+        }
 
-                font-size:2vw;
 
-            }
 
-             @include breakpoint($laptopl) {
+    }
 
-                font-size:30px;
+    em {
 
-            }
+        font-family: 'SourceSansProItalic';
 
-           padding: 1.5vw 0;
+    }
+
+    ol {
+
+        list-style: decimal;
+        padding:0 4vw;
+
+    }
+
+    ul {
+
+        list-style: initial;
+        padding:0 4vw;
 
     }
 

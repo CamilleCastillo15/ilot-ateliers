@@ -17,24 +17,12 @@ $img = field_view_field("node",$atelier,'field_image');
 
 $couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
 
-drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
+drupal_add_css('.atelier .wtitle, .atelier .wsubtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
 drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
 
 
 $lservice = drupal_get_path_alias("node/".$atelier->nid);
-/*
-
-$link = field_get_items("node",$node,'field_link');
-$flag = field_view_field("node",$node,'field_flag');
-$build_body = field_view_field('node', $node, 'body', 'teaser');
-
-<a href="<?php   print $link[0]["value"]; ?>" target="_blank">
-    <div class="title"><?php print $title; ?></div>
-    <div class="flag"><?php print render($flag); ?></div>
-    <div class="logo"><?php print render($logo); ?></div>
-</a>
-
-*/?>
+?>
 
 <div class="atelier">
 
@@ -69,11 +57,7 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
 
     <div class="atelier-header">
 
-        <div class="left">
-
-            <?php print render($imgactu); ?>
-
-        </div>
+        <?php print render($imgactu); ?>
 
         <div class="text-presentation">
 

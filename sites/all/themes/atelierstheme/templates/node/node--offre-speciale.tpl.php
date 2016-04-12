@@ -17,6 +17,8 @@
     drupal_add_css('.offre'.$node->nid.' {border-bottom: 3px solid'.$couleur.';} ', 'inline');
 
     drupal_add_css('.offre-detail'.$node->nid.' .wtitle {color:'.$couleur.';} ', 'inline');
+    drupal_add_css('.offre-detail'.$node->nid.' .wsubtitle {color:'.$couleur.';} ', 'inline');
+
     $link = drupal_get_path_alias("node/".$node->nid);
 
 ?>
@@ -43,7 +45,7 @@
 
           <?php print l("lire la suite" ,$link  , array("html"=>true, 'attributes' => array('class' => array('plus')))); ?>
 
-            </div>
+             </div>
 
         </div>
 
@@ -56,11 +58,7 @@
 
         <div class="offres-speciales-header">
 
-            <div class="left">
-
-                <?php print render($imgactu); ?>
-
-            </div>
+            <?php print render($imgactu); ?>
 
             <div class="text-presentation">
 
