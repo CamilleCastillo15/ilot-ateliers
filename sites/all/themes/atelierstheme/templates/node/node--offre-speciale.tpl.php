@@ -23,8 +23,6 @@
 
 ?>
 
-
-
 <?php if($teaser){ ?>
 
     <div class="offre-speciale actus teaser <?php print 'offre'.$node->nid ?>">

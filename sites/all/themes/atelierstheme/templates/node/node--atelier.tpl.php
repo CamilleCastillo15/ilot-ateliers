@@ -47,65 +47,70 @@
         
     </div>
     
-    <div class="atelier-body atelier-color">
+    <div class="text-presentation atelier-color">
         <?php print render($body); ?>
     </div>
     
-    <div class="atelier-gallerie">
+        <div class="atelier-gallerie">
 
-        <div class="atelier-gallerie-big">
-    <div class="atelier-gallerie swiper-container">
-       
-        <div class="atelier-gallerie-big swiper-wrapper">
-            
-            <?php
-            
-                foreach($gallerie as $key => $value){ ?>
-                   
-                    <div class="atelier-gallerie-image swiper-slide">
-                        <?php
-                            $imagea = field_view_value('node', $node, 'field_image_multi', $value);
-                            print render($imagea);
-                        ?>
+                <div class="atelier-gallerie-big">
+
+                    <div class="atelier-gallerie swiper-container">
+
+                        <div class="atelier-gallerie-big swiper-wrapper">
+
+                            <?php
+
+                                foreach($gallerie as $key => $value){ ?>
+
+                                    <div class="atelier-gallerie-image swiper-slide">
+                                        <?php
+                                            $imagea = field_view_value('node', $node, 'field_image_multi', $value);
+                                            print render($imagea);
+                                        ?>
+                                    </div>
+
+                                <?php
+
+                                    }
+
+                                ?>
+
+                        </div>
+
+                        <div class="atelier-gallerie-thumbnails">
+
+                            <?php foreach($gallerie as $key => $value){ ?>
+
+                                <div class="atelier-gallerie-image">
+                                    <?php
+                                        $imagea = field_view_value('node', $node, 'field_image_multi', $value,array(
+                                            'type' => 'image',
+                                            'settings' => array(
+                                                'image_style' => 'gallerie_thumb',
+                                            ),
+                                        ));
+                                        print render($imagea);
+                                    ?>
+                                </div>
+                            <?php
+
+                                }
+
+                            ?>
+
+                        </div>
+
                     </div>
-                    
-                <?php
-                    
-                    }
 
-                ?>
-            
+            <div class="contact">
+
+                Nous contacter
+
+            </div>
+
         </div>
 
-        <div class="atelier-gallerie-thumbnails">
-             
-            <?php foreach($gallerie as $key => $value){ ?>
-               
-                <div class="atelier-gallerie-image">
-                    <?php
-                        $imagea = field_view_value('node', $node, 'field_image_multi', $value,array(
-                            'type' => 'image',
-                            'settings' => array(
-                                'image_style' => 'gallerie_thumb',
-                            ),
-                        ));
-                        print render($imagea);
-                    ?>
-                </div>
-            <?php 
-                
-                } 
-            
-            ?>
-            
-        </div>
-        
     </div>
-    
-    <div class="contact">
-        
-        Nous contacter
-        
-    </div>
-    
+
 </div>

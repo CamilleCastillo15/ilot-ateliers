@@ -1,27 +1,30 @@
 <?php
-/*
-$view = views_get_view('actus');
-$view->execute();
-$result = $view->result;
-*/
 
-$title = field_view_field("node",$node,'field_title');
-$imgactu = field_view_field("node",$node,'field_image');
+    /*
+    $view = views_get_view('actus');
+    $view->execute();
+    $result = $view->result;
+    */
 
-$body = field_view_field("node",$node,'body');
-$atelier = field_get_items("node",$node,'field_atelier')[0]["entity"];
+    $title = field_view_field("node",$node,'field_title');
+    $imgactu = field_view_field("node",$node,'field_image');
 
-$ftitle = field_view_field("node",$atelier,'field_title');
-$picto = field_view_field("node",$node,'field_picto');
-$img = field_view_field("node",$atelier,'field_image');
+    $body = field_view_field("node",$node,'body');
+    $atelier = field_get_items("node",$node,'field_atelier')[0]["entity"];
 
-$couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
+    $ftitle = field_view_field("node",$atelier,'field_title');
+    $picto = field_view_field("node",$node,'field_picto');
+    $img = field_view_field("node",$atelier,'field_image');
 
-drupal_add_css('.atelier .wtitle, .atelier .wsubtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
-drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
+    $couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
+
+    drupal_add_css('.atelier .wtitle, .atelier .wsubtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
+    drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
+    drupal_add_css('.actus{border-bottom: 3px solid '.$couleur.';} ', 'inline');
 
 
-$lservice = drupal_get_path_alias("node/".$atelier->nid);
+    $lservice = drupal_get_path_alias("node/".$atelier->nid);
+
 ?>
 
 <div class="atelier">
@@ -39,6 +42,7 @@ $lservice = drupal_get_path_alias("node/".$atelier->nid);
         <div class="title">
             <?php print render($ftitle); ?>
         </div>
+
         <div class="triangle-left"></div><!--
         --><div class="triangle-right"></div>
 
