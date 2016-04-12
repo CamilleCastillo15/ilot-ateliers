@@ -61,6 +61,69 @@ body {
 
 }
 
+.text-actus {
+
+    font-size:15px;
+    padding:4vw;
+
+     @include breakpoint($laptop) {
+
+            font-size:1.25vw;
+
+        }
+
+     @include breakpoint($laptopl) {
+
+            font-size:20px;
+
+        }
+
+        h1 {
+
+           text-transform: uppercase;
+           font-family: 'SourceSansProSemiBold';
+           font-size:20px;
+
+            @include breakpoint($laptop) {
+
+                font-size:2vw;
+
+            }
+
+             @include breakpoint($laptopl) {
+
+                font-size:30px;
+
+            }
+
+           padding: 1vw 0;
+
+    }
+
+    h1.wtitle {
+
+        text-transform: lowercase;
+        font-family: 'SourceSansProRegular';
+        font-size:15px;
+
+         @include breakpoint($laptop) {
+
+                font-size:1.25vw;
+
+            }
+
+         @include breakpoint($laptopl) {
+
+                font-size:20px;
+
+            }
+
+        padding: 0;
+
+    }
+
+}
+
     .pictotitlecontainer {
 
         width:100%;
@@ -123,5 +186,72 @@ body {
             }
 
         }
+
+    }
+
+
+.actus {
+
+        border-bottom-width:3px;
+        border-bottom-style:solid;
+        margin: 50px 50px;
+
+//        @include breakpoint($laptop) {
+//
+//                height: 207px;
+//
+//        }
+
+        .views-field-field-image {
+
+            @include breakpoint($laptop) {
+
+                float: left;
+
+            }
+
+        }
+
+        .views-field-field-title {
+
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size:22px;
+            padding:10px 0px;
+        }
+
+        .views-field-view-node  {
+
+            @include breakpoint($laptop) {
+
+                float: right;
+
+            }
+
+            width:150px;
+            text-align: center;
+            margin:30px 0;
+            border: 1px solid black;
+            padding: 5px 25px;
+
+        }
+
+        div {
+
+            &:not(:first-child) {
+
+                max-width:750px;
+
+                @include breakpoint($laptop) {
+
+                    margin-left:250px;
+
+                }
+
+            }
+
+
+        }
+
 
     }

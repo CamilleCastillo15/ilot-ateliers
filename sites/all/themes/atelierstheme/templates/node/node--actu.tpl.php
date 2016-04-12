@@ -63,28 +63,26 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
 
     </div>
 
-
 </div>
 
-    <div class="atelier actu-detail">
+<div class="atelier actu-detail">
 
-        <div class="atelier-header">
+    <div class="atelier-header">
 
-            <div class="left">
+        <div class="left">
 
-                <?php print render($imgactu); ?>
+            <?php print render($imgactu); ?>
 
-            </div>
+        </div>
 
-            <div class="text-presentation">
+        <div class="text-presentation">
 
-                <h1> <?php print render($title); ?> </h1>
-                <?php print render($body); ?>
-
-            </div>
+            <h1> <?php print render($title); ?> </h1>
+            <?php print render($body); ?>
 
         </div>
 
     </div>
 
 </div>
+

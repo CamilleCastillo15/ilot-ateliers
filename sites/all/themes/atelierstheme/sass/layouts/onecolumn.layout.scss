@@ -19,6 +19,14 @@ a {
 }
 
 .l-header {
+
+
+    &.text-presentation {
+
+        padding: 0;
+
+    }
+
     display: none;
     margin: 0 auto;
     position: relative;
@@ -36,44 +44,7 @@ a {
         padding-top:30px;
         margin-left: auto;
         margin-right: auto;
-        
-//        @include breakpoint($mobiles) {
-//
-//            top:80vw;
-//            height:358px;
-//            width:300px;
-//
-//        }
-//
-//        @include breakpoint($mobilem) {
-//
-//            height:350x;
-//            width:350px;
-//
-//        }
-//
-//        @include breakpoint($mobilel) {
-//
-//            height:85vw;
-//            width:85vw;
-//
-//        }
-//
-//        @include breakpoint($tablet) {
-//
-//            top:600px;
-//            height:650px;
-//            width:650px;
-//
-//        }
-//
-//        @include breakpoint($laptop) {
-//
-//            top: 13vw;
-//            height: 23vw;
-//            width: 76vw;
-//
-//        }
+
 
         .par-bienvenue {
             
@@ -289,9 +260,7 @@ a {
     .menu {
     
         text-transform: uppercase;
-        padding: 1vw;
         text-align: center;
-        font-size: 1.25vw;
         
         .leaf {
             
@@ -609,7 +578,6 @@ a {
     .bloc2 {
         
         background-color: #00a886;
-        padding: 60px 0;
 
         @include breakpoint($laptop) {
 
@@ -617,31 +585,18 @@ a {
 
         }
         
-        .text {
+        .text-presentation {
             
             font-family: "SourceSansProLight";
 
             color: #ffffff;
             text-align: center;
-            font-size:3.5vw;
 
-             @include breakpoint($laptop) {
-
-                font-size:1.5vw;
-
-            }
             
             h1 {
                 
                 font-family: "SourceSansProRegular";
                 text-transform: uppercase;
-                font-size:4vw;
-
-                @include breakpoint($laptop) {
-
-                    font-size:2vw;
-
-                }
                 
             }
             
@@ -662,12 +617,6 @@ a {
     }
 
     display: block;
-    
-}
-
-.home {
-    
-    
     
 }
 
