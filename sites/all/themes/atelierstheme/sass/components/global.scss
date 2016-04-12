@@ -61,69 +61,6 @@ body {
 
 }
 
-.text-actus {
-
-    font-size:15px;
-    padding:4vw;
-
-     @include breakpoint($laptop) {
-
-            font-size:1.25vw;
-
-        }
-
-     @include breakpoint($laptopl) {
-
-            font-size:20px;
-
-        }
-
-        h1 {
-
-           text-transform: uppercase;
-           font-family: 'SourceSansProSemiBold';
-           font-size:20px;
-
-            @include breakpoint($laptop) {
-
-                font-size:2vw;
-
-            }
-
-             @include breakpoint($laptopl) {
-
-                font-size:30px;
-
-            }
-
-           padding: 1vw 0;
-
-    }
-
-    h1.wtitle {
-
-        text-transform: lowercase;
-        font-family: 'SourceSansProRegular';
-        font-size:15px;
-
-         @include breakpoint($laptop) {
-
-                font-size:1.25vw;
-
-            }
-
-         @include breakpoint($laptopl) {
-
-                font-size:20px;
-
-            }
-
-        padding: 0;
-
-    }
-
-}
-
     .pictotitlecontainer {
 
         width:100%;
@@ -190,19 +127,19 @@ body {
     }
 
 
-.actus {
+.actus, .offre-speciale {
 
-        border-bottom-width:3px;
-        border-bottom-style:solid;
+//        border-bottom-width:3px;
+//        border-bottom-style:solid;
         margin: 50px 50px;
 
-//        @include breakpoint($laptop) {
-//
-//                height: 207px;
-//
-//        }
+        @include breakpoint($laptop) {
 
-        .views-field-field-image {
+                min-height: 207px;
+
+        }
+
+        .views-field-field-image, img {
 
             @include breakpoint($laptop) {
 
@@ -212,7 +149,7 @@ body {
 
         }
 
-        .views-field-field-title {
+        .views-field-field-title,  .title-offre-speciale {
 
             text-transform: uppercase;
             font-weight: 900;
@@ -220,7 +157,7 @@ body {
             padding:10px 0px;
         }
 
-        .views-field-view-node  {
+        .views-field-view-node, .plus  {
 
             @include breakpoint($laptop) {
 
@@ -250,8 +187,43 @@ body {
 
             }
 
+        }
+
+    }
+
+
+.pager {
+
+    clear: both;
+    padding: 0;
+    text-align: right;
+    margin: 50px 50px;
+
+    .pager__item--current {
+
+        padding: 1.5px 13.5px;
+        text-align: center;
+        color: white;
+
+    }
+
+}
+
+.offre-speciale {
+
+    img {
+
+         width:220px;
+         height:84px;
+
+        @include breakpoint($laptop) {
+
+            float: left;
 
         }
 
-
     }
+
+}
+
+

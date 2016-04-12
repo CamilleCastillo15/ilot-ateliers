@@ -1,9 +1,4 @@
 <?php
-    /*
-    $view = views_get_view('actus');
-    $view->execute();
-    $result = $view->result;
-    */
 
     $imgactu = field_view_field("node",$node,'field_image');
     $title = field_view_field("node",$node,'field_title');
@@ -18,15 +13,15 @@
 
     $couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
 
+    drupal_add_css('.offre'.$node->nid.' {padding: 0 0 100px 0;} ', 'inline');
     drupal_add_css('.offre'.$node->nid.' {border-bottom: 3px solid'.$couleur.';} ', 'inline');
+
     drupal_add_css('.offre-detail'.$node->nid.' .wtitle {color:'.$couleur.';} ', 'inline');
+    $link = drupal_get_path_alias("node/".$node->nid);
 
 ?>
 
-<div class="imagetitle">
-    <div class="image"><?php print render($image); ?></div>
-    <div class="title">offres spéciales</div>
-</div>
+
 
 <?php if($teaser){ ?>
 
@@ -42,8 +37,11 @@
 
             <div class="text-actus">
 
-                <h1> <?php print render($title); ?> </h1>
+                <h1 class="title-offre-speciale"> <?php print render($title); ?> </h1>
                 <?php print render($body); ?>
+
+
+          <?php print l("lire la suite" ,$link  , array("html"=>true, 'attributes' => array('class' => array('plus')))); ?>
 
             </div>
 
@@ -54,7 +52,7 @@
 
 <?php }else{ ?>
 
-    <div class="offre-speciale <?php print 'offre-detail'.$node->nid ?>">
+    <div class="offre-speciale-detail <?php print 'offre-detail'.$node->nid ?>">
 
         <div class="offres-speciales-header">
 

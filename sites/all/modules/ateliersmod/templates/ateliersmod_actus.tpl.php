@@ -11,6 +11,7 @@
 
     drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
     drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
+    drupal_add_css('.pager__item--current{background-color:'.$couleur.';} ', 'inline');
 
     $lservice = drupal_get_path_alias("node/".$node->nid);
     dpm($lservice);

@@ -31,17 +31,11 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
 
 <div class="offres-speciales">
     <div class="atelier-header pictotitlecontainer">
-        <div class="atelier-header-bg image">
-            <?php print render($img); ?>
-        </div>
+       <div class="imagetitle">
+    <div class="image"><?php print render($image); ?></div>
+    <div class="title">offres spéciales</div>
+</div>
 
-        <div class="picto pictotitle">
-            <?php print render($picto); ?>
-        </div>
-
-        <div class="title">
-            <?php print render($ftitle); ?>
-        </div>
     </div>
     <?php print $view; ?>
 </div>
