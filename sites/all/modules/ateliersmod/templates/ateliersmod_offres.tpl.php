@@ -2,6 +2,7 @@
 
 
 $base = base_path();
+/*
 $ftitle = field_view_field("node",$node,'field_title');
 $picto = field_view_field("node",$node,'field_picto');
 $img = field_view_field("node",$node,'field_image');
@@ -12,9 +13,8 @@ $couleur = field_get_items("node",$node,'field_couleur')[0]['rgb'];
 
 drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
 drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
-
+*/
 /*
-
 $link = field_get_items("node",$node,'field_link');
 $flag = field_view_field("node",$node,'field_flag');
 $build_body = field_view_field('node', $node, 'body', 'teaser');
@@ -25,14 +25,12 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
     <div class="logo"><?php print render($logo); ?></div>
 </a>
 */
-$lservice = drupal_get_path_alias("node/".$node->nid);
-dpm($lservice);
+//$lservice = drupal_get_path_alias("node/".$node->nid);
+
 ?>
 
-<div class="atelier">
-
+<div class="offres-speciales">
     <div class="atelier-header pictotitlecontainer">
-
         <div class="atelier-header-bg image">
             <?php print render($img); ?>
         </div>
@@ -44,17 +42,6 @@ dpm($lservice);
         <div class="title">
             <?php print render($ftitle); ?>
         </div>
-        <div class="triangle-left"></div><!--
-        --><div class="triangle-right"></div>
-
-        <div class="liens">
-            <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
-            <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?>
-
-        </div>
-
     </div>
-
     <?php print $view; ?>
-
 </div>

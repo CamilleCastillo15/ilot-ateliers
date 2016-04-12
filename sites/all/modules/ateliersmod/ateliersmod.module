@@ -29,11 +29,19 @@ function ateliersmod_menu() {
         'access arguments' => array('access ateliersmod admin'),
         'type' => MENU_NORMAL_ITEM,
     );
-     $items['services/%/actus'] = array(
+    $items['services/%/actus'] = array(
         'title' => 'Actualités de l\'atelier' ,
         'description' => 'les actus de l\'atelier',
         'access callback' => TRUE,
          'page callback' => 'ateliersmod_pageactus',
+        'page arguments' => array(0,1),        
+        'type' => MENU_NORMAL_ITEM,
+    );
+    $items['offres-speciales'] = array(
+        'title' => 'Offres speciales' ,
+        'description' => 'Toutes les offres spéciales',
+        'access callback' => TRUE,
+         'page callback' => 'ateliersmod_pageoffres',
         'page arguments' => array(0,1),        
         'type' => MENU_NORMAL_ITEM,
     );
@@ -58,6 +66,18 @@ function ateliersmod_pageactus($arg,$hop){
         //return $view;
         return theme('ateliersmod_actus', array('view' => $view, 'node'=>$node));
     }
+    
+    //return NULL;
+   // return 'hop '.$arg . " ".$hop;
+}
+function ateliersmod_pageoffres($arg,$hop){
+
+    
+    
+    $view = views_embed_view('offres_speciales', 'block');
+    //return $view;
+    return theme('ateliersmod_offres', array('view' => $view));
+
     
     //return NULL;
    // return 'hop '.$arg . " ".$hop;
@@ -182,9 +202,13 @@ function ateliersmod_theme($existing, $type, $theme, $path){
   $bodyaddress = variable_get('ateliersmod_fsadress_text');
 
   return array(
+    'ateliersmod_offres' => array(
+        'template' => 'templates/ateliersmod_offres', // Change this to the template file name.
+        'variables' => array('view' => NULL), // This is the list of the variables that will be passed to the template file. 
+    ),
     'ateliersmod_actus' => array(
-      'template' => 'templates/ateliersmod_actus', // Change this to the template file name.
-      'variables' => array('id' => NULL), // This is the list of the variables that will be passed to the template file. 
+        'template' => 'templates/ateliersmod_actus', // Change this to the template file name.
+        'variables' => array('id' => NULL), // This is the list of the variables that will be passed to the template file. 
     ),  
     'ateliersmod_address' => array(
       'template' => 'templates/ateliersmod_address',

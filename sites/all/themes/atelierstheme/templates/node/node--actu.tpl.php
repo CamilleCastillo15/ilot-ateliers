@@ -20,6 +20,8 @@ $couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
 drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
 drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
 
+
+$lservice = drupal_get_path_alias("node/".$atelier->nid);
 /*
 
 $link = field_get_items("node",$node,'field_link');
@@ -31,6 +33,7 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
     <div class="flag"><?php print render($flag); ?></div>
     <div class="logo"><?php print render($logo); ?></div>
 </a>
+
 */?>
 
 <div class="atelier">
@@ -53,8 +56,8 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
 
         <div class="liens">
 
-            <a href="/services" class="services">service</a>
-            <a href="<?php print render($title); ?>/actus" class="actualites">actualités</a>
+          <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
+            <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?>
 
         </div>
 
