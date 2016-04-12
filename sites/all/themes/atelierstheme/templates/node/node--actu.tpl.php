@@ -64,24 +64,24 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
 </div>
 
     <div class="atelier actu-detail">
-   
+
         <div class="atelier-header">
-              
+
             <div class="left">
-               
+
                 <?php print render($imgactu); ?>
-                
+
             </div>
-                
+
             <div class="text-presentation">
 
                 <h1> <?php print render($title); ?> </h1>
                 <?php print render($body); ?>
-            
+
             </div>
 
         </div>
 
     </div>
-    
+
 </div>

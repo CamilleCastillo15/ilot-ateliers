@@ -2,13 +2,13 @@
 @import "../variables/variables";
 
 .picto_ateliers {
-    
+
     &:hover, &:link, &:active, &:visited {
         color: white;
-    } 
-    
+    }
+
     &.ilot_gourmand {
-        
+
         @include breakpoint($mobiles) {
             margin: 0 12vw;
         }
@@ -29,14 +29,14 @@
             margin: 0 2vw;
             margin-top: 3vw;
         }
-        
+
     }
-    
+
 //    &.menuiserie {
-//        
+//
 //        img {
-//            
-//            
+//
+//
 //            @include breakpoint($mobiles) {
 //                margin: 0 12vw;
 //            }
@@ -57,13 +57,13 @@
 //                margin: 0 2vw;
 //                margin-top: 3vw;
 //            }
-//               
+//
 //        }
 //
 //    }
 
     img {
-        
+
         height: auto;
         width: 15vw;
         @include breakpoint($tablet) {
@@ -76,7 +76,7 @@
             width: 150px;
             margin-top: 14px;
         }
-        
+
     }
 
 }
@@ -159,7 +159,7 @@
         @include breakpoint($laptopl) {
             margin: 0 50px;
             font-size: 51px;
-        }  
+        }
     }
     .container-title-pictos {
         position: relative;

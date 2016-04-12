@@ -3,28 +3,28 @@
 @import "../variables/mixin";
 
 body {
-    
+
     font-family: 'SourceSansProRegular';
-    
+
 }
 
 .bkg-blanc {
-    
+
     background-color:white;
-    
+
 }
 
 .left {
-    
+
     float:left;
-    
+
 }
 
 .text-presentation {
-    
+
     font-size:15px;
     padding:4vw;
-    
+
      @include breakpoint($laptop) {
 
             font-size:1.25vw;
@@ -55,7 +55,7 @@ body {
 
             }
 
-           padding: 1.5vw 0; 
+           padding: 1.5vw 0;
 
     }
 
@@ -67,9 +67,9 @@ body {
         position: relative;
 
         .image {
-            
+
              width:100%;
-            
+
         }
 
         .pictotitle {
@@ -78,15 +78,15 @@ body {
             position:absolute;
             top: 34%;
             left: 50%;
-            
+
             img {
-                
+
                 width:16vw;
-                
+
             }
 
         }
-        
+
         .title {
 
             @include translate(-50%,-50%);
@@ -98,9 +98,9 @@ body {
             font-size: 2.5vw;
 
         }
-        
+
         .liens {
-            
+
             @include translate(-50%,-50%);
             position:absolute;
             top: 93%;
@@ -109,19 +109,19 @@ body {
             color: white;
             font-size: 1.75vw;
             width: 50vw;
-            
+
             a {
-                
+
                 color:white;
-                
+
             }
-            
+
             .actualites {
-                
+
                 float: right;
-                
+
             }
-            
+
         }
 
     }

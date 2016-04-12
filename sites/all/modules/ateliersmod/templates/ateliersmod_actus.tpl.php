@@ -25,32 +25,32 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
 */?>
 
 <div class="atelier">
-   
+
     <div class="atelier-header pictotitlecontainer">
-       
+
         <div class="atelier-header-bg image">
             <?php print render($img); ?>
         </div>
-        
+
         <div class="picto pictotitle">
             <?php print render($picto); ?>
         </div>
-        
+
         <div class="title">
             <?php print render($ftitle); ?>
         </div>
         <div class="triangle-left"></div><!--
         --><div class="triangle-right"></div>
-        
+
         <div class="liens">
-            
+
             <a href="/services" class="services">service</a>
             <a href="<?php print render($title); ?>/actus" class="actualites">actualités</a>
-            
+
         </div>
-        
+
     </div>
-    
+
     <?php print $view; ?>
-    
+
 </div>

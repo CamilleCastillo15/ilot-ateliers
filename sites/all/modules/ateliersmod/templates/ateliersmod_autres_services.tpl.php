@@ -14,12 +14,12 @@
     <?php $theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
 
         <h1>autres services</h1>
-    
-    <?php  
-              
+
+    <?php
+
           echo "<div class=\"img-pictos\">";
 
-            foreach($result_ateliers as $key => $value) { 
+            foreach($result_ateliers as $key => $value) {
 
               $n = node_load($value->nid);
 
@@ -38,7 +38,7 @@
 
           echo "<div class=\"container-title-pictos\">";
 
-            foreach($result_ateliers as $key => $value) { 
+            foreach($result_ateliers as $key => $value) {
 
               $n = node_load($value->nid);
 
@@ -50,17 +50,17 @@
               $class_render = render($class);
               $title_render = render($title);
               $picto_render = render($picto);
-            
+
               echo "<div class=\"title-pictos ".$class_render."\">";
-            
+
                 print l($title_render, $link,array("html"=>true));
-            
+
               echo "</div>";
 
             }
 
           echo "</div>";
-    
+
     ?>
 
 </div>

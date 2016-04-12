@@ -1,5 +1,11 @@
 <?php
 
+$ftitle = field_view_field("node",$node,'field_title');
+$picto = field_view_field("node",$node,'field_picto');
+
+$bkg_mobile = field_view_field("node",$node,'field_image_mobile');
+$bkg_web = field_view_field("node",$node,'field_image_pc');
+
 $title = field_view_field("node",$node,'title');
 
 $ftitle = field_view_field("node",$node,'field_title');
@@ -13,18 +19,14 @@ $couleur = field_get_items("node",$node,'field_couleur')[0]['rgb'];
 
 drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
 drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
-/*
 
-$link = field_get_items("node",$node,'field_link');
-$flag = field_view_field("node",$node,'field_flag');
-$build_body = field_view_field('node', $node, 'body', 'teaser');
+?>
 
 <a href="<?php   print $link[0]["value"]; ?>" target="_blank">
     <div class="title"><?php print $title; ?></div>
     <div class="flag"><?php print render($flag); ?></div>
     <div class="logo"><?php print render($logo); ?></div>
 </a>
-*/?>
 
 <div class="atelier">
    
@@ -50,6 +52,9 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
         <?php print render($body); ?>
     </div>
     
+    <div class="atelier-gallerie">
+
+        <div class="atelier-gallerie-big">
     <div class="atelier-gallerie swiper-container">
        
         <div class="atelier-gallerie-big swiper-wrapper">
@@ -72,7 +77,7 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
                 ?>
             
         </div>
-        
+
         <div class="atelier-gallerie-thumbnails">
              
             <?php foreach($gallerie as $key => $value){ ?>

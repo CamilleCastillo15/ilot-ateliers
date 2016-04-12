@@ -5,7 +5,7 @@
     <div class="text">
         
         <h1>
-            
+
             Vous êtes un particulier ?
             <br /> Une entreprise ?
             <br />
@@ -20,7 +20,7 @@
         <br />
 
         <img class="tel" src="../<?php print $theme; ?>/images/telephone_blanc.svg" alt="telephone" title="telephone" /> 03 59 99 08 80
-        
+
         <div class="petit">
 
             (numéro non surtaxé)
