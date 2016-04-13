@@ -134,4 +134,18 @@
 
     }
 
+    .text-presentation {
+
+        @include breakpoint($laptop) {
+
+            h1.wtitle {
+
+                font-size: 18px;
+
+            }
+
+        }
+
+    }
+
 }

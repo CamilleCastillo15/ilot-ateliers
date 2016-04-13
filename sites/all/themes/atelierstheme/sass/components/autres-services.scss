@@ -15,12 +15,32 @@
         h1 {
 
             text-transform: uppercase;
+            margin-bottom: 4vw;
 
         }
 
         h2 {
 
             font-size: 15px;
+
+            @include breakpoint($tablet) {
+
+                font-size:20px;
+
+
+            }
+
+            @include breakpoint($laptop) {
+
+                font-size:25px;
+
+            }
+
+             @include breakpoint($laptopl) {
+
+                font-size:30px;
+
+            }
 
         }
 
@@ -35,17 +55,17 @@
         @include translate(-50%,-50%);
         margin-left: auto;
         margin-right: auto;
-        width: 279px;
+        width: 343px;
 
         .ilot_gourmand {
 
-            margin-left: 36px;
+            margin-left: 12px;
 
         }
 
         .auto_bleue {
 
-            margin-left: 43px;
+            margin-left: 25px;
 
         }
 

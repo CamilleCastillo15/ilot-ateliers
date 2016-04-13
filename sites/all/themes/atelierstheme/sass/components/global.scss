@@ -138,7 +138,13 @@ body {
     h2 {
 
         padding-top:1.5vw;
-        font-size:20px;
+
+        @include breakpoint($tablet) {
+
+            font-size:20px;
+
+
+        }
 
         @include breakpoint($laptop) {
 
@@ -161,7 +167,7 @@ body {
         background-color: #9D2537;
         padding: 1vw 2vw;
         color: white;
-        margin: -5vw 0vw 0vw 22vw;
+        margin:-5vw 0vw 0vw 17vw;
         position: absolute;
         font-size:15px;
 
