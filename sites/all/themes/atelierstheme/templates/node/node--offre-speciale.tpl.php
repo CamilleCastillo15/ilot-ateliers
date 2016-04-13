@@ -37,10 +37,7 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
 </a>
 */
 if($teaser){ ?>
-
-
-
-    <div class="offre-speciale teaser <?php print 'offre'.$node->nid ?>">
+       <div class="offre-speciale teaser <?php print 'offre'.$node->nid ?>">
         offre spéciale teaser
          <div class="machin"><?php print render($title);?></div>
          <div class="machin"><?php print render($body);?></div>
