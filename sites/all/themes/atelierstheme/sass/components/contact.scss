@@ -1,0 +1,37 @@
+.webform-client-form {
+    max-width: 570px;
+    width:100%;
+    margin: 100px auto;
+    background-color: #d8d8d8;
+    padding: 100px;
+
+    label {
+
+        margin-bottom: 15px;
+
+    }
+
+    input {
+
+        border:none;
+        width:100%;
+
+    }
+
+    textarea {
+
+        border:none;
+
+    }
+
+    .webform-submit {
+
+        background-color: #00a886;
+        float: right;
+        padding:7.5px 30px;
+        color:white;
+        text-transform: uppercase;
+
+    }
+
+}
