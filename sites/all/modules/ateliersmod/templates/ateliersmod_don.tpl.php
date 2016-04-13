@@ -4,17 +4,17 @@
 
    <img class="don-img" src="../<?php print $variables["ateliers_theme"]; ?>/images/logo_coeur_rouge.svg" alt="don" />
 
-   <div class="text">
+   <div class="text-presentation-block">
 
-           <h2 class="title-don">
+           <h1>
                 Je fais un don
-           </h2>
+           </h1>
 
                <br />
 
-           <div class="asso">
+           <h2>
                 à l'association l'îlot
-           </div>
+           </h2>
 
            <div class="formulaire">
                 accèder au formulaire

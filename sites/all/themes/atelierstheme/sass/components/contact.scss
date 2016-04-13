@@ -1,4 +1,9 @@
+@import "singularitygs";
+@import "breakpoint";
+@import "../variables/variables";
+
 .webform-client-form {
+
     max-width: 570px;
     width:100%;
     margin: 100px auto;
@@ -14,7 +19,6 @@
     input {
 
         border:none;
-        width:100%;
 
     }
 
@@ -31,6 +35,23 @@
         padding:7.5px 30px;
         color:white;
         text-transform: uppercase;
+        with:100px !important;
+
+    }
+
+    @include breakpoint($mobilem) {
+
+        input {
+
+            width:100%;
+
+        }
+
+    }
+
+    @include breakpoint($tablet) {
+
+        width:100%;
 
     }
 

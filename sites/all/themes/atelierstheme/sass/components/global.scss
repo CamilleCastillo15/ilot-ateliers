@@ -25,13 +25,13 @@ body {
     font-size:15px;
     padding:4vw;
 
- @include breakpoint($laptop) {
+     @include breakpoint($laptop) {
 
         font-size:1.25vw;
 
     }
 
- @include breakpoint($laptopl) {
+     @include breakpoint($laptopl) {
 
         font-size:20px;
 
@@ -43,7 +43,7 @@ body {
 
     }
 
-    h1 {
+    h1, h1.wtitle {
 
        text-transform: uppercase;
        font-family: 'SourceSansProSemiBold';
@@ -66,30 +66,7 @@ body {
 
     }
 
-    h1.wtitle {
-
-       text-transform: uppercase;
-       font-family: 'SourceSansProSemiBold';
-       font-size:20px;
-       padding: 20px 0;
-
-        @include breakpoint($laptop) {
-
-            font-size:25px;
-            padding: 1.5vw 0;
-
-        }
-
-         @include breakpoint($laptopl) {
-
-            font-size:30px;
-            padding: 25px 0
-
-        }
-
-    }
-
-    h2.wsubtitle {
+    h2, h2.wsubtitle {
 
        text-transform: uppercase;
        font-family: 'SourceSansProSemiBold';
@@ -110,8 +87,6 @@ body {
 
         }
 
-
-
     }
 
     em {
@@ -131,6 +106,76 @@ body {
 
         list-style: initial;
         padding:0 4vw;
+
+    }
+
+}
+
+.text-presentation-block {
+
+    padding:4vw 0 0 7vw;
+    display: inline-block;
+
+    h1 {
+
+        display: inline-block;
+        font-size:20px;
+
+        @include breakpoint($laptop) {
+
+            font-size:45px;
+
+        }
+
+         @include breakpoint($laptopl) {
+
+            font-size:50px;
+
+        }
+
+    }
+
+    h2 {
+
+        padding-top:1.5vw;
+        font-size:20px;
+
+        @include breakpoint($laptop) {
+
+            font-size:25px;
+
+        }
+
+         @include breakpoint($laptopl) {
+
+            font-size:30px;
+
+        }
+
+    }
+
+    .formulaire {
+
+        font-family: 'SourceSansProLight';
+        display: inline;
+        background-color: #9D2537;
+        padding: 1vw 2vw;
+        color: white;
+        margin: -5vw 0vw 0vw 22vw;
+        position: absolute;
+        font-size:15px;
+
+        @include breakpoint($laptop) {
+
+            font-size:20x;
+
+        }
+
+         @include breakpoint($laptopl) {
+
+            font-size:25px;
+
+        }
 
     }
 
