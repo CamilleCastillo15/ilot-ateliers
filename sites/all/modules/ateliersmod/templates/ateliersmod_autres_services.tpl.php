@@ -30,7 +30,7 @@
               $class_render = render($class);
               $picto_render = render($picto);
 
-                print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers', $class_render))));
+                print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('img-block ', $class_render))));
 
             }
 

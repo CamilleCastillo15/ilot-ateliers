@@ -113,7 +113,7 @@ body {
 
 .text-presentation-block {
 
-    padding:4vw 0 0 7vw;
+    padding: 4vw 7vw 0 7vw;
     display: inline-block;
 
     h1 {
@@ -340,6 +340,52 @@ body {
 
             float: left;
 
+        }
+
+    }
+
+}
+
+.img-block {
+
+    &.ilot_gourmand {
+
+        img {
+
+            margin:0 18px;
+
+            @include breakpoint($tablet) {
+                margin:0 50px;
+            }
+
+            @include breakpoint($laptop) {
+                margin:0 100px;
+            }
+
+            @include breakpoint($laptopl) {
+                margin:0 200px;
+            }
+
+        }
+
+    }
+
+    img {
+
+        height: auto;
+        width: 100px;
+
+        @include breakpoint($tablet) {
+            width: 125px;
+        }
+
+        @include breakpoint($laptop) {
+            width: 150px;
+        }
+
+        @include breakpoint($laptopl) {
+            width: 200px;
+            margin-top: 14px;
         }
 
     }
