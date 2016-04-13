@@ -119,7 +119,7 @@ function ateliersmod_admin() {
     );
     $var2 = variable_get('ateliersmod_fsgoogle_text');    
     $form['ateliersmod_fsgoogle']['ateliersmod_fsgoogle_text'] = array(
-        '#type' => 'text_format',
+        '#type' => 'google_map_field',
         '#title' => t('Texte du bloc'),
         '#format' =>  $var2["format"],
         '#default_value' =>$var2["value"],
