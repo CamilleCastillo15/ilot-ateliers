@@ -1,17 +1,17 @@
 <?php
-    $theme = drupal_get_path("theme",$GLOBALS['theme']) ;
+
+    $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
+
 //    $lservice = drupal_get_path_alias("node/".$node->nid);
 //    dpm($node);
 ?>
 
 <div class="l-header text-presentation">
-       <?php // print l("<img class=\"logo\" src=\"../".$theme."/images/logo.png\" alt=\"logo\" title=\"logo\" />", "content/home"); ?>
-
-       <a href="home">
-           <img class="logo" src="../<?php print $theme ?>/images/logo.png" alt="logo" title="logo" />
-       </a>
-
-        <?php print render($page['header']); ?>
+    <?php // print l("<img class=\"logo\" src=\"../".$theme."/images/logo.png\" alt=\"logo\" title=\"logo\" />", "content/home"); ?>
+    <a href="home">
+        <img class="logo" src="<?php print $theme ?>/images/logo.png" alt="logo" title="logo" />
+    </a>
+    <?php print render($page['header']); ?>
 </div>
 
 <div <?php print $attributes;?>>
@@ -22,9 +22,7 @@
         <?php print $messages; ?>
         <?php print render($page['content']); ?>
     </div>
-
 </div>
-
 <div class="l-services">
      <?php print render($page['services']); ?>
 </div>
