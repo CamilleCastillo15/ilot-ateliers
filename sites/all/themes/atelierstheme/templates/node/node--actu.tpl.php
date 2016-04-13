@@ -58,7 +58,6 @@
 </div>
 
 <div class="atelier actu-detail">
-    j
 
     <div class="atelier-header">
 

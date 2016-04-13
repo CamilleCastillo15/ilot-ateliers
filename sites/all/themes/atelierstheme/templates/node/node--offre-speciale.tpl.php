@@ -29,19 +29,6 @@
 
          <div class="offres-speciales-header">
 
-<<<<<<< HEAD
-<a href="<?php   print $link[0]["value"]; ?>" target="_blank">
-    <div class="title"><?php print $title; ?></div>
-    <div class="flag"><?php print render($flag); ?></div>
-    <div class="logo"><?php print render($logo); ?></div>
-</a>
-*/
-if($teaser){ ?>
-       <div class="offre-speciale teaser <?php print 'offre'.$node->nid ?>">
-        offre spéciale teaser
-         <div class="machin"><?php print render($title);?></div>
-         <div class="machin"><?php print render($body);?></div>
-=======
             <div class="left">
 
                 <?php print render($imgactu); ?>
@@ -51,16 +38,14 @@ if($teaser){ ?>
             <div class="text-actus">
 
                 <h1 class="title-offre-speciale"> <?php print render($title); ?> </h1>
-                <?php print render($body); ?>
 
-
-          <?php print l("lire la suite" ,$link  , array("html"=>true, 'attributes' => array('class' => array('plus')))); ?>
+                 <?php print render($body); ?>
+                 <?php print l("lire la suite" ,$link  , array("html"=>true, 'attributes' => array('class' => array('plus')))); ?>
 
              </div>
 
         </div>
 
->>>>>>> origin/master
     </div>
 
 
