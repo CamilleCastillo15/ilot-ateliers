@@ -1,11 +1,5 @@
 <?php
 
-    /*
-    $view = views_get_view('actus');
-    $view->execute();
-    $result = $view->result;
-    */
-
     $title = field_view_field("node",$node,'field_title');
     $imgactu = field_view_field("node",$node,'field_image');
 
