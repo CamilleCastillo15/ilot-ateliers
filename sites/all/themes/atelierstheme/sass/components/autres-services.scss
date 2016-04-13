@@ -1,6 +1,7 @@
 @import "breakpoint";
 @import "singularitygs";
 @import "../variables/variables";
+@import "../variables/mixin";
 
 .autres_services {
 
@@ -9,33 +10,35 @@
     text-align: center;
     padding: 5vw;
 
-    h1 {
+    &.text-presentation-block {
 
-        text-transform: uppercase;
-        font-family: 'SourceSansProRegular';
-        font-size: 4vw;
+        h1 {
 
-        @include breakpoint($laptopl) {
-            font-size: 3vw;
+            text-transform: uppercase;
+            margin-bottom: 4vw;
+
         }
 
-    }
+        h2 {
 
-    .img-pictos {
+            font-size: 15px;
 
-        @include breakpoint($laptopl) {
-            margin-top: 4vw;
-        }
+            @include breakpoint($tablet) {
 
-        .picto_ateliers {
+                font-size:20px;
 
-            width: 15vw;
-            margin: 7vw 7vw 2vw 7vw;
 
-            img {
+            }
 
-                width: 12vw;
-                margin-top: 2vw;
+            @include breakpoint($laptop) {
+
+                font-size:25px;
+
+            }
+
+             @include breakpoint($laptopl) {
+
+                font-size:30px;
 
             }
 
@@ -44,27 +47,83 @@
     }
 
     .container-title-pictos {
-        position: relative;
-        margin-top: 2vw;
-        font-size: 2.5vw;
 
-        .menuiserie {
-
-
-                margin-left: 11vw;
-
-        }
+        margin-top: 15px;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        @include translate(-50%,-50%);
+        margin-left: auto;
+        margin-right: auto;
+        width: 343px;
 
         .ilot_gourmand {
 
-
-                margin-left: 9vw;
+            margin-left: 12px;
 
         }
 
         .auto_bleue {
 
-                margin-left: 9vw;
+            margin-left: 25px;
+
+        }
+
+        @include breakpoint($tablet) {
+
+            width: 479px;
+            margin-top: 30px;
+
+            .ilot_gourmand {
+
+                margin-left: 36px;
+
+            }
+
+            .auto_bleue {
+
+                margin-left: 43px;
+
+            }
+
+        }
+
+        @include breakpoint($laptop) {
+
+            width: 656px;
+            margin-top: 45px;
+
+            .ilot_gourmand {
+
+                margin-left: 68px;
+
+            }
+
+            .auto_bleue {
+
+                margin-left: 88px;
+
+            }
+
+
+        }
+
+        @include breakpoint($laptopl) {
+
+            width: 990px;
+            margin-top: 60px;
+
+            .ilot_gourmand {
+
+                margin-left: 188px;
+
+            }
+
+            .auto_bleue {
+
+                margin-left: 205px;
+
+            }
 
         }
 

@@ -6,14 +6,14 @@
 
     .actus {
 
-        border-bottom: 3px solid orange;
+ //       border-bottom: 3px solid orange;
         margin: 50px 50px;
 
-        @include breakpoint($laptop) {
-
-                height: 207px;
-
-        }
+//        @include breakpoint($laptop) {
+//
+//                height: 207px;
+//
+//        }
 
         .views-field-field-image {
 

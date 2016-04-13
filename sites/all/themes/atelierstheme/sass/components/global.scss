@@ -27,35 +27,161 @@ body {
 
      @include breakpoint($laptop) {
 
-            font-size:1.25vw;
+        font-size:1.25vw;
 
-        }
+    }
 
      @include breakpoint($laptopl) {
 
-            font-size:20px;
+        font-size:20px;
+
+    }
+
+    p {
+
+        padding:0 2vw;
+
+    }
+
+    h1, h1.wtitle {
+
+       text-transform: uppercase;
+       font-family: 'SourceSansProSemiBold';
+       font-size:20px;
+       padding: 20px 0;
+
+        @include breakpoint($laptop) {
+
+            font-size:25px;
+            padding: 1.5vw 0;
 
         }
 
-        h1 {
+         @include breakpoint($laptopl) {
 
-           text-transform: uppercase;
-           font-family: 'SourceSansProSemiBold';
-           font-size:20px;
+            font-size:30px;
+            padding: 25px 0
 
-            @include breakpoint($laptop) {
+        }
 
-                font-size:2vw;
+    }
 
-            }
+    h2, h2.wsubtitle {
 
-             @include breakpoint($laptopl) {
+       text-transform: uppercase;
+       font-family: 'SourceSansProSemiBold';
+       font-size:15px;
+       padding: 20px 0;
 
-                font-size:30px;
+        @include breakpoint($laptop) {
 
-            }
+            font-size:20px;
+            padding: 1.5vw 0;
 
-           padding: 1.5vw 0;
+        }
+
+         @include breakpoint($laptopl) {
+
+            font-size:25px;
+            padding: 25px 0;
+
+        }
+
+    }
+
+    em {
+
+        font-family: 'SourceSansProItalic';
+
+    }
+
+    ol {
+
+        list-style: decimal;
+        padding:0 4vw;
+
+    }
+
+    ul {
+
+        list-style: initial;
+        padding:0 4vw;
+
+    }
+
+}
+
+.text-presentation-block {
+
+    padding: 4vw 7vw 0 7vw;
+    display: inline-block;
+
+    h1 {
+
+        display: inline-block;
+        font-size:20px;
+
+        @include breakpoint($laptop) {
+
+            font-size:45px;
+
+        }
+
+         @include breakpoint($laptopl) {
+
+            font-size:50px;
+
+        }
+
+    }
+
+    h2 {
+
+        padding-top:1.5vw;
+
+        @include breakpoint($tablet) {
+
+            font-size:20px;
+
+
+        }
+
+        @include breakpoint($laptop) {
+
+            font-size:25px;
+
+        }
+
+         @include breakpoint($laptopl) {
+
+            font-size:30px;
+
+        }
+
+    }
+
+    .formulaire {
+
+        font-family: 'SourceSansProLight';
+        display: inline;
+        background-color: #9D2537;
+        padding: 1vw 2vw;
+        color: white;
+        margin:-5vw 0vw 0vw 17vw;
+        position: absolute;
+        font-size:15px;
+
+        @include breakpoint($laptop) {
+
+            font-size:20x;
+
+        }
+
+         @include breakpoint($laptopl) {
+
+            font-size:25px;
+
+        }
 
     }
 
@@ -125,3 +251,151 @@ body {
         }
 
     }
+
+
+.actus, .offre-speciale {
+
+//        border-bottom-width:3px;
+//        border-bottom-style:solid;
+        margin: 50px 50px;
+
+        @include breakpoint($laptop) {
+
+                min-height: 207px;
+
+        }
+
+        .views-field-field-image, img {
+
+            @include breakpoint($laptop) {
+
+                float: left;
+
+            }
+
+        }
+
+        .views-field-field-title,  .title-offre-speciale {
+
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size:22px;
+            padding:10px 0px;
+        }
+
+        .views-field-view-node, .plus  {
+
+            @include breakpoint($laptop) {
+
+                float: right;
+
+            }
+
+            width:150px;
+            text-align: center;
+            margin:30px 0;
+            border: 1px solid black;
+            padding: 5px 25px;
+
+        }
+
+        div {
+
+            &:not(:first-child) {
+
+                max-width:750px;
+
+                @include breakpoint($laptop) {
+
+                    margin-left:250px;
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+.pager {
+
+    clear: both;
+    padding: 0;
+    text-align: right;
+    margin: 50px 50px;
+
+    .pager__item--current {
+
+        padding: 1.5px 13.5px;
+        text-align: center;
+        color: white;
+
+    }
+
+}
+
+.offre-speciale {
+
+    img {
+
+         width:220px;
+         height:84px;
+
+        @include breakpoint($laptop) {
+
+            float: left;
+
+        }
+
+    }
+
+}
+
+.img-block {
+
+    &.ilot_gourmand {
+
+        img {
+
+            margin:0 18px;
+
+            @include breakpoint($tablet) {
+                margin:0 50px;
+            }
+
+            @include breakpoint($laptop) {
+                margin:0 100px;
+            }
+
+            @include breakpoint($laptopl) {
+                margin:0 200px;
+            }
+
+        }
+
+    }
+
+    img {
+
+        height: auto;
+        width: 100px;
+
+        @include breakpoint($tablet) {
+            width: 125px;
+        }
+
+        @include breakpoint($laptop) {
+            width: 150px;
+        }
+
+        @include breakpoint($laptopl) {
+            width: 200px;
+            margin-top: 14px;
+        }
+
+    }
+
+}
+
+

@@ -19,6 +19,14 @@ a {
 }
 
 .l-header {
+
+
+    &.text-presentation {
+
+        padding: 0;
+
+    }
+
     display: none;
     margin: 0 auto;
     position: relative;
@@ -36,44 +44,7 @@ a {
         padding-top:30px;
         margin-left: auto;
         margin-right: auto;
-        
-//        @include breakpoint($mobiles) {
-//
-//            top:80vw;
-//            height:358px;
-//            width:300px;
-//
-//        }
-//
-//        @include breakpoint($mobilem) {
-//
-//            height:350x;
-//            width:350px;
-//
-//        }
-//
-//        @include breakpoint($mobilel) {
-//
-//            height:85vw;
-//            width:85vw;
-//
-//        }
-//
-//        @include breakpoint($tablet) {
-//
-//            top:600px;
-//            height:650px;
-//            width:650px;
-//
-//        }
-//
-//        @include breakpoint($laptop) {
-//
-//            top: 13vw;
-//            height: 23vw;
-//            width: 76vw;
-//
-//        }
+
 
         .par-bienvenue {
             
@@ -289,9 +260,7 @@ a {
     .menu {
     
         text-transform: uppercase;
-        padding: 1vw;
         text-align: center;
-        font-size: 1.25vw;
         
         .leaf {
             
@@ -311,7 +280,7 @@ a {
         margin-right: auto;
         top:1.5vw;
         left:0;
-        right:66vw;
+        right:77vw;
         
     }
     
@@ -609,7 +578,6 @@ a {
     .bloc2 {
         
         background-color: #00a886;
-        padding: 60px 0;
 
         @include breakpoint($laptop) {
 
@@ -617,31 +585,18 @@ a {
 
         }
         
-        .text {
+        .text-presentation {
             
             font-family: "SourceSansProLight";
 
             color: #ffffff;
             text-align: center;
-            font-size:3.5vw;
 
-             @include breakpoint($laptop) {
-
-                font-size:1.5vw;
-
-            }
             
             h1 {
                 
                 font-family: "SourceSansProRegular";
                 text-transform: uppercase;
-                font-size:4vw;
-
-                @include breakpoint($laptop) {
-
-                    font-size:2vw;
-
-                }
                 
             }
             
@@ -665,63 +620,5 @@ a {
     
 }
 
-.home {
-    
-    
-    
-}
 
-.bloc_don {
-    
-    font-family: 'SourceSansProRegular';
-    text-transform: uppercase;
-    font-size: 2.5vw;
-    padding: 5vw 2vw;
-    color: #9D2537;
-    text-align: center;
-    width: 62vw;
-    
-    .don-img {
-        
-        width:15vw;
-        float:left;
-        margin:0vw 0vw;
-        display: inline-block;
-        
-    }
-    
-    .text {
-        
-        padding:4vw 0 0 7vw;
-        display: inline-block;
-        
-        .title-don {
-        
-            font-family: PermanentMarker;
-            font-size: 4vw;
-            display: inline-block;
-
-        }
-        
-        .asso {
-            
-            padding-top:3vw;
-            
-        }
-        
-        .formulaire {
-        
-            font-family: 'SourceSansProLight';
-            display: inline;
-            background-color: #9D2537;
-            padding: 2vw 3vw;
-            color: white;
-            margin: -10vw 0vw 0vw 22vw;
-            position: absolute;
-
-        }
-        
-    }
-
-}
 

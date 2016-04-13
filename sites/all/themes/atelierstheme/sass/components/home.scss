@@ -32,36 +32,6 @@
 
     }
 
-//    &.menuiserie {
-//
-//        img {
-//
-//
-//            @include breakpoint($mobiles) {
-//                margin: 0 12vw;
-//            }
-//
-//            @include breakpoint($mobilem) {
-//                margin: 0 12vw;
-//            }
-//
-//            @include breakpoint($mobilel) {
-//                margin: 0 12vw;
-//            }
-//
-//            @include breakpoint($tablet) {
-//                margin: 0 96px;
-//            }
-//
-//            @include breakpoint($laptop) {
-//                margin: 0 2vw;
-//                margin-top: 3vw;
-//            }
-//
-//        }
-//
-//    }
-
     img {
 
         height: auto;
@@ -282,9 +252,6 @@
         width: 25em;
     }
     @include breakpoint($laptop) {
-//        margin: 0;
-//        top: 2vw;
-//        width: 8vw;
         display: none;
     }
 }

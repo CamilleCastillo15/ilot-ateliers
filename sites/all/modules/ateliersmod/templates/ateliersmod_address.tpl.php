@@ -2,7 +2,7 @@
 
 <div class="bloc2">
 
-    <div class="text">
+    <div class="text-presentation">
         
         <h1>
 

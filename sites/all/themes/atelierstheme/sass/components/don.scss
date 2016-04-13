@@ -1,0 +1,32 @@
+.bloc_don {
+
+    font-family: 'SourceSansProRegular';
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    padding: 5vw 2vw;
+    color: #9D2537;
+    text-align: center;
+    width: 83vw;
+
+    .don-img {
+
+        width: 9vw;
+        /* float: left; */
+        margin: auto;
+        display: inline-block;
+        margin-right: 83px;
+
+    }
+
+    .text-presentation-block {
+
+        h1, h1.wtitle {
+
+           font-family: 'PermanentMarker';
+
+        }
+
+    }
+
+}
+

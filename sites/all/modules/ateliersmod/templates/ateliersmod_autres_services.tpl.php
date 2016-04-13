@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="autres_services">
+<div class="autres_services text-presentation-block">
 
     <?php $theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
 
@@ -30,7 +30,7 @@
               $class_render = render($class);
               $picto_render = render($picto);
 
-                print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers', $class_render))));
+                print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('img-block ', $class_render))));
 
             }
 
@@ -51,11 +51,11 @@
               $title_render = render($title);
               $picto_render = render($picto);
 
-              echo "<div class=\"title-pictos ".$class_render."\">";
+              echo "<h2 class=\"title-pictos ".$class_render."\">";
 
                 print l($title_render, $link,array("html"=>true));
 
-              echo "</div>";
+              echo "</h2>";
 
             }
 
