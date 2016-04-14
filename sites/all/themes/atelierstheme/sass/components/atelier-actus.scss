@@ -6,7 +6,7 @@
 
     .actus {
 
- //       border-bottom: 3px solid orange;
+//      border-bottom: 3px solid orange;
         margin: 50px 50px;
 
 //        @include breakpoint($laptop) {
@@ -85,12 +85,12 @@
 
         max-width:10000px;
         margin-left:0px !important;
-        margin-top: 35px;
+        margin-top: 10px;
 
         @include breakpoint($laptop) {
 
             text-align: right;
-            margin-top: 85px;
+            margin-top: 56px;
 
         }
 
