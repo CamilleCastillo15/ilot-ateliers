@@ -51,6 +51,10 @@
 </div>
 
 <div class="atelier actu-detail">
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/master
 
     <div class="atelier-header">
 
