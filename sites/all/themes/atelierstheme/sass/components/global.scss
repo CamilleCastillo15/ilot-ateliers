@@ -163,13 +163,19 @@ body {
     .formulaire {
 
         font-family: 'SourceSansProLight';
-        display: inline;
         background-color: #9D2537;
         padding: 1vw 2vw;
         color: white;
-        margin:-5vw 0vw 0vw 17vw;
-        position: absolute;
+        margin:2vw 0vw 0vw 0vw;
         font-size:15px;
+
+        @include breakpoint($tablet) {
+
+            display: inline;
+            position: absolute;
+            margin:-5vw 0vw 0vw 17vw;
+
+        }
 
         @include breakpoint($laptop) {
 
