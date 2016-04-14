@@ -397,6 +397,7 @@ a {
     background-color: #4b4b4b;
     text-transform: uppercase;
     display: block;
+    z-index: 10000000;
 
     @include grid-span(12, 1);
 
