@@ -33,6 +33,16 @@
             padding:10px 0px;
         }
 
+        .views-field-body {
+
+            @include breakpoint($laptop) {
+
+                position: absolute;
+
+            }
+
+        }
+
         .views-field-created-1 {
 
             max-width:10000px;
@@ -41,6 +51,7 @@
             @include breakpoint($laptop) {
 
                 float: right;
+                margin-top: -47px;
 
             }
 
@@ -90,7 +101,7 @@
         @include breakpoint($laptop) {
 
             text-align: right;
-            margin-top: 56px;
+            margin-top: 9px;
 
         }
 

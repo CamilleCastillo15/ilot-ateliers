@@ -38,15 +38,22 @@
         text-transform: uppercase;
         with:100px !important;
 
-    }
-
-    @include breakpoint($mobilem) {
-
         input {
 
-            width:100%;
+
+            @include breakpoint($tablet) {
+
+                width:30%;
+
+            }
 
         }
+
+    }
+
+    input {
+
+        width:100%;
 
     }
 
