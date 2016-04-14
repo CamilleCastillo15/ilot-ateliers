@@ -60,7 +60,6 @@ function ateliersmod_pageactus($arg,$hop){
         
     }else{
         $result[0];
-        dpm($result[0]->nid);
         $node = node_load($result[0]->nid);
         $view = views_embed_view('actus', 'page_1', $result[0]->nid);
         //return $view;
@@ -84,28 +83,69 @@ function ateliersmod_pageoffres($arg,$hop){
 }
 
 function ateliersmod_admin() {
+    drupal_load('module', 'google_map_field');
+    module_load_include('inc', 'google_map_field');
+ 
     $theme = drupal_get_path("theme","atelierstheme");
     
     drupal_add_css($theme."/css/admin.css");
     $form = array();
+    $form['ateliersmod_fsvisuels'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Paramétrage des visuels génériques du site'),
+        '#collapsible' => TRUE, // Added
+        '#collapsed' => FALSE,  // Added
+    );
     $form['ateliersmod_fsadress'] = array(
         '#type' => 'fieldset',
         '#title' => t('Paramétrage de l\'adresse'),
         '#collapsible' => TRUE, // Added
         '#collapsed' => FALSE,  // Added
     );
-    $form['ateliersmod_fsgoogle'] = array(
-        '#type' => 'fieldset',
-        '#title' => t('Paramétrage du google map'),
-        '#collapsible' => TRUE, // Added
-        '#collapsed' => FALSE,  // Added
-    );
-   
-   $defaults = array(
-    'value' => '',
-    'format' => 'full_html',
-    );
+
+
     
+
+    $defaults = array(
+        'value' => '',
+        'format' => 'full_html',
+    );
+    $fid = variable_get('ateliersmod_fsvisuels_offres');
+    $form['ateliersmod_fsvisuels']['ateliersmod_fsvisuels_offres'] = array(
+        '#type' => 'media',
+        '#tree' => TRUE,
+        '#title' => t('Image offres spéciales'),
+        '#default_value' => $fid,
+        '#media_options' => array(
+            'global' => array(
+                'file_extensions' => 'jpg png', // File extensions
+                'max_filesize' => '100 MB',
+                'file_directory' => 'config', // Will be a subdirectory of the files directory
+                'types' => array('image'), // Refers to a file_entity bundle (such as audio, video, image, etc.)
+            ),  
+        ),  
+        '#description' => t("Image générique dans la partie offres spéciales"),
+        '#required' => FALSE,
+       
+    );
+    $fid2 = variable_get('ateliersmod_fsvisuels_contact');
+    $form['ateliersmod_fsvisuels']['ateliersmod_fsvisuels_contact'] = array(
+        '#type' => 'media',
+        '#tree' => TRUE,
+        '#title' => t('Image header du contact'),
+        '#default_value' => $fid2,
+        '#media_options' => array(
+            'global' => array(
+                'file_extensions' => 'jpg png', // File extensions
+                'max_filesize' => '100 MB',
+                'file_directory' => 'config', // Will be a subdirectory of the files directory
+                'types' => array('image'), // Refers to a file_entity bundle (such as audio, video, image, etc.)
+            ),  
+        ),  
+        '#description' => t("Image générique sur le forum contact"),
+        '#required' => FALSE,
+       
+    );
    
     $var1 = variable_get('ateliersmod_fsadress_text');
     $form['ateliersmod_fsadress']['ateliersmod_fsadress_text'] = array(
@@ -117,15 +157,32 @@ function ateliersmod_admin() {
         '#required' => FALSE,
        
     );
-    $var2 = variable_get('ateliersmod_fsgoogle_text');    
-    $form['ateliersmod_fsgoogle']['ateliersmod_fsgoogle_text'] = array(
-        '#type' => 'google_map_field',
-        '#title' => t('Texte du bloc'),
-        '#format' =>  $var2["format"],
-        '#default_value' =>$var2["value"],
+    $var2 = variable_get('ateliersmod_fsgoogle_map');    
+    $form['ateliersmod_fsgoogle_map'] = array(
+        '#type' => 'location_element', 
+        '#title' => t('Texte du bloc'),      
+        '#default_value' =>$var2,
         '#description' => t("Texte présent dans le footer du site"),
         '#required' => FALSE,
+        '#location_settings' => array (
+            'form' => array(
+                'fields' => array (
+                    'name' => array('collect' => 1, 'weight' => 0),
+                    'country' => array('collect' => 1, 'weight' => 2, 'default' => 'fr'),
+                    'street'  => array('collect' => 1, 'weight' => 4),
+                    'additional'    => array('collect' => 1, 'weight' => 6),
+                    'city'          => array('collect' => 1, 'weight' => 8),
+                    'postal_code'   => array('collect' => 1, 'weight' => 12),
+                    /*
+                    'locpick'       => array('collect' => 4, 'weight' => 14),
+                    */
+                    
+                ),
+            ),
+        )
     );
+        
+    
     
     
 /*
@@ -133,6 +190,8 @@ function ateliersmod_admin() {
     '#type' => 'submit', 
     '#value' => t('Submit'),
   );*/
+    
+  
   return system_settings_form($form);
 }
 
@@ -229,10 +288,13 @@ function ateliersmod_theme($existing, $type, $theme, $path){
    
   );
 }
+
+function ateliersmod_form(&$form, &$form_state, $form_id) {
+    dpm($form);
+    
+}
 /*
+
 function zapimod_preprocess_html(&$variables) {
     drupal_add_css(drupal_get_path('module', 'zapimod') . '/css/zapimod.css');
 }*/
-
-
-

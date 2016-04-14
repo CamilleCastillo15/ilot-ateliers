@@ -23,67 +23,73 @@
 
 ?>
 
-<div class="atelier">
-   
-    <div class="atelier-header pictotitlecontainer">
+    <div class="atelier">
 
-        <div class="atelier-header-bg image">
-            <?php print render($img); ?>
+        <div class="atelier-header pictotitlecontainer">
+
+            <div class="atelier-header-bg image">
+                <?php print render($img); ?>
+            </div>
+
+            <div class="picto pictotitle">
+                <?php print render($picto); ?>
+            </div>
+
+            <div class="title">
+                <?php print render($ftitle); ?>
+            </div>
+
+            <div class="triangle-left"></div>
+            <!--
+        -->
+            <div class="triangle-right"></div>
+
+            <div class="liens">
+
+                <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
+                    <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?>
+
+            </div>
+
         </div>
 
-        <div class="picto pictotitle"><?php print render($picto); ?></div>
-
-        <div class="title"><?php print render($ftitle); ?></div>
-
-        <div class="triangle-left"></div><!--
-        --><div class="triangle-right"></div>
-        
-        <div class="liens">
-            
-          <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
-          <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?>
-            
+        <div class="text-presentation atelier-color">
+            <?php print render($body); ?>
         </div>
-        
-    </div>
-    
-    <div class="text-presentation atelier-color">
-        <?php print render($body); ?>
-    </div>
-    
+
         <div class="atelier-gallerie">
-
-                <div class="atelier-gallerie-big">
-
-                    <div class="atelier-gallerie swiper-container">
-
-                        <div class="atelier-gallerie-big swiper-wrapper">
-
-                            <?php
+            <div class="atelier-gallerie-big">
+                <div class="atelier-gallerie swiper-container">
+                    <div class="atelier-gallerie-big swiper-wrapper">
+                        <?php
 
                                 foreach($gallerie as $key => $value){ ?>
 
-                                    <div class="atelier-gallerie-image swiper-slide">
-                                        <?php
+                            <div class="atelier-gallerie-image swiper-slide">
+                                <?php
                                             $imagea = field_view_value('node', $node, 'field_image_multi', $value);
                                             print render($imagea);
                                         ?>
-                                    </div>
+                            </div>
 
-                                <?php
+                            <?php
 
                                     }
 
                                 ?>
 
-                        </div>
+                    </div>
+                      <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+                </div>
+                <div class="atelier-gallerie-thumbnails">
 
-                        <div class="atelier-gallerie-thumbnails">
+                    <?php foreach($gallerie as $key => $value){ ?>
 
-                            <?php foreach($gallerie as $key => $value){ ?>
-
-                                <div class="atelier-gallerie-image">
-                                    <?php
+                        <div class="atelier-gallerie-image" data-id="<?php print $key; ?>">
+                            <?php
                                         $imagea = field_view_value('node', $node, 'field_image_multi', $value,array(
                                             'type' => 'image',
                                             'settings' => array(
@@ -92,17 +98,19 @@
                                         ));
                                         print render($imagea);
                                     ?>
-                                </div>
-                            <?php
+                        </div>
+                        <?php
 
                                 }
 
                             ?>
 
-                        </div>
+                </div>
 
-                    </div>
 
+
+
+            </div>
             <div class="contact">
 
                 Nous contacter
@@ -112,5 +120,3 @@
         </div>
 
     </div>
-
-</div>
