@@ -8,21 +8,27 @@
 
 <div class="l-header text-presentation">
     <?php // print l("<img class=\"logo\" src=\"../".$theme."/images/logo.png\" alt=\"logo\" title=\"logo\" />", "content/home"); ?>
+
     <a href="home">
         <img class="logo" src="<?php print $theme ?>/images/logo.png" alt="logo" title="logo" />
     </a>
+
     <?php print render($page['header']); ?>
+
 </div>
 
 <div <?php print $attributes;?>>
 
     <div class="clear"></div>
+
     <div class="l-content">
         <?php /*print render($tabs);*/ ?>
         <?php print $messages; ?>
         <?php print render($page['content']); ?>
     </div>
+
 </div>
+
 <div class="l-services">
      <?php print render($page['services']); ?>
 </div>
@@ -32,21 +38,25 @@
 </div>
 
 <footer class="l-footer text-presentation" >
+
     <?php print render($page['footer']); ?>
+
     <div class="reseaux">
-        <img class="twitter" src="../<?php print $theme; ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
-        <img class="linkedin" src="../<?php print $theme; ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" />
+        <img class="twitter" src="<?php print $theme ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
+        <img class="linkedin" src="<?php print $theme ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" />
     </div>
+
 </footer>
 
 <div class="l-off h text-presentation">
    
-    <img class="logo" src="../<?php print $theme; ?>/images/logo.png" alt="logo" title="logo" />
+    <img class="logo" src="<?php print $theme ?>/images/logo.png" alt="logo" title="logo" />
+
     <?php print render($page['off']); ?>
 
     <div class="reseaux">
-        <img class="twitter" src="../<?php print $theme; ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
-        <img class="linkedin" src="../<?php print $theme; ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" />
+        <img class="twitter" src="<?php print $theme ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
+        <img class="linkedin" src="<?php print $theme ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" />
     </div>
 
 </div>

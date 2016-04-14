@@ -294,13 +294,13 @@ a {
         
     }
 
-    -webkit-transition: all 2.5s;
-    -moz-transition: all 2.5s;
-    transition: all 2.5s;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    transition: all 1.5s;
     top: 50px;
-    left: 64vw;
+    left: 83vw;
     position: fixed;
-    width: 14vw;
+    width: 10vw;
     height: auto;
     cursor: pointer;
     z-index:1000;
@@ -317,15 +317,9 @@ a {
     $offsetY_3: 47.1px;
     $widthX: 46.7438px;
 
-    -webkit-transition: all 2500ms;
-    -moz-transition: all 2500ms;
-    transition: all 2500ms;
-
-    /*
-    &.h{
-        opacity: 0;
-    }
-    */
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    transition: all 500ms;
 
     circle {
         opacity: 0.3;
@@ -403,6 +397,7 @@ a {
     background-color: #4b4b4b;
     text-transform: uppercase;
     display: block;
+    z-index: 10000000;
 
     @include grid-span(12, 1);
 
@@ -418,9 +413,9 @@ a {
     width: 40vw;
     height: 154vw;
     
-    -webkit-transition: all 500ms ease-in;
-    -moz-transition: all 500ms ease-in;
-    transition: all 500ms ease-in;
+    -webkit-transition: all 375ms ease-in;
+    -moz-transition: all 375ms ease-in;
+    transition: all 375ms ease-in;
     
     &.h {
         

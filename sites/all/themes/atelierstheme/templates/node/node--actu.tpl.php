@@ -1,11 +1,5 @@
 <?php
 
-    /*
-    $view = views_get_view('actus');
-    $view->execute();
-    $result = $view->result;
-    */
-
     $title = field_view_field("node",$node,'field_title');
     $imgactu = field_view_field("node",$node,'field_image');
 
@@ -21,7 +15,6 @@
     drupal_add_css('.atelier .wtitle, .atelier .wsubtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
     drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
     drupal_add_css('.actus{border-bottom: 3px solid '.$couleur.';} ', 'inline');
-
 
     $lservice = drupal_get_path_alias("node/".$atelier->nid);
 
@@ -58,7 +51,10 @@
 </div>
 
 <div class="atelier actu-detail">
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 
     <div class="atelier-header">
 

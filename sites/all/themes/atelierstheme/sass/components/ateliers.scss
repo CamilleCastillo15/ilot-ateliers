@@ -7,27 +7,108 @@
     //font-size: 4vw;
 
     .triangle-left {
-        border-bottom-width: 120px;
-        border-bottom-style: solid;
-        border-left: 0px solid transparent;
-        border-right: 0px solid transparent;
-        height: 0;
-        width: 50%;
         @include grid-span(6,1);
 
-        margin-top: -123px;
+        border-bottom-width: 26px;
+        border-bottom-style: solid;
+        border-left: -40px solid transparent;
+        border-right: 102px solid transparent;
+        height: 0;
+        width: 50%;
+
+        margin-top: -67px;
+        z-index: 100000;
+
+        position: relative;
+
+        @include breakpoint($mobilem) {
+
+            border-bottom-width: 36px;
+            border-left: -40px solid transparent;
+            border-right: 102px solid transparent;
+            margin-top: -38px;
+
+        }
+
+        @include breakpoint($tablet) {
+
+            border-bottom-width: 46px;
+            border-left: -40px solid transparent;
+            border-right: 102px solid transparent;
+            margin-top: -48px;
+
+        }
+
+
+        @include breakpoint($laptop) {
+
+            border-bottom-width: 56px;
+            border-left: -40px solid transparent;
+            border-right: 102px solid transparent;
+            margin-top: -58px;
+
+        }
+
+        @include breakpoint($laptopl) {
+
+            border-bottom-width: 66px;
+            border-left: -40px solid transparent;
+            border-right: 102px solid transparent;
+            margin-top: -68px;
+
+        }
+
     }
 
     .triangle-right {
        @include grid-span(6,7);
 
-        border-bottom-width: 120px;
+        border-bottom-width: 66px;
         border-bottom-style: solid;
-        border-left: 0px solid transparent;
+        border-left: 102px solid transparent;
         border-right: 0px solid transparent;
         height: 0;
         width: 50%;
-        margin-top: -123px;
+        margin-top: -67px;
+
+        position: relative;
+
+        @include breakpoint($mobilem) {
+
+            border-bottom-width: 36px;
+            border-left: 102px solid transparent;
+            border-right: 0px solid transparent;
+            margin-top: -38px;
+
+        }
+
+        @include breakpoint($tablet) {
+
+            border-bottom-width: 46px;
+            border-left: 102px solid transparent;
+            border-right: 0px solid transparent;
+            margin-top: -48px;
+
+        }
+
+
+        @include breakpoint($laptop) {
+
+            border-bottom-width: 56px;
+            border-left: 102px solid transparent;
+            border-right: 0px solid transparent;
+            margin-top: -58px;
+
+        }
+
+        @include breakpoint($laptopl) {
+
+            border-bottom-width: 66px;
+            border-left: 102px solid transparent;
+            border-right: 0px solid transparent;
+            margin-top: -68px;
+
+        }
 
     }
 
@@ -39,7 +120,7 @@
         margin-right: 7%;
         font-size:15px;
 
-        @include breakpoint($laptop) {
+            @include breakpoint($laptop) {
 
                 font-size:20px;
 
@@ -140,22 +221,6 @@
             display: none;
         }
     }
-
-    //    .title {
-    //        font-size: 4vw;
-    //        text-transform: uppercase;
-    //        color: white;
-    //        text-align: center;
-    //        margin: 26px 0 0 auto;
-    //    }
-
-    //    .picto {
-    //        width: 15vw;
-    //        height: auto;
-    //        margin: 0 auto;
-    //        display: block;
-    //        margin-top: -31vw;
-    //    }
 
     .block-orange {
         width: 100%;

@@ -2,6 +2,16 @@
 
 
 $base = base_path();
+
+$visuel_offre = variable_get(ateliersmod_fsvisuels_offres);
+dpm($visuel_offre);
+
+$file = file_load($visuel_offre);
+dpm($file->uri);
+
+$img = image_style_url("header", $file->uri);
+//print $img;
+
 /*
 $ftitle = field_view_field("node",$node,'field_title');
 $picto = field_view_field("node",$node,'field_picto');
@@ -30,12 +40,13 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
 ?>
 
 <div class="offres-speciales">
-    <div class="atelier-header pictotitlecontainer">
-       <div class="imagetitle">
-    <div class="image"><?php print render($image); ?></div>
-    <div class="title">offres spéciales</div>
-</div>
 
+    <div class="imagetitle">
+        <div class="image">
+            <img src="<?php print $img; ?>" alt="header" title="header" />
+        </div>
+        <div class="title">offres spéciales</div>
     </div>
+
     <?php print $view; ?>
 </div>

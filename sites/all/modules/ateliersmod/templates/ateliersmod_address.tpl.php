@@ -1,4 +1,9 @@
-<?php $theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
+<?php
+
+    //$theme = drupal_get_path("theme",$GLOBALS['theme']) ;
+    $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
+
+?>
 
 <div class="bloc2">
 
@@ -19,7 +24,7 @@
         <br /> 80 000 Amiens
         <br />
 
-        <img class="tel" src="../<?php print $theme; ?>/images/telephone_blanc.svg" alt="telephone" title="telephone" /> 03 59 99 08 80
+        <img class="tel" src="<?php print $theme; ?>/images/telephone_blanc.svg" alt="telephone" title="telephone" /> 03 59 99 08 80
 
         <div class="petit">
 

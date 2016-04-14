@@ -6,15 +6,26 @@
     padding: 5vw 2vw;
     color: #9D2537;
     text-align: center;
-    width: 83vw;
+
+    @include breakpoint($tablet) {
+
+        width: 83vw;
+
+    }
 
     .don-img {
 
-        width: 9vw;
-        /* float: left; */
+        width: 19vw;
+        margin-right: 0px;
         margin: auto;
         display: inline-block;
-        margin-right: 83px;
+
+        @include breakpoint($tablet) {
+
+            width: 9vw;
+            margin-right: 83px;
+
+        }
 
     }
 
