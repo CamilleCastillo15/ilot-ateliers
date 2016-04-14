@@ -2,11 +2,16 @@
 
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
 
-//    $lservice = drupal_get_path_alias("node/".$node->nid);
-//    dpm($node);
+    //    $atelier = field_get_items("node",$node,'field_atelier')[0]["entity"];
+    //    $lservice = drupal_get_path_alias("node/".$node->nid);
+
+    //    $lservice = drupal_get_path_alias("node/".$node->nid);
+    //    dpm($node);
+
 ?>
 
 <div class="l-header text-presentation">
+
     <?php // print l("<img class=\"logo\" src=\"../".$theme."/images/logo.png\" alt=\"logo\" title=\"logo\" />", "content/home"); ?>
 
     <a href="home">
