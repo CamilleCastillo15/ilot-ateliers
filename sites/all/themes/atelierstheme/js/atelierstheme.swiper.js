@@ -8,6 +8,7 @@
             prevButton: '.swiper-button-prev',
             spaceBetween: 30,
             autoHeight:true,
+            height:1000,
             autoplay : 2000
         });
         $(".atelier-gallerie-image").on("click",function(){

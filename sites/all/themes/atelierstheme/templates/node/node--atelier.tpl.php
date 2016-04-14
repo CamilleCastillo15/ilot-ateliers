@@ -57,6 +57,12 @@
             <?php print render($body); ?>
         </div>
 
+        <div class="contact">
+
+            Nous contacter
+
+        </div>
+
         <div class="atelier-gallerie">
             <div class="atelier-gallerie-big">
                 <div class="atelier-gallerie swiper-container">
@@ -106,14 +112,6 @@
                             ?>
 
                 </div>
-
-
-
-
-            </div>
-            <div class="contact">
-
-                Nous contacter
 
             </div>
 
