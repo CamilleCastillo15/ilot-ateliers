@@ -1,8 +1,13 @@
 <div class="bloc_don">
 
- <?php $theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
+<?php
 
-   <img class="don-img" src="../<?php print $variables["ateliers_theme"]; ?>/images/logo_coeur_rouge.svg" alt="don" />
+    //$theme = drupal_get_path("theme",$GLOBALS['theme']) ;
+    $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
+
+?>
+
+   <img class="don-img" src="<?php print $theme; ?>/images/logo_coeur_rouge.svg" alt="don" />
 
    <div class="text-presentation-block">
 

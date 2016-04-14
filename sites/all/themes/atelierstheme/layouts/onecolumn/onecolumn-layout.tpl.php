@@ -34,8 +34,8 @@
 <footer class="l-footer text-presentation" >
     <?php print render($page['footer']); ?>
     <div class="reseaux">
-        <img class="twitter" src="../<?php print $theme; ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
-        <img class="linkedin" src="../<?php print $theme; ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" />
+        <img class="twitter" src="<?php print $theme ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
+        <img class="linkedin" src="<?php print $theme ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" />
     </div>
 </footer>
 
@@ -45,8 +45,8 @@
     <?php print render($page['off']); ?>
 
     <div class="reseaux">
-        <img class="twitter" src="../<?php print $theme; ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
-        <img class="linkedin" src="../<?php print $theme; ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" />
+        <img class="twitter" src="<?php print $theme ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
+        <img class="linkedin" src="<?php print $theme ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" />
     </div>
 
 </div>
