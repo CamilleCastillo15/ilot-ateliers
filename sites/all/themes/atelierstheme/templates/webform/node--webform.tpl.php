@@ -2,6 +2,16 @@
 
 $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
 
+$base = base_path();
+
+$visuel_contact = variable_get(ateliersmod_fsvisuels_contact);
+dpm($visuel_contact);
+
+$file = file_load($visuel_contact);
+dpm($file->uri);
+
+$img = image_style_url("header", $file->uri);
+
     /**
      * @file
      * Default theme implementation to display a node.
@@ -81,9 +91,16 @@ $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
      */
 
 ?>
+<div class="imagetitle">
+    <div class="image">
+        <img src="<?php print $img; ?>" alt="header" title="header" />
+    </div>
+    <div class="title">Contact</div>
+</div>
+
 <div class="block-contact">
 
-   <img class="mailbox" src="<?php print $theme ?>/images/mailbox_verte.svg" alt="logo" title="logo" />
+   <img class="mailbox" src="<?php print $theme ?>/images/mailbox_blanc.svg" alt="logo" title="logo" />
 
    <div class="contactez-nous">
 
