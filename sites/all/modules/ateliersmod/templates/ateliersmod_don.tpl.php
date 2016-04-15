@@ -23,6 +23,7 @@
 
            <div class="formulaire">
                 accèder au formulaire
+                <img class="f_g_droite" src="<?php print $theme ?>/images/f_blanches/f_droite.svg" alt="logo" title="logo" />
            </div>
 
     </div>

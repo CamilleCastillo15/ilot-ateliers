@@ -164,28 +164,69 @@ body {
 
         font-family: 'SourceSansProLight';
         background-color: #9D2537;
-        padding: 1vw 2vw;
+        padding: 15px 35px;
         color: white;
-        margin:2vw 0vw 0vw 0vw;
         font-size:15px;
+
+        margin: 30px auto;
+        font-size: 15px;
+        width: 247px;
+
+        position: relative;
 
         @include breakpoint($tablet) {
 
             display: inline;
             position: absolute;
-            margin:-5vw 0vw 0vw 17vw;
+            margin:-50px 0 0 142px;
 
         }
 
         @include breakpoint($laptop) {
 
             font-size:20x;
+            margin:-50px 0 0 242px;
 
         }
 
          @include breakpoint($laptopl) {
 
             font-size:25px;
+             margin: -50px 0 0 300px;
+             width: 338px;
+
+        }
+
+        .f_g_droite {
+
+            position: absolute;
+            width: 10px;
+            left: 217px;
+            bottom: 12px;
+
+            @include breakpoint($tablet) {
+
+                width: 9px;
+                left: 216px;
+                bottom: 13px;
+
+            }
+
+            @include breakpoint($laptop) {
+
+                width: 10px;
+                left: 220px;
+                bottom: 12px
+
+            }
+
+            @include breakpoint($laptopl) {
+
+                width: 12px;
+                left: 312px;
+                bottom: 15px;
+
+            }
 
         }
 
@@ -405,5 +446,6 @@ body {
     }
 
 }
+
 
 
