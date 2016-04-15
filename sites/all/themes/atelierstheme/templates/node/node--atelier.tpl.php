@@ -19,7 +19,12 @@
 
     drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
     drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
+
+    drupal_add_css('.atelier .contact{background-color:'.$couleur.';} ', 'inline');
+
     $lservice = drupal_get_path_alias("node/".$node->nid);
+
+    $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
 
 ?>
 
@@ -60,6 +65,8 @@
         <div class="contact">
 
             Nous contacter
+
+            <img class="f_g_droite" src="<?php print $theme ?>/images/f_blanches/f_droite.svg" alt="logo" title="logo" />
 
         </div>
 
