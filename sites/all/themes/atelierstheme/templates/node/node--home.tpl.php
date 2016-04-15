@@ -47,44 +47,44 @@
             
             <?php 
         
-//                foreach($result_ateliers as $key => $value) {
-//
-//                      $n = node_load($value->nid);
-//
-//                      $link =drupal_get_path_alias("node/".$value->nid);
-//                      $picto = field_view_field("node",$n,'field_picto');
-//                      $title = field_view_field("node",$n,'field_title');
-//                      $class = field_view_field("node",$n,'field_class');
-//
-//                      $title_render = render($title);
-//                      $class_render = render($class);
-//                      $picto_render = render($picto);
-//
-//                      print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers', $class_render))));
-//                      $title_render = render($title);
-//
-//                      // print l($picto_render,$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));
-//
-//                }
+                foreach($result_ateliers as $key => $value) {
+
+                      $n = node_load($value->nid);
+
+                      $link =drupal_get_path_alias("node/".$value->nid);
+                      $picto = field_view_field("node",$n,'field_picto');
+                      $title = field_view_field("node",$n,'field_title');
+                      $class = field_view_field("node",$n,'field_class');
+
+                      $title_render = render($title);
+                      $class_render = render($class);
+                      $picto_render = render($picto);
+
+                      print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers', $class_render))));
+                      $title_render = render($title);
+
+                      // print l($picto_render,$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));
+
+                }
         
                 echo "<div class=\"container-title-pictos\">";
         
-//                    foreach($result_ateliers as $key => $value) {
-//
-//                      $n = node_load($value->nid);
-//
-//                      $link =drupal_get_path_alias("node/".$value->nid);
-//                      $title = field_view_field("node",$n,'field_title');
-//                      $class = field_view_field("node",$n,'field_class');
-//
-//                      $title_render = render($title);
-//                      $class_render = render($class);;
-//
-//                            echo "<p class=\"title-pictos ".$class_render."\">";
-//                                print l($title_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers'))));
-//                            echo "</p>";
-//
-//                    }
+                    foreach($result_ateliers as $key => $value) {
+
+                      $n = node_load($value->nid);
+
+                      $link =drupal_get_path_alias("node/".$value->nid);
+                      $title = field_view_field("node",$n,'field_title');
+                      $class = field_view_field("node",$n,'field_class');
+
+                      $title_render = render($title);
+                      $class_render = render($class);;
+
+                            echo "<p class=\"title-pictos ".$class_render."\">";
+                                print l($title_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers'))));
+                            echo "</p>";
+
+                    }
         
                 echo "</div>";
         
@@ -96,20 +96,19 @@
     <div class="home-body-actu swiper-container">
 
          <div class="swiper-wrapper">
-      
-<!--
+
                <?php
 
-                 //foreach($result as $key => $value) { ?>
+                 foreach($result as $key => $value) { ?>
 
                     <div class="actu actu-gallerie-images swiper-slide">
 
                            <?php
-//
-//                                    $n = node_load($value->nid);
-//                                    $im_offres = field_view_field("node",$n,'field_image');
-//                                    $title_offres = field_view_field("node",$n,'field_title');
-//                                    $body_offres = field_view_field("node",$n,'body');
+
+                                    $n = node_load($value->nid);
+                                    $im_offres = field_view_field("node",$n,'field_image');
+                                    $title_offres = field_view_field("node",$n,'field_title');
+                                    $body_offres = field_view_field("node",$n,'body');
 
                             ?>
 
@@ -117,18 +116,18 @@
 
                             <?php
 
-//                                echo "<h1>";
-//                                    print render($title_offres);
-//                                echo "</h1>";
-//
-//                                print render($body_offres);
+                                echo "<h1>";
+                                    print render($title_offres);
+                                echo "</h1>";
+
+                                print render($body_offres);
                             ?>
 
                             <div class="en_savoir_plus">
 
                                 En savoir plus
 
-                                <img class="f_g_droite" src="<?php //print $theme ?>/images/f_blanches/f_droite.svg" alt="logo" title="logo" />
+                                <img class="f_g_droite" src="<?php print $theme ?>/images/f_blanches/f_droite.svg" alt="logo" title="logo" />
 
                             </div>
 
@@ -138,7 +137,7 @@
 
                             <?php
 
-//                                print render($im_offres);
+                               print render($im_offres);
 
                             ?>
 
@@ -146,7 +145,7 @@
 
                     </div>
 
-                <?php    //} ?>
+                <?php    } ?>
 -->
 
             </div>
