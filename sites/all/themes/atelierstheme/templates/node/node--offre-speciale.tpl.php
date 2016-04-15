@@ -12,6 +12,7 @@
     $img = field_view_field("node",$atelier,'field_image');
 
     $couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
+    $gallerie = field_get_items("node",$node,'field_image_multi');
 
     drupal_add_css('.offre'.$node->nid.' {padding: 0 0 100px 0;} ', 'inline');
     drupal_add_css('.offre'.$node->nid.' {border-bottom: 3px solid'.$couleur.';} ', 'inline');
@@ -61,6 +62,77 @@
 
                 <h1> <?php print render($title); ?> </h1>
                 <?php print render($body); ?>
+
+            </div>
+
+        </div>
+
+        <div class="offres-speciales-gallerie">
+
+            <div class="offres-speciales-gallerie-big">
+
+                <div class="offres-speciales-gallerie swiper-container">
+
+                    <div class="offres-speciales-gallerie-big swiper-wrapper">
+
+                        <?php
+
+                            foreach($gallerie as $key => $value){ ?>
+
+                            <div class="offres-speciales-gallerie-image swiper-slide">
+                                <?php
+                                            $imagea = field_view_value('node', $node, 'field_image_multi', $value);
+                                            print render($imagea);
+                                        ?>
+                            </div>
+
+                            <?php
+
+                                }
+
+                            ?>
+
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                </div>
+
+                <div class="offres-speciales-gallerie-thumbnails">
+
+                    <?php foreach($gallerie as $key => $value){ ?>
+
+                        <div class="offres-speciales-gallerie-image" data-id="<?php print $key; ?>">
+
+                            <?php
+
+                                    $imagea = field_view_value('node', $node, 'field_image_multi', $value,array(
+
+                                            'type' => 'image',
+
+                                            'settings' => array(
+                                            'image_style' => 'gallerie_thumb',
+
+                                        ),
+
+                                    ));
+
+                                    print render($imagea);
+
+                                ?>
+                        </div>
+
+                        <?php
+
+                            }
+
+                        ?>
+
+                </div>
 
             </div>
 

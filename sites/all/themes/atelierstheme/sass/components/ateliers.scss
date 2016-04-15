@@ -61,6 +61,7 @@
     }
 
     .triangle-right {
+
        @include grid-span(6,7);
 
         border-bottom-width: 66px;
@@ -90,7 +91,6 @@
             margin-top: -48px;
 
         }
-
 
         @include breakpoint($laptop) {
 
