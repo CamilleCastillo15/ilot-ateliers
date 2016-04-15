@@ -49,10 +49,11 @@
         -->
             <div class="triangle-right"></div>
 
-            <div class="liens">
+            <div class="liens text-presentation ">
 
                 <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
-                    <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?>
+
+                <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?>
 
             </div>
 

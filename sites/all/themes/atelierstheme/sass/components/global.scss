@@ -268,7 +268,26 @@ body {
             left: 50%;
             text-transform: uppercase;
             color: white;
-            font-size: 2.5vw;
+
+            font-size:20px;
+
+            @include breakpoint($mobilel) {
+
+                font-size:25px;
+
+            }
+
+            @include breakpoint($laptop) {
+
+                font-size:35px;
+
+            }
+
+             @include breakpoint($laptopl) {
+
+                font-size:40px;
+
+            }
 
         }
 
@@ -276,14 +295,16 @@ body {
 
             @include translate(-50%,-50%);
             position:absolute;
-            top: 93%;
-            left: 50%;
+
             text-transform: uppercase;
             color: white;
-            font-size: 1.75vw;
             width: 50vw;
 
             z-index: 1000000;
+            font-size: 20px;
+
+            top: 90%;
+            left: 69%;
 
             a {
 
@@ -294,6 +315,49 @@ body {
             .actualites {
 
                 float: right;
+
+            }
+
+            .services {
+
+                margin-left: -150px;
+
+                @include breakpoint($laptop) {
+
+                    margin-left: 0px;
+
+                }
+
+                @include breakpoint($laptopl) {
+
+                    margin-left: 0px;
+
+                }
+
+            }
+
+            font-size:20px;
+
+            @include breakpoint($mobilel) {
+
+                    top: 92%;
+                    left: 69%;
+                    font-size: 20px;
+
+            }
+
+            @include breakpoint($laptop) {
+
+                top: 93%;
+                left: 52%;
+                font-size: 28px;
+
+            }
+
+             @include breakpoint($laptopl) {
+
+                top: 93%;
+                font-size: 30px;
 
             }
 
@@ -451,15 +515,27 @@ body {
 
     position: relative;
 
-    .f_g_droite {
+}
 
-        width: 0.5em;
-        top: 11px;
-        position: absolute;
-        left: 192px;
+.en_savoir_plus {
+    text-transform: uppercase;
+    //background-color: #f7941d;
+    color: white;
+    padding: 11px;
+    width: 233px;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    background-color:green;
+    position: relative;
+}
 
-    }
+.f_g_droite {
 
+    width: 0.5em;
+    top: 11px;
+    position: absolute;
+    left: 192px;
 
 }
 

@@ -28,9 +28,14 @@
             console.log(".offres-speciales-gallerie-image");
             swiper.slideTo($(this).data("id"));
 
-        })
+        });
 
-        console.log("Swiper");
+        $(".offres-speciales-gallerie-image").on("click",function() {
+
+            console.log(".offres-speciales-gallerie-image");
+            swiper.slideTo($(this).data("id"));
+
+        })
 
     }
 

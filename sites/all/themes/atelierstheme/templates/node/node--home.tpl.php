@@ -8,7 +8,7 @@
     $gallerie = field_get_items("node",$node,'field_image_multi');
     $image = field_get_items("node",$node,'field_image');
 
-    $view = views_get_view('actus');
+    $view = views_get_view('offres_speciales');
     $view->set_display('blockhome');
     $view->execute();
 
@@ -93,22 +93,70 @@
 
     </div>
         
-    <div class="home-body-actu">
-      
-       <?php 
-        
-         foreach($result as $key => $value){ ?>
-               <div class="actu"> <?php
-                
-                $n = node_load($value->nid);
-                $im = field_view_field("node",$n,'field_image');
-                print render($im);
-                 ?>
-                </div>
-        <?php    }?>
+    <div class="home-body-actu swiper-container">
 
-     
-    </div>
+         <div class="swiper-wrapper">
+      
+               <?php
+
+                 foreach($result as $key => $value) { ?>
+
+                    <div class="actu actu-gallerie-images swiper-slide">
+
+                           <?php
+
+                                    $n = node_load($value->nid);
+                                    $im_offres = field_view_field("node",$n,'field_image');
+                                    $title_offres = field_view_field("node",$n,'field_title');
+                                    $body_offres = field_view_field("node",$n,'body');
+
+                            ?>
+
+                         <div class="text-presentation body_offres ">
+
+                            <?php
+
+                                echo "<h1>";
+                                    print render($title_offres);
+                                echo "</h1>";
+
+                                print render($body_offres);
+                            ?>
+
+                            <div class="en_savoir_plus">
+
+                                En savoir plus
+
+                                <img class="f_g_droite" src="<?php print $theme ?>/images/f_blanches/f_droite.svg" alt="logo" title="logo" />
+
+                            </div>
+
+                        </div>
+
+                        <div class="im_offres">
+
+                            <?php
+
+                                print render($im_offres);
+
+                            ?>
+
+                       </div>
+
+                    </div>
+
+                <?php    } ?>
+
+            </div>
+
+                
+            <div class="swiper-pagination"></div>
+
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
 
     <div class="home-image-solidarite">
             <?php print render($image); ?>
