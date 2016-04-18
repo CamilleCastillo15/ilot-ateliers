@@ -4,6 +4,6 @@
     </div>
     <?php
         $var = variable_get("ateliersmod_fsgoogle_map");
-        dpm($var);
+        //dpm($var);
     ?>
 </div>

@@ -1,0 +1,28 @@
+body{
+
+    font-family: arial;
+
+}
+
+p{
+    &.wdefault{
+        font-size:1em;
+        color: black;
+    }
+}
+
+h1{
+    &.wtitle{
+        font-size:2em;
+
+    }
+}
+
+h2{
+    &.wsubtitle{
+        font-size:1.5em;
+        color: black;
+        //color: #f7941d;
+
+    }
+}

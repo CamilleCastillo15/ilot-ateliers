@@ -1,0 +1,151 @@
+@import "breakpoint";
+@import "../variables/variables";
+@import "../variables/mixin";
+
+.home-services {
+
+    .container-containers {
+
+        @include breakpoint($laptop) {
+
+                width:960px;
+                margin: auto;
+        }
+
+    }
+
+    .container-containers {
+
+        .container {
+
+            @include breakpoint($laptop) {
+
+                width: 300px;
+                float: left;
+                //height: 55vw;
+                margin: 80px 10px;
+                background-color: #f7f7f7;
+                position: relative;
+
+            }
+
+        }
+
+    }
+
+
+    .header-img {
+
+        margin-bottom: 7vw;
+
+    }
+
+    .picto_ateliers {
+
+        width: 9em;
+        height: auto;
+        display: block;
+        top: 0;
+        left: 0;
+        margin: -100px auto;
+        display: block;
+
+    }
+
+    .plus {
+
+        display: block;
+        text-transform: uppercase;
+        background-color: #00a886;
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+        margin: 0 auto 2vw auto;
+        color: white;
+        position: relative;
+
+        .f_g_droite {
+
+            width: 8px;
+            position: absolute;
+            left: 167px;
+
+        }
+    }
+
+    .pictotitlecontainer {
+
+        width:100%;
+        position: relative;
+
+        .image {
+
+             width:100%;
+
+            @include breakpoint($laptop) {
+
+               margin-top:51%;
+
+            }
+
+        }
+
+        .pictotitle {
+
+            @include translate(-50%,-50%);
+            position:absolute;
+            top: 70%;
+            left: 50%;
+
+            img {
+
+                width: 19vw;
+
+            }
+
+            @include breakpoint($laptop) {
+
+               position: absolute;
+               top:-132%;
+                width:85px;
+
+            }
+
+        }
+
+    }
+
+    .wtitle {
+
+        @include breakpoint($laptop) {
+
+             @include translate(-50%,-50%);
+             position: absolute;
+             left: 50%;
+             top: 124px;
+             font-size: 20px;
+        }
+
+    }
+
+    .text-presentation {
+
+        padding: 25px;
+
+    }
+
+    .text-presentation {
+
+        @include breakpoint($laptop) {
+
+            h1.wtitle {
+
+                font-size: 18px;
+
+            }
+
+        }
+
+    }
+
+}

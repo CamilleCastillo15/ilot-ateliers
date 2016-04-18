@@ -1,0 +1,233 @@
+@import "singularitygs";
+@import "breakpoint";
+@import "../variables/variables";
+
+.atelier {
+    font-family: 'SourceSansProRegular';
+    //font-size: 4vw;
+
+    .triangle-left {
+        @include grid-span(6,1);
+
+        border-bottom-width: 26px;
+        border-bottom-style: solid;
+        border-left: -40px solid transparent;
+        border-right: 102px solid transparent;
+        height: 0;
+        width: 50%;
+
+        margin-top: -67px;
+        z-index: 100000;
+
+        position: relative;
+
+        @include breakpoint($mobilem) {
+
+            border-bottom-width: 36px;
+            border-left: -40px solid transparent;
+            border-right: 102px solid transparent;
+            margin-top: -38px;
+
+        }
+
+        @include breakpoint($tablet) {
+
+            border-bottom-width: 46px;
+            border-left: -40px solid transparent;
+            border-right: 102px solid transparent;
+            margin-top: -48px;
+
+        }
+
+
+        @include breakpoint($laptop) {
+
+            border-bottom-width: 56px;
+            border-left: -40px solid transparent;
+            border-right: 102px solid transparent;
+            margin-top: -58px;
+
+        }
+
+        @include breakpoint($laptopl) {
+
+            border-bottom-width: 66px;
+            border-left: -40px solid transparent;
+            border-right: 102px solid transparent;
+            margin-top: -68px;
+
+        }
+
+    }
+
+    .triangle-right {
+
+       @include grid-span(6,7);
+
+        border-bottom-width: 66px;
+        border-bottom-style: solid;
+        border-left: 102px solid transparent;
+        border-right: 0px solid transparent;
+        height: 0;
+        width: 50%;
+        margin-top: -67px;
+
+        position: relative;
+
+        @include breakpoint($mobilem) {
+
+            border-bottom-width: 36px;
+            border-left: 102px solid transparent;
+            border-right: 0px solid transparent;
+            margin-top: -38px;
+
+        }
+
+        @include breakpoint($tablet) {
+
+            border-bottom-width: 46px;
+            border-left: 102px solid transparent;
+            border-right: 0px solid transparent;
+            margin-top: -48px;
+
+        }
+
+        @include breakpoint($laptop) {
+
+            border-bottom-width: 56px;
+            border-left: 102px solid transparent;
+            border-right: 0px solid transparent;
+            margin-top: -58px;
+
+        }
+
+        @include breakpoint($laptopl) {
+
+            border-bottom-width: 66px;
+            border-left: 102px solid transparent;
+            border-right: 0px solid transparent;
+            margin-top: -68px;
+
+        }
+
+    }
+
+
+    .atelier-body {
+
+        line-height: 1.4em;
+        margin-left: 7%;
+        margin-right: 7%;
+        font-size:15px;
+
+            @include breakpoint($laptop) {
+
+                font-size:20px;
+
+            }
+
+             @include breakpoint($laptopxl) {
+
+                font-size:25px;
+
+            }
+
+        strong {
+            font-weight: 800;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        h1 {
+
+            font-family: 'SourceSansProSemiBold';
+            text-transform: uppercase;
+            font-size:20px;
+
+            @include breakpoint($laptop) {
+
+                font-size:30px;
+
+            }
+
+             @include breakpoint($laptopxl) {
+
+                font-size:35px;
+
+            }
+
+            margin: 25px 0;
+        }
+
+        h2 {
+
+            font-size:17px;
+
+            @include breakpoint($laptop) {
+
+                font-size:22px;
+
+            }
+
+             @include breakpoint($laptopxl) {
+
+                font-size:27px;
+
+            }
+
+            text-transform: uppercase;
+            margin: 25px 0;
+        }
+
+        ul {
+
+            margin-left: 15px;
+
+            li {
+
+                list-style: disc inside none;
+
+            }
+
+        }
+
+    }
+
+    .contact {
+        text-transform: uppercase;
+        //background-color: #f7941d;
+        color: white;
+        padding: 11px;
+        width: 233px;
+        display: block;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .atelier-header-bg-web {
+        display: none;
+
+        @include breakpoint($laptop) {
+
+            display: block;
+
+        }
+
+    }
+    .atelier-header-bg-mobile {
+        display: block;
+        @include breakpoint($laptop) {
+            display: none;
+        }
+    }
+
+    .block-orange {
+        width: 100%;
+        height: 10vw;
+        background-color: #f7941d;
+    }
+
+
+}
