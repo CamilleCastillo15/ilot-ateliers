@@ -11,29 +11,36 @@
     color: #9D2537;
     text-align: center;
 
-    @include breakpoint($tablet) {
-
-        width: 83vw;
-
-    }
+//    @include breakpoint($tablet) {
+//
+//        width: 83vw;
+//
+//    }
 
     .don-img {
 
         width: 19vw;
-        margin-right: 0px;
+        //        margin-right: 0px;
+        //        margin: auto;
+        //        display: inline-block;
+
+        position: absolute;
+        left: 0;
+        right: 463px;
         margin: auto;
-        display: inline-block;
 
         @include breakpoint($tablet) {
 
             width: 9vw;
-            margin-right: 83px;
+            //margin-right: 83px;
 
         }
 
     }
 
     .text-presentation-block {
+
+        display: block;
 
         h1, h1.wtitle {
 

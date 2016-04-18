@@ -25,15 +25,21 @@
     <div class="atelier-header pictotitlecontainer">
 
         <div class="atelier-header-bg image">
+
             <?php print render($img); ?>
+
         </div>
 
         <div class="picto pictotitle">
+
             <?php print render($picto); ?>
+
         </div>
 
         <div class="title">
+
             <?php print render($ftitle); ?>
+
         </div>
 
         <div class="triangle-left"></div><!--
@@ -51,10 +57,6 @@
 </div>
 
 <div class="atelier actu-detail">
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 
     <div class="atelier-header">
 

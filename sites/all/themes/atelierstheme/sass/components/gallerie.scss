@@ -2,7 +2,7 @@
 
     width: 900px;
     height: auto;
-    margin: 0 auto 100px auto;
+    margin: 100px auto 100px auto;
 
 }
 
@@ -12,6 +12,28 @@
     cursor: pointer;
 
     .atelier-gallerie-image {
+
+        display: inline-block;
+
+    }
+
+}
+
+
+.offres-speciales-gallerie {
+
+    width: 900px;
+    height: auto;
+    margin: 100px auto 100px auto;
+
+}
+
+.offres-speciales-gallerie-thumbnails {
+
+    display: inline-block;
+    cursor: pointer;
+
+    .offres-speciales-gallerie-image {
 
         display: inline-block;
 

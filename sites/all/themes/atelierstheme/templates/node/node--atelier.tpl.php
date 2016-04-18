@@ -19,7 +19,12 @@
 
     drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
     drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
+
+    drupal_add_css('.atelier .contact{background-color:'.$couleur.';} ', 'inline');
+
     $lservice = drupal_get_path_alias("node/".$node->nid);
+
+    $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
 
 ?>
 
@@ -44,10 +49,11 @@
         -->
             <div class="triangle-right"></div>
 
-            <div class="liens">
+            <div class="liens text-presentation ">
 
                 <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
-                    <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?>
+
+                <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?>
 
             </div>
 
@@ -61,55 +67,71 @@
 
             Nous contacter
 
+            <img class="f_g_droite" src="<?php print $theme ?>/images/f_blanches/f_droite.svg" alt="logo" title="logo" />
+
         </div>
 
         <div class="atelier-gallerie">
+
             <div class="atelier-gallerie-big">
+
                 <div class="atelier-gallerie swiper-container">
+
                     <div class="atelier-gallerie-big swiper-wrapper">
+
                         <?php
 
-                                foreach($gallerie as $key => $value){ ?>
+                                foreach($gallerie as $key => $value) { ?>
 
                             <div class="atelier-gallerie-image swiper-slide">
-                                <?php
-                                            $imagea = field_view_value('node', $node, 'field_image_multi', $value);
-                                            print render($imagea);
-                                        ?>
+
+                                    <?php
+
+                                        $imagea = field_view_value('node', $node, 'field_image_multi', $value);
+                                        print render($imagea);
+
+                                    ?>
                             </div>
 
-                            <?php
+                        <?php
 
-                                    }
+                            }
 
-                                ?>
+                        ?>
 
                     </div>
-                      <div class="swiper-pagination"></div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
                 </div>
+
                 <div class="atelier-gallerie-thumbnails">
 
                     <?php foreach($gallerie as $key => $value){ ?>
 
                         <div class="atelier-gallerie-image" data-id="<?php print $key; ?>">
-                            <?php
-                                        $imagea = field_view_value('node', $node, 'field_image_multi', $value,array(
-                                            'type' => 'image',
-                                            'settings' => array(
-                                                'image_style' => 'gallerie_thumb',
-                                            ),
-                                        ));
+
+                                    <?php
+                                                $imagea = field_view_value('node', $node, 'field_image_multi', $value,array(
+                                                    'type' => 'image',
+                                                    'settings' => array(
+                                                        'image_style' => 'gallerie_thumb',
+                                                    ),
+                                                ));
+
                                         print render($imagea);
                                     ?>
                         </div>
+
                         <?php
 
-                                }
+                            }
 
-                            ?>
+                        ?>
 
                 </div>
 

@@ -164,28 +164,69 @@ body {
 
         font-family: 'SourceSansProLight';
         background-color: #9D2537;
-        padding: 1vw 2vw;
+        padding: 15px 35px;
         color: white;
-        margin:2vw 0vw 0vw 0vw;
         font-size:15px;
+
+        margin: 30px auto;
+        font-size: 15px;
+        width: 247px;
+
+        position: relative;
 
         @include breakpoint($tablet) {
 
             display: inline;
             position: absolute;
-            margin:-5vw 0vw 0vw 17vw;
+            margin:-50px 0 0 142px;
 
         }
 
         @include breakpoint($laptop) {
 
             font-size:20x;
+            margin:-50px 0 0 242px;
 
         }
 
          @include breakpoint($laptopl) {
 
             font-size:25px;
+             margin: -50px 0 0 300px;
+             width: 338px;
+
+        }
+
+        .f_g_droite {
+
+            position: absolute;
+            width: 10px;
+            left: 217px;
+            bottom: 12px;
+
+            @include breakpoint($tablet) {
+
+                width: 9px;
+                left: 216px;
+                bottom: 13px;
+
+            }
+
+            @include breakpoint($laptop) {
+
+                width: 10px;
+                left: 220px;
+                bottom: 12px
+
+            }
+
+            @include breakpoint($laptopl) {
+
+                width: 12px;
+                left: 312px;
+                bottom: 15px;
+
+            }
 
         }
 
@@ -208,12 +249,30 @@ body {
 
             @include translate(-50%,-50%);
             position:absolute;
-            top: 34%;
+            top: 37%;
             left: 50%;
 
             img {
 
                 width:16vw;
+
+                @include breakpoint($mobilel) {
+
+                    width:18vw;
+
+                }
+
+                @include breakpoint($laptop) {
+
+                    width:20vw;
+
+                }
+
+                 @include breakpoint($laptopl) {
+
+                    width:250px;
+
+                }
 
             }
 
@@ -227,7 +286,26 @@ body {
             left: 50%;
             text-transform: uppercase;
             color: white;
-            font-size: 2.5vw;
+
+            font-size:20px;
+
+            @include breakpoint($mobilel) {
+
+                font-size:25px;
+
+            }
+
+            @include breakpoint($laptop) {
+
+                font-size:35px;
+
+            }
+
+             @include breakpoint($laptopl) {
+
+                font-size:40px;
+
+            }
 
         }
 
@@ -235,14 +313,35 @@ body {
 
             @include translate(-50%,-50%);
             position:absolute;
-            top: 93%;
-            left: 50%;
+
             text-transform: uppercase;
             color: white;
-            font-size: 1.75vw;
+
             width: 50vw;
 
+            @include breakpoint($mobilel) {
+
+                width: 70vw;
+
+            }
+
+            @include breakpoint($laptop) {
+
+                width: 80vw;
+
+            }
+
+             @include breakpoint($laptopl) {
+
+                width: 90vw;
+
+            }
+
             z-index: 1000000;
+            font-size: 20px;
+
+            top: 90%;
+            left: 69%;
 
             a {
 
@@ -253,6 +352,49 @@ body {
             .actualites {
 
                 float: right;
+
+            }
+
+            .services {
+
+                margin-left: -150px;
+
+                @include breakpoint($laptop) {
+
+                    margin-left: 0px;
+
+                }
+
+                @include breakpoint($laptopl) {
+
+                    margin-left: 0px;
+
+                }
+
+            }
+
+            font-size:20px;
+
+            @include breakpoint($mobilel) {
+
+                    top: 92%;
+                    left: 69%;
+                    font-size: 20px;
+
+            }
+
+            @include breakpoint($laptop) {
+
+                top: 93%;
+                left: 52%;
+                font-size: 28px;
+
+            }
+
+             @include breakpoint($laptopl) {
+
+                top: 93%;
+                font-size: 30px;
 
             }
 
@@ -405,5 +547,34 @@ body {
     }
 
 }
+
+.contact {
+
+    position: relative;
+
+}
+
+.en_savoir_plus {
+    text-transform: uppercase;
+    //background-color: #f7941d;
+    color: white;
+    padding: 11px;
+    width: 233px;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    background-color:$green;
+    position: relative;
+}
+
+.f_g_droite {
+
+    width: 0.5em;
+    top: 11px;
+    position: absolute;
+    left: 192px;
+
+}
+
 
 
