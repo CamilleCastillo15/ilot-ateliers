@@ -421,7 +421,11 @@ body {
 
         .views-field-field-image, img {
 
+            @include breakpoint($tablet) {
+
                 float: left;
+
+            }
 
         }
 
