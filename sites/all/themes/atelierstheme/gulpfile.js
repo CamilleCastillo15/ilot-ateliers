@@ -41,7 +41,6 @@ gulp.task('sass:dev', function () {
 
 });
 
-
 gulp.task('templates', function(){
   gulp.src('hbs/*.hbs')
     .pipe(handlebars())
@@ -65,14 +64,9 @@ gulp.task('sass:watch', function () {
 gulp.task('browser-sync',['sass:dev'], function() {
 
  browserSync.init({
-   // Change as required
    proxy: "",
    socket: {
-       // For local development only use the default Browsersync local URL.
        domain: 'ilotateliers.dinde.pro:3000'
-       // For external development (e.g on a mobile or tablet) use an external URL.
-       // You will need to update this to whatever BS tells you is the external URL when you run Gulp.
-       //domain: '192.168.0.13:3000'
    }
  });
 });

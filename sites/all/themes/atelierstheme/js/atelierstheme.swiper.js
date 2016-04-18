@@ -6,14 +6,14 @@
 
         var swiper = new Swiper('.swiper-container', {
 
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            spaceBetween: 30,
-            autoHeight:true,
-            height:1000,
-            autoplay : 2000
+//            pagination: '.swiper-pagination',
+//            paginationClickable: true,
+//            nextButton: '.swiper-button-next',
+//            prevButton: '.swiper-button-prev',
+//            spaceBetween: 30,
+//            autoHeight:true,
+//            //height:1000,
+//            autoplay : 2000
 
         });
 
