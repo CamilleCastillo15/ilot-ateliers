@@ -1,13 +1,9 @@
 <div class="bloc1">
-    <div class="text">
-        <div class="gros">
-
-         MAP
-            <br /> Une entreprise ?
-            <br />
-
-        </div>
+    <div class="map">
 
     </div>
-
+    <?php
+        $var = variable_get("ateliersmod_fsgoogle_map");
+        dpm($var);
+    ?>
 </div>

@@ -160,9 +160,11 @@ function ateliersmod_admin() {
     $var2 = variable_get('ateliersmod_fsgoogle_map');    
     $form['ateliersmod_fsgoogle_map'] = array(
         '#type' => 'location_element', 
-        '#title' => t('Texte du bloc'),      
+        '#title' => t('Adresse'),      
+        
+        
         '#default_value' =>$var2,
-        '#description' => t("Texte présent dans le footer du site"),
+        '#description' => t("Plan des ateliers"),
         '#required' => FALSE,
         '#location_settings' => array (
             'form' => array(
@@ -173,10 +175,7 @@ function ateliersmod_admin() {
                     'additional'    => array('collect' => 1, 'weight' => 6),
                     'city'          => array('collect' => 1, 'weight' => 8),
                     'postal_code'   => array('collect' => 1, 'weight' => 12),
-                    /*
-                    'locpick'       => array('collect' => 4, 'weight' => 14),
-                    */
-                    
+                    'locpick'       => array('collect' => 4, 'weight' => 14),                   
                 ),
             ),
         )
@@ -248,7 +247,12 @@ function ateliersmod_block_view($delta='') {
         case 'ateliersmod_autres_services':
 			$block['subject'] = "";//t('Block Name 1');
 			$block['content']['ateliersmod_autres_services'] = array(
-		        '#theme' => 'ateliersmod_autres_services'
+		        '#theme' => 'ateliersmod_autres_services',
+                '#attached' => array(
+                    'js' => array(
+                        drupal_get_path('module', 'ateliersmod') . '/js/ateliersmod_map.js',
+                    ),
+                )
 	       );            
 		break;   
         

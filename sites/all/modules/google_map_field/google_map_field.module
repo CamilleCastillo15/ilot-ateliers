@@ -71,6 +71,7 @@ function google_map_field_field_widget_info() {
     'google_map_field_widget' => array(
       'label' => t('Map'),
       'field types' => array('google_map_field'),
+     
     ),
   );
 }
@@ -213,6 +214,8 @@ function google_map_field_field_widget_form(&$form, &$form_state, $field, $insta
       ),
     ),
   );
+    
+    
 
   $defaults = array(
     'name'    =>  isset($instance['default_value'][0]['name']) ? $instance['default_value'][0]['name'] : t('Default'),
