@@ -405,23 +405,12 @@ body {
 
 .actus, .offre-speciale {
 
-//        border-bottom-width:3px;
-//        border-bottom-style:solid;
         margin: 50px 50px;
-
-        @include breakpoint($laptop) {
-
-                min-height: 207px;
-
-        }
+        min-height: 207px;
 
         .views-field-field-image, img {
 
-            @include breakpoint($laptop) {
-
                 float: left;
-
-            }
 
         }
 
@@ -435,17 +424,35 @@ body {
 
         .views-field-view-node, .plus  {
 
+            margin:30px 0;
+            position: relative;
+
             @include breakpoint($laptop) {
 
                 float: right;
+                width: 170px;
+                text-align: center;
+                border: 1px solid black;
+                padding: 5px 25px;
+                text-transform: uppercase;
 
             }
 
-            width:150px;
-            text-align: center;
-            margin:30px 0;
-            border: 1px solid black;
-            padding: 5px 25px;
+            .f_g_droite {
+
+                width: 0.4em;
+                height: auto;
+                top: 6px;
+                left: 147px;
+                display: none;
+
+                @include breakpoint($laptop) {
+
+                    display: block;
+
+                }
+
+            }
 
         }
 
@@ -454,10 +461,21 @@ body {
             &:not(:first-child) {
 
                 max-width:750px;
+                margin-left:250px;
+
+            }
+
+        }
+
+        .text-actus {
+
+            p, h2.wsubtitle, h1.wtitle {
+
+                display:none;
 
                 @include breakpoint($laptop) {
 
-                    margin-left:250px;
+                    display: block;
 
                 }
 

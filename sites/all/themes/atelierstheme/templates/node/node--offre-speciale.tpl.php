@@ -22,6 +22,8 @@
 
     $link = drupal_get_path_alias("node/".$node->nid);
 
+    $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
+
 ?>
 
 <?php if($teaser){ ?>
@@ -41,7 +43,8 @@
                 <h1 class="title-offre-speciale"> <?php print render($title); ?> </h1>
 
                  <?php print render($body); ?>
-                 <?php print l("lire la suite" ,$link  , array("html"=>true, 'attributes' => array('class' => array('plus')))); ?>
+
+                 <?php print l("lire la suite <img class=\"f_g_droite\" src=\"/sites/all/themes/atelierstheme/images/f_noires/f_g_droite.svg\" alt=\"logo\" title=\"logo\" />", $link, array("html"=>true, 'attributes' => array('class' => array('plus')))); ?>
 
              </div>
 

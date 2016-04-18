@@ -91,11 +91,17 @@ $img = image_style_url("header", $file->uri);
      */
 
 ?>
+
 <div class="imagetitle">
+
     <div class="image">
+
         <img src="<?php print $img; ?>" alt="header" title="header" />
+
     </div>
+
     <div class="title">Contact</div>
+
 </div>
 
 <div class="block-contact">
