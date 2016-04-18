@@ -39,14 +39,9 @@
         .views-field-created-1 {
 
             max-width:10000px;
-            //text-align: right;
 
-            @include breakpoint($laptop) {
-
-                float: right;
-                margin-top: -47px;
-
-            }
+            float: right;
+            margin-top: -47px;
 
             background-image: url("../images/calendrier.svg");
             background-repeat: no-repeat;
@@ -60,15 +55,11 @@
              display: block;
              color: white;
              font-size: 20px;
-             padding-top: 11px;
-             margin-top: 20px;
+//           padding-top: 11px;
+//           margin-top: 20px;
 
-            @include breakpoint($laptop) {
-
-                    margin-top: 11px;
-                    padding-top: 0px;
-
-                }
+            margin-top: 11px;
+            padding-top: 0px;
 
             }
 
