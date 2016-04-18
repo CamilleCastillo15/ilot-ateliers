@@ -272,7 +272,6 @@
 
 .home-body-actu {
 
-
     .actu {
 
         padding:30px;
@@ -310,4 +309,52 @@
     }
 
 }
+
+.home-body-solidarite {
+
+    .body_solidarite {
+
+        padding:30px;
+        display: block;
+
+        @include breakpoint($tablet) {
+
+            display: inline-block;
+            width:49%;
+
+        }
+
+        &.text-presentation {
+
+            padding:0;
+
+        }
+
+    }
+
+    .image_solidarite {
+
+        display: block;
+        padding:0 0 0 20px;
+
+        @include breakpoint($tablet) {
+
+            display: inline-block;
+            width:50%;
+            position: absolute;
+
+        }
+
+    }
+
+    .en_savoir_plus {
+
+        border: solid 1px black;
+        color:black;
+        background-color: white;
+
+    }
+
+}
+
 

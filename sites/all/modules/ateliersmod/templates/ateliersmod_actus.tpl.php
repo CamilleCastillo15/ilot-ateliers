@@ -24,21 +24,28 @@
     <div class="atelier-header pictotitlecontainer">
 
         <div class="atelier-header-bg image">
+
             <?php print render($img); ?>
+
         </div>
 
         <div class="picto pictotitle">
+
             <?php print render($picto); ?>
+
         </div>
 
         <div class="title">
+
             <?php print render($ftitle); ?>
+
         </div>
 
         <div class="triangle-left"></div><!--
         --><div class="triangle-right"></div>
 
         <div class="liens">
+
             <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
             <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?>
 

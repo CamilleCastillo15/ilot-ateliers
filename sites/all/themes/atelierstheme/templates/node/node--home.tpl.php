@@ -7,6 +7,7 @@
 
     $gallerie = field_get_items("node",$node,'field_image_multi');
     $image = field_view_field("node",$node,'field_image');
+    $body = field_view_field("node",$node,'field_body');
 
     $view = views_get_view('offres_speciales');
     $view->set_display('blockhome');
@@ -19,17 +20,19 @@
 
     $result_ateliers = $view_ateliers->result;
 
+    $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
+
  ?>
        
-    <?php $theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
+    <?php //$theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
           
         <?php //print $styles; ?>
         
-         <img class="header-img-mobile" src="../<?php print $theme; ?>/images/bkg_home_mobile.png" alt="header" title="header" />
+         <img class="header-img-mobile" src="<?php print $theme; ?>/images/bkg_home_mobile.png" alt="header" title="header" />
          
-         <img class="header-img-web" src="../<?php print $theme; ?>/images/bkg_home_web.png" alt="header" title="header" />
+         <img class="header-img-web" src="<?php print $theme; ?>/images/bkg_home_web.png" alt="header" title="header" />
         
-         <img class="logo-img" src="../<?php print $theme; ?>/images/logo.png" alt="logo" title="logo" />
+         <img class="logo-img" src="<?php print $theme; ?>/images/logo.png" alt="logo" title="logo" />
            
     <div class="block-w">
 
@@ -141,26 +144,47 @@
 
                             ?>
 
-                       </div>
+                        </div>
 
                     </div>
 
                 <?php    } ?>
--->
 
             </div>
 
-                
-            <div class="swiper-pagination"></div>
+        <div class="swiper-pagination"></div>
 
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+<div class="text-presentation home-body-solidarite">
+
+    <div class="body_solidarite">
+
+        <?php
+
+            print render($body);
+        ?>
+
+        <div class="en_savoir_plus">
+
+            En savoir plus
+
+            <img class="f_g_droite" src="<?php print $theme ?>/images/f_noires/f_g_droite.svg" alt="logo" title="logo" />
 
         </div>
 
-    <div class="home-image-solidarite">
-            <?php print render($image); ?>
     </div>
+
+    <div class="image_solidarite">
+
+            <?php print render($image); ?>
+
+    </div>
+
+</div>
 
            

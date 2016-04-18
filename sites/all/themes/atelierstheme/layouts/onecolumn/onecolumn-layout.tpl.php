@@ -35,11 +35,15 @@
 </div>
 
 <div class="l-services">
+
      <?php print render($page['services']); ?>
+
 </div>
 
 <div class="l-map">
+
     <?php print render($page['map']); ?>
+
 </div>
 
 <footer class="l-footer text-presentation" >
@@ -69,7 +73,9 @@
 <div class="burger h">
 
     <svg id="Calque_1" data-name="Calque 1" viewBox="0 0 55.4 55.4">
+
         <circle class="cls-1" cx="27.7" cy="27.7" r="27.7"/>
+
         <path class="cls-2" id="burger_3"
             d="M31,33H2.7a1.06,1.06,0,0,0,0,2H31a0.85,0.85,0,0,0,.7-1C31.7,33.4,31.5,33,31,33Z"
             transform="translate(10.8 5.7)"/>

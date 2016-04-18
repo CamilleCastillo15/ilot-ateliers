@@ -249,12 +249,30 @@ body {
 
             @include translate(-50%,-50%);
             position:absolute;
-            top: 34%;
+            top: 37%;
             left: 50%;
 
             img {
 
                 width:16vw;
+
+                @include breakpoint($mobilel) {
+
+                    width:18vw;
+
+                }
+
+                @include breakpoint($laptop) {
+
+                    width:20vw;
+
+                }
+
+                 @include breakpoint($laptopl) {
+
+                    width:250px;
+
+                }
 
             }
 
@@ -298,7 +316,26 @@ body {
 
             text-transform: uppercase;
             color: white;
+
             width: 50vw;
+
+            @include breakpoint($mobilel) {
+
+                width: 70vw;
+
+            }
+
+            @include breakpoint($laptop) {
+
+                width: 80vw;
+
+            }
+
+             @include breakpoint($laptopl) {
+
+                width: 90vw;
+
+            }
 
             z-index: 1000000;
             font-size: 20px;
