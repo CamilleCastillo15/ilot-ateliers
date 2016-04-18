@@ -3,25 +3,19 @@
 @import "../variables/mixin";
 
 .home-services {
-
     .container-containers {
-
         @include breakpoint($laptop) {
 
                 width:960px;
                 margin: auto;
         }
-
-    }
-
-    .container-containers {
-
         .container {
-
+            text-align:center;
             @include breakpoint($laptop) {
 
                 width: 300px;
                 float: left;
+               
                 //height: 55vw;
                 margin: 80px 10px;
                 background-color: #f7f7f7;
@@ -54,23 +48,7 @@
 
     .plus {
 
-        display: block;
-        text-transform: uppercase;
-        background-color: #00a886;
-        padding: 10px;
-        width: 200px;
-        text-align: center;
-        margin: 0 auto 2vw auto;
-        color: white;
-        position: relative;
-
-        .f_g_droite {
-
-            width: 8px;
-            position: absolute;
-            left: 167px;
-
-        }
+      @include btn($green);
     }
 
     .pictotitlecontainer {

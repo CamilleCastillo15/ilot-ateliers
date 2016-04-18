@@ -9,17 +9,18 @@
 
 ?>
 
-<div class="l-header text-presentation">
+<div class="l-header">
 
     <?php // print l("<img class=\"logo\" src=\"../".$theme."/images/logo.png\" alt=\"logo\" title=\"logo\" />", "content/home"); ?>
-
-    <a href="home">
-        <img class="logo" src="<?php print $theme ?>/images/logo.png" alt="logo" title="logo" />
-    </a>
-
+    <div class="logo">
+        <a href="/">
+            <img src="<?php print $theme ?>/images/logo.png" alt="logo" title="logo" />
+        </a>
+    </div>
     <?php print render($page['header']); ?>
 
 </div>
+<div class="clear"></div>
 
 <div <?php print $attributes;?>>
 
@@ -55,7 +56,7 @@
     </div>
 
 </footer>
-
+<div class="l-shield"></div>
 <div class="l-off h text-presentation">
    
     <img class="logo" src="<?php print $theme ?>/images/logo.png" alt="logo" title="logo" />

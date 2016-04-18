@@ -196,6 +196,8 @@
     }
 
     .contact {
+        @include btn($green);
+        /*
         text-transform: uppercase;
         //background-color: #f7941d;
         color: white;
@@ -204,6 +206,7 @@
         display: block;
         margin: 30px auto;
         text-align: center;
+        */
     }
 
     .atelier-header-bg-web {

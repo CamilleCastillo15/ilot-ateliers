@@ -1,0 +1,36 @@
+@import "singularitygs";
+@import "breakpoint";
+@import "../variables/variables";
+.l-header{
+    .menu{
+        $h : 100px;
+        height:$h;
+        
+        li{
+            text-transform: uppercase;
+            display:inline-block;
+            line-height:$h;
+            font-size:1.2rem;
+            margin : 0 0.4rem;
+            &.active-trail{
+                a{
+                    padding-bottom:1rem;
+                    border-bottom:3px solid $green;
+                }
+            }
+            a{
+                text-decoration: none;
+            }
+            @include breakpoint($laptop){
+
+                font-size:1.4rem;
+                margin : 0 0.8rem;
+            }
+             @include breakpoint($laptopl){
+
+                font-size:1.8rem;
+                margin : 0 1.2rem;
+            }
+        }    
+    }
+}

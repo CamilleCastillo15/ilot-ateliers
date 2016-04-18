@@ -23,7 +23,7 @@ body {
 .text-presentation {
 
     font-size:15px;
-    padding:4vw;
+ 
 
      @include breakpoint($laptop) {
 
@@ -435,35 +435,13 @@ body {
 
         .views-field-view-node, .plus  {
 
-            margin:30px 0;
+           
             position: relative;
-
-            @include breakpoint($laptop) {
-
-                float: right;
-                width: 170px;
-                text-align: center;
-                border: 1px solid black;
-                padding: 5px 25px;
-                text-transform: uppercase;
-
-            }
-
-            .f_g_droite {
-
-                width: 0.4em;
-                height: auto;
-                top: 6px;
-                left: 147px;
-                display: none;
-
-                @include breakpoint($laptop) {
-
-                    display: block;
-
-                }
-
-            }
+        
+            @include btn(#FF0000);
+            margin:30px auto;
+           
+           
 
         }
 
@@ -515,7 +493,7 @@ body {
 }
 
 .offre-speciale {
-
+    .left{
     img {
 
          width:220px;
@@ -527,6 +505,8 @@ body {
 
         }
 
+    }
+        
     }
 
 }
@@ -584,26 +564,9 @@ body {
 }
 
 .en_savoir_plus {
-    text-transform: uppercase;
-    //background-color: #f7941d;
-    color: white;
-    padding: 11px;
-    width: 233px;
-    display: block;
-    margin: 30px auto;
-    text-align: center;
-    background-color:$green;
-    position: relative;
+   @include btn($green);
 }
 
-.f_g_droite {
-
-    width: 0.5em;
-    top: 11px;
-    position: absolute;
-    left: 192px;
-
-}
 
 
 

@@ -44,7 +44,7 @@
 
                  <?php print render($body); ?>
 
-                 <?php print l("lire la suite <img class=\"f_g_droite\" src=\"/sites/all/themes/atelierstheme/images/f_noires/f_g_droite.svg\" alt=\"logo\" title=\"logo\" />", $link, array("html"=>true, 'attributes' => array('class' => array('plus')))); ?>
+                 <?php print l("lire la suite", $link, array("html"=>true, 'attributes' => array('class' => array('plus')))); ?>
 
              </div>
 

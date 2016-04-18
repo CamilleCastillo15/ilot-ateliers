@@ -9,7 +9,7 @@
         var doc = $(document);
         var win = $(window);
         function initMap() {
-
+            /*
             var mapDiv = document.getElementById('map');
             var map = new google.maps.Map(mapDiv, {
                 center: {
@@ -17,6 +17,7 @@
                     lng: -78.546},
                 zoom: 8
             });
+            */
         }
         initMap();
 

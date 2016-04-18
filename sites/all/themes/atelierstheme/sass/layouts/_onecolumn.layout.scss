@@ -6,12 +6,11 @@
 //@include add-guttertyle('split');
 //sdf
 body {
-    background-color: white;
+    
     font-size: 17px;
     //sdfg
     //qsdf
-    
-    }
+}
 
 a {
     &:hover,
@@ -24,169 +23,48 @@ a {
 }
 
 .l-header {
-    &.text-presentation {
-        padding: 0;
-    }
+    background-color:#cccccc;
+    max-width: $max;
     display: none;
-    margin: 0 auto;
     position: relative;
-    //background-color: white;
-    @include grid-span(12, 1);
-    /*
     @include breakpoint($tablet) {
         display: block;
-        background: rgba(255, 255, 255, 0.25);
-        left: 0;
-        right: 0;
-        padding-top: 30px;
-        margin-left: auto;
-        margin-right: auto;
-    }*/
-    .par-bienvenue {
-        font-family: 'SourceSansProLight';
-        font-size: 4vw;
-        margin: 10vw 0;
-        /*
-        @include breakpoint($mobilem) {
-            text-align: center;
-        }
-        @include breakpoint($laptop) {
-            text-align: left;
-        }
-        @include breakpoint($tablet) {
-            font-size: 30px;
-            margin: 80px 0;
-        }
-        @include breakpoint($laptop) {
-            font-size: 1.9vw;
-            margin: 5vw 3vw;
-            float: left;
-        }*/
-    }
-    .title-bienvenue {
-        font-family: 'PermanentMarker';
-        font-size: 9vw;
-        /*
-            @include breakpoint($tablet) {
-                font-size: 60px;
-            }
-            @include breakpoint($laptop) {
-                text-align: left;
-                margin: 0 3vw;
-                font-size: 3vw;
-            }
-        */
-    }
-    .container-title-pictos {
-        position: relative;
-        /*
-            @include breakpoint($laptop) {
-                margin-top: 2vw;
-            }*/
-        .title-pictos {
-            font-family: 'SourceSansProRegular';
-            text-transform: uppercase;
-            //
-            /*
-                @include breakpoint($mobiles) {
-                    position: absolute;
-                    margin-top: 5vw;
-                    &.auto_bleue {
-                        margin-left: 8vw;
-                    }
-                    &.menuiserie {
-                        margin-left: 34vw;
-                    }
-                    &.ilot_gourmand {
-                        margin-left: 60vw;
-                    }
-                    font-size: 2.5vw;
-                }
-                @include breakpoint($mobilem) {
-                    &.auto_bleue {
-                        margin-left: 8vw;
-                    }
-                    &.menuiserie {
-                        margin-left: 34vw;
-                    }
-                    &.ilot_gourmand {
-                        margin-left: 60vw;
-                    }
-                    font-size: 2.5vw;
-                }
-                @include breakpoint($mobilel) {
-                    &.auto_bleue {
-                        margin-left: 8vw;
-                    }
-                    &.menuiserie {
-                        margin-left: 34vw;
-                    }
-                    &.ilot_gourmand {
-                        margin-left: 60vw;
-                    }
-                    font-size: 2.5vw;
-                }
-                @include breakpoint($tablet) {
-                    &.auto_bleue {
-                        margin-left: 59px;
-                    }
-                    &.menuiserie {
-                        margin-left: 267px;
-                    }
-                    &.ilot_gourmand {
-                        margin-left: 477px;
-                    }
-                    font-size: 17.48px;
-                }
-                @include breakpoint($laptop) {
-                    margin-top: 1vw;
-                    position: relative;
-                    float: left;
-                    margin: 0;
-                    font-size: 1.3vw;
-                    &.auto_bleue {
-                        margin-left: 5vw;
-                    }
-                    &.menuiserie {
-                        margin-left: 4vw;
-                    }
-                    &.ilot_gourmand {
-                        margin-left: 2vw;
-                    }
-                }
-              */
-        }
-    }
-    .menu {
-        text-transform: uppercase;
-        text-align: center;
-        .leaf {
-            display: inline-block;
-            padding: 3vw 2vw;
-        }
+        margin:auto;   
     }
     .logo {
-        width: 10vw;
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        top: 1.5vw;
-        left: 0;
-        right: 77vw;
+        @include grid-span(2,1);
+        
+        text-align: center;
+        padding:0.5rem;
+        img{
+            width:100%;
+            max-width:8rem;
+        }
+      
+      
     }
+    .menu {        
+        @include grid-span(8,3);
+       
+    }
+   
 }
 
 .burger {
+    display: block;
     @include breakpoint($tablet) {
-        display: none;
+        display:none ;
     }
+    /*
     -webkit-transition: all 1.5s;
     -moz-transition: all 1.5s;
     transition: all 1.5s;
-    top: 50px;
+    */
+    top: $margin;
+    right:$margin;
     //left: 83vw;
     position: fixed;
-    //width: 10vw;
+    width: 60px;
     height: auto;
     cursor: pointer;
     z-index:1000;
@@ -251,34 +129,48 @@ a {
     position: relative;
     //height:2337px;
 }
+.l-shield{
+    transition: height 0ms ease-in-out 400ms,
+                opacity 400ms ease-in-out 0ms;
+    opacity : 0; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(255,255,255,0.7);
+    &.o {
+         transition: height 0ms ease-in-out 0ms,
+                opacity 400ms ease-in-out 0ms;
+        opacity:1;
+        height:100%;
+    }
+}
 
 .l-off {
     background-color: #4b4b4b;
     text-transform: uppercase;
     display: block;
-    z-index: 10000000;
-    @include grid-span(12, 1);
     @include breakpoint($laptop) {
         //@include grid-span(6,1);
         display: none;
     }
     position: fixed;
     top: 0;
-    width: 40vw;
-    height: 154vw;
-    -webkit-transition: all 375ms ease-in;
-    -moz-transition: all 375ms ease-in;
-    transition: all 375ms ease-in;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 375ms ease-in-out;
+    -moz-transition: all 375ms ease-in-out;
+    transition: all 375ms ease-in-out;
+    
+    @include breakpoint($mobilel){
+        width:70%;
+    }
     &.h {
         visibility: hidden;
-        left: -250px;
+        left: -100%;
     }
     &.o {
         left: 0px;
-        /*     -webkit-transform:translate3d(260px, 0, 0);
-    -moz-transform:translate3d(260px, 0, 0);
-    -o-transform:translate3d(260px, 0, 0);
-    transform:translate3d(260px, 0, 0); */
     }
     li.leaf {
         margin-top: 14vw;
