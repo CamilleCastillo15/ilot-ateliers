@@ -1,5 +1,4 @@
 <?php
-
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
 
     //    $atelier = field_get_items("node",$node,'field_atelier')[0]["entity"];

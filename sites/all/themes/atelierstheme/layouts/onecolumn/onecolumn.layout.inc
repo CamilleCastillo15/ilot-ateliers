@@ -16,4 +16,5 @@ stylesheets[all][] = css/layouts/public/onecolumn.layout.css
 stylesheets[all][] = css/layouts/public/onecolumn.layout.no-query.css
 
 ; Scripts
-scripts[] = layouts/onepage/js/onecolumn.layout.behaviours.js
+scripts[] = layouts/onecolumn/js/onecolumn.layout.behaviours.js
+
