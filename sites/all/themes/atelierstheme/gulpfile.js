@@ -32,7 +32,7 @@ gulp.task('sass:dev', function () {
             }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./css'))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream({match: '**/*.css'}))
         //  .pipe(browserSync.reload({stream:true}));
 
 });

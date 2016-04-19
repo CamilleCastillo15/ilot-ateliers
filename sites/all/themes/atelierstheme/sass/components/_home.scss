@@ -49,6 +49,7 @@
             }
             
         }
+        
         .title-bienvenue {
             font-family: PermanentMarker;
             font-size: 2rem;
@@ -141,25 +142,17 @@
 .home-body-actu {
     .actu {
         padding: 30px;
-        .body_offres {
-            display: block;
-            @include breakpoint($tablet) {
-                display: inline-block;
-                width: 49%;
-            }
-            &.text-presentation {
-                padding: 0;
-            }
-        }
         .im_offres {
-            display: block;
-            padding: 0 0 0 20px;
             @include breakpoint($tablet) {
-                display: inline-block;
-                width: 50%;
-                position: absolute;
+                @include grid-span(6,7);
             }
         }
+        .body_offres {
+            @include breakpoint($tablet) {
+                @include grid-span(6,1);
+            }
+        }
+        
     }
 }
 

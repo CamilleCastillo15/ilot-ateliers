@@ -547,7 +547,9 @@ body {
     position: relative;
 
 }
-
+.center{
+    text-align: center;
+}
 .en_savoir_plus {
    @include btn($green);
 }
