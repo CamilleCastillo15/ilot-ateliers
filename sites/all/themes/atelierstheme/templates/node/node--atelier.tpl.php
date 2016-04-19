@@ -27,9 +27,7 @@
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
 
 ?>
-
-    <div class="atelier">
-
+<div class="atelier">
         <div class="atelier-header pictotitlecontainer">
 
             <div class="atelier-header-bg image">
@@ -44,12 +42,10 @@
                 <?php print render($ftitle); ?>
             </div>
 
-            <div class="triangle-left"></div>
-            <!--
-        -->
-            <div class="triangle-right"></div>
+            <div class="triangle-left"></div><!--
+         --><div class="triangle-right"></div>
 
-            <div class="liens text-presentation ">
+            <div class="liens text-presentation">
 
                 <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
 
@@ -75,9 +71,7 @@
 
                     <div class="atelier-gallerie-big swiper-wrapper">
 
-                        <?php
-
-                                foreach($gallerie as $key => $value) { ?>
+                        <?php foreach($gallerie as $key => $value) { ?>
 
                             <div class="atelier-gallerie-image swiper-slide">
 
@@ -89,11 +83,7 @@
                                     ?>
                             </div>
 
-                        <?php
-
-                            }
-
-                        ?>
+                        <?php } ?>
 
                     </div>
 

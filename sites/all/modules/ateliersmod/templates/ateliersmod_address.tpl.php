@@ -7,7 +7,7 @@
 
 <div class="bloc2">
 
-    <div class="text-presentation">
+  
         
         <h1>
 
@@ -36,6 +36,6 @@
 
         <br /> ateliers.ilot.asso.fr
        
-    </div>
+   
 
 </div>

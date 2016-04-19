@@ -3,50 +3,58 @@
 @import "../variables/mixin";
 
 .bloc_don {
+    background-color:$lightgrey;
+    padding:1rem;
+    .inner{
+        margin : auto;
+        max-width:$tablet;
+       
+        font-family: 'SourceSansProRegular';
+        text-transform: uppercase;
+        color: #9D2537;
+        text-align: center;
+        .don-img {
+            @include grid-span(2,1);
+            @include breakpoint($tablet) {
 
-    font-family: 'SourceSansProRegular';
-    text-transform: uppercase;
-    color: #9D2537;
-    text-align: center;
 
-//    @include breakpoint($tablet) {
-//
-//        width: 83vw;
-//
-//    }
-
-    .don-img {
-
-        width: 19vw;
-        //        margin-right: 0px;
-        //        margin: auto;
-        //        display: inline-block;
-
-        position: absolute;
-        left: 0;
-        right: 463px;
-        margin: auto;
-
-        @include breakpoint($tablet) {
-
-            width: 9vw;
-            //margin-right: 83px;
-
+            }
         }
 
-    }
-
-    .text-presentation-block {
-
-        display: block;
-
-        h1, h1.wtitle {
-
-           font-family: 'PermanentMarker';
-
+        .don-txt {
+            @include grid-span(8,3);
+            h1, h1.wtitle {
+               font-family: 'PermanentMarker';
+                font-size:2rem;
+            }
+            h2{
+                font-size:1.5rem; 
+            }
+           
         }
+        .don-btn{
+            @include grid-span(2,11);
+            a{
 
+                @include btn(#9D2537);
+            }
+        }
     }
 
 }
-
+.bloc2{
+    font-family: "SourceSansProLight";
+    color: #ffffff;
+    text-align: center;
+    padding:1rem;
+    h1 {
+        font-family: "SourceSansProRegular";
+        text-transform: uppercase;
+    }
+    .petit {
+        font-size: 15px;
+    }
+    .tel {
+        width: 1.05em;
+    }
+}

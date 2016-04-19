@@ -108,15 +108,18 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
-    <div class="text-presentation home-body-solidarite">
-        <div class="body_solidarite">
-            <?php print render($body); ?>
-            <div class="en_savoir_plus">
-                En savoir plus
-            </div>
-        </div>
+    <div class="home-body-solidarite">
         <div class="image_solidarite">
             <?php print render($image); ?>
         </div>
+        <div class="body_solidarite">
+            <?php print render($body); ?>
+            <div class="center">
+            <div class="en_savoir_plus">
+                En savoir plus
+            </div>
+            </div>
+        </div>
+        
     </div>
 </div>

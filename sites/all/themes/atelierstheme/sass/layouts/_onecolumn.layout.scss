@@ -125,7 +125,7 @@ a {
 
 .l-content {
     //background-color: yellow;
-    @include grid-span(12, 1);
+   
     position: relative;
     //height:2337px;
 }
@@ -206,21 +206,7 @@ a {
         @include breakpoint($laptop) {
             @include grid-span(6, 7);
         }
-        .text-presentation {
-            font-family: "SourceSansProLight";
-            color: #ffffff;
-            text-align: center;
-            h1 {
-                font-family: "SourceSansProRegular";
-                text-transform: uppercase;
-            }
-            .petit {
-                font-size: 15px;
-            }
-            .tel {
-                width: 1.05em;
-            }
-        }
+        
     }
     display: block;
 }

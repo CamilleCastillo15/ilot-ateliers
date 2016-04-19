@@ -178,28 +178,25 @@
 
 .home-body-solidarite {
     .body_solidarite {
-        padding: 30px;
+        padding: 0 30px;
         display: block;
         @include breakpoint($tablet) {
-            display: inline-block;
-            width: 49%;
+           @include grid-span(6,7);
         }
-        &.text-presentation {
-            padding: 0;
-        }
+        h1{
+                text-transform:uppercase;
+                font-size:1.3rem;
+                font-weight: 700;
+                margin : 0.5rem 0;
+                
+            }
+       
     }
     .image_solidarite {
         display: block;
-        padding: 0 0 0 20px;
         @include breakpoint($tablet) {
-            display: inline-block;
-            width: 50%;
-            position: absolute;
+          @include grid-span(6,1);
         }
     }
-    .en_savoir_plus {
-        border: solid 1px black;
-        color: black;
-        background-color: white;
-    }
+    
 }

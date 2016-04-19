@@ -2,8 +2,5 @@
     <div class="map">
 
     </div>
-    <?php
-        $var = variable_get("ateliersmod_fsgoogle_map");
-        //dpm($var);
-    ?>
+    <?php $var = variable_get("ateliersmod_fsgoogle_map"); ?>
 </div>
