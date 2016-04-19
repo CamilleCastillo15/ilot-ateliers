@@ -39,46 +39,60 @@
 
     .menu {
 
-            a {
-                color: white;
+            border: none;
+            list-style: none;
+            text-align: left;
+            margin-top:1rem;
 
-                &:hover, &:link, &:active, &:visited {
-                    text-decoration: none;
-                }
+        a {
+            color: white;
 
-                &.active {
+            &:hover, &:link, &:active, &:visited {
 
-                    color:$green;
+                text-decoration: none;
 
-                    &:hover {
-                        color:white;
-                    }
+            }
+
+            &.active {
+
+                color:$green;
+
+                &:hover {
+
+                    color:white;
 
                 }
 
             }
 
-            border: none;
-            list-style: none;
-            text-align: left;
+        }
 
 
         li.leaf {
 
-                list-style-type: none;
-                list-style-image: none;
-
-            &:hover {
-                background-color:$green;
-            }
+            list-style-type: none;
+            list-style-image: none;
 
             a {
 
-                border-bottom: solid 1px white;
-                padding: 2rem 0 2rem 0;
+                padding: 2rem 3rem 1.5rem 3rem;
                 display: block;
-                margin-left: 3rem;
-                margin-right: 3rem;
+                margin:auto;
+
+                &:hover {
+
+                    background-color:$green;
+
+                }
+
+            }
+
+            &:after {
+
+                content:"";
+                border-bottom: solid 1px white;
+                margin:0 2rem;
+                display: block;
 
             }
 
@@ -89,44 +103,56 @@
             list-style-type: none;
             list-style-image: none;
 
-            &:hover {
-                background-color:$green;
+            a {
 
-                ul li {
+                padding: 2rem 3rem 1.5rem 3rem;
+                display: block;
+                margin-left: auto;
 
-                    background-color: $grey;
+
+                &:hover {
+
+                    background-color:$green;
 
                 }
 
             }
 
-            a {
+            &:after {
 
+                content:"";
                 border-bottom: solid 1px white;
-                padding: 2rem 0 2rem 0;
+                margin:0 2rem;
                 display: block;
-                margin-left: 3rem;
-                margin-right: 3rem;
 
             }
 
             ul {
 
+                margin-top:0rem;
+
                 li {
 
                     font-size:0.9rem;
-                    border-bottom: none;
-
-                    &:hover {
-
-                        background-color:$green;
-
-                    }
 
                     a {
 
-                        border:none;
-                        margin-left: 6rem;
+                        padding: 2rem 3rem 1.5rem 6rem;
+
+                        &:after {
+
+                            content:"";
+                            border-bottom: none;
+                            display: block;
+
+                        }
+
+                    }
+
+                    &:after {
+
+                        content:"";
+                        border-bottom: none;
 
                     }
 
