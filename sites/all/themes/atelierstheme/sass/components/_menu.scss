@@ -6,13 +6,14 @@
         $h: 100px;
         height: $h;
         li {
+            
             text-transform: uppercase;
             display: inline-block;
             line-height: $h;
             font-size: 1.2rem;
             margin: 0 0.4rem;
-            &.active-trail {
-                a {
+            a {
+                &.active{
                     padding-bottom: 1rem;
                     border-bottom: 3px solid $green;
                 }
@@ -37,12 +38,10 @@
         a {
             color: white;
         }
-       
-            border: none;
+        border: none;
             list-style: none;
             text-align: left;
-            margin-left: 4vw;
-            font-size: 2.5vw;
+     margin-left: 4vw;font-size: 2.5vw;
        
         li.leaf {
         margin-top: 14vw;
