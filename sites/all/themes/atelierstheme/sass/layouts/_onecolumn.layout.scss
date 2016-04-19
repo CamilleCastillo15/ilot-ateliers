@@ -23,6 +23,7 @@ a {
 }
 
 .l-header {
+
     background-color:#cccccc;
     max-width: $max;
     display: none;
@@ -31,7 +32,9 @@ a {
         display: block;
         margin:auto;   
     }
+
     .logo {
+
         @include grid-span(2,1);
         
         text-align: center;
@@ -39,12 +42,62 @@ a {
         img{
             width:100%;
             max-width:8rem;
+
         }
-      
-      
+
     }
-    .menu {        
+
+    .menu {
+
         @include grid-span(8,3);
+
+        .menu {
+
+            &:before {
+
+                content:"";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 16px 28px 16px;
+
+                @include breakpoint($laptop) {
+                    border-width: 0 32px 48px 32px;
+                }
+
+                @include breakpoint($laptopl) {
+                    border-width: 0 32px 48px 32px;
+                }
+
+                border-color: transparent transparent $grey transparent;
+                z-index: 10000;
+                position: absolute;
+
+                margin-top: -26px;
+                margin-left: -48px;
+
+                @include breakpoint($laptop) {
+                    margin-top: -26px;
+                    margin-left: -80px;
+                }
+
+                @include breakpoint($laptopl) {
+                    margin-top: -26px;
+                    margin-left: -80px;
+                }
+
+            }
+
+            @include grid-span(2,1);
+            font-size:0.5rem;
+
+            li {
+
+                line-height: 65px;
+
+            }
+
+        }
        
     }
    

@@ -65,6 +65,19 @@
 
         //float: left;
         padding: 10px 0;
+
+        @include breakpoint($laptop) {
+
+            padding: 24px 0;
+
+        }
+
+        @include breakpoint($laptopl) {
+
+            padding: 10px 0;
+
+        }
+
         position: absolute;
         display: none;
 
