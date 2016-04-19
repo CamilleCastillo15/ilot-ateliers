@@ -59,13 +59,14 @@
 <div class="l-shield"></div>
 <div class="l-off h text-presentation">
    
-    <img class="logo" src="<?php print $theme ?>/images/logo.png" alt="logo" title="logo" />
+    <a href="/">
+        <img class="logo" src="<?php print $theme ?>/images/ilot_vert.svg" alt="logo" title="logo" />
+    </a>
 
     <?php print render($page['off']); ?>
 
     <div class="reseaux">
-        <img class="twitter" src="<?php print $theme ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
-        <img class="linkedin" src="<?php print $theme ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" />
+        <a href="https://twitter.com/IlotAsso?lang=fr" target="_blank"><img class="twitter" src="<?php print $theme ?>/images/twitter_blanc.svg" alt="logo" title="twitter" /></a>&nbsp;|&nbsp;<a href="https://www.linkedin.com/company/3787026?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A3787026%2Cidx%3A2-1-3%2CtarId%3A1460643706927%2Ctas%3Al%27ilot%20" target="_blank"><img class="linkedin" src="<?php print $theme ?>/images/linkedin_blanc.svg" alt="logo" title="linkedin" /></a>
     </div>
 
 </div>
