@@ -38,8 +38,11 @@
     display:inline-block;
     vertical-align: top;
     width:100%;
+    a{
+        text-decoration : none;
+    }
     text-align:center;
-     @include breakpoint($mobilem){
+    @include breakpoint($mobilem){
           width:33.33%;
     }
     

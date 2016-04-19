@@ -16,6 +16,7 @@
 
 .block-all {
     position:relative;
+   
     .block-img {
         width: 100%;
         height: 100%;
@@ -29,51 +30,62 @@
         }
     }
     .block-w {
+        @include breakpoint($mobilem){
+            width:80%;
+        }
+       
         color: white;
         text-align: center;
         display: block;
-        background: rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.1);
         position:absolute;
         top:50%;
         left:50%;
         width:100%;
         transform : translate(-50%,-50%);
         padding: 2rem;
- 
-        .par-bienvenue {
-            font-family: 'SourceSansProLight';
-            text-align: center;
-            margin: 2rem 0;
-            @include breakpoint($tablet) {
-                text-align: left;
-            }
-            
-        }
         .title-bienvenue {
             font-family: PermanentMarker;
             font-size: 2rem;
             @include breakpoint($mobilel){
                  font-size: 2.5rem;
+               
+                display:inline-block;
             }
             @include breakpoint($tablet) {
                 font-size: 3rem;
             }
-            @include breakpoint($laptop) {
-                text-align: left;
-                
-            }
-            @include breakpoint($laptopl) {
-                
-            }
+           
         }
+        .par-bienvenue {
+            font-family: 'SourceSansProLight';            
+            margin: 2rem 0;
+            
+            @include breakpoint($tablet) {
+                display:inline-block;
+                vertical-align: top;
+                width:50%;
+                margin: 1rem 0;
+                text-align: left;
+            }
+            
+        }
+        
+       
         .ateliers{
             width:100%;
             .atelier{
-                 @include atelier();
+                @include atelier();
+                margin: 0.5rem 0;
+                img{
+                    width:50%;
+                }
             }
             @include breakpoint($tablet){
                 width:50%;
-                margin:auto
+                display:inline-block;
+                vertical-align: top;
+                margin:auto;
                     .atelier{
                         img{
                          width:50%;
@@ -139,27 +151,28 @@
 }
 
 .home-body-actu {
+    background-color: $lightgrey;
     .actu {
-        padding: 30px;
-        .body_offres {
-            display: block;
-            @include breakpoint($tablet) {
-                display: inline-block;
-                width: 49%;
-            }
-            &.text-presentation {
-                padding: 0;
-            }
-        }
+       padding: 3rem;
         .im_offres {
-            display: block;
-            padding: 0 0 0 20px;
             @include breakpoint($tablet) {
-                display: inline-block;
-                width: 50%;
-                position: absolute;
+                @include grid-span(6,7);
             }
         }
+        
+        .body_offres {
+            h1{
+                text-transform:uppercase;
+                font-size:1.3rem;
+                font-weight: 700;
+                margin : 0.5rem 0;
+                
+            }
+            @include breakpoint($tablet) {
+                @include grid-span(6,1);
+            }
+        }
+        
     }
 }
 
