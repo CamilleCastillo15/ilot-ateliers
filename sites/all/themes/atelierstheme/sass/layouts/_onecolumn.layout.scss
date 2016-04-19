@@ -24,7 +24,7 @@ a {
 
 .l-header {
 
-    background-color:#cccccc;
+    //background-color:#cccccc;
     max-width: $max;
     display: none;
     position: relative;
@@ -62,38 +62,47 @@ a {
                 border-width: 0 16px 28px 16px;
 
                 @include breakpoint($laptop) {
-                    border-width: 0 32px 48px 32px;
+                    border-width: 0 32px 56px 32px;
                 }
 
                 @include breakpoint($laptopl) {
-                    border-width: 0 39px 56px 39px;
+                    border-width: 0 39px 78px 39px;
                 }
 
                 border-color: transparent transparent $grey transparent;
                 z-index: 10000;
                 position: absolute;
 
-                margin-top: -26px;
-                margin-left: -48px;
+                margin-top: -20px;
+                margin-left: auto;
+                margin-right: auto;
+                right: 0;
+
+                //margin-left: -48px;
 
                 @include breakpoint($laptop) {
-                    margin-top: -26px;
-                    margin-left: -80px;
+
+                    margin-top: -21px;
+
                 }
 
                 @include breakpoint($laptopl) {
-                    margin-top: -33px;
-                    margin-left: -80px;
+
+                    margin-top: -24px;
+
                 }
 
             }
 
-            @include grid-span(2,1);
+            @include grid-span(14,1);
             font-size:0.5rem;
+            left: 50%;
+            transform: translate(-50%,0);
+            z-index: 10;
 
             li {
 
-                line-height: 65px;
+                line-height: 60px;
 
             }
 
