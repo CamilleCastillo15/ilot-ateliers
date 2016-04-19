@@ -7,32 +7,60 @@
     .menu {
         $h: 100px;
         height: $h;
+
         li {
             
             text-transform: uppercase;
             display: inline-block;
             line-height: $h;
-            font-size: 1.2rem;
+            font-size: 1rem;
             margin: 0 0.4rem;
+
             a {
                 &.active{
                     padding-bottom: 1rem;
                     border-bottom: 3px solid $green;
                 }
             }
+
             a {
                 text-decoration: none;
             }
+
             @include breakpoint($laptop) {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 margin: 0 0.8rem;
             }
+
             @include breakpoint($laptopl) {
-                font-size: 1.8rem;
+                font-size: 1.4rem;
                 margin: 0 1.2rem;
             }
+
+            .menu {
+
+                li {
+
+                    font-size: 0.7rem;
+
+                    @include breakpoint($laptop) {
+                        font-size: 0.9rem;
+                        margin: 0;
+                    }
+
+                    @include breakpoint($laptopl) {
+                        font-size: 1.1rem;
+                        margin: 0;
+                    }
+
+                }
+
+            }
+
         }
+
     }
+
 }
 
 .l-off {
@@ -102,6 +130,7 @@
 
             list-style-type: none;
             list-style-image: none;
+            position: relative;
 
             a {
 
