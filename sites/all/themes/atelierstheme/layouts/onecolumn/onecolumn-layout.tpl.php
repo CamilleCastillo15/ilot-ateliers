@@ -59,13 +59,12 @@
 <div class="l-shield"></div>
 <div class="l-off h text-presentation">
    
-    <img class="logo" src="<?php print $theme ?>/images/logo.png" alt="logo" title="logo" />
+    <img class="logo" src="<?php print $theme ?>/images/ilot_vert.svg" alt="logo" title="logo" />
 
     <?php print render($page['off']); ?>
 
     <div class="reseaux">
-        <img class="twitter" src="<?php print $theme ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
-        <img class="linkedin" src="<?php print $theme ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" />
+        <img class="twitter" src="<?php print $theme ?>/images/twitter_blanc.svg" alt="logo" title="twitter" />&nbsp;|&nbsp;<img class="linkedin" src="<?php print $theme ?>/images/linkedin_blanc.svg" alt="logo" title="linkedin" />
     </div>
 
 </div>
