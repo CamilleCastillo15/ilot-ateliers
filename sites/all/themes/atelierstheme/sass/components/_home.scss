@@ -69,13 +69,7 @@
         .ateliers{
             width:100%;
             .atelier{
-                display:inline-block;
-                vertical-align: top;
-                width:100%;
-                text-align:center;
-                 @include breakpoint($mobilem){
-                      width:33.33%;
-                }
+                 @include atelier();
             }
             @include breakpoint($tablet){
                 width:50%;

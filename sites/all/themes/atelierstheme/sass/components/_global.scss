@@ -515,29 +515,10 @@ body {
 
 }
 
+
 .img-block {
 
-    &.ilot_gourmand {
-
-        img {
-
-            margin:0 18px;
-
-            @include breakpoint($tablet) {
-                margin:0 50px;
-            }
-
-            @include breakpoint($laptop) {
-                margin:0 100px;
-            }
-
-            @include breakpoint($laptopl) {
-                margin:0 200px;
-            }
-
-        }
-
-    }
+   
 
     img {
 

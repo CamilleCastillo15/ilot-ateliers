@@ -5,11 +5,14 @@
 
 .autres_services {
 
-    @include grid-span(12, 1);
+    //@include grid-span(12, 1);
     background-color: white;
     text-align: center;
     padding: 5vw;
-
+    margin:auto;
+    .atelier{
+        @include atelier();
+    }
     &.text-presentation-block {
 
         h1 {

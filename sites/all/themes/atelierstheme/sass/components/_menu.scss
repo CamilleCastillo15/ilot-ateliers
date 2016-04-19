@@ -1,36 +1,58 @@
 @import "singularitygs";
 @import "breakpoint";
 @import "../variables/variables";
-.l-header{
-    .menu{
-        $h : 100px;
-        height:$h;
-        
-        li{
+.l-header {
+    .menu {
+        $h: 100px;
+        height: $h;
+        li {
             text-transform: uppercase;
-            display:inline-block;
-            line-height:$h;
-            font-size:1.2rem;
-            margin : 0 0.4rem;
-            &.active-trail{
-                a{
-                    padding-bottom:1rem;
-                    border-bottom:3px solid $green;
+            display: inline-block;
+            line-height: $h;
+            font-size: 1.2rem;
+            margin: 0 0.4rem;
+            &.active-trail {
+                a {
+                    padding-bottom: 1rem;
+                    border-bottom: 3px solid $green;
                 }
             }
-            a{
+            a {
                 text-decoration: none;
             }
-            @include breakpoint($laptop){
-
-                font-size:1.4rem;
-                margin : 0 0.8rem;
+            @include breakpoint($laptop) {
+                font-size: 1.4rem;
+                margin: 0 0.8rem;
             }
-             @include breakpoint($laptopl){
-
-                font-size:1.8rem;
-                margin : 0 1.2rem;
+            @include breakpoint($laptopl) {
+                font-size: 1.8rem;
+                margin: 0 1.2rem;
             }
-        }    
+        }
     }
+}
+
+.l-off {
+    .menu {
+        a {
+            color: white;
+        }
+       
+            border: none;
+            list-style: none;
+            text-align: left;
+            margin-left: 4vw;
+            font-size: 2.5vw;
+       
+        li.leaf {
+        margin-top: 14vw;
+        border-bottom: solid 1px white;
+        margin-top: 6vw;
+        border-bottom: solid 1px white;
+        padding-bottom: 20px;
+        list-style-type: none;
+        list-style-image: none;
+    } 
+    }
+    
 }

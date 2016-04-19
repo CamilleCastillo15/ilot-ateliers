@@ -147,9 +147,7 @@ a {
 }
 
 .l-off {
-    background-color: #4b4b4b;
-    text-transform: uppercase;
-    display: block;
+
     @include breakpoint($laptop) {
         //@include grid-span(6,1);
         display: none;
@@ -161,7 +159,7 @@ a {
     -webkit-transition: all 375ms ease-in-out;
     -moz-transition: all 375ms ease-in-out;
     transition: all 375ms ease-in-out;
-    
+    display: block;
     @include breakpoint($mobilel){
         width:70%;
     }
@@ -172,42 +170,28 @@ a {
     &.o {
         left: 0px;
     }
-    li.leaf {
-        margin-top: 14vw;
-        border-bottom: solid 1px white;
-        margin-top: 6vw;
-        border-bottom: solid 1px white;
-        padding-bottom: 20px;
-        list-style-type: none;
-        list-style-image: none;
-    }
-    a {
-        color: white;
-    }
+    background-color: #4b4b4b;
+    text-transform: uppercase;
+    
+   
     .logo {
-        width: 24vw;
-        margin: 0 auto;
-        display: block;
-        margin-top: 4vw;
-    }
-    .menu {
-        border: none;
-        list-style: none;
-        text-align: left;
-        margin-left: 4vw;
-        font-size: 2.5vw;
-    }
-    .reseaux {
-        /* width:5vw;
-           margin:0 auto; */
-        display: block;
-        text-align: center;
-        padding-top: 2vw;
-        img {
-            width: 5vw;
-            margin-right: 2vw;
+            width: 24vw;
+            margin: 0 auto;
+            display: block;
+            margin-top: 4vw;
         }
-    }
+        
+        .reseaux {
+            /* width:5vw;
+           margin:0 auto; */
+            display: block;
+            text-align: center;
+            padding-top: 2vw;
+            img {
+                width: 5vw;
+                margin-right: 2vw;
+            }
+        }
 }
 
 .l-footer {

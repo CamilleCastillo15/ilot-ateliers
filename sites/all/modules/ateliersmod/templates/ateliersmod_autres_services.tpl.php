@@ -9,38 +9,15 @@
 
 ?>
 
-<div class="autres_services text-presentation-block">
+    <div class="autres_services">
+        <?php $theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
+            <h1>autres services</h1>
 
-    <?php $theme = drupal_get_path("theme",$GLOBALS['theme']) ;?>
-
-        <h1>autres services</h1>
-
-    <?php
-
-          echo "<div class=\"img-pictos\">";
-
-            foreach($result_ateliers as $key => $value) {
-
-              $n = node_load($value->nid);
-
-              $link =drupal_get_path_alias("node/".$value->nid);
-              $picto = field_view_field("node",$n,'field_picto');
-              $class = field_view_field("node",$n,'field_class');
-
-              $class_render = render($class);
-              $picto_render = render($picto);
-
-                print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('img-block ', $class_render))));
-
-            }
-
-          echo "</div>";
-
-          echo "<div class=\"container-title-pictos\">";
-
-            foreach($result_ateliers as $key => $value) {
-
-              $n = node_load($value->nid);
+            <div class="img-pictos">
+                <!--;
+        <?php foreach($result_ateliers as $key => $value) { ?>                            
+                --><div class="atelier">
+                    <?php $n = node_load($value->nid);
 
               $link =drupal_get_path_alias("node/".$value->nid);
               $picto = field_view_field("node",$n,'field_picto');
@@ -48,19 +25,19 @@
               $class = field_view_field("node",$n,'field_class');
 
               $class_render = render($class);
-              $title_render = render($title);
+                 $title_render = render($title);
               $picto_render = render($picto);
 
-              echo "<h2 class=\"title-pictos ".$class_render."\">";
+                print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('img-block ', $class_render))));
+            echo "<h2 class=\"title-pictos ".$class_render."\">";
 
                 print l($title_render, $link,array("html"=>true));
 
-              echo "</h2>";
+              echo "</h2>"; ?>
+                </div><!--
+    
+            <?php } ?>
 
-            }
+          --></div>;
 
-          echo "</div>";
-
-    ?>
-
-</div>
+    </div>
