@@ -7,6 +7,7 @@
     .menu {
         $h: 100px;
         height: $h;
+        @include grid-span(8,3);
 
         li {
             
@@ -37,11 +38,24 @@
                 margin: 0 1.2rem;
             }
 
-            .menu {
+        }
+
+        li.expanded {
+
+                position: relative;
+
+                .menu {
+
+                @include grid-span(14,1);
+                font-size:0.5rem;
+                left: 50%;
+                transform: translate(-50%,0);
+                z-index: 10;
 
                 li {
 
                     font-size: 0.7rem;
+                    line-height: 60px;
 
                     @include breakpoint($laptop) {
                         font-size: 0.9rem;
@@ -51,6 +65,47 @@
                     @include breakpoint($laptopl) {
                         font-size: 1.1rem;
                         margin: 0;
+                    }
+
+                }
+
+                &:before {
+
+                    content:"";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 16px 28px 16px;
+
+                    @include breakpoint($laptop) {
+                        border-width: 0 32px 56px 32px;
+                    }
+
+                    @include breakpoint($laptopl) {
+                        border-width: 0 39px 78px 39px;
+                    }
+
+                    border-color: transparent transparent $grey transparent;
+                    z-index: 10000;
+                    position: absolute;
+
+                    margin-top: -20px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    right: 0;
+
+                    //margin-left: -48px;
+
+                    @include breakpoint($laptop) {
+
+                        margin-top: -21px;
+
+                    }
+
+                    @include breakpoint($laptopl) {
+
+                        margin-top: -24px;
+
                     }
 
                 }
