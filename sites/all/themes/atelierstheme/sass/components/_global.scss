@@ -241,7 +241,7 @@ body {
 
         .image {
 
-             width:100%;
+            width:100%;
 
         }
 
@@ -330,6 +330,9 @@ body {
             //z-index: 1000000;
             font-size: 20px;
 
+            display: block;
+            width: 100%;
+
             a {
 
                 color:white;
@@ -386,6 +389,11 @@ body {
 
                 font-size: 30px;
 
+            }
+
+            .active {
+
+                text-decoration: underline;
             }
 
         }
@@ -476,19 +484,20 @@ body {
 }
 
 .offre-speciale {
-    .left{
-    img {
+    .left {
 
-         width:220px;
-         height:84px;
+        img {
 
-        @include breakpoint($laptop) {
+             width:220px;
+             height:84px;
 
-            float: left;
+            @include breakpoint($laptop) {
+
+                float: left;
+
+            }
 
         }
-
-    }
         
     }
 
