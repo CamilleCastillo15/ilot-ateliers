@@ -450,6 +450,20 @@ body {
 
         }
 
+            div {
+
+            &:not(:first-child) {
+
+                @include breakpoint($tablet) {
+
+                    margin-left:250px;
+
+                }
+
+            }
+
+        }
+
     }
 
 

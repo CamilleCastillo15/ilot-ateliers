@@ -9,7 +9,14 @@
     $atelier = node_load($atelier_id);
 
     $ftitle = field_view_field("node",$atelier,'field_title');
-    $img = field_view_field("node",$atelier,'field_image');
+
+    $imgactu_petite = field_get_items("node",$node,'field_image');
+    $imgactu_render = field_view_value('node', $node, 'field_image', $imgactu_petite[0], array(
+        'type' => 'image',
+        'settings' => array(
+        'image_style' => 'slider',
+      ),
+    ));
 
     $couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
     $gallerie = field_get_items("node",$node,'field_image_multi');
@@ -19,6 +26,8 @@
 
     drupal_add_css('.offre-detail'.$node->nid.' .wtitle {color:'.$couleur.';} ', 'inline');
     drupal_add_css('.offre-detail'.$node->nid.' .wsubtitle {color:'.$couleur.';} ', 'inline');
+
+    drupal_add_css('.offre-speciale .plus:hover{background-color:#00a886 !important; border: 2px solid #00a886 !important;} ', 'inline');
 
     $link = drupal_get_path_alias("node/".$node->nid);
 
@@ -34,7 +43,7 @@
 
             <div class="left">
 
-                <?php print render($imgactu); ?>
+                <?php print render($imgactu_render); ?>
 
             </div>
 

@@ -7,6 +7,7 @@
     //font-size: 4vw;
 
     .triangle-left {
+
         @include grid-span(6,1);
 
         border-bottom-width: 26px;
@@ -38,7 +39,6 @@
             margin-top: -48px;
 
         }
-
 
         @include breakpoint($laptop) {
 
@@ -120,17 +120,17 @@
         margin-right: 7%;
         font-size:15px;
 
-            @include breakpoint($laptop) {
+        @include breakpoint($laptop) {
 
-                font-size:20px;
+            font-size:20px;
 
-            }
+        }
 
-             @include breakpoint($laptopxl) {
+         @include breakpoint($laptopxl) {
 
-                font-size:25px;
+            font-size:25px;
 
-            }
+        }
 
         strong {
             font-weight: 800;
@@ -244,6 +244,18 @@
                 margin-top:40px;
 
             }
+
+        }
+
+    }
+
+    a {
+
+        text-decoration: none;
+
+        &:hover {
+
+            color:white;
 
         }
 

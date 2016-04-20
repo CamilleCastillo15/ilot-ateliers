@@ -69,7 +69,11 @@
         </div>
 
         <div class="contact">
-            Nous contacter
+            <a href="/content/formulaire-de-contact" >
+
+                Nous contacter
+
+            </a>
         </div>
 
         <div class="atelier-gallerie">
