@@ -22,11 +22,17 @@
     <?php print render($page['map']); ?>
 </div>
 <footer class="l-footer text-presentation" >
-    <?php print render($page['footer']); ?>
-    <div class="reseaux">
-        <img class="twitter" src="<?php print $theme ?>/images/twitter_vert.svg" alt="logo" title="twitter" />
-        <img class="linkedin" src="<?php print $theme ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" />
+
+    <div class="footer-menu">
+
+        <?php print render($page['footer']); ?>
+
     </div>
+
+    <div class="reseaux">
+        <a href="https://twitter.com/IlotAsso?lang=fr" target="_blank"><img class="twitter" src="<?php print $theme ?>/images/twitter_vert.svg" alt="logo" title="twitter" /></a><a href="https://www.linkedin.com/company/3787026?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A3787026%2Cidx%3A2-1-3%2CtarId%3A1460643706927%2Ctas%3Al%27ilot%20" target="_blank"><img class="linkedin" src="<?php print $theme ?>/images/linkedin_vert.svg" alt="logo" title="linkedin" /></a>
+    </div>
+
 </footer>
 <div class="l-shield"></div>
 <div class="l-off h text-presentation">   

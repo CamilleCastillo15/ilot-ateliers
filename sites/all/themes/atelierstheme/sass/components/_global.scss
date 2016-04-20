@@ -241,7 +241,7 @@ body {
 
         .image {
 
-             width:100%;
+            width:100%;
 
         }
 
@@ -319,50 +319,36 @@ body {
             text-align: center;
 
             position: absolute;
-            left: 0;
+
+            left: 50%;
             right: 0;
+            top:93%;
+
             margin-left: auto;
             margin-right: auto;
 
-            @include breakpoint($mobilel) {
-
-                width: 412px;
-
-            }
-
-            @include breakpoint($tablet) {
-
-                width: 75vw;
-
-            }
-
-            @include breakpoint($laptop) {
-
-                width: 80vw;
-
-            }
-
-             @include breakpoint($laptopl) {
-
-                width: 90vw;
-
-            }
-
-            z-index: 1000000;
+            //z-index: 1000000;
             font-size: 20px;
 
-            top: 90%;
-            left: 69%;
+            display: block;
+            width: 100%;
 
             a {
 
                 color:white;
+                text-decoration: none;
 
             }
 
-            .actualites {
+            .actualites-lien {
 
-                float: right;
+                @include grid-span(6,1);
+
+            }
+
+            .services-lien {
+
+                @include grid-span(6,7);
 
             }
 
@@ -384,29 +370,30 @@ body {
 
             }
 
-            font-size:20px;
+            font-size:14px;
 
             @include breakpoint($mobilel) {
 
-                    top: 92%;
-                    left: 69%;
                     font-size: 20px;
 
             }
 
             @include breakpoint($laptop) {
 
-                top: 93%;
-                left: 52%;
                 font-size: 28px;
 
             }
 
              @include breakpoint($laptopl) {
 
-                top: 93%;
                 font-size: 30px;
 
+            }
+
+            .active {
+
+                    padding-bottom: 0.25rem;
+                    border-bottom: 2.5px solid white;
             }
 
         }
@@ -497,19 +484,20 @@ body {
 }
 
 .offre-speciale {
-    .left{
-    img {
+    .left {
 
-         width:220px;
-         height:84px;
+        img {
 
-        @include breakpoint($laptop) {
+             width:220px;
+             height:84px;
 
-            float: left;
+            @include breakpoint($laptop) {
+
+                float: left;
+
+            }
 
         }
-
-    }
         
     }
 
