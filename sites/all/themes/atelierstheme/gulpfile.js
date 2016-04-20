@@ -56,7 +56,8 @@ gulp.task('browser-sync',['sass:dev'], function() {
    proxy: "",
    socket: {
        domain: 'ilotateliers.dinde.pro:3000'
-   }
+   },
+    ghostMode : false;
  });
 
 });

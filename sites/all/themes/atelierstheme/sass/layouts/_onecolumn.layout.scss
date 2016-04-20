@@ -193,14 +193,17 @@ a {
 .l-map {
     @include grid-span(12, 1);
     .bloc1 {
-        background-color: cyan;
-        height: 341px;
+        background-color: white;
+        min-height: 340px;
+        height:340px;
         //@include grid-span(12,1);
         @include breakpoint($laptop) {
             @include grid-span(6, 7);
         }
     }
     .bloc2 {
+        
+        min-height: 340px;
         background-color: #00a886;
         @include breakpoint($laptop) {
             @include grid-span(6, 7);
