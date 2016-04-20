@@ -13,6 +13,7 @@
     drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
     drupal_add_css('.pager__item--current{background-color:'.$couleur.';} ', 'inline');
     drupal_add_css('.actus{border-bottom: 3px solid '.$couleur.';} ', 'inline');
+    drupal_add_css('.actus .views-field-view-node:hover{background-color:'.$couleur.' !important; border: 2px solid '.$couleur.' !important;} ', 'inline');
 
     $lservice = drupal_get_path_alias("node/".$node->nid);
     dpm($lservice);

@@ -33,7 +33,12 @@
             @include breakpoint($laptop) {
 
                 display: block;
-                //position: absolute;
+
+            }
+
+            p {
+
+                text-align: left !important;
 
             }
 
@@ -43,7 +48,7 @@
 
             max-width:10000px;
 
-            @include breakpoint($laptop) {
+            @include breakpoint($tablet) {
 
                 float: right;
                 margin-top: -47px;
@@ -76,7 +81,12 @@
             margin-left:0px !important;
             margin-top: 9px;
 
-            text-align: right;
+            @include breakpoint($tablet) {
+
+                text-align: right;
+
+            }
+
             text-transform: uppercase;
 
         }
@@ -85,9 +95,7 @@
 
             &:not(:first-child) {
 
-                //max-width:750px;
-
-                @include breakpoint($laptop) {
+                @include breakpoint($tablet) {
 
                     margin-left:250px;
 
@@ -95,12 +103,39 @@
 
             }
 
+        }
+
+        .views-field-view-node {
+
+            margin-left: 0px;
+
+            &:hover {
+
+                color:white;
+
+            }
+
+            a {
+
+                text-decoration: none;
+
+                &:hover {
+
+                    color:white;
+
+                }
+
+            }
+
+            @include breakpoint($tablet) {
+
+                margin-left: 29px !important;
+
+            }
 
         }
 
-
     }
-
 
 }
 

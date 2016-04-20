@@ -431,19 +431,6 @@ body {
         
             @include btn(#FF0000);
             margin:30px auto;
-           
-           
-
-        }
-
-        div {
-
-            &:not(:first-child) {
-
-                max-width:750px;
-                margin-left:250px;
-
-            }
 
         }
 
