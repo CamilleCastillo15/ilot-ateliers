@@ -6,18 +6,26 @@
 
         var mobile = (navigator.userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i) ? true : false );
         var clickmethod = mobile ? "touchstart" : "click";
+        var locpick = settings.map.locpick;
+        console.log("coucou");
         var doc = $(document);
         var win = $(window);
         function initMap() {
-            /*
+           console.log("initmap",locpick);
+            var pos  = {
+                    lat:parseFloat(locpick.user_latitude),
+                    lng:parseFloat(locpick.user_longitude)
+                }
             var mapDiv = document.getElementById('map');
             var map = new google.maps.Map(mapDiv, {
-                center: {
-                    lat: 44.540,
-                    lng: -78.546},
-                zoom: 8
+                center: pos,
+                zoom: 18
             });
-            */
+            var marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+                title: 'Les ateliers de l\'Îlot'
+              });
         }
         initMap();
 

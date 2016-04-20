@@ -235,7 +235,17 @@ function ateliersmod_block_view($delta='') {
         case 'ateliersmod_map':
 			$block['subject'] = "";//t('Block Name 1');
 			$block['content']['ateliersmod_map'] = array(
-		        '#theme' => 'ateliersmod_map'
+		        '#theme' => 'ateliersmod_map',
+                  '#attached' => array(
+                    'js' => array(
+                        
+                       'https://maps.googleapis.com/maps/api/js?key=AIzaSyA-mhBDQt-3OHL8nDWFlKi3zfJH4s9CCMM&' => array(
+                            'type' => 'external',
+                        ),
+                        drupal_get_path('module', 'ateliersmod') . '/js/ateliersmod_map.js'
+                        
+                    ),
+                )
 	       );            
 		break;
         case 'ateliersmod_don':
@@ -247,12 +257,8 @@ function ateliersmod_block_view($delta='') {
         case 'ateliersmod_autres_services':
 			$block['subject'] = "";//t('Block Name 1');
 			$block['content']['ateliersmod_autres_services'] = array(
-		        '#theme' => 'ateliersmod_autres_services',
-                '#attached' => array(
-                    'js' => array(
-                        drupal_get_path('module', 'ateliersmod') . '/js/ateliersmod_map.js',
-                    ),
-                )
+		        '#theme' => 'ateliersmod_autres_services'
+              
 	       );            
 		break;   
         
