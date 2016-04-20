@@ -6,47 +6,19 @@
 .autres_services {
 
     //@include grid-span(12, 1);
-   
-    text-align: center;
-    padding: 5vw;
-    margin:auto;
+
+    .sub_autres_services {
+
+        background-color:$grey_2;
+        position: relative;
+        text-align: center;
+        padding: 5vw;
+        margin:auto;
+
+    }
+
     .atelier{
         @include atelier();
-    }
-    &.text-presentation-block {
-
-        h1 {
-
-            text-transform: uppercase;
-            margin-bottom: 4vw;
-
-        }
-
-        h2 {
-
-            font-size: 15px;
-
-            @include breakpoint($tablet) {
-
-                font-size:20px;
-
-
-            }
-
-            @include breakpoint($laptop) {
-
-                font-size:25px;
-
-            }
-
-             @include breakpoint($laptopl) {
-
-                font-size:30px;
-
-            }
-
-        }
-
     }
 
     .container-title-pictos {
@@ -135,6 +107,133 @@
             font-family: 'SourceSansProRegular';
             text-transform: uppercase;
             float: left;
+
+        }
+
+    }
+
+.triangles {
+
+            display: block;
+            position: relative;
+
+            height: 36px;
+
+            @include breakpoint($mobilem) {
+
+                height: 36px;
+
+            }
+
+            @include breakpoint($tablet) {
+
+                height: 46px;
+
+            }
+
+
+            @include breakpoint($laptop) {
+
+                height: 56px;
+
+            }
+
+            @include breakpoint($laptopl) {
+
+                height:66px;
+            }
+
+        .triangle-left {
+
+            @include grid-span(6,1);
+
+            border-bottom-width: 26px;
+            border-bottom-style: solid;
+            border-left: -40px solid transparent;
+            border-right: 102px solid transparent;
+            height: 0;
+            width: 50%;
+
+            position: relative;
+
+            @include breakpoint($mobilem) {
+
+                border-bottom-width: 36px;
+                border-left: -40px solid transparent;
+                border-right: 102px solid transparent;
+
+            }
+
+            @include breakpoint($tablet) {
+
+                border-bottom-width: 46px;
+                border-left: -40px solid transparent;
+                border-right: 102px solid transparent;
+
+            }
+
+
+            @include breakpoint($laptop) {
+
+                border-bottom-width: 56px;
+                border-left: -40px solid transparent;
+                border-right: 102px solid transparent;
+
+            }
+
+            @include breakpoint($laptopl) {
+
+                border-bottom-width: 66px;
+                border-left: -40px solid transparent;
+                border-right: 102px solid transparent;
+            }
+
+        }
+
+        .triangle-right {
+
+           @include grid-span(6,7);
+
+            border-bottom-width: 66px;
+            border-bottom-style: solid;
+            border-left: 102px solid transparent;
+            border-right: 0px solid transparent;
+            height: 0;
+            width: 50%;
+
+            position: relative;
+
+            @include breakpoint($mobilem) {
+
+                border-bottom-width: 36px;
+                border-left: 102px solid transparent;
+                border-right: 0px solid transparent;
+
+            }
+
+            @include breakpoint($tablet) {
+
+                border-bottom-width: 46px;
+                border-left: 102px solid transparent;
+                border-right: 0px solid transparent;
+
+            }
+
+            @include breakpoint($laptop) {
+
+                border-bottom-width: 56px;
+                border-left: 102px solid transparent;
+                border-right: 0px solid transparent;
+
+            }
+
+            @include breakpoint($laptopl) {
+
+                border-bottom-width: 66px;
+                border-left: 102px solid transparent;
+                border-right: 0px solid transparent;
+
+            }
 
         }
 

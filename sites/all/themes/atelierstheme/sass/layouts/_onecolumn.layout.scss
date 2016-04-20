@@ -306,3 +306,7 @@ a {
     }
     display: block;
 }
+
+.l-services {
+    @include grid-span(12, 1);
+}

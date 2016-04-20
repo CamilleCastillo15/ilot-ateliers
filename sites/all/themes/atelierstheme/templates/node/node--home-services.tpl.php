@@ -63,7 +63,7 @@
                                         print render($tx);
                                     echo "</div>";
                         
-                                    print l("en savoir plus",$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));                    
+                                    print l("en savoir plus",$link,array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
                                     
                                  ?>
 
