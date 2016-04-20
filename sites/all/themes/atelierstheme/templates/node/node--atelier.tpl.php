@@ -47,9 +47,17 @@
 
             <div class="liens text-presentation">
 
-                <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services', 'active')))); ?>
+               <div class="services-lien">
 
-                <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?>
+                   <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services', 'active')))); ?>
+
+               </div>
+
+                <div class="actualites-lien">
+
+                    <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?>
+
+                </div>
 
             </div>
 

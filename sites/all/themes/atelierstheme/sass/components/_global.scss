@@ -340,14 +340,13 @@ body {
 
             }
 
-            .actualites {
+            .actualites-lien {
 
                 @include grid-span(6,1);
 
             }
 
-
-            .services {
+            .services-lien {
 
                 @include grid-span(6,7);
 
@@ -393,7 +392,8 @@ body {
 
             .active {
 
-                text-decoration: underline;
+                    padding-bottom: 0.25rem;
+                    border-bottom: 3px solid white;
             }
 
         }
