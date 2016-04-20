@@ -114,6 +114,7 @@
         .views-field-view-node {
 
             margin-left: 0px;
+            display: block;
 
             &:hover {
 
@@ -133,11 +134,11 @@
 
             }
 
-            @include breakpoint($tablet) {
-
-                margin-left: 29px !important;
-
-            }
+//            @include breakpoint($tablet) {
+//
+//                margin-left: 29px !important;
+//
+//            }
 
         }
 
