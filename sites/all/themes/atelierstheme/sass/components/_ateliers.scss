@@ -215,10 +215,12 @@
 
     }
     .atelier-header-bg-mobile {
+
         display: block;
         @include breakpoint($laptop) {
             display: none;
         }
+
     }
 
     .block-orange {

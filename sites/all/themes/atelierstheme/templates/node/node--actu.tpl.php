@@ -47,17 +47,17 @@
 
         <div class="liens">
 
-                <div class="services-lien">
+            <div class="services-lien">
 
-                   <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
+               <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
 
-               </div>
+           </div>
 
-                <div class="actualites-lien">
+            <div class="actualites-lien">
 
-                    <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites', 'active')))); ?>
+                <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites', 'active')))); ?>
 
-                </div>
+            </div>
 
         </div>
 

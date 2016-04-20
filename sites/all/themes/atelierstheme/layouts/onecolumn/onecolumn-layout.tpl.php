@@ -2,7 +2,7 @@
 <div class="l-header">
     <div class="logo">
         <a href="/">
-            <img src="<?php print $theme ?>/images/logo.png" alt="logo" title="logo" />
+            <img src="<?php print $theme ?>/images/ilot_degrade.svg" alt="logo" title="logo" />
         </a>
     </div>
     <?php print render($page['header']); ?>

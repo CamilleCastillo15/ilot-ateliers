@@ -18,6 +18,8 @@
     $lservice = drupal_get_path_alias("node/".$node->nid);
     dpm($lservice);
 
+    $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
+
 ?>
 
 <div class="atelier">
