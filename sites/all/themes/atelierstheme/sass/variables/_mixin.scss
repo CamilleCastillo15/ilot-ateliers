@@ -24,6 +24,8 @@
     border : 2px solid #000000;
     background-image : url(../images/f_noires/f_g_droite.svg);
     
+    width:200px;
+
     &:hover{
         color: white;
         background-color: $color;
