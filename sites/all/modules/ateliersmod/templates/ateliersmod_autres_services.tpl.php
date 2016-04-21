@@ -7,30 +7,22 @@
 
     $result_ateliers = $view_ateliers->result;
     $theme = drupal_get_path("theme",$GLOBALS['theme']);
-
+/*
     drupal_add_css('.triangles .triangle-left,.triangles .triangle-right{border-bottom-color:#f7f7f7;} ', 'inline');
-
+*/
 ?>
-
 <div class="autres_services">
-
-  <div class="triangles">
-
-    <div class="triangle-left"></div><!--
+    <div class="triangles">
+        <div class="triangle-left"></div><!--
      --><div class="triangle-right"></div>
-
-  </div>
-   
-  <div class="sub_autres_services">
-
-    <div class="text-presentation">
-
+    </div>
+    <div class="inner">
         <h1>autres services</h1>
-
-        <div class="img-pictos"><!--;
+        <div class="img-pictos">
+                <!--;
             <?php foreach($result_ateliers as $key => $value) { ?>
             --><div class="atelier">
-                <?php $n = node_load($value->nid);
+                    <?php $n = node_load($value->nid);
                       $link =drupal_get_path_alias("node/".$value->nid);
                       $picto = field_view_field("node",$n,'field_picto');
                       $title = field_view_field("node",$n,'field_title');
@@ -40,15 +32,12 @@
                       $title_render = render($title);
                       $picto_render = render($picto);
                     print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('img-block', $class_render)))); ?>
-                    <h2 class="title-pictos <?php/* ca fait planter print $class_render ?> */?>">
+                        <h2 class="title-pictos <?php/* ca fait planter print $class_render ?> */?>">
                       <?php print l($title_render, $link,array("html"=>true)); ?>
                     </h2>
                 </div><!--
             <?php } ?>
-      --></div>
-
+      -->
+        </div>
     </div>
-
-  </div>
-
 </div>
