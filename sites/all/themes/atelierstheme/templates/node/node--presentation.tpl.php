@@ -31,19 +31,20 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
     <div class="text-presentation">
         <?php print render($body); ?>
     </div>
-
         <div class="atelier-gallerie-big">
-            <?php
-                foreach($gallerie as $key => $value){
-                    ?>
-                        <?php
-                            $imagea = field_view_value('node', $node, 'field_image_multi', $value);
-                            print render($imagea);
-                        ?>
-                <?php
-                }
-
-            ?>
+            <?php foreach($gallerie as $key => $value){
+                        
+                    $imagea = field_view_value('node', $node, 'field_image_multi', $value,array(
+                      'type' => 'image',
+                      'settings' => array(
+                        'image_style' => 'partenaire',
+                        
+                      ),
+                    ));
+                    print render($imagea);
+                        
+                
+                } ?>
         </div>
 
 </div>

@@ -16,8 +16,6 @@
     drupal_add_css('.actus .views-field-view-node:hover{background-color:'.$couleur.' !important; border: 2px solid '.$couleur.' !important;} ', 'inline');
 
     $lservice = drupal_get_path_alias("node/".$node->nid);
-    dpm($lservice);
-
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
 
 ?>
@@ -50,21 +48,12 @@
         </div>
         <div class="atelier-liens">                
             <div class="services-lien">
-
                    <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
-
-               </div>
-
-                <div class="actualites-lien">
-
+               </div><!--
+                --><div class="actualites-lien">
                     <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites', 'active')))); ?>
-
                 </div>
-
         </div>
-
     </div>
-
     <?php print $view; ?>
-
 </div>

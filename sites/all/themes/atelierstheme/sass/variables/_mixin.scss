@@ -59,5 +59,163 @@
     @include breakpoint($mobilem){
           width:33.33%;
     }
-    
+    img {
+
+        height: auto;
+        width: 100px;
+
+        @include breakpoint($tablet) {
+            width: 125px;
+        }
+
+        @include breakpoint($laptop) {
+            width: 150px;
+        }
+
+        @include breakpoint($laptopl) {
+            width: 175px;
+           
+        }
+
+    }
 }
+@mixin triangleleft($color){
+    @include grid-span(6,1);
+
+        border-bottom-width: 26px;
+        border-bottom-style: solid;
+        border-left: -40px solid transparent;
+        border-right: 102px solid transparent;
+        height: 0;
+        width: 50%;
+
+     
+        //z-index: 100000;
+
+        position: relative;
+
+        @include breakpoint($mobilem) {
+
+            border-bottom-width: 36px;
+            border-left: -40px solid transparent;
+            border-right: 102px solid transparent;
+            
+        }
+
+        @include breakpoint($tablet) {
+
+            border-bottom-width: 46px;
+            border-left: -40px solid transparent;
+            border-right: 102px solid transparent;
+          
+        }
+
+        @include breakpoint($laptop) {
+
+            border-bottom-width: 56px;
+            border-left: -40px solid transparent;
+            border-right: 102px solid transparent;
+           
+        }
+
+        @include breakpoint($laptopl) {
+
+            border-bottom-width: 66px;
+            border-left: -40px solid transparent;
+            border-right: 102px solid transparent;
+           
+
+        }
+}
+@mixin triangleright($color){
+    @include grid-span(6,7);
+
+        border-bottom-width: 66px;
+        border-bottom-style: solid;
+        border-left: 102px solid transparent;
+        border-right: 0px solid transparent;
+        height: 0;
+        width: 50%;
+        
+        position: relative;
+
+        @include breakpoint($mobilem) {
+
+            border-bottom-width: 36px;
+            border-left: 102px solid transparent;
+            border-right: 0px solid transparent;
+           
+        }
+
+        @include breakpoint($tablet) {
+
+            border-bottom-width: 46px;
+            border-left: 102px solid transparent;
+            border-right: 0px solid transparent;
+           
+
+        }
+
+        @include breakpoint($laptop) {
+
+            border-bottom-width: 56px;
+            border-left: 102px solid transparent;
+            border-right: 0px solid transparent;
+           
+
+        }
+
+        @include breakpoint($laptopl) {
+
+            border-bottom-width: 66px;
+            border-left: 102px solid transparent;
+            border-right: 0px solid transparent;
+           
+
+        }
+}
+@mixin triangles($color1,$color2){
+        background-color: $color1;
+       
+        display: block;
+        position: relative;
+        $h : 40px;
+        height: $h;
+        @include breakpoint($tablet) {
+            height: $h + 10;
+        }
+       
+       
+        .triangle-left {
+            @include grid-span(6, 1);
+            border-bottom-width: $h;
+            border-bottom-style: solid;
+            border-bottom-color: $color2;
+            border-right: $h*2 solid transparent;
+            height: 0;
+            width: 50%;
+            position: relative;
+            
+            @include breakpoint($tablet) {
+                border-bottom-width: $h + 10;              
+                border-right: ($h+10)*2 solid transparent;
+            }
+          
+           
+        }
+        .triangle-right {
+            @include grid-span(6, 7);
+            border-bottom-width: $h;
+            border-bottom-style: solid;
+            border-left:  $h*2 solid transparent;
+          border-bottom-color: $color2;
+            height: 0;
+            width: 50%;
+            position: relative;
+            
+           @include breakpoint($tablet) {
+                border-bottom-width: $h + 10;               
+                border-left: ($h+10)*2 solid transparent;
+            }
+        }
+    }

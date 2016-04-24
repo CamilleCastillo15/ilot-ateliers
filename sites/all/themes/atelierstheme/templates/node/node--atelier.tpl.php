@@ -19,13 +19,13 @@
 
     drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
 
-    drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
-
+    drupal_add_css('.atelier .triangle-left,.atelier .triangle-right{border-bottom-color:'.$couleur.' !important;} ', 'inline');
     drupal_add_css('.atelier .contact:hover{background-color:'.$couleur.' !important; border: 2px solid '.$couleur.' !important;} ', 'inline');
+drupal_add_css('.atelier ul li:before{background-color:'.$couleur.' !important;} ', 'inline');
 
     $lservice = drupal_get_path_alias("node/".$node->nid);
+    $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']);
 
-    $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
 
 ?>
 <div class="atelier">
@@ -42,29 +42,21 @@
             <div class="title">
                 <?php print render($ftitle); ?>
             </div>
-
-            <div class="triangle-left"></div><!--
-         --><div class="triangle-right"></div>
-
-            <div class="liens text-presentation">
-
-               <div class="services-lien">
-
-                   <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services', 'active')))); ?>
-
-               </div>
-
-                <div class="actualites-lien">
-
-                    <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?>
-
-                </div>
-
+            <div class="triangles">
+                <div class="triangle-left"></div><!--
+             --><div class="triangle-right"></div>
             </div>
-
+            <div class="atelier-liens">                
+               <div class="services-lien">
+                   <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services', 'active')))); ?>
+               </div><!--
+                --><div class="actualites-lien">
+                    <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?>
+                </div>
+            </div>
         </div>
 
-        <div class="text-presentation atelier-color">
+        <div class="text atelier-color">
             <?php print render($body); ?>
         </div>
 

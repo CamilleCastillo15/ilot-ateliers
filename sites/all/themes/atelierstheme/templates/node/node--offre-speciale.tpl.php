@@ -7,7 +7,6 @@
 
     $atelier_id = field_get_items("node",$node,'field_atelier')[0]["target_id"];
     $atelier = node_load($atelier_id);
-
     $ftitle = field_view_field("node",$atelier,'field_title');
 
     $imgactu_petite = field_get_items("node",$node,'field_image');
@@ -23,10 +22,8 @@
 
     drupal_add_css('.offre'.$node->nid.' {padding: 0 0 100px 0;} ', 'inline');
     drupal_add_css('.offre'.$node->nid.' {border-bottom: 3px solid'.$couleur.';} ', 'inline');
-
     drupal_add_css('.offre-detail'.$node->nid.' .wtitle {color:'.$couleur.';} ', 'inline');
     drupal_add_css('.offre-detail'.$node->nid.' .wsubtitle {color:'.$couleur.';} ', 'inline');
-
     drupal_add_css('.offre-speciale .plus:hover{background-color:#00a886 !important; border: 2px solid #00a886 !important;} ', 'inline');
 
     $link = drupal_get_path_alias("node/".$node->nid);

@@ -5,24 +5,68 @@
 .home-services {
     .container-containers {
         @include breakpoint($laptop) {
-
-                width:960px;
-                margin: auto;
+                margin: 2rem auto;
+                display:table;
+                width:$laptop;
+               
+            
         }
         .container {
+            position:relative;
+            background-color: #f7f7f7;
             text-align:center;
-            @include breakpoint($laptop) {
-
-                width: 300px;
-                float: left;
+            padding-bottom: 6rem;
+            .pictotitlecontainer {
+                display: none;
+                width:100%;
+                 top:0px;
                
-                //height: 55vw;
-                margin: 80px 10px;
-                background-color: #f7f7f7;
-                position: relative;
+
+
 
             }
+            
+             .picto{
+                    margin-top : -20%;
+                    text-align: center;
+                    img{
+                        max-width:100px;
+                    }
+                }
+            @include breakpoint($mobilel) {
+                .picto{
+                    margin-top : -15%;
+                    text-align: center;
+                    img{
+                        max-width:150px;
+                    }
+                }
+            }
+            @include breakpoint($laptop) {
+                border:1rem solid white;
+                padding-bottom: 6rem;
+                display:table-cell;  
+                position: relative;
+                .inner{
+                    padding-top: 2rem;
+                }
+                .picto{
 
+                    text-align: center;
+                    img{
+                        max-width:175px;
+                    }
+                }
+                .pictomobile{
+                    display:none;
+                }
+                .pictotitlecontainer {
+                    display:block;
+                     position: relative;
+                }
+
+            }
+            
         }
 
     }
@@ -34,96 +78,21 @@
 
     }
 
-    .picto_ateliers {
-
-        width: 9em;
-        height: auto;
-        display: block;
-        top: 0;
-        left: 0;
-        margin: -100px auto;
-        display: block;
-
+    
+    .en_savoir_plus {
+        position : absolute;
+        bottom : 0;
+        @include translate(-50%,0);
     }
 
-    .plus {
-
-      @include btn($green);
-    }
-
-    .pictotitlecontainer {
-
-        width:100%;
-        position: relative;
-
-        .image {
-
-             width:100%;
-
-            @include breakpoint($laptop) {
-
-               margin-top:51%;
-
-            }
-
-        }
-
-        .pictotitle {
-
-            @include translate(-50%,-50%);
-            position:absolute;
-            top: 70%;
-            left: 50%;
-
-            img {
-
-                width: 19vw;
-
-            }
-
-            @include breakpoint($laptop) {
-
-               position: absolute;
-               top:-132%;
-                width:85px;
-
-            }
-
-        }
-
-    }
+    
 
     .wtitle {
 
-        @include breakpoint($laptop) {
-
-             @include translate(-50%,-50%);
-             position: absolute;
-             left: 50%;
-             top: 124px;
-             font-size: 20px;
-        }
+      
 
     }
 
-    .text-presentation {
-
-        padding: 25px;
-
-    }
-
-    .text-presentation {
-
-        @include breakpoint($laptop) {
-
-            h1.wtitle {
-
-                font-size: 18px;
-
-            }
-
-        }
-
-    }
+   
 
 }
