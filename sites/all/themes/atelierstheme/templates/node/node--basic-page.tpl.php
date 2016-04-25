@@ -3,7 +3,7 @@
     $body = field_view_field("node",$node,'body');
 
 ?>
-
+sdfsdf
 COUCOU
 
 <div class="mentions-legales">

@@ -1,7 +1,9 @@
 <?php $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ; ?>
 <div class="bloc_don">
     <div class="inner">
-        <img class="don-img" src="<?php print $theme; ?>/images/logo_coeur_rouge.svg" alt="don" />
+        <div  class="don-img">
+            <img src="<?php print $theme; ?>/images/logo_coeur_rouge.svg" alt="don" />
+        </div>
         <div class="don-txt">
             <h1>Je fais un don</h1>
             <br />

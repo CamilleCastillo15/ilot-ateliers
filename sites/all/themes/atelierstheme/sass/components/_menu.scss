@@ -10,7 +10,7 @@
         @include grid-span(8,3);
 
         li {
-            
+             transition:all 0ms;
             text-transform: uppercase;
             display: inline-block;
             line-height: $h;
@@ -18,15 +18,17 @@
             margin: 0 0.4rem;
 
             a {
+                transition:all 400ms;
+                 padding-bottom: 1rem;
+                 border-bottom: 3px solid white;
+                &:hover,
                 &.active{
-                    padding-bottom: 1rem;
+                   
                     border-bottom: 3px solid $green;
                 }
-            }
-
-            a {
                 text-decoration: none;
             }
+
 
             @include breakpoint($laptop) {
                 font-size: 1.2rem;
@@ -301,7 +303,3 @@
 
 }
 
-.l-off {
-
-    
-}

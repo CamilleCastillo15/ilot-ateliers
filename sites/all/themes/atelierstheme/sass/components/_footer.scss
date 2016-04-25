@@ -1,8 +1,121 @@
 .l-footer {
+    padding:2rem;
+    position: relative;
+    background-color: #4b4b4b;
+    text-align: center;
+    
+    text-transform: uppercase;
+   
+    a {
+        &:hover,
+        &:link,
+        &:active,
+        &:visited {
+            color: #05aa88;
+        }
+    }
+    color: #05aa88;
+   
+    .menu {
+        text-align: center;
+        li {
+            display: inline;
 
-    &.text-presentation {
+            a {
 
-        padding: 2vw;
+                &:hover {
+                    color:white;
+                }
+
+            }
+        }
+
+    }
+   
+    .footer-menu {
+
+        .leaf {
+
+            &:after {
+
+                content:"  | ";
+                padding:0 15px;
+                font-size:1.5rem;
+
+            }
+
+            &.last {
+
+                &:after {
+
+                    content:"";
+
+                }
+            }
+        }
+    }
+
+    .reseaux {
+        position:absolute;
+        right:1rem;
+        top:1.5rem;
+
+
+        img {
+            //width: 2vw;
+            margin: 0 1rem;
+           
+        }
+
+        .twitter-img {
+            display: inline-block;
+            background: url("../images/twitter_vert.svg") no-repeat;
+            background-position: bottom;
+            height:2rem;
+            width:2rem;
+            margin: 0 0.5rem;
+
+            &:hover {
+
+                background: url("../images/twitter_blanc.svg") no-repeat;
+                background-position: bottom;
+
+            }
+
+            margin-left: 30px;
+
+           
+
+        }
+
+        .linkedin-img {
+            display: inline-block;
+            background: url("../images/linkedin_vert.svg") no-repeat;
+            background-position: bottom;
+            height:2rem;
+            width:2rem;
+            margin: 0 0.5rem;
+            &:hover {
+
+                background: url("../images/linkedin_blanc.svg") no-repeat;
+                background-position: bottom;
+
+            }
+
+           
+        }
+
+    }
+
+    .footer-menu {
+
+        @include grid-span(12, 1);
+
+    }
+
+    a {
+
+        text-decoration: none;
 
     }
 

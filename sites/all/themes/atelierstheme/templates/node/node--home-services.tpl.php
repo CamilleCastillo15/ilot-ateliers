@@ -8,18 +8,7 @@
     $result = $view->result;
 
     //dpm($result);
-    
-    $img_auto_bleue = field_view_field("node",$node,'field_image_auto_bleue');
-    $img_menuiserie = field_view_field("node",$node,'field_image_menuiserie');
-    $img_ilot_gourmand = field_view_field("node",$node,'field_image_ilot_gourmand');
 
-    $auto_bleue_text = field_view_field("node",$node,'field_auto_bleue');
-    $menuiserie_text = field_view_field("node",$node,'field_menuiserie');
-    $ilot_gourmand_text = field_view_field("node",$node,'field_ilot_gourmand');
-
-    $auto_bleue_picto = field_view_field("node",$node,'field_picto_auto_bleue');
-    $menuiserie_picto = field_view_field("node",$node,'field_picto_menuiserie');
-    $ilot_gourmand_picto = field_view_field("node",$node,'field_picto_ilot_gourmand');
 
  ?>
          
@@ -32,42 +21,60 @@
                 <div class="title">Nos Services</div>
             </div>
             
-            <div class="container-containers">
-                  
-                  <?php 
-        
-                    foreach($result as $key => $value){ ?>
-                       
-                       <div class="container">
+            <div class="container-containers">                  
+                <?php         
+                    foreach($result as $key => $value){ 
+                        //get atelier node
+                        $n = node_load($value->nid);
+                        //construct link to node
+                        $link =drupal_get_path_alias("node/".$value->nid);
+                        //get atelier fields
+                        $im = field_get_items("node",$n,'field_image_presentation');
                         
-                            <?php
+                        $im_r = field_view_value('node', $n, 'field_image_presentation', $im[0], array(
+                            'type' => 'image',
+                            'settings' => array(
+                                'image_style' => 'slider',
+                            ),
+                        ));
+                        $im_hr = field_view_value('node', $n, 'field_image_presentation', $im[0], array(
+                            'type' => 'image',
+                            'settings' => array(
+                                'image_style' => 'header',
+                            ),
+                        ));
+                        
+                        
+                        
+                        $tx = field_view_field("node",$n,'field_texte_presentation');
+                        $picto = field_view_field("node",$n,'field_picto');
+                        $title = field_view_field("node",$n,'field_title'); ?>  
+                
+                        <div class="container">
+                            <div class="inner">  
+                                <div class="pictomobile">
+                                    <?php print render($im_hr); ?>
+                                </div>
+                                <div class="picto">
+                                   <?php print render($picto); ?>
+                                </div>
+                                <h1 class="title">
+                                   <?php print render($title); ?>
+                                </h1>
+                                <div class="pictotitlecontainer">
+                                    <div class="image">
+                                       <?php print render($im_r); ?>
+                                    </div>                                        
+                                </div>
+                                <div class="text-presentation">
+                                     <?php print render($tx); ?>
+                                </div>
+                                <?php 
+                                print l("en savoir plus",$link,array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
 
-                                    $n = node_load($value->nid);
-                        
-                                    $link =drupal_get_path_alias("node/".$value->nid);
-                        
-                                    $im = field_view_field("node",$n,'field_image_presentation');
-                                    $tx = field_view_field("node",$n,'field_texte_presentation');
-                                    $picto = field_view_field("node",$n,'field_picto');
-                                    $title = field_view_field("node",$n,'field_title');
-                     
-                                    echo "<div class=\"pictotitlecontainer\">";
-                                        echo "<div class=\"image\">";
-                                            print render($im);
-                                        echo "</div>";
-                                        echo "<div class=\"pictotitle\">";
-                                            print render($picto);
-                                        echo "</div>";
-                                    echo "</div>";
-                                    echo "<div class=\"text-presentation\">";
-                                        print render($tx);
-                                    echo "</div>";
-                        
-                                    print l("en savoir plus",$link,array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
-                                    
-                                 ?>
-
-                </div>
+                                ?>
+                            </div>
+                        </div>
                         
                         <?php    }?>
             

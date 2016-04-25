@@ -22,20 +22,10 @@ body {
 
 .text-presentation {
 
-    font-size:15px;
+  
  
 
-     @include breakpoint($laptop) {
-
-        font-size:1.25vw;
-
-    }
-
-     @include breakpoint($laptopl) {
-
-        font-size:20px;
-
-    }
+    
 
     p {
 
@@ -118,8 +108,7 @@ body {
 
     h1 {
 
-        display: inline-block;
-        font-size:20px;
+      
 
         @include breakpoint($laptop) {
 
@@ -309,95 +298,7 @@ body {
 
         }
 
-        .liens {
-
-            @include translate(-50%,-50%);
-
-            text-transform: uppercase;
-            color: white;
-
-            text-align: center;
-
-            position: absolute;
-
-            left: 50%;
-            right: 0;
-            top:93%;
-
-            margin-left: auto;
-            margin-right: auto;
-
-            //z-index: 1000000;
-            font-size: 20px;
-
-            display: block;
-            width: 100%;
-
-            a {
-
-                color:white;
-                text-decoration: none;
-
-            }
-
-            .actualites-lien {
-
-                @include grid-span(6,1);
-
-            }
-
-            .services-lien {
-
-                @include grid-span(6,7);
-
-            }
-
-            .services {
-
-                margin-left: -150px;
-
-                @include breakpoint($laptop) {
-
-                    margin-left: 0px;
-
-                }
-
-                @include breakpoint($laptopl) {
-
-                    margin-left: 0px;
-
-                }
-
-            }
-
-            font-size:14px;
-
-            @include breakpoint($mobilel) {
-
-                    font-size: 20px;
-
-            }
-
-            @include breakpoint($laptop) {
-
-                font-size: 28px;
-
-            }
-
-             @include breakpoint($laptopl) {
-
-                font-size: 30px;
-
-            }
-
-            .active {
-
-                    padding-bottom: 0.25rem;
-                    border-bottom: 2.5px solid white;
-            }
-
-        }
-
+       
     }
 
 
@@ -505,31 +406,9 @@ body {
 }
 
 
-.img-block {
-
    
 
-    img {
-
-        height: auto;
-        width: 100px;
-
-        @include breakpoint($tablet) {
-            width: 125px;
-        }
-
-        @include breakpoint($laptop) {
-            width: 150px;
-        }
-
-        @include breakpoint($laptopl) {
-            width: 200px;
-            margin-top: 14px;
-        }
-
-    }
-
-}
+    
 
 .contact {
 

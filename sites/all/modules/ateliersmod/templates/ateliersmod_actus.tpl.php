@@ -10,14 +10,12 @@
     $couleur = field_get_items("node",$node,'field_couleur')[0]['rgb'];
 
     drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
-    drupal_add_css('.triangle-left,.triangle-right{border-bottom-color:'.$couleur.';} ', 'inline');
+   drupal_add_css('.atelier .triangle-left,.atelier .triangle-right{border-bottom-color:'.$couleur.' !important;} ', 'inline');
     drupal_add_css('.pager__item--current{background-color:'.$couleur.';} ', 'inline');
     drupal_add_css('.actus{border-bottom: 3px solid '.$couleur.';} ', 'inline');
     drupal_add_css('.actus .views-field-view-node:hover{background-color:'.$couleur.' !important; border: 2px solid '.$couleur.' !important;} ', 'inline');
 
     $lservice = drupal_get_path_alias("node/".$node->nid);
-    dpm($lservice);
-
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
 
 ?>
@@ -44,27 +42,18 @@
 
         </div>
 
-        <div class="triangle-left"></div><!--
-        --><div class="triangle-right"></div>
-
-        <div class="liens">
-
-                <div class="services-lien">
-
-                   <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
-
-               </div>
-
-                <div class="actualites-lien">
-
-                    <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites', 'active')))); ?>
-
-                </div>
-
+          <div class="triangles">
+            <div class="triangle-left"></div><!--
+             --><div class="triangle-right"></div>
         </div>
-
+        <div class="atelier-liens">                
+            <div class="services-lien">
+                   <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
+               </div><!--
+                --><div class="actualites-lien">
+                    <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites', 'active')))); ?>
+                </div>
+        </div>
     </div>
-
     <?php print $view; ?>
-
 </div>

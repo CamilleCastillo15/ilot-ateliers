@@ -3,10 +3,8 @@
 @import "../variables/mixin";
 
 .bloc_don {
-
     background-color:$lightgrey;
     padding:1rem;
-
     .inner {
         margin : auto;
         max-width:$tablet;
@@ -16,45 +14,78 @@
         color: #9D2537;
         text-align: center;
         .don-img {
-
-            @include grid-span(2,1);
-
+            text-align: center;
+            img{
+                 max-width:150px;
+            }
+            @include grid-span(12,1);
         }
-
         .don-txt {
-            @include grid-span(8,3);
-            h1, h1.wtitle {
+            @include grid-span(12,1);
+            margin : 1rem 0;
+            h1{
                font-family: 'PermanentMarker';
-                font-size:2rem;
+                font-size:2.5rem;
             }
             h2{
-                font-size:1.5rem; 
+                font-size:1.8rem; 
             }
            
         }
-
         .don-btn {
-
-            @include breakpoint($laptop) {
-
-                @include grid-span(2,11);
-
-            }
-
+            @include grid-span(12,1);
             a {
-
                 @include btn(#9D2537);
 
-                margin: 120px 0 0 0;
+                margin: 0px 0 0 0;
                 width: 300px;
 
-                @include breakpoint($laptop) {
-
-                    margin:20px 0;
-                    width: 200px;
-
-                }
+               
             }
+        }
+        @include breakpoint($tablet){
+            .don-img {
+                 @include grid-span(4,1);
+            }
+            .don-txt {
+                @include grid-span(8,5);
+                margin : 1rem 0;
+                h1, h1.wtitle {
+                   font-family: 'PermanentMarker';
+                    font-size:2.5rem;
+                }
+                h2{
+                    font-size:1.8rem; 
+                }
+           
+            }
+            .don-btn {
+                @include grid-span(8,5)
+          
+            }
+            
+        }
+         @include breakpoint($laptop){
+            .don-img {
+                 @include grid-span(2,1);
+            }
+            .don-txt {
+                @include grid-span(7,3);
+                //margin : 1rem 0;
+                h1, h1.wtitle {
+                   font-family: 'PermanentMarker';
+                    font-size:2.5rem;
+                }
+                h2{
+                    font-size:1.8rem; 
+                }
+           
+            }
+            .don-btn {
+                @include grid-span(2,10)
+          
+            }
+            
         }
     }
 }
@@ -65,10 +96,7 @@
     color: #ffffff;
     text-align: center;
     padding:1rem;
-    h1 {
-        font-family: "SourceSansProRegular";
-        text-transform: uppercase;
-    }
+  
     .petit {
         font-size: 15px;
     }
