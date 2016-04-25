@@ -165,7 +165,7 @@ a {
     }
     .bloc2 {
         
-        padding-top: 56px;
+        padding-top: 14px;
         min-height: 340px;
         background-color: #00a886;
 
@@ -173,6 +173,11 @@ a {
             @include grid-span(6, 7);
         }
         height: 341px;
+        font-size: 20px;
+
+        h1{
+            font-size: 1.75rem;
+        }
         
     }
     display: block;

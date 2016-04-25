@@ -16,7 +16,7 @@
         .don-img {
             text-align: center;
             img{
-                 max-width:150px;
+                 max-width:110px;
             }
             @include grid-span(12,1);
         }
@@ -35,7 +35,7 @@
         .don-btn {
             @include grid-span(12,1);
             a {
-                @include btn(#9D2537);
+                @include btn_don(#9D2537);
 
                 margin: 0px 0 0 0;
                 width: 300px;
