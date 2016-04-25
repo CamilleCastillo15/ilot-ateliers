@@ -9,7 +9,7 @@
         </div>
         <div class="don-btn">
             <a href="http://www.soutien.ilot.asso.fr/checkout/7555" target="_blank" class="don">
-                accèder au formulaire
+                accéder au formulaire
             </a>    
         </div>
         <div class="clear"></div>
