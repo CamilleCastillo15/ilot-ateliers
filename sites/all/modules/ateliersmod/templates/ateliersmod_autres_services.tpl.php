@@ -17,7 +17,7 @@
      --><div class="triangle-right"></div>
     </div>
     <div class="inner">
-        <h1>autres services</h1>
+        <h1>Nos services</h1>
         <div class="img-pictos">
                 <!--;
             <?php foreach($result_ateliers as $key => $value) { ?>
