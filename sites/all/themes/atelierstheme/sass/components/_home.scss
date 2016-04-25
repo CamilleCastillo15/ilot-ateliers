@@ -60,6 +60,7 @@
         .par-bienvenue {
             font-family: 'SourceSansProLight';            
             margin: 2rem 0;
+            font-size:21px;
             
             @include breakpoint($tablet) {
                 display:inline-block;

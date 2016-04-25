@@ -4,6 +4,17 @@
 
         padding: 3vw 5vw;
 
+        a {
+
+            &:hover,
+            &:link,
+            &:active,
+            &:visited {
+                color: $green;
+            }
+
+        }
+
     }
 
     .atelier-gallerie-big {
