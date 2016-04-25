@@ -16,7 +16,7 @@
         
         <div class="home-services bkg-blanc"> 
             
-            <div class="imagetitle">
+            <div class="pictotitlecontainer">
                 <div class="image"><?php print render($img_fond); ?></div>
                 <div class="title">Nos Services</div>
             </div>
