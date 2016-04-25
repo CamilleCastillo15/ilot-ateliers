@@ -293,10 +293,48 @@
         padding-top: 2.5rem;
         color:white;
         font-size: 2rem;
+        position: relative;
 
         img {
             width: 2rem;
             margin:0 2.5rem;
+        }
+
+        div {
+
+            &.twitter-img {
+
+                    &:after {
+
+                    content:"  | ";
+                    padding:0 50px;
+                    font-size:1.5rem;
+                    color:white;
+                    font-size: 37px;
+
+                }
+
+            }
+
+            &.linkedin-img {
+
+                //padding:0 35px;
+
+            }
+
+        }
+
+        a {
+
+            &:hover,
+            &:link,
+            &:active,
+            &:visited {
+
+                color: transparent;
+
+            }
+
         }
 
     }

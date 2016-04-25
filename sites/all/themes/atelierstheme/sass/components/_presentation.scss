@@ -1,37 +1,35 @@
 .presentation{
 
-    .text-presentation{
+.text-presentation {
 
-        padding: 3vw 5vw;
+    padding: 3vw 5vw;
 
-        a {
+    a {
 
-            &:hover,
-            &:link,
-            &:active,
-            &:visited {
-                color: $green;
-            }
+        &:hover,
+        &:link,
+        &:active,
+        &:visited {
+            color: $green;
+        }
+
+    }
+
+}
+
+.atelier-gallerie-big {
+
+    text-align: center;
+
+        img {
+
+            margin:1rem;
+
 
         }
 
     }
 
-    .atelier-gallerie-big {
-
-        text-align: center;
-
-            img {
-
-                margin:1rem;
-             
-
-            }
-
-           
-
-        }
-
-    }
+}
 
 

@@ -415,6 +415,52 @@ body {
    @include btn($green);
 }
 
+.reseaux {
+    position:absolute;
+    right:1rem;
+    top:1.5rem;
 
+
+    img {
+        //width: 2vw;
+        margin: 0 1rem;
+
+    }
+
+    .twitter-img {
+        display: inline-block;
+        background: url("../images/twitter_blanc.svg") no-repeat;
+        height:2rem;
+        width:2rem;
+        margin: 0 0.5rem;
+
+        &:hover {
+
+            background: url("../images/twitter_vert.svg") no-repeat;
+
+        }
+
+        margin-left: 30px;
+
+
+
+    }
+
+    .linkedin-img {
+        display: inline-block;
+        background: url("../images/linkedin_blanc.svg") no-repeat;
+        height:2rem;
+        width:2rem;
+        margin: 0 2rem;
+        &:hover {
+
+            background: url("../images/linkedin_vert.svg") no-repeat;
+
+        }
+
+
+    }
+
+}
 
 
