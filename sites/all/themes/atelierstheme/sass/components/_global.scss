@@ -9,17 +9,6 @@ body {
 
 }
 
-a {
-    &:hover,
-    &:link,
-    &:active,
-    &:visited {
-        color: black;
-        text-decoration: red;
-    }
-
-}
-
 .bkg-blanc {
 
     background-color:white;

@@ -111,13 +111,21 @@
             }
 
             a {
- border-bottom: none;
+
+                border-bottom: none;
+
                 &:hover,
                 &.active{
                    
                     border-bottom: none;
                 }
                 color:white;
+
+                &.active-trail {
+
+                    border-bottom: 3px solid $green;
+
+                }
 
             }
 
