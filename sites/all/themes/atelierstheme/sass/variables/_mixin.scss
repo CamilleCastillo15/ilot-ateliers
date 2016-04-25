@@ -48,6 +48,7 @@
     }
 
 }
+
 @mixin atelier(){
     display:inline-block;
     vertical-align: top;
@@ -78,8 +79,11 @@
         }
 
     }
+
 }
+
 @mixin triangleleft($color){
+
     @include grid-span(6,1);
 
         border-bottom-width: 26px;
@@ -126,7 +130,9 @@
            
 
         }
+
 }
+
 @mixin triangleright($color){
     @include grid-span(6,7);
 
@@ -175,47 +181,48 @@
         }
 }
 @mixin triangles($color1,$color2){
+
         background-color: $color1;
        
         display: block;
         position: relative;
-        $h : 40px;
-        height: $h;
+        $h : 60px;
+        height: $h - 10;
         @include breakpoint($tablet) {
-            height: $h + 10;
+            height: $h;
         }
        
        
         .triangle-left {
             @include grid-span(6, 1);
-            border-bottom-width: $h;
+            border-bottom-width: $h - 10;
             border-bottom-style: solid;
             border-bottom-color: $color2;
-            border-right: $h*2 solid transparent;
+            border-right: $h+10 solid transparent;
             height: 0;
             width: 50%;
             position: relative;
             
             @include breakpoint($tablet) {
-                border-bottom-width: $h + 10;              
-                border-right: ($h+10)*2 solid transparent;
+                border-bottom-width: $h;
+                border-right: ($h*2)/1.5 solid transparent;
             }
           
            
         }
         .triangle-right {
             @include grid-span(6, 7);
-            border-bottom-width: $h;
+            border-bottom-width: $h - 10;
             border-bottom-style: solid;
-            border-left:  $h*2 solid transparent;
-          border-bottom-color: $color2;
+            border-left: $h+10 solid transparent;
+            border-bottom-color: $color2;
             height: 0;
             width: 50%;
             position: relative;
             
            @include breakpoint($tablet) {
-                border-bottom-width: $h + 10;               
-                border-left: ($h+10)*2 solid transparent;
+                border-bottom-width: $h;
+                border-left: ($h*2)/1.5 solid transparent;
             }
         }
     }
