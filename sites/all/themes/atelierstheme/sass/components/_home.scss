@@ -61,13 +61,14 @@
             font-family: 'SourceSansProLight';            
             margin: 2rem 0;
             font-size:21px;
+            text-align: center;
             
             @include breakpoint($tablet) {
                 display:inline-block;
                 vertical-align: top;
                 width:50%;
                 margin: 1rem 0;
-                text-align: left;
+                //text-align: left;
             }
             
         }

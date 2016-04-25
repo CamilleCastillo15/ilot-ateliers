@@ -4,15 +4,14 @@
 
 .atelier {
     font-family: 'SourceSansProRegular';
+
     .triangles{
         @include triangles(transparent,transparent);
-        margin-top:-40px;
+        margin-top:-50px;
         @include breakpoint($tablet) {
-            margin-top:-50px;
+            margin-top:-60px;
         }
     }
-   
-
 
     .atelier-body {
 
@@ -41,9 +40,6 @@
             font-style: italic;
         }
 
-   
-       
-
     }
 
     .contact {
@@ -59,10 +55,8 @@
        img{
             display:block;
         }
-        
 
     }
-   
 
     .block-orange {
         width: 100%;
@@ -95,8 +89,8 @@
                     margin-left:15px;
                     list-style: none inside none;
                 }
-            }
 
+            }
         
         }
 
@@ -124,7 +118,8 @@
     width: 100%;
     bottom: 0.5rem;
     font-size: 1.1rem;
-    a{
+
+    a {
      color:white;    
         
     }
@@ -132,10 +127,12 @@
     @include breakpoint($tablet) {
           font-size:1.3rem;
          bottom: 1rem;
+
         .active {
             padding-bottom: 0.2rem;
            
-     }
+         }
+
     }
     .services-lien,
     .actualites-lien {
