@@ -56,4 +56,21 @@
         </div>
     </div>
     <?php print $view; ?>
+
+<!--
+        <div class="reseaux">
+
+            <a href="https://twitter.com/IlotAsso?lang=fr" class="twitter-lien" target="_blank">
+                <div class="twitter-img">
+                </div>
+            </a>
+
+           <a href="https://www.linkedin.com/company/3787026?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A3787026%2Cidx%3A2-1-3%2CtarId%3A1460643706927%2Ctas%3Al%27ilot%20" class="linkedin-lien" target="_blank">
+                <div class="linkedin-img">
+                </div>
+            </a>
+
+        </div>
+-->
+
 </div>

@@ -49,6 +49,12 @@
         margin-right: auto;
         display: block;
 
+        &:hover {
+            color: white;
+            text-decoration: red;
+            cursor:pointer;
+        }
+
     }
 
     .atelier-header-bg {
@@ -67,10 +73,12 @@
     .atelier-color {
        
         text-align:left;
+
         &.text {
             max-width:$laptop;
             margin:0 auto;
             padding: 2rem;
+
             ul {
 
                 margin-left: 15px;
@@ -99,12 +107,6 @@
     a {
 
         text-decoration: none;
-
-        &:hover {
-
-            color:white;
-
-        }
 
     }
 

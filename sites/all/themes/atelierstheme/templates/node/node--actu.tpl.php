@@ -31,6 +31,7 @@
         ),
     ));
 ?> 
+
 <div class="atelier actu-detail>">
     <div class="left">
        <?php print render($imgactu_render); ?>
@@ -86,6 +87,7 @@
             <h1> <?php print render($title); ?> </h1>
             <?php print render($body); ?>
         </div>
+
     </div>
 </div>
 <?php } ?>
