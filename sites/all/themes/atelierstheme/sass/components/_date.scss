@@ -1,0 +1,53 @@
+.atelier {
+
+    .date {
+
+        text-transform: uppercase;
+
+        @include breakpoint($tablet) {
+            text-align: center;
+         }
+
+        .day {
+
+            //float: right;
+            display: block;
+            clear: right;
+
+            span {
+
+                display: block;
+                background-image: url('../images/calendrier.svg');
+                background-size: cover;
+                width:2.5em;
+                height: 2.5em;
+                padding-top: 15px;
+                color: white;
+                text-align: center;
+
+                @include breakpoint($tablet) {
+                    margin:auto;
+                 }
+
+            }
+
+        }
+
+        .year {
+
+            //float: right;
+            display: block;
+            clear: right;
+
+        }
+
+        .socials {
+
+            //float: right;
+            clear: right;
+
+        }
+
+    }
+
+}

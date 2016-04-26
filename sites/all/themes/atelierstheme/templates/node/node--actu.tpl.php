@@ -3,8 +3,6 @@
     $title = field_view_field("node",$node,'field_title');
     $imgactu = field_get_items("node",$node,'field_image');
     $atelier = field_get_items("node",$node,'field_atelier')[0]["entity"];
-   
-   
 
     $ftitle = field_view_field("node",$atelier,'field_title');
     $picto = field_view_field("node",$atelier,'field_picto');
@@ -13,8 +11,9 @@
     $couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
 
     drupal_add_css('.atelier .wtitle, .atelier .wsubtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
+    drupal_add_css('.atelier .wtitle, .atelier .wsubtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
     drupal_add_css('.atelier .triangle-left,.atelier .triangle-right{border-bottom-color:'.$couleur.' !important;} ', 'inline');
-    drupal_add_css('.actus{border-bottom: 3px solid '.$couleur.';} ', 'inline');
+    drupal_add_css('.atelier .actus .readmore:hover{background-color: '.$couleur.' !important; border:2px solid '.$couleur.' !important} ', 'inline');
 
     $lservice = drupal_get_path_alias("node/".$atelier->nid);
 
@@ -35,13 +34,10 @@
     $link = url('node/'.$node->nid, array('absolute' => TRUE));
     $linke = drupal_get_path_alias('node/'.$node->nid);
 
-
-
-
 ?> 
 
 <div class="atelier actu-detail>">
-    <div class="left">
+    <div class="img-actu">
         <?php print render($imgactu_render); ?>
     </div>
     <div class="date">
@@ -52,12 +48,10 @@
     <div class="text-actus">
         <h1><?php print render($title); ?></h1>
         <?php print render($body); ?>
+        <div class="readmore">
+             <?php print l("Lire la suite",$linke , array("html"=>true, 'attributes' => array('class' => array()))); ?>
+        </div>
     </div>
-    <div class="readmore">
-         <?php print l("Lire la suite",$linke , array("html"=>true, 'attributes' => array('class' => array()))); ?>
-
-    </div>
-
 </div>
 
 

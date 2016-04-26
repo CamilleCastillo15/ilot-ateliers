@@ -44,7 +44,6 @@
         background-color: $color;
         border : 2px solid $color;
         background-image : url(../images/f_blanches/f_droite.svg);
-       
     }
 
     &:hover > a {
@@ -265,5 +264,52 @@
     background-image : url(../images/f_blanches/f_droite.svg);
 
     width:200px;
+
+}
+
+@mixin btn_actu($color) {
+    background-color: transparent;
+    cursor:pointer;
+    transition: all 200ms;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+
+    @include breakpoint($laptop) {
+
+        margin-top:30px;
+
+    }
+
+    @include breakpoint($laptopl) {
+
+        margin-top:40px;
+
+    }
+
+    padding: 10px 30px;
+    text-align: center;
+
+    background-repeat: no-repeat;
+
+    background-size : 15% 40%;
+    background-position: 100% center;
+    color: #000000;
+    position: relative;
+    border : 2px solid #000000;
+    background-image : url(../images/f_noires/f_g_droite.svg);
+
+    width:200px;
+
+    &:hover {
+        color: white;
+        background-color: $color;
+        border : 2px solid $color;
+        background-image : url(../images/f_blanches/f_droite.svg);
+    }
+
+    &:hover > a {
+        color: white;
+    }
 
 }
