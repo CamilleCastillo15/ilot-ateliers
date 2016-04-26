@@ -6,7 +6,7 @@
     $gallerie = field_get_items("node",$node,'field_image_multi');
     $image = field_view_field("node",$node,'field_image');
 
-    $im_solidarite = field_view_field("node",$node,'field_image');
+    $im_solidarite =  field_get_items("node",$node,'field_image');
     $im_solidarite_r = field_view_value('node', $node, 'field_image', $im_solidarite[0], array(
         'type' => 'image',
         'settings' => array(
