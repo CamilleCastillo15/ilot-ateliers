@@ -37,12 +37,15 @@
         .readmore {
 
             @include grid-span(7,4);
+            @include btn_actu(#FF0000);
             margin-left: 0%;
             clear: both;
+            margin-bottom: 20px;
+            margin-top: 20px;
 
             @include breakpoint($tablet) {
-                @include btn_actu(#FF0000);
-                margin-bottom: 20px;
+                margin-right: 0%;
+                float: right;
              }
 
         }

@@ -8,3 +8,52 @@
     }
 
 }
+
+
+.offre-speciale {
+
+        overflow: hidden;
+
+        .img-actu {
+
+             @include breakpoint($tablet) {
+                @include grid-span(3,1);
+                 //margin-right: -15%;
+             }
+
+        }
+
+        .date {
+
+            @include breakpoint($tablet) {
+                @include grid-span(2,11);
+             }
+
+        }
+
+        .text-actus {
+
+            @include breakpoint($tablet) {
+                @include grid-span(7,4);
+                margin-left: 30%;
+             }
+
+        }
+
+        .readmore {
+
+            @include grid-span(7,4);
+            @include btn_actu(#FF0000);
+            margin-left: 0%;
+            clear: both;
+            margin-bottom: 20px;
+            margin-top: 20px;
+
+            @include breakpoint($tablet) {
+
+             }
+
+        }
+
+        margin: 50px 50px;
+}

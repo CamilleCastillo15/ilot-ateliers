@@ -298,73 +298,6 @@ body {
        
     }
 
-
-.actus, .offre-speciale {
-
-        margin: 50px 50px;
-        min-height: 207px;
-
-        .views-field-field-image, img {
-
-            @include breakpoint($tablet) {
-
-                float: left;
-
-            }
-
-        }
-
-        .views-field-field-title,  .title-offre-speciale {
-
-            text-transform: uppercase;
-            font-weight: 900;
-            font-size:22px;
-            padding:10px 0px;
-        }
-
-        .views-field-view-node, .plus  {
-
-           
-            position: relative;
-        
-            @include btn(#FF0000);
-            margin:30px auto;
-
-        }
-
-        .text-actus {
-
-            p, h2.wsubtitle, h1.wtitle {
-
-                display:none;
-
-                @include breakpoint($laptop) {
-
-                    display: block;
-
-                }
-
-            }
-
-        }
-
-//            div {
-//
-//            &:not(:first-child) {
-//
-//                @include breakpoint($tablet) {
-//
-//                    margin-left:250px;
-//
-//                }
-//
-//            }
-//
-//        }
-
-    }
-
-
 .pager {
 
     clear: both;
@@ -401,7 +334,6 @@ body {
     }
 
 }
-
 
 .contact {
 
@@ -463,4 +395,9 @@ body {
 
 }
 
+.ajax-progress {
+
+    display: none;
+
+}
 

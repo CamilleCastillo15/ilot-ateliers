@@ -22,9 +22,12 @@
 
     drupal_add_css('.offre'.$node->nid.' {padding: 0 0 100px 0;} ', 'inline');
     drupal_add_css('.offre'.$node->nid.' {border-bottom: 3px solid'.$couleur.';} ', 'inline');
-    drupal_add_css('.offre-detail'.$node->nid.' .wtitle {color:'.$couleur.';} ', 'inline');
-    drupal_add_css('.offre-detail'.$node->nid.' .wsubtitle {color:'.$couleur.';} ', 'inline');
+    drupal_add_css('.offre'.$node->nid.' .title-offre-speciale{color:'.$couleur.';} ', 'inline');
+    drupal_add_css('.offre'.$node->nid.' .wtitle {color:'.$couleur.';} ', 'inline');
+    drupal_add_css('.offre'.$node->nid.' .wsubtitle {color:'.$couleur.';} ', 'inline');
     drupal_add_css('.offre-speciale .plus:hover{background-color:#00a886 !important; border: 2px solid #00a886 !important;} ', 'inline');
+
+    drupal_add_css('.offre'.$node->nid.' .readmore:hover{background-color: '.$couleur.' !important; border:2px solid '.$couleur.' !important} ', 'inline');
 
     $link = drupal_get_path_alias("node/".$node->nid);
 
@@ -38,7 +41,7 @@
 
          <div class="offres-speciales-header">
 
-            <div class="left">
+            <div class="img-actu">
 
                 <?php print render($imgactu_render); ?>
 
@@ -50,7 +53,7 @@
 
                  <?php print render($body); ?>
 
-                 <?php print l("lire la suite", $link, array("html"=>true, 'attributes' => array('class' => array('plus')))); ?>
+                 <?php print l("lire la suite", $link, array("html"=>true, 'attributes' => array('class' => array('readmore')))); ?>
 
              </div>
 
