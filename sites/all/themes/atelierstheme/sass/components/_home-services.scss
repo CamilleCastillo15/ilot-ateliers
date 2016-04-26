@@ -20,13 +20,11 @@
                 display: none;
                 width:100%;
                  top:0px;
-               
-
-
 
             }
             
              .picto{
+
                     margin-top : -20%;
                     text-align: center;
                     img{
@@ -43,12 +41,24 @@
                 }
             }
             @include breakpoint($laptop) {
+                .picto{
+                    margin-top : 0%;
+                }
+            }
+            @include breakpoint($laptop) {
                 border:1rem solid white;
                 padding-bottom: 6rem;
                 display:table-cell;  
                 position: relative;
+                margin-top: 0%;
                 .inner{
                     padding-top: 2rem;
+
+                    .text-presentation {
+
+                        padding-top: 12px;
+                    }
+
                 }
                 .picto{
 
