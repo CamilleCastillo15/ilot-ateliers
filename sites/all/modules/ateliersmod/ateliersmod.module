@@ -103,9 +103,6 @@ function ateliersmod_admin() {
         '#collapsed' => FALSE,  // Added
     );
 
-
-    
-
     $defaults = array(
         'value' => '',
         'format' => 'full_html',
@@ -214,9 +211,11 @@ function ateliersmod_block_info() {
     'info' => t('Ateliers block autres services'), //The name that will appear in the block list.
     'cache' => DRUPAL_CACHE_PER_ROLE, //Default
   );
- 
+  $blocks['ateliersmod_abonnement_offres_speciales'] = array(
+    'info' => t('Ateliers block abonnement offres spéciales'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+  );
   return $blocks;
-    
 }
 
 
@@ -257,11 +256,15 @@ function ateliersmod_block_view($delta='') {
         case 'ateliersmod_autres_services':
 			$block['subject'] = "";//t('Block Name 1');
 			$block['content']['ateliersmod_autres_services'] = array(
-		        '#theme' => 'ateliersmod_autres_services'
-              
+		        '#theme' => 'ateliersmod_autres_services'   
 	       );            
-		break;   
-        
+		break;
+        case 'ateliersmod_abonnement_offres_speciales':
+			$block['subject'] = "";//t('Block Name 1');
+			$block['content']['ateliersmod_abonnement_offres_speciales'] = array(
+		        '#theme' => 'ateliersmod_abonnement_offres_speciales'   
+	       );            
+		break;
     }
     return $block;
 }
@@ -269,7 +272,6 @@ function ateliersmod_block_view($delta='') {
 function ateliersmod_theme($existing, $type, $theme, $path){
   $themez = drupal_get_path("theme",$GLOBALS['theme']);
   $bodyaddress = variable_get('ateliersmod_fsadress_text');
-
   return array(
     'ateliersmod_offres' => array(
         'template' => 'templates/ateliersmod_offres', // Change this to the template file name.
@@ -294,17 +296,19 @@ function ateliersmod_theme($existing, $type, $theme, $path){
     'ateliersmod_autres_services' => array(
       'template' => 'templates/ateliersmod_autres_services',
       'variables'=> array('ateliers_theme' => $themez)
+    ),
+    'ateliersmod_abonnement_offres_speciales' => array(
+      'template' => 'templates/ateliersmod_abonnement_offres_speciales',
+      'variables'=> array('ateliers_theme' => $themez)
     )
-   
   );
 }
 
 function ateliersmod_form(&$form, &$form_state, $form_id) {
     dpm($form);
-    
 }
 /*
 
 function zapimod_preprocess_html(&$variables) {
     drupal_add_css(drupal_get_path('module', 'zapimod') . '/css/zapimod.css');
-}*/
+}l
