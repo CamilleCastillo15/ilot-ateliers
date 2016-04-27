@@ -22,7 +22,7 @@
             case "home" :                
                 drupal_add_js($theme_path."/js/Swiper/dist/js/swiper.jquery.min.js");
                 drupal_add_js($theme_path."/js/atelierstheme.home.js");
-                drupal_add_js($theme_path."/js/atelierstheme.swiper.js");
+                
             break;
         }
     }
