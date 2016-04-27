@@ -1,4 +1,6 @@
-<?php $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ; ?>
+<?php
+    dpm("hophophop");
+    $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ; ?>
 <div class="bloc_don">
     <div class="inner">
         <div  class="don-img">
@@ -14,6 +16,7 @@
                 accéder au formulaire
             </a>
         </div>
+
         <div class="clear"></div>
     </div>
 </div>
