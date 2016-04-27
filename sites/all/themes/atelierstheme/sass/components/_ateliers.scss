@@ -70,19 +70,14 @@
         background-color: #f7941d;
     }
 
-    .atelier-color {
-       
-        text-align:left;
-
+.atelier-color {
+    text-align:left;
         &.text {
             max-width:$laptop;
             margin:0 auto;
             padding: 2rem;
-
             ul {
-
                 margin-left: 15px;
-
                 li {
                     position: relative;
                     &:before{
@@ -97,19 +92,12 @@
                     margin-left:15px;
                     list-style: none inside none;
                 }
-
             }
-        
         }
-
     }
-
     a {
-
         text-decoration: none;
-
     }
-
 }
 .atelier-liens {
    .active {
