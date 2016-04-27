@@ -33,6 +33,12 @@
 
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
 
+    $date_day = format_date($node->created, 'custom','d');
+    $date_month = format_date($node->created, 'custom','F');
+    $date_fullyear = format_date($node->created, 'custom','Y');
+    $link = url('node/'.$node->nid, array('absolute' => TRUE));
+    $linke = drupal_get_path_alias('node/'.$node->nid);
+
 ?>
 
 <?php if($teaser){ ?>

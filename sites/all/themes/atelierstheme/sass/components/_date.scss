@@ -1,54 +1,51 @@
-.atelier {
+.date {
 
-    .date {
+    text-transform: uppercase;
 
-        text-transform: uppercase;
+    @include breakpoint($tablet) {
+        text-align: center;
+        @include grid-span(2,11);
+     }
 
-        @include breakpoint($tablet) {
+    .day {
+
+        //float: right;
+        display: block;
+        clear: right;
+
+        span {
+
+            display: block;
+            background-image: url('../images/calendrier.svg');
+            background-size: cover;
+            width:2.5em;
+            height: 2.5em;
+            padding-top: 15px;
+            color: white;
             text-align: center;
-         }
 
-        .day {
-
-            //float: right;
-            display: block;
-            clear: right;
-
-            span {
-
-                display: block;
-                background-image: url('../images/calendrier.svg');
-                background-size: cover;
-                width:2.5em;
-                height: 2.5em;
-                padding-top: 15px;
-                color: white;
-                text-align: center;
-
-                @include breakpoint($tablet) {
-                    margin-left:auto;
-                    margin-right:auto;
-                    margin-bottom: 7px;
-                 }
-
-            }
+            @include breakpoint($tablet) {
+                margin-left:auto;
+                margin-right:auto;
+                margin-bottom: 7px;
+             }
 
         }
 
-        .year {
+    }
 
-            //float: right;
-            display: block;
-            clear: right;
+    .year {
 
-        }
+        //float: right;
+        display: block;
+        clear: right;
 
-        .socials {
+    }
 
-            //float: right;
-            clear: right;
+    .socials {
 
-        }
+        //float: right;
+        clear: right;
 
     }
 

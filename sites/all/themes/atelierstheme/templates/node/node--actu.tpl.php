@@ -28,12 +28,12 @@
                 'settings' => array(
                 'image_style' => 'medium'),
         ));
+
     $date_day = format_date($node->created, 'custom','d');
     $date_month = format_date($node->created, 'custom','F');
     $date_fullyear = format_date($node->created, 'custom','Y');
     $link = url('node/'.$node->nid, array('absolute' => TRUE));
     $linke = drupal_get_path_alias('node/'.$node->nid);
-
 ?> 
 
 <div class="atelier actu-detail>">
