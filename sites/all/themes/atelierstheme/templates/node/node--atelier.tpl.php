@@ -80,12 +80,13 @@ drupal_add_css('.atelier ul li:before{background-color:'.$couleur.' !important;}
 
                             <div class="atelier-gallerie-image swiper-slide">
 
-                                    <?php
+                                <?php
 
-                                        $imagea = field_view_value('node', $node, 'field_image_multi', $value);
-                                        print render($imagea);
+                                    $imagea = field_view_value('node', $node, 'field_image_multi', $value);
+                                    print render($imagea);
 
-                                    ?>
+                                ?>
+
                             </div>
 
                         <?php } ?>

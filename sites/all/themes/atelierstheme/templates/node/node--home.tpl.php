@@ -3,7 +3,8 @@
     $body_actu = field_view_field("node",$node,'field_body_actu');
     $body = field_view_field("node",$node,'field_body');
 
-    $gallerie = field_get_items("node",$node,'field_image_multi');
+    $gallerie_fond = field_get_items("node",$node,'field_image_multi');
+
     $image = field_view_field("node",$node,'field_image');
 
     $im_solidarite =  field_get_items("node",$node,'field_image');
@@ -39,49 +40,75 @@
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
 ?>
 <div class="home">
-    <div class="block-all">
-        <div class="block-img" style="background-image:url(<?php print $src; ?>)">
-            <?php print render($image_fond_render) ?>   
-        </div>
-        <div class="block-w">
-            <h2 class="title-bienvenue">Bienvenue aux ateliers de l'îlot! </h2>
-            <p class="par-bienvenue">
+    <div class="block-all swiper-container">
 
-                Les Ateliers l'îlot permettent à des
-                personnes très éloignées de l'emploi de travailler et de se réinsérer
+        <div class="swipper-wrapper">
 
-            </p><!--
-            --><div class="ateliers">
-            <!--
-            <?php         
-            foreach($result_ateliers as $key => $value) { ?>
-                --><div class="atelier">
-                <?php 
+           <?php
 
-                  $n = node_load($value->nid);
+            $i =0;
 
-                  $link =drupal_get_path_alias("node/".$value->nid);
-                  $picto = field_view_field("node",$n,'field_picto');
-                  $title = field_view_field("node",$n,'field_title');
-                  $class = field_view_field("node",$n,'field_class');
+            foreach($gallerie_fond as $key => $value) {
 
-                  $title_render = render($title);
-                  $class_render = render($class);
-                  $picto_render = render($picto);
+                $gallerie_fond_r = field_view_value('node', $node, 'field_image_multi', $value, array(
+                    'type' => 'image',
+                    'settings' => array(
+                        'image_style' => 'slider',
+                    ),
+                ));
 
-                  print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers', $class_render))));
-                  $title_render = render($title);
-                  echo "<p class=\"title-pictos ".$class_render."\">";
-                    print l($title_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers'))));
-                    echo "</p>";
-                  // print l($picto_render,$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));
-                ?>
-                </div><!--
+            ?>
+                <div class="block-img" style="background-image:url(<?php print $src; ?>)">
+                    <?php print render($gallerie_fond_r) ?>
+                </div>
+
             <?php } ?>
-              -->  
+
+                <div class="block-w">
+
+                    <h2 class="title-bienvenue">Bienvenue aux ateliers de l'îlot! </h2>
+                    <p class="par-bienvenue">
+
+                        Les Ateliers l'îlot permettent à des
+                        personnes très éloignées de l'emploi de travailler et de se réinsérer
+
+                    </p><!--
+                --><div class="ateliers">
+                <!--
+                <?php
+                foreach($result_ateliers as $key => $value) { ?>
+                    --><div class="atelier">
+                        <?php
+
+                          $n = node_load($value->nid);
+
+                          $link =drupal_get_path_alias("node/".$value->nid);
+                          $picto = field_view_field("node",$n,'field_picto');
+                          $title = field_view_field("node",$n,'field_title');
+                          $class = field_view_field("node",$n,'field_class');
+
+                          $title_render = render($title);
+                          $class_render = render($class);
+                          $picto_render = render($picto);
+
+                          print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers', $class_render))));
+                          $title_render = render($title);
+                          echo "<p class=\"title-pictos ".$class_render."\">";
+                            print l($title_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers'))));
+                            echo "</p>";
+                          // print l($picto_render,$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));
+                        ?>
+                    </div><!--
+                <?php } ?>
+                  -->
+                </div>
+
             </div>
+
         </div>
+
     </div>
+
     <div class="home-body-actu swiper-container">
         <div class="swiper-wrapper">
             <?php foreach($result as $key => $value) { ?>
