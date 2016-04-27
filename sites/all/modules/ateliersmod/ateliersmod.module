@@ -215,6 +215,10 @@ function ateliersmod_block_info() {
     'info' => t('Ateliers block abonnement offres spéciales'), //The name that will appear in the block list.
     'cache' => DRUPAL_CACHE_PER_ROLE, //Default
   );
+  $blocks['ateliersmod_nos_services'] = array(
+    'info' => t('Ateliers block nos services'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+  );
   return $blocks;
 }
 
@@ -265,6 +269,12 @@ function ateliersmod_block_view($delta='') {
 		        '#theme' => 'ateliersmod_abonnement'   
 	       );            
 		break;
+        case 'ateliersmod_nos_services':
+			$block['subject'] = "";//t('Block Name 1');
+			$block['content']['ateliersmod_nos_services'] = array(
+		        '#theme' => 'ateliersmod_nos_services'   
+	       );            
+		break;
     }
     return $block;
 }
@@ -299,6 +309,10 @@ function ateliersmod_theme($existing, $type, $theme, $path){
     ),
     'ateliersmod_abonnement' => array(
       'template' => 'templates/ateliersmod_abonnement',
+      'variables'=> array('ateliers_theme' => $themez)
+    ),
+    'ateliersmod_nos_services' => array(
+      'template' => 'templates/ateliersmod_nos_services',
       'variables'=> array('ateliers_theme' => $themez)
     )
   );

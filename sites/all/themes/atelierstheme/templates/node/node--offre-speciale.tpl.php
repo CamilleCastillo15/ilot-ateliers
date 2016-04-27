@@ -38,120 +38,73 @@
 <?php if($teaser){ ?>
 
     <div class="offre-speciale actus teaser <?php print 'offre'.$node->nid ?>">
-
          <div class="offres-speciales-header">
-
             <div class="img-actu">
-
                 <?php print render($imgactu_render); ?>
-
             </div>
-
+            <div class="date">
+                <div class="day"><span class=""><?php print render($date_day); ?></span><?php print render($date_month); ?></div>
+                <div class="year"><?php print render($date_fullyear); ?></div>
+                <div class="socials"><div class="fb-share-button" data-href="<?php print $link;?>" data-layout="icon_link" data-mobile-iframe="true"></div></div>
+            </div>
             <div class="text-actus">
-
                 <h1 class="title-offre-speciale"> <?php print render($title); ?> </h1>
-
                  <?php print render($body); ?>
-
                  <?php print l("lire la suite", $link, array("html"=>true, 'attributes' => array('class' => array('readmore')))); ?>
-
              </div>
-
         </div>
-
     </div>
-
-
 <?php }else{ ?>
-
     <div class="offre-speciale-detail <?php print 'offre-detail'.$node->nid ?>">
-
         <div class="offres-speciales-header">
-
             <?php print render($imgactu); ?>
-
             <div class="text-presentation">
-
                 <h1> <?php print render($title); ?> </h1>
                 <?php print render($body); ?>
-
             </div>
-
         </div>
-
         <div class="offres-speciales-gallerie">
-
             <div class="offres-speciales-gallerie-big">
-
                 <div class="offres-speciales-gallerie swiper-container">
-
                     <div class="offres-speciales-gallerie-big swiper-wrapper">
-
                         <?php
-
                             foreach($gallerie as $key => $value){ ?>
-
                             <div class="offres-speciales-gallerie-image swiper-slide">
                                 <?php
-                                            $imagea = field_view_value('node', $node, 'field_image_multi', $value);
-                                            print render($imagea);
-                                        ?>
+                                    $imagea = field_view_value('node', $node, 'field_image_multi', $value);
+                                    print render($imagea);
+                                ?>
                             </div>
-
                             <?php
 
                                 }
-
                             ?>
-
                     </div>
-
                     <div class="swiper-pagination"></div>
-
                     <!-- Add Arrows -->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-
                 </div>
-
                 <div class="offres-speciales-gallerie-thumbnails">
-
                     <?php foreach($gallerie as $key => $value){ ?>
-
                         <div class="offres-speciales-gallerie-image" data-id="<?php print $key; ?>">
-
-                            <?php
-
-                                    $imagea = field_view_value('node', $node, 'field_image_multi', $value,array(
-
-                                            'type' => 'image',
-
-                                            'settings' => array(
-                                            'image_style' => 'gallerie_thumb',
-
-                                        ),
-
-                                    ));
-
-                                    print render($imagea);
-
-                                ?>
-                        </div>
-
                         <?php
-
+                                $imagea = field_view_value('node', $node, 'field_image_multi', $value,array(
+                                        'type' => 'image',
+                                        'settings' => array(
+                                        'image_style' => 'gallerie_thumb',
+                                    ),
+                                ));
+                                print render($imagea);
+                            ?>
+                        </div>
+                        <?php
                             }
-
                         ?>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 <?php } ?>
 
 

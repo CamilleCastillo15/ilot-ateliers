@@ -1,4 +1,5 @@
 <?php
+
     $styles  = drupal_get_css();
     $body_actu = field_view_field("node",$node,'field_body_actu');
     $body = field_view_field("node",$node,'field_body');
@@ -38,7 +39,9 @@
 
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
 
-    $fc_textimage = field_get_items('node', $node, 'field_gallerie_image_texte');
+    $fc_textimage = field_get_items('node', $node, 'field_bloc_presentation_l_ilot_');
+
+    //dpm($fc_textimage);
 
     if($fc_textimage){
         $idti = array();
@@ -47,6 +50,8 @@
         }
         $collectionsg =  field_collection_item_load_multiple($idti);
     }
+
+    //dpm($idti);
 ?>
 <div class="home">
     <div class="block-all swiper-container">
@@ -55,26 +60,26 @@
             <?php for($i = 0; $i < count($idti); $i++){
                 $collectiong = $collectionsg[$idti[$i]];
 
-                $image_field = field_get_items('field_collection_item', $collectiong, 'field_image');
-                $image_render = field_view_value('field_collection_item', $collectiong, 'field_image', $image_field[0], array(
+                $image_field = field_get_items('field_collection_item', $collectiong, 'field_imge_presentation');
+                $image_render = field_view_value('field_collection_item', $collectiong, 'field_imge_presentation', $image_field[0], array(
                     'type' => 'image',
                     'settings' => array(
                         'image_style' => 'header',
                     )));
-                $chapeau = field_view_field('field_collection_item', $collectiong, 'field_chapeau');
+
+                $titre = field_view_field('field_collection_item', $collectiong, 'field_titre');
+                $chapeau = field_view_field('field_collection_item', $collectiong, 'field_body_presentation');
 
             ?>
             <div class="home swiper-slide">
                 <div class="block-img" >
                    <?php print render($image_render); ?>
-                   <?php print render($chapeau); ?>
                 </div>
                 <div class="block-w">
-                    <h2 class="title-bienvenue">Bienvenue aux ateliers de l'îlot!</h2>
+                    <h2 class="title-bienvenue"><?php print render($titre); ?></h2>
                     <p class="par-bienvenue">
 
-                        Les Ateliers l'îlot permettent à des
-                        personnes très éloignées de l'emploi de travailler et de se réinsérer
+                        <?php print render($chapeau); ?>
 
                     </p><!--
                     --><div class="ateliers">

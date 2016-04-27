@@ -90,6 +90,7 @@
         </div>
     </div>
 </div>
+
 <div class="atelier actu-detail">
     <div class="atelier-header">
         <?php print render($imgactu_render); ?>
