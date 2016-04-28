@@ -10,8 +10,8 @@
             paginationClickable: true,
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
-           spaceBetween: 30,
-//            autoHeight:true,
+            spaceBetween: 30,
+            autoHeight:true,
             autoplay : 5000
 
         });

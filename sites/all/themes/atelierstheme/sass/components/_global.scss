@@ -72,16 +72,11 @@ body {
 
     h1 {
 
-      
-
         @include breakpoint($laptop) {
-
             font-size:45px;
-
         }
 
          @include breakpoint($laptopl) {
-
             font-size:50px;
 
         }
@@ -93,22 +88,15 @@ body {
         padding-top:1.5vw;
 
         @include breakpoint($tablet) {
-
             font-size:20px;
-
-
         }
 
         @include breakpoint($laptop) {
-
             font-size:25px;
-
         }
 
          @include breakpoint($laptopl) {
-
             font-size:30px;
-
         }
 
     }
@@ -158,27 +146,21 @@ body {
             bottom: 12px;
 
             @include breakpoint($tablet) {
-
                 width: 9px;
                 left: 216px;
                 bottom: 13px;
-
             }
 
             @include breakpoint($laptop) {
-
                 width: 10px;
                 left: 220px;
                 bottom: 12px
-
             }
 
             @include breakpoint($laptopl) {
-
                 width: 12px;
                 left: 312px;
                 bottom: 15px;
-
             }
 
         }
@@ -193,13 +175,10 @@ body {
         position: relative;
 
         .image {
-
             width:100%;
-
         }
 
         .pictotitle {
-
             @include translate(-50%,-50%);
             position:absolute;
             top: 37%;
@@ -210,21 +189,15 @@ body {
                 width:16vw;
 
                 @include breakpoint($mobilel) {
-
                     width:18vw;
-
                 }
 
                 @include breakpoint($laptop) {
-
                     width:20vw;
-
                 }
 
                  @include breakpoint($laptopl) {
-
                     width:250px;
-
                 }
 
             }
@@ -243,21 +216,15 @@ body {
             font-size:20px;
 
             @include breakpoint($mobilel) {
-
                 font-size:25px;
-
             }
 
             @include breakpoint($laptop) {
-
                 font-size:35px;
-
             }
 
              @include breakpoint($laptopl) {
-
                 font-size:40px;
-
             }
 
         }
