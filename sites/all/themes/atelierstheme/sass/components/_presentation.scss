@@ -1,39 +1,24 @@
-.presentation{
+.presentation {
 
-.text-presentation {
+    .atelier-gallerie-big {
 
-    padding: 1vw 6vw;
+        text-align: center;
 
-    @include breakpoint($laptopl) {
-        padding: 10px 85px;
-    }
+            img {
 
-    a {
+                margin:1rem;
+                width:8rem;
 
-        &:hover,
-        &:link,
-        &:active,
-        &:visited {
-            color: $green;
-        }
+                &:last-child {
 
-    }
+                    width:6rem;
 
-}
+                }
 
-.atelier-gallerie-big {
-
-    text-align: center;
-
-        img {
-
-            margin:1rem;
-
+            }
 
         }
 
     }
-
-}
 
 

@@ -56,9 +56,19 @@
 .atelier-color {
     text-align:left;
         &.text {
-            max-width:$laptop;
-            margin:0 auto;
-            padding: 2rem;
+
+            h1 {
+
+                padding: 0 0 1rem 0;
+
+            }
+
+            h2 {
+
+                padding: 1.25rem 0;
+
+            }
+
             ul {
                 margin-left: 15px;
                 li {

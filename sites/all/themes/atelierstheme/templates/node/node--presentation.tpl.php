@@ -28,9 +28,9 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
         <div class="title"><?php print render($ftitle); ?></div>
     </div>
 
-    <div class="text-presentation">
+    <div class="bloc-grille-base">
         <?php print render($body); ?>
-    </div>
+
         <div class="atelier-gallerie-big">
             <?php foreach($gallerie as $key => $value){
                         
@@ -46,5 +46,7 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
                 
                 } ?>
         </div>
+
+    </div>
 
 </div>

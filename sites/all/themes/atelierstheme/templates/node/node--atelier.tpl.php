@@ -56,7 +56,7 @@ drupal_add_css('.atelier ul li:before{background-color:'.$couleur.' !important;}
             </div>
         </div>
 
-        <div class="text atelier-color">
+        <div class="text atelier-color bloc-grille-base">
             <?php print render($body); ?>
         </div>
 

@@ -21,7 +21,7 @@
                 <div class="title">Nos Services</div>
             </div>
             
-            <div class="container-containers">                  
+            <div class="container-containers bloc-grille-base">
                 <?php         
                     foreach($result as $key => $value){ 
                         //get atelier node
