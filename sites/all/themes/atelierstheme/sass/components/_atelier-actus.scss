@@ -19,9 +19,7 @@
 
         .date {
 
-            @include breakpoint($tablet) {
-                @include grid-span(2,11);
-             }
+
 
         }
 

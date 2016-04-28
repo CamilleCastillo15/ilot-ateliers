@@ -198,7 +198,7 @@
 
     .triangle-left {
         @include grid-span(6, 1);
-        border-bottom-width: $h - 20;
+        border-bottom-width: $h - 25;
         border-bottom-style: solid;
         border-bottom-color: $color2;
         border-right: $h+10 solid transparent;
@@ -215,7 +215,7 @@
 
     .triangle-right {
         @include grid-span(6, 7);
-        border-bottom-width: $h - 10;
+        border-bottom-width: $h - 25;
         border-bottom-style: solid;
         border-left: $h+10 solid transparent;
         border-bottom-color: $color2;
