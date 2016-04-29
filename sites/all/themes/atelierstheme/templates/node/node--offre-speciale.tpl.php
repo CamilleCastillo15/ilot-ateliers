@@ -27,7 +27,7 @@
     drupal_add_css('.offre'.$node->nid.' .wsubtitle {color:'.$couleur.';} ', 'inline');
     drupal_add_css('.offre-speciale .plus:hover{background-color:#00a886 !important; border: 2px solid #00a886 !important;} ', 'inline');
 
-    drupal_add_css('.offre'.$node->nid.' .readmore:hover{background-color: '.$couleur.' !important; border:2px solid '.$couleur.' !important} ', 'inline');
+//    drupal_add_css('.offre'.$node->nid.' .readmore:hover{background-color: '.$couleur.' !important; border:2px solid '.$couleur.' !important} ', 'inline');
 
     $link = drupal_get_path_alias("node/".$node->nid);
 
