@@ -20,14 +20,14 @@
     $couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
     $gallerie = field_get_items("node",$node,'field_image_multi');
 
-//    drupal_add_css('.offre'.$node->nid.' {padding: 0 0 100px 0;} ', 'inline');
+    //    drupal_add_css('.offre'.$node->nid.' {padding: 0 0 100px 0;} ', 'inline');
     drupal_add_css('.offre'.$node->nid.' {border-bottom: 3px solid'.$couleur.';} ', 'inline');
     drupal_add_css('.offre'.$node->nid.' .title-offre-speciale{color:'.$couleur.';} ', 'inline');
     drupal_add_css('.offre'.$node->nid.' .wtitle {color:'.$couleur.';} ', 'inline');
     drupal_add_css('.offre'.$node->nid.' .wsubtitle {color:'.$couleur.';} ', 'inline');
     drupal_add_css('.offre-speciale .plus:hover{background-color:#00a886 !important; border: 2px solid #00a886 !important;} ', 'inline');
 
-//    drupal_add_css('.offre'.$node->nid.' .readmore:hover{background-color: '.$couleur.' !important; border:2px solid '.$couleur.' !important} ', 'inline');
+    //    drupal_add_css('.offre'.$node->nid.' .readmore:hover{background-color: '.$couleur.' !important; border:2px solid '.$couleur.' !important} ', 'inline');
 
     $link = drupal_get_path_alias("node/".$node->nid);
 
@@ -61,7 +61,7 @@
         </div>
     </div>
 <?php }else{ ?>
-    <div class="offre-speciale-detail <?php print 'offre-detail'.$node->nid ?>">
+    <div class="offre-speciale-detail bloc-grille-base <?php print 'offre-detail'.$node->nid ?>">
         <div class="offres-speciales-header">
             <?php print render($imgactu); ?>
             <div class="text-presentation">

@@ -10,8 +10,8 @@
     $couleur = field_get_items("node",$node,'field_couleur')[0]['rgb'];
 
     drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
-   drupal_add_css('.atelier .triangle-left,.atelier .triangle-right{border-bottom-color:'.$couleur.' !important;} ', 'inline');
-    drupal_add_css('.pager__item--current{background-color:'.$couleur.';} ', 'inline');
+    drupal_add_css('.atelier .triangle-left,.atelier .triangle-right{border-bottom-color:'.$couleur.' !important;} ', 'inline');
+    drupal_add_css('.pager__item--current{background-color:#00a886;} ', 'inline');
     drupal_add_css('.actus{border-bottom: 3px solid '.$couleur.';} ', 'inline');
     drupal_add_css('.actus .views-field-view-node:hover{background-color:'.$couleur.' !important; border: 2px solid '.$couleur.' !important;} ', 'inline');
 
@@ -61,21 +61,5 @@
         <?php print $view; ?>
 
     </div>
-
-<!--
-        <div class="reseaux">
-
-            <a href="https://twitter.com/IlotAsso?lang=fr" class="twitter-lien" target="_blank">
-                <div class="twitter-img">
-                </div>
-            </a>
-
-           <a href="https://www.linkedin.com/company/3787026?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A3787026%2Cidx%3A2-1-3%2CtarId%3A1460643706927%2Ctas%3Al%27ilot%20" class="linkedin-lien" target="_blank">
-                <div class="linkedin-img">
-                </div>
-            </a>
-
-        </div>
--->
 
 </div>

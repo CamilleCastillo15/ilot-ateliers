@@ -36,7 +36,7 @@
     $linke = drupal_get_path_alias('node/'.$node->nid);
 ?> 
 
-<div class="atelier actu-detail>">
+<div class="atelier actu-detail">
     <div class="img-actu">
         <?php print render($imgactu_render); ?>
     </div>

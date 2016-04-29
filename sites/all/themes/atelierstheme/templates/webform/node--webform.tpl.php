@@ -106,13 +106,17 @@ $img = image_style_url("header", $file->uri);
 
 <div class="block-contact">
 
-   <img class="mailbox" src="<?php print $theme ?>/images/mailbox_blanc.svg" alt="logo" title="logo" />
+   <div class="block-contact-detail">
 
-   <div class="contactez-nous">
+        <img class="mailbox" src="<?php print $theme ?>/images/mailbox_blanc.svg" alt="logo" title="logo" />
 
-       Contactez - nous !
+       <div class="contactez-nous">
 
-   </div>
+           Contactez - nous !
+
+       </div>
+
+    </div>
 
 </div>
 
