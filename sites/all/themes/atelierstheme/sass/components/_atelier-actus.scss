@@ -8,34 +8,91 @@
 
         overflow: hidden;
 
-        .img-actu {
+        @include breakpoint($mobilel) {
+            //margin-left:25%;
+         }
 
-             @include breakpoint($tablet) {
-                @include grid-span(3,1);
-                 //margin-right: -15%;
-             }
+        height: 100%;
+
+        &:not(:first-child) {
+
+            margin-top:50px;
 
         }
 
-        .date {
+        .img-actu {
 
+             //@include breakpoint($tablet) {
+                @include grid-span(3,1);
+             //}
 
+            img {
+
+                @include breakpoint($mobilel) {
+                    //margin-left:25%;
+                 }
+
+                @include breakpoint($tablet) {
+                    //min-height: 204px;
+                 }
+
+                @include breakpoint($laptopl) {
+                    //min-height: 204px;
+                 }
+
+                height: 100%;
+
+            }
 
         }
 
         .text-actus {
 
-            @include breakpoint($tablet) {
-                @include grid-span(7,4);
-                //margin-left: 20%;
+            @include grid-span(6,4);
+            margin-left:29%;
+
+            @include breakpoint($mobilel) {
+                margin-left:27%;
              }
+
+            @include breakpoint($tablet) {
+                margin-left:28%;
+             }
+
+            @include breakpoint($laptop) {
+                margin-left:26%;
+             }
+
+            @include breakpoint($laptopl) {
+                margin-left:19%;
+             }
+
+            .text-detail {
+
+                display: none;
+
+                @include breakpoint($mobilel) {
+                    display: block;
+                 }
+
+            }
+
+            p {
+
+                text-align: left !important;
+
+            }
 
         }
 
         .readmore {
 
             @include grid-span(7,4);
-            @include btn_actu(#FF0000);
+
+            @include breakpoint($mobilel) {
+                @include btn_actu($green);
+             }
+
             margin-left: 0%;
             clear: both;
             margin-bottom: 20px;

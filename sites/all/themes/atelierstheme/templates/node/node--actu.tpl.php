@@ -47,7 +47,7 @@
     </div>
     <div class="text-actus">
         <h1><?php print render($title); ?></h1>
-        <?php print render($body); ?>
+        <div class="text-detail"> <?php print render($body); ?> </div>
         <div class="readmore">
              <?php print l("Lire la suite",$linke , array("html"=>true, 'attributes' => array('class' => array()))); ?>
         </div>
