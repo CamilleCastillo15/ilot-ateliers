@@ -55,7 +55,12 @@
                 </div>
         </div>
     </div>
-    <?php print $view; ?>
+
+    <div class="bloc-grille-base">
+
+        <?php print $view; ?>
+
+    </div>
 
 <!--
         <div class="reseaux">
