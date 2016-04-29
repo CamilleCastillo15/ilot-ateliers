@@ -1,5 +1,16 @@
 .presentation {
 
+        a {
+
+            &:hover,
+            &:link,
+            &:active,
+            &:visited {
+                color: $green;
+            }
+
+        }
+
     .atelier-gallerie-big {
 
         text-align: center;

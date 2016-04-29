@@ -18,16 +18,53 @@
 
     }
 
-}
+    .atelier-gallerie-big {
 
-.atelier-gallerie-thumbnails {
+        img {
 
-    display: inline-block;
-    cursor: pointer;
+            display: block;
+            margin: 0 auto;
 
-    .atelier-gallerie-image {
+        }
+
+    }
+
+    .atelier-gallerie-thumbnails {
 
         display: inline-block;
+        cursor: pointer;
+
+
+        img {
+
+            width:6em;
+
+            @include breakpoint($mobilel) {
+
+                width:7em;
+            }
+
+            @include breakpoint($tablet) {
+
+                width:8em
+
+            }
+
+            @include breakpoint($laptop) {
+
+                width:8em;
+
+            }
+
+        }
+
+
+
+        .atelier-gallerie-image {
+
+            display: inline-block;
+
+        }
 
     }
 

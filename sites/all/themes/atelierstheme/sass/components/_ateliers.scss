@@ -13,25 +13,6 @@
         }
     }
 
-    .atelier-body {
-        line-height: 1.4em;
-        margin-left: 7%;
-        margin-right: 7%;
-        font-size:15px;
-        @include breakpoint($laptop) {
-            font-size:20px;
-        }
-        @include breakpoint($laptopxl) {
-            font-size:25px;
-        }
-        strong {
-            font-weight: 800;
-        }
-        em {
-            font-style: italic;
-        }
-    }
-
     .contact {
         @include btn($green);
         margin-left:auto;
@@ -121,8 +102,7 @@
     }
     position: absolute;
     width: 100%;
-    bottom: 0.5rem;
-    font-size: 1.1rem;
+    bottom: -0.5rem;
 
     a {
      color:white;    
@@ -130,7 +110,7 @@
     }
     
     @include breakpoint($tablet) {
-          font-size:1.3rem;
+         //font-size:1.3rem;
          bottom: 1rem;
 
         .active {

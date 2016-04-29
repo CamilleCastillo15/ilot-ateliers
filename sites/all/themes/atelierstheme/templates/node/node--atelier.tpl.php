@@ -40,7 +40,11 @@ drupal_add_css('.atelier ul li:before{background-color:'.$couleur.' !important;}
             </div>
 
             <div class="title">
-                <?php print render($ftitle); ?>
+                <h1>
+
+                    <?php print render($ftitle); ?>
+
+                </h1>
             </div>
             <div class="triangles">
                 <div class="triangle-left"></div><!--
@@ -48,10 +52,10 @@ drupal_add_css('.atelier ul li:before{background-color:'.$couleur.' !important;}
             </div>
             <div class="atelier-liens">                
                <div class="services-lien">
-                   <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services', 'active')))); ?>
+                   <h2> <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services', 'active')))); ?> </h2>
                </div><!--
                 --><div class="actualites-lien">
-                    <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?>
+                    <h2> <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites')))); ?> </h2>
                 </div>
             </div>
         </div>

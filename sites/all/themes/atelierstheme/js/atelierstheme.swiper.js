@@ -11,6 +11,7 @@
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
             spaceBetween: 30,
+            autoWidth:true,
             autoHeight:true,
             autoplay : 5000
 
