@@ -135,7 +135,7 @@
     <div class="home-body-actu swiper-container">
         <div class="swiper-wrapper">
             <?php foreach($result as $key => $value) { ?>
-               <div class="actu actu-gallerie-images swiper-slide">
+               <div class="home-body-padding actu-gallerie-images swiper-slide">
                    <?php
                         $n = node_load($value->nid);
                         $im_offre = field_get_items("node",$n,'field_image');
@@ -167,7 +167,7 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
-    <div class="home-body-solidarite">
+    <div class="home-body-solidarite home-body-padding ">
         <div class="image_solidarite">
             <?php print render($im_solidarite_r); ?>
         </div>

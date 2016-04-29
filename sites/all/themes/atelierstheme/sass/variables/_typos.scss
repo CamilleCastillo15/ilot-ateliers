@@ -1,6 +1,13 @@
 body{
+
+    @include breakpoint($tablet) {
+
+            font-size:18px;
+        }
+
     font-size: 17px;
     line-height: 1.65rem;
+    font-family: 'SourceSansProRegular';
 }
 
 h1{
@@ -15,5 +22,6 @@ h2{
     font-size: 1.2rem;
     font-weight: 700;
     margin: 0.5rem 0;
+    line-height: 3rem;
 }
 

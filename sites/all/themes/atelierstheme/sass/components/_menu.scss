@@ -7,7 +7,7 @@
     .menu {
         $h: 100px;
         height: $h;
-        @include grid-span(8,3);
+        @include grid-span(9,3);
 
         li {
              transition:all 0ms;

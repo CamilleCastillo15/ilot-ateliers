@@ -6,7 +6,6 @@
         </div>
         <div class="don-txt">
             <h1>Je fais un don</h1>
-            <br />
             <h2>à l'association l'îlot</h2>
         </div>
         <div class="don-btn">

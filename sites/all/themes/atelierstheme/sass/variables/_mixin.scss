@@ -37,7 +37,7 @@
     border : 2px solid #000000;
     background-image : url(../images/f_noires/f_g_droite.svg);
     
-    width:200px;
+    width:230px;
 
     &:hover {
         color: white;
@@ -61,6 +61,15 @@
     }
     text-align:center;
     @include breakpoint($mobilem){
+          width:60.33%;
+    }
+    @include breakpoint($mobilel){
+          width:50.33%;
+    }
+    @include breakpoint($tablet){
+          width:33.33%;
+    }
+    @include breakpoint($laptop){
           width:33.33%;
     }
     img {
@@ -265,7 +274,7 @@
     border : 2px solid $color;
     background-image : url(../images/f_blanches/f_droite.svg);
 
-    width:200px;
+    width:230px;
 
 }
 
@@ -297,7 +306,7 @@
     border : 2px solid #000000;
     background-image : url(../images/f_noires/f_g_droite.svg);
 
-    width:200px;
+    width:230px;
 
     &:hover {
         color: white;
