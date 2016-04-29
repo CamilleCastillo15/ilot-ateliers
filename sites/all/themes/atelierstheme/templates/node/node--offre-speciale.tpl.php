@@ -13,14 +13,14 @@
     $imgactu_render = field_view_value('node', $node, 'field_image', $imgactu_petite[0], array(
         'type' => 'image',
         'settings' => array(
-        'image_style' => 'slider',
+        'image_style' => 'medium',
       ),
     ));
 
     $couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
     $gallerie = field_get_items("node",$node,'field_image_multi');
 
-    drupal_add_css('.offre'.$node->nid.' {padding: 0 0 100px 0;} ', 'inline');
+//    drupal_add_css('.offre'.$node->nid.' {padding: 0 0 100px 0;} ', 'inline');
     drupal_add_css('.offre'.$node->nid.' {border-bottom: 3px solid'.$couleur.';} ', 'inline');
     drupal_add_css('.offre'.$node->nid.' .title-offre-speciale{color:'.$couleur.';} ', 'inline');
     drupal_add_css('.offre'.$node->nid.' .wtitle {color:'.$couleur.';} ', 'inline');
@@ -43,7 +43,7 @@
 
 <?php if($teaser){ ?>
 
-    <div class="offre-speciale actus teaser <?php print 'offre'.$node->nid ?>">
+    <div class="bloc-grille-base offre-speciale actus teaser <?php print 'offre'.$node->nid ?>">
          <div class="offres-speciales-header">
             <div class="img-actu">
                 <?php print render($imgactu_render); ?>
@@ -54,8 +54,8 @@
                 <div class="socials"><div class="fb-share-button" data-href="<?php print $link;?>" data-layout="icon_link" data-mobile-iframe="true"></div></div>
             </div>
             <div class="text-actus">
-                <h1 class="title-offre-speciale"> <?php print render($title); ?> </h1>
-                 <?php print render($body); ?>
+                <h1> <?php print render($title); ?> </h1>
+                <div class="text-detail"><?php print render($body); ?></div>
                  <?php print l("lire la suite", $link, array("html"=>true, 'attributes' => array('class' => array('readmore')))); ?>
              </div>
         </div>

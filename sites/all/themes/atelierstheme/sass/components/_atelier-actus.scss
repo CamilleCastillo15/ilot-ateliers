@@ -2,16 +2,11 @@
 @import "breakpoint";
 @import "../variables/variables";
 
-.atelier {
+.atelier, .offre-speciale {
 
     .actus {
 
         overflow: hidden;
-
-        @include breakpoint($mobilel) {
-            //margin-left:25%;
-         }
-
         height: 100%;
 
         &:not(:first-child) {
@@ -22,9 +17,7 @@
 
         .img-actu {
 
-             //@include breakpoint($tablet) {
                 @include grid-span(3,1);
-             //}
 
             img {
 
