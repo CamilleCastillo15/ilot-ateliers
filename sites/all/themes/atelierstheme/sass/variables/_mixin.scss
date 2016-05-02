@@ -55,16 +55,16 @@
 @mixin atelier(){
     display:inline-block;
     vertical-align: top;
-    width:100%;
+    width:49.33%;
     a{
         text-decoration : none;
     }
     text-align:center;
     @include breakpoint($mobilem){
-          width:60.33%;
+          width:49.33%;
     }
     @include breakpoint($mobilel){
-          width:50.33%;
+          width:33.33%;
     }
     @include breakpoint($tablet){
           width:33.33%;

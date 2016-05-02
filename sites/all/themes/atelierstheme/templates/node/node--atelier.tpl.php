@@ -63,7 +63,7 @@ drupal_add_css('.atelier ul li:before{background-color:'.$couleur.' !important;}
         <div class="contact">
             <a href="/content/formulaire-de-contact" >
 
-                Nous contacter
+                Contactez - nous !
 
             </a>
         </div>

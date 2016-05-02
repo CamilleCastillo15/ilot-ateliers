@@ -1,9 +1,9 @@
 .bloc-grille-base {
 
-    padding: 3vw 6vw;
+    padding: 5vw 8vw;
 
     @include breakpoint($laptopl) {
-        padding: 40px 80px;
+        padding: 60px 100px;
     }
 
 }

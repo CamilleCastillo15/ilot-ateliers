@@ -16,19 +16,26 @@
     ));
 */
     $auto_promo = field_get_items("node",$node,"field_auto_promo");
-    dpm($auto_promo[0]["entity"]);
+    //dpm($auto_promo[0]["entity"]);
 
 
-    $im_solidarite =  field_get_items("node",$auto_promo[0]["entity"],'field_image');
+    $im_auto_promo =  field_get_items("node",$auto_promo[0]["entity"],'field_image');
 
-    $im_solidarite_r = field_view_value('node', $auto_promo[0]["entity"], 'field_image', $im_solidarite[0], array(
+    $im_auto_promo = field_view_value('node', $auto_promo[0]["entity"], 'field_image', $im_auto_promo[0], array(
         'type' => 'image',
         'settings' => array(
             'image_style' => 'slider',
         ),
     ));
 
-    $body =  field_get_items("node",$auto_promo[0]["entity"],'field_class');
+    $body_auto_promo =  field_view_field("node",$auto_promo[0]["entity"],'body',array(
+          'label'=>'hidden',
+          'type' => 'text_summary_or_trimmed',
+          'settings'=>array('trim_length' => 300),
+    ));
+
+    $link_auto_promo = field_view_field("node",$auto_promo[0]["entity"],'nid');
+    //dpm($link_auto_promo);
 
     $image_fond = field_get_items("node",$node,'field_image');
     $image_fond_render = field_view_value('node', $node, 'field_image', $image_fond[0], array(
@@ -66,6 +73,7 @@
 
     //dpm($idti);
 ?>
+
 <div class="home">
 
         <div class="block-all swiper-container">
@@ -171,8 +179,8 @@
                         ?>
                         <div class="center">
                           <?php $link =drupal_get_path_alias("node/".$value->nid);
-    print l("En savoir plus", $link,array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus')))); ?>
-
+                            print l("En savoir plus", $link,array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
+                           ?>
                         </div>
                     </div>
                 </div>
@@ -184,14 +192,14 @@
     </div>
     <div class="home-body-solidarite home-body-padding ">
         <div class="image_solidarite">
-            <?php print render($im_solidarite_r); ?>
+            <?php print render($im_auto_promo); ?>
         </div>
         <div class="body_solidarite">
-            <?php print render($body); ?>
+            <?php print render($body_auto_promo); ?>
             <div class="center">
-            <div class="en_savoir_plus">
-                En savoir plus
-            </div>
+                <?php $link_auto_promo =drupal_get_path_alias("node/".$auto_promo[0]["entity"]->nid);
+                    print l("En savoir plus", $link_auto_promo,array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
+                ?>
             </div>
         </div>
         <div class="clear"></div>
