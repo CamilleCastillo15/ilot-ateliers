@@ -7,9 +7,8 @@
             <img src="<?php print $theme; ?>/images/paperplane.svg" alt="don" />
         </div>
         <div class="don-txt">
-            <h2>S'abonner</h2>
-            <br />
-            <h2>Aux offres spéciales!</h2>
+            <h2>S'abonner <br />
+            Aux offres spéciales!</h2>
         </div>
         <div class="don-btn">
             <a href="http://www.soutien.ilot.asso.fr/checkout/7555" target="_blank" class="don">

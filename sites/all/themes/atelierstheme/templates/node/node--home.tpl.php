@@ -2,11 +2,11 @@
 
     $styles  = drupal_get_css();
     $body_actu = field_view_field("node",$node,'field_body_actu');
-    $body = field_view_field("node",$node,'field_body');
+    //$body = field_view_field("node",$node,'field_body');
 
     $gallerie = field_get_items("node",$node,'field_image_multi');
     $image = field_view_field("node",$node,'field_image');
-
+/*
     $im_solidarite =  field_get_items("node",$node,'field_image');
     $im_solidarite_r = field_view_value('node', $node, 'field_image', $im_solidarite[0], array(
         'type' => 'image',
@@ -14,6 +14,21 @@
             'image_style' => 'slider',
         ),
     ));
+*/
+    $auto_promo = field_get_items("node",$node,"field_auto_promo");
+    dpm($auto_promo[0]["entity"]);
+
+
+    $im_solidarite =  field_get_items("node",$auto_promo[0]["entity"],'field_image');
+
+    $im_solidarite_r = field_view_value('node', $auto_promo[0]["entity"], 'field_image', $im_solidarite[0], array(
+        'type' => 'image',
+        'settings' => array(
+            'image_style' => 'slider',
+        ),
+    ));
+
+    $body =  field_get_items("node",$auto_promo[0]["entity"],'field_class');
 
     $image_fond = field_get_items("node",$node,'field_image');
     $image_fond_render = field_view_value('node', $node, 'field_image', $image_fond[0], array(
@@ -23,8 +38,6 @@
       ),
     ));
     //$src = image_style_url("home", $image_fond[0]["uri"]);
-
-    $body = field_view_field("node",$node,'field_body');
 
     $view = views_get_view('offres_speciales');
     $view->set_display('blockhome');
@@ -157,7 +170,9 @@
                             print render($body_offres);
                         ?>
                         <div class="center">
-                            <div class="en_savoir_plus">En savoir plus</div>
+                          <?php $link =drupal_get_path_alias("node/".$value->nid);
+    print l("En savoir plus", $link,array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus')))); ?>
+
                         </div>
                     </div>
                 </div>

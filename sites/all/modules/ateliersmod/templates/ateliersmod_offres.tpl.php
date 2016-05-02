@@ -3,12 +3,8 @@
 
 $base = base_path();
 
-$visuel_offre = variable_get(ateliersmod_fsvisuels_offres);
-dpm($visuel_offre);
-
+$visuel_offre = variable_get("ateliersmod_fsvisuels_offres");
 $file = file_load($visuel_offre);
-dpm($file->uri);
-
 $img = image_style_url("header", $file->uri);
 //print $img;
 
@@ -49,4 +45,5 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
     </div>
 
     <?php print $view; ?>
+
 </div>

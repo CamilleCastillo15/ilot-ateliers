@@ -92,7 +92,7 @@
 </div>
 
 <div class="atelier actu-detail">
-    <div class="atelier-header">
+    <div class="atelier-header bloc-grille-base">
         <?php print render($imgactu_render); ?>
         <div class="text-presentation">
             <h1> <?php print render($title); ?> </h1>

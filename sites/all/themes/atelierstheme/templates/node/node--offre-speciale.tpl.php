@@ -1,8 +1,13 @@
 <?php
 
+    $base = base_path();
+
+    $visuel_offre = variable_get("ateliersmod_fsvisuels_offres");
+    $file = file_load($visuel_offre);
+    $img_header = image_style_url("header", $file->uri);
+
     $imgactu = field_view_field("node",$node,'field_image');
     $title = field_view_field("node",$node,'field_title');
-    $body = field_view_field("node",$node,'body');
     //$picto = field_view_field("node",$node,'field_picto');
 
     $atelier_id = field_get_items("node",$node,'field_atelier')[0]["target_id"];
@@ -41,7 +46,14 @@
 
 ?>
 
-<?php if($teaser){ ?>
+<?php if($teaser){
+$body = field_view_field("node",$node,'body',array(
+              'label'=>'hidden',
+              'type' => 'text_summary_or_trimmed',
+              'settings'=>array('trim_length' => 150),
+        ));
+
+?>
 
     <div class="bloc-grille-base offre-speciale actus teaser <?php print 'offre'.$node->nid ?>">
          <div class="offres-speciales-header">
@@ -60,7 +72,16 @@
              </div>
         </div>
     </div>
-<?php }else{ ?>
+<?php }else{
+    $body = field_view_field("node",$node,'body'); ?>
+
+     <div class="imagetitle">
+        <div class="image">
+            <img src="<?php print $img_header; ?>" alt="header" title="header" />
+        </div>
+        <div class="title">offres spéciales</div>
+    </div>
+
     <div class="offre-speciale-detail bloc-grille-base <?php print 'offre-detail'.$node->nid ?>">
         <div class="offres-speciales-header">
             <?php print render($imgactu); ?>
@@ -69,6 +90,7 @@
                 <?php print render($body); ?>
             </div>
         </div>
+        <?php if ($gallerie) { ?>
         <div class="offres-speciales-gallerie">
             <div class="offres-speciales-gallerie-big">
                 <div class="offres-speciales-gallerie swiper-container">
@@ -110,6 +132,7 @@
                 </div>
             </div>
         </div>
+        <?php } ?>
     </div>
 <?php } ?>
 

@@ -14,74 +14,50 @@
         text-transform: uppercase;
         color: $green;
         text-align: center;
+
         .don-img {
             text-align: center;
             img{
-                 max-width:110px;
+                 max-width:80px;
             }
-            @include grid-span(12,1);
+            @include grid-span(5,1);
         }
         .don-txt {
-            @include grid-span(12,1);
-            margin : 1rem 0;
+            @include grid-span(7,5);
+            float: none;
+            color: black;
+
             h2{
                 font-family: 'SourceSansProLight';
-                font-size:1.8rem;
-                line-height: 0.7;
+                font-size:1.5rem;
+                //line-height: 0.7;
             }
 
         }
+
         .don-btn {
-            @include grid-span(12,1);
+             @include grid-span(7,5);
             a {
                 @include btn_don($green);
 
                 margin: 0px 0 0 0;
-                width: 300px;
+                width: 200px;
 
 
             }
         }
-        @include breakpoint($tablet){
-            .don-img {
-                 @include grid-span(4,1);
-            }
-            .don-txt {
-                @include grid-span(8,5);
-                margin : 1rem 0;
-                h1, h1.wtitle {
-                   font-family: 'PermanentMarker';
-                    font-size:2.5rem;
-                }
-                h2{
-                    font-size:1.8rem;
-                }
+        @include breakpoint($tablet) {
 
-            }
-            .don-btn {
-                @include grid-span(8,5)
-
-            }
-
-        }
-         @include breakpoint($laptop){
             .don-img {
                  @include grid-span(2,1);
             }
+
             .don-txt {
-                @include grid-span(7,3);
-                //margin : 1rem 0;
-                h1, h1.wtitle {
-                   font-family: 'PermanentMarker';
-                    font-size:2.5rem;
-                }
-                h2{
-                    font-size:1.8rem;
-                }
+                 @include grid-span(7,3);
 
             }
             .don-btn {
-                @include grid-span(2,10)
+                @include grid-span(2,10);
 
             }
 
