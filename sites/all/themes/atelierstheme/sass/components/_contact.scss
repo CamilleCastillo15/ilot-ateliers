@@ -11,6 +11,9 @@
     background-color: #d8d8d8;
     padding: 100px;
 
+    border-right: 20px solid white;
+    border-left: 20px solid white;
+
     label {
 
         margin-bottom: 15px;
@@ -20,6 +23,10 @@
     input {
 
         border:none;
+        background-size : 15% 40%;
+        background-position: 100% center;
+        background-repeat: no-repeat;
+        background-image : url(../images/f_blanches/f_droite.svg);
 
     }
 
@@ -33,14 +40,14 @@
 
         background-color: #00a886;
         float: right;
-        padding:7.5px 30px;
+        padding:7.5px 0px;
         color:white;
         text-transform: uppercase;
         with:100px !important;
 
         @include breakpoint($tablet) {
 
-            width:30%;
+            width:40%;
 
         }
 
@@ -49,6 +56,7 @@
     input {
 
         width:100%;
+        font-size: 15px;
 
     }
 
@@ -76,6 +84,9 @@
 
     position: relative;
 
+    border-right: 20px solid white;
+    border-left: 20px solid white;
+
     .contactez-nous {
 
         display: inline-block;
@@ -90,11 +101,8 @@
     .mailbox {
 
         width: 3em;
-        /* float: left; */
-        //margin-left: -44%;
         display: inline-block;
 
-        //position: absolute;
         margin-top: 1em;
         stroke: white;
 
@@ -104,6 +112,32 @@
     .block-contact-detail {
 
         text-align: center;
+
+    }
+
+}
+
+.webform-confirmation {
+
+    border-right: 20px solid white;
+    border-left: 20px solid white;
+    padding: 200px 0 117px 0;
+
+}
+
+.webform-confirmation-link {
+
+    .links {
+
+        @include btn($green);
+        display: block;
+        margin:0 auto;
+
+        a {
+
+            text-decoration: none;
+
+        }
 
     }
 

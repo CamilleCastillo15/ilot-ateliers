@@ -78,15 +78,15 @@
         width: 100px;
 
         @include breakpoint($tablet) {
-            width: 125px;
+            width: 100px;
         }
 
         @include breakpoint($laptop) {
-            width: 150px;
+            width: 125px;
         }
 
         @include breakpoint($laptopl) {
-            width: 175px;
+            width: 150px;
            
         }
 

@@ -169,12 +169,13 @@ a {
             @include grid-span(6, 7);
         }
         height: 341px;
-        font-size: 20px;
 
         h1{
             font-size: 1.75rem;
         }
         
+        line-height: 1.2rem;
+
     }
     display: block;
 }

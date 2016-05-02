@@ -71,6 +71,29 @@
                         line-height: 70px;
                     }
 
+                    &:hover,
+                    &.active {
+
+                        background-color:$green;
+                    }
+
+                    a {
+
+                        &:hover,
+                        &.active {
+
+                            border-bottom:none !important;
+                        }
+
+                        text-decoration: none;
+                    }
+
+                    &.active-trail {
+
+                        background-color: $green;
+
+                    }
+
                 }
 
                 &:before {
