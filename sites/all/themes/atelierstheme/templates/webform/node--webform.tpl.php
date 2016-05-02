@@ -4,11 +4,11 @@ $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
 
 $base = base_path();
 
-$visuel_contact = variable_get(ateliersmod_fsvisuels_contact);
-dpm($visuel_contact);
+$visuel_contact = variable_get("ateliersmod_fsvisuels_contact");
+//dpm($visuel_contact);
 
 $file = file_load($visuel_contact);
-dpm($file->uri);
+//dpm($file->uri);
 
 $img = image_style_url("header", $file->uri);
 

@@ -44,6 +44,10 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
         <div class="title">offres spéciales</div>
     </div>
 
-    <?php print $view; ?>
+    <div class="bloc-grille-base-offres">
+
+        <?php print $view; ?>
+
+    </div>
 
 </div>

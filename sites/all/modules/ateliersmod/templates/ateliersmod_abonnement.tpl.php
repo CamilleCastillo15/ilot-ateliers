@@ -1,5 +1,4 @@
 <?php
-    dpm("hophophop");
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ; ?>
 <div class="bloc_abo">
     <div class="inner">

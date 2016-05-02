@@ -8,4 +8,12 @@
 
 }
 
+.bloc-grille-base-offres {
 
+    padding: 0 0 5vw 0;
+
+    @include breakpoint($laptopl) {
+        padding: 0 0 60px 0;
+    }
+
+}
