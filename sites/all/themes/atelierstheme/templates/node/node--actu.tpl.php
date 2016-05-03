@@ -101,4 +101,11 @@
 
     </div>
 </div>
-<?php } ?>
+<?php
+//        $block = module_invoke('user', 'block_view');
+//print render($block['content']);
+//
+//    $block = module_invoke('ateliersmod',  'block_view','ateliersmod_autres_services');
+//        dpm($block);
+//print render($block['content']);
+    } ?>

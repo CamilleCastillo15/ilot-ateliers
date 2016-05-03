@@ -41,22 +41,14 @@
     text-align:left;
 
         &.text {
-
             h1 {
-
                 padding: 0 0 1rem 0;
-
             }
-
             h2 {
-
                 padding: 1.25rem 0;
-
             }
-
             ul {
                 margin-left: 15px;
-
                 li {
                     position: relative;
                     &:before{
@@ -72,47 +64,31 @@
                     list-style: none inside none;
                 }
             }
-
                em {
-
-                font-family: 'SourceSansProItalic';
-
-            }
-
+                    font-family: 'SourceSansProItalic';
+                }
             strong {
-
                 //font-family: "SourceSansProBold";
                 font-weight: 900;
-
             }
         }
     }
-
     a {
         text-decoration: none;
         padding-bottom: 15px;
     }
-
     .pictotitlecontainer .pictotitle {
-
         top: 30%;
-
         @include breakpoint($tablet) {
             top: 37%;
         }
-
     }
-
     .pictotitlecontainer .title {
-
         top: 67%;
-
         @include breakpoint($tablet) {
               top: 75%;
         }
-
     }
-
 }
 
 .atelier-liens {
@@ -125,23 +101,18 @@
     position: absolute;
     width: 100%;
     bottom: 0.3rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 
     a {
-
-     color:white;    
-        
+     color:white;
     }
     
     @include breakpoint($tablet) {
          font-size:1.3rem;
          bottom: 1rem;
-
         .active {
             padding-bottom: 0.2rem;
-           
          }
-
     }
 
     .services-lien,

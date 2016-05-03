@@ -177,11 +177,11 @@
                             echo "<h1>".render($title_offres)."</h1>";
                             print render($body_offres);
                         ?>
-                        <div class="center">
-                          <?php $link =drupal_get_path_alias("node/".$value->nid);
-                            print l("En savoir plus", $link,array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
-                           ?>
-                        </div>
+                    </div>
+                    <div class="center">
+                      <?php $link =drupal_get_path_alias("node/".$value->nid);
+                        print l("En savoir plus", $link,array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
+                       ?>
                     </div>
                 </div>
             <?php  } ?>

@@ -276,9 +276,18 @@
     position: relative;
 
 }
+
 .center{
     text-align: center;
 }
+
+.home-body-actu {
+
+  .center{
+        margin-top: 16%;
+    }
+}
+
 .en_savoir_plus {
    @include btn($green);
 }

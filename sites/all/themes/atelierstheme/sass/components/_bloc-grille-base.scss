@@ -17,3 +17,13 @@
     }
 
 }
+
+.offre-speciale-detail img {
+
+    padding: 0 0 5vw 0;
+
+    @include breakpoint($laptopl) {
+        padding: 0 0 60px 0;
+    }
+
+}

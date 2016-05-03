@@ -31,6 +31,8 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
     <div class="bloc-grille-base">
         <?php print render($body); ?>
 
+       <br />
+
         <div class="atelier-gallerie-big">
             <?php foreach($gallerie as $key => $value){
                         

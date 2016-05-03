@@ -7,17 +7,31 @@
 
     $result_ateliers = $view_ateliers->result;
     $theme = drupal_get_path("theme",$GLOBALS['theme']);
+    $node = menu_get_object();
 
-
-
-
-    if ($node = menu_get_object()) { // Get the nid
+    if ($node && $node->type=="atelier") { // Get the nid
         $nid = $node->nid;
     }else {
-        $nid = 0;
+        $p = drupal_get_normal_path(arg(0)."/".arg(1));
+        //dpm(arg(0)."/".arg(1));
+        $a = explode("/",$p);
+        //dpm($a);
+        $nid = $a[1];
+        $path = request_path($nid);
+        $b = explode("/", $path);
+        //dpm($b);
+        $url = $b[0]."/".$b[1];
+        //dpm($url);
+        $source_url = drupal_lookup_path('source', $url);
+        //dpm($b);
+        //dpm($id);
+        $c = explode("/", $source_url);
+        //dpm($c);
+        $nid = $c[1];
     }
 
 ?>
+
 <div class="autres_services">
     <div class="triangles">
         <div class="triangle-left"></div><!--
@@ -28,7 +42,11 @@
         <div class="img-pictos">
                 <!--;
             <?php foreach($result_ateliers as $key => $value) {
+
+                    echo"ecart";
+
                     if($value->nid == $nid){
+
                         $class = "active";
                         $n = node_load($value->nid);
                         $couleur = field_view_field("node",$n,'field_couleur');
@@ -46,7 +64,6 @@
                       $picto = field_view_field("node",$n,'field_picto');
                       $title = field_view_field("node",$n,'field_title');
                       $class = field_view_field("node",$n,'field_class');
-
                       $class_render = render($class);
                       $title_render = render($title);
                       $picto_render = render($picto);
