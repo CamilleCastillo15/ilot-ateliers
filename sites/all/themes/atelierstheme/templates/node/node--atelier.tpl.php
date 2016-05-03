@@ -18,7 +18,6 @@
     $couleur = field_get_items("node",$node,'field_couleur')[0]['rgb'];
 
     drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
-
     drupal_add_css('.atelier .triangle-left,.atelier .triangle-right{border-bottom-color:'.$couleur.' !important;} ', 'inline');
     drupal_add_css('.atelier .contact:hover{background-color:'.$couleur.' !important; border: 2px solid '.$couleur.' !important;} ', 'inline');
 drupal_add_css('.atelier ul li:before{background-color:'.$couleur.' !important;} ', 'inline');

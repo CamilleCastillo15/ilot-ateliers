@@ -7,9 +7,16 @@
 
     $result_ateliers = $view_ateliers->result;
     $theme = drupal_get_path("theme",$GLOBALS['theme']);
-/*
-    drupal_add_css('.triangles .triangle-left,.triangles .triangle-right{border-bottom-color:#f7f7f7;} ', 'inline');
-*/
+
+
+
+
+    if ($node = menu_get_object()) { // Get the nid
+        $nid = $node->nid;
+    }else {
+        $nid = 0;
+    }
+
 ?>
 <div class="autres_services">
     <div class="triangles">
@@ -20,8 +27,20 @@
         <h1>Autres services</h1>
         <div class="img-pictos">
                 <!--;
-            <?php foreach($result_ateliers as $key => $value) { ?>
-            --><div class="atelier">
+            <?php foreach($result_ateliers as $key => $value) {
+                    if($value->nid == $nid){
+                        $class = "active";
+                        $n = node_load($value->nid);
+                        $couleur = field_view_field("node",$n,'field_couleur');
+
+                        drupal_add_css('.autres_services .img-pictos .active h2 a{
+                        border-bottom:3px solid black;
+                        border-bottom-color:'. render($couleur[0]).' !important;} ', 'inline');
+                    }else{
+                        $class="";
+                    }
+                    ?>
+            --><div class="atelier <?php print $class ;?>">
                     <?php $n = node_load($value->nid);
                       $link =drupal_get_path_alias("node/".$value->nid);
                       $picto = field_view_field("node",$n,'field_picto');
