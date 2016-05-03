@@ -20,14 +20,24 @@
         $path = request_path($nid);
         $b = explode("/", $path);
         //dpm($b);
-        $url = $b[0]."/".$b[1];
-        //dpm($url);
-        $source_url = drupal_lookup_path('source', $url);
-        //dpm($b);
-        //dpm($id);
-        $c = explode("/", $source_url);
-        //dpm($c);
-        $nid = $c[1];
+
+        if(count($b) > 1) {
+
+            $url = $b[0]."/".$b[1];
+            //dpm($url);
+            $source_url = drupal_lookup_path('source', $url);
+            //dpm($b);
+            //dpm($id);
+            $c = explode("/", $source_url);
+            //dpm($c);
+            $nid = $c[1];
+
+        } else {
+
+            $nid = 0;
+
+        }
+
     }
 
 ?>
@@ -69,11 +79,10 @@
                       $picto_render = render($picto);
                     print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('img-block', $class_render)))); ?>
                         <h2 class="title-pictos <?php/* ca fait planter print $class_render ?> */?>">
-                      <?php print l($title_render, $link,array("html"=>true)); ?>
-                    </h2>
+                          <?php print l($title_render, $link,array("html"=>true)); ?>
+                        </h2>
                 </div><!--
-            <?php } ?>
-      -->
+            <?php } ?> -->
         </div>
     </div>
 </div>
