@@ -1,19 +1,14 @@
 <?php
-
     $base = base_path();
-
     $visuel_offre = variable_get("ateliersmod_fsvisuels_offres");
     $file = file_load($visuel_offre);
     $img_header = image_style_url("header", $file->uri);
-
     $imgactu = field_view_field("node",$node,'field_image');
     $title = field_view_field("node",$node,'field_title');
     //$picto = field_view_field("node",$node,'field_picto');
-
     $atelier_id = field_get_items("node",$node,'field_atelier')[0]["target_id"];
     $atelier = node_load($atelier_id);
     $ftitle = field_view_field("node",$atelier,'field_title');
-
     $imgactu_petite = field_get_items("node",$node,'field_image');
     $imgactu_render = field_view_value('node', $node, 'field_image', $imgactu_petite[0], array(
         'type' => 'image',
@@ -21,23 +16,17 @@
         'image_style' => 'medium',
       ),
     ));
-
     $couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
-    $gallerie = field_get_items("node",$node,'field_image_multi');
-
+    $gallerie = field_get_items("node",$node,'field_image_multi'
     //    drupal_add_css('.offre'.$node->nid.' {padding: 0 0 100px 0;} ', 'inline');
     drupal_add_css('.offre'.$node->nid.' {border-bottom: 3px solid'.$couleur.';} ', 'inline');
-//    drupal_add_css('.offre'.$node->nid.' .title-offre-speciale{color:'.$couleur.';} ', 'inline');
-//    drupal_add_css('.offre'.$node->nid.' .wtitle {color:'.$couleur.';} ', 'inline');
-//    drupal_add_css('.offre'.$node->nid.' .wsubtitle {color:'.$couleur.';} ', 'inline');
+    //    drupal_add_css('.offre'.$node->nid.' .title-offre-speciale{color:'.$couleur.';} ', 'inline');
+    //    drupal_add_css('.offre'.$node->nid.' .wtitle {color:'.$couleur.';} ', 'inline');
+    //    drupal_add_css('.offre'.$node->nid.' .wsubtitle {color:'.$couleur.';} ', 'inline');
     drupal_add_css('.offre-speciale .plus:hover{background-color:#00a886 !important; border: 2px solid #00a886 !important;} ', 'inline');
-
     //    drupal_add_css('.offre'.$node->nid.' .readmore:hover{background-color: '.$couleur.' !important; border:2px solid '.$couleur.' !important} ', 'inline');
-
     $link = drupal_get_path_alias("node/".$node->nid);
-
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
-
     $date_day = format_date($node->created, 'custom','d');
     $date_month = format_date($node->created, 'custom','F');
     $date_fullyear = format_date($node->created, 'custom','Y');
