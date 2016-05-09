@@ -45,19 +45,19 @@
             margin-left:29%;
 
             @include breakpoint($mobilel) {
-                margin-left:27%;
+                margin-left:31%;
              }
 
             @include breakpoint($tablet) {
-                margin-left:28%;
+                margin-left:32%;
              }
 
             @include breakpoint($laptop) {
-                margin-left:26%;
+                margin-left:30%;
              }
 
             @include breakpoint($laptopl) {
-                margin-left:19%;
+                margin-left:25%;
              }
 
             .text-detail {

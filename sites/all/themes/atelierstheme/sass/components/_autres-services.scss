@@ -4,7 +4,7 @@
 @import "../variables/mixin";
 .autres_services {
     //@include grid-span(12, 1);
-     background-color: $grey_2;
+     background-color: $grey_3;
     .inner {
         padding:1rem 0 2rem 0; ;
         max-width:$laptop;
@@ -17,7 +17,7 @@
        
     }
     .triangles{
-        @include triangles(white,$grey_2);
+        @include triangles(white,$grey_3);
     }
     a{
 

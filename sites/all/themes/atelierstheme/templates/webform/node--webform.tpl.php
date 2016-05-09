@@ -104,33 +104,39 @@ $img = image_style_url("header", $file->uri);
 
 </div>
 
-<div class="block-contact">
+<div class="bloc-grille-base">
 
-   <div class="block-contact-detail">
+    <div class="block-contact">
 
-        <img class="mailbox" src="<?php print $theme ?>/images/mailbox_blanc.svg" alt="logo" title="logo" />
+       <div class="block-contact-detail">
 
-       <div class="contactez-nous">
+            <img class="mailbox" src="<?php print $theme ?>/images/mailbox_blanc.svg" alt="logo" title="logo" />
 
-           Contactez - nous !
+           <div class="contactez-nous">
 
-       </div>
+               Contactez - nous !
+
+           </div>
+
+        </div>
 
     </div>
 
+    <article<?php print $attributes; ?>>
+
+       <div<?php print $content_attributes; ?>>
+
+         <?php
+          // We hide the comments and links now so that we can render them later.
+          hide($content['comments']);
+          hide($content['links']);
+          print render($content);
+        ?>
+
+      </div>
+
+    </article>
+
 </div>
 
-<article<?php print $attributes; ?>>
 
-   <div<?php print $content_attributes; ?>>
-
-     <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      print render($content);
-    ?>
-
-  </div>
-
-</article>

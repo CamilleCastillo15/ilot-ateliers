@@ -7,33 +7,26 @@
 
     max-width: 570px;
     width:100%;
-    margin: 100px auto;
+    margin: 0 auto;
     background-color: #d8d8d8;
     padding: 100px;
-
     border-right: 20px solid white;
     border-left: 20px solid white;
 
     label {
-
         margin-bottom: 15px;
-
     }
 
     input {
-
         border:none;
         background-size : 15% 40%;
         background-position: 100% center;
         background-repeat: no-repeat;
         background-image : url(../images/f_blanches/f_droite.svg);
-
     }
 
     textarea {
-
         border:none;
-
     }
 
     .webform-submit {
@@ -46,30 +39,22 @@
         with:100px !important;
 
         @include breakpoint($tablet) {
-
             width:40%;
-
         }
-
     }
 
     input {
-
         width:100%;
         font-size: 15px;
-
     }
 
     .text-contact {
-
         text-align: center;
         position: absolute;
         margin-top: -73px;
         right: 0;
         left: 0;
-
     }
-
 }
 
 .block-contact {
@@ -77,68 +62,51 @@
     background-color: #4b4b4b;
     height: 100px;
     width: 100%;
-    margin: 100px auto -100px auto;
+    margin: 0 auto;
     max-width: 570px;
     color:white;
     text-transform: uppercase;
-
     position: relative;
-
     border-right: 20px solid white;
     border-left: 20px solid white;
 
     .contactez-nous {
-
         display: inline-block;
         margin-left:20px;
         font-size:25px;
         position: relative;
         top: 50%;
         @include translate(0%,-100%);
-
     }
 
     .mailbox {
-
         width: 3em;
         display: inline-block;
-
         margin-top: 1em;
         stroke: white;
-
     }
 
 
     .block-contact-detail {
-
         text-align: center;
-
     }
 
 }
 
 .webform-confirmation {
-
     border-right: 20px solid white;
     border-left: 20px solid white;
     padding: 200px 0 117px 0;
-
 }
 
 .webform-confirmation-link {
 
     .links {
-
         @include btn($green);
         display: block;
         margin:0 auto;
-
         a {
-
             text-decoration: none;
-
         }
-
     }
-
 }
