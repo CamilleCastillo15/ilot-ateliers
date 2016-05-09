@@ -7,6 +7,14 @@
         @include grid-span(2,11);
      //}
 
+        @include breakpoint($tablet) {
+
+            font-size:21px;
+        }
+
+        font-size: 17px;
+
+
     .day {
 
         display: block;
@@ -19,7 +27,7 @@
             background-size: cover;
             width:2.5em;
             height: 2.5em;
-            padding-top: 9px;
+            padding-top: 13px;
             color: white;
             text-align: center;
 
@@ -45,6 +53,13 @@
 
         //float: right;
         clear: right;
+
+        @include breakpoint($tablet) {
+
+            font-size:21px !important;
+        }
+
+        font-size: 17px !important;
 
     }
 

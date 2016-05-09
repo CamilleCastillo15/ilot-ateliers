@@ -45,8 +45,6 @@ gulp.task('sass:watch', function () {
         }, 300);
     } );    
     gulp.watch('./**/*.{php,inc,info,js}', ['reload']);
-
-
 });
 
 
@@ -56,8 +54,8 @@ gulp.task('browser-sync',['sass:dev'], function() {
    proxy: "",
    socket: {
        domain: 'ilotateliers.dinde.pro:3000'
-   },
-    ghostMode : false;
+   }
+    //ghostMode : false;
  });
 
 });

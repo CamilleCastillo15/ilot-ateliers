@@ -13,9 +13,10 @@
         }
         .container {
             position:relative;
-            background-color: #f7f7f7;
+            background-color: $grey_3;
             text-align:center;
             padding-bottom: 6rem;
+
             .pictotitlecontainer {
                 display: none;
                 width:100%;

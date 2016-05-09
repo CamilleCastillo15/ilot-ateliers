@@ -1,42 +1,34 @@
 <?php
-
     $styles  = drupal_get_css();
     $body_actu = field_view_field("node",$node,'field_body_actu');
-    //$body = field_view_field("node",$node,'field_body');
-
+    $body = field_view_field("node",$node,'field_body');
     $gallerie = field_get_items("node",$node,'field_image_multi');
     $image = field_view_field("node",$node,'field_image');
-/*
-    $im_solidarite =  field_get_items("node",$node,'field_image');
-    $im_solidarite_r = field_view_value('node', $node, 'field_image', $im_solidarite[0], array(
-        'type' => 'image',
-        'settings' => array(
-            'image_style' => 'slider',
-        ),
-    ));
-*/
+    /*
+        $im_solidarite =  field_get_items("node",$node,'field_image');
+        $im_solidarite_r = field_view_value('node', $node, 'field_image', $im_solidarite[0], array(
+            'type' => 'image',
+            'settings' => array(
+                'image_style' => 'slider',
+            ),
+        ));
+    */
     $auto_promo = field_get_items("node",$node,"field_auto_promo");
     //dpm($auto_promo[0]["entity"]);
-
-
     $im_auto_promo =  field_get_items("node",$auto_promo[0]["entity"],'field_image');
-
     $im_auto_promo = field_view_value('node', $auto_promo[0]["entity"], 'field_image', $im_auto_promo[0], array(
         'type' => 'image',
         'settings' => array(
             'image_style' => 'slider',
         ),
     ));
-
     $body_auto_promo =  field_view_field("node",$auto_promo[0]["entity"],'body',array(
           'label'=>'hidden',
           'type' => 'text_summary_or_trimmed',
           'settings'=>array('trim_length' => 300),
     ));
-
     $link_auto_promo = field_view_field("node",$auto_promo[0]["entity"],'nid');
     //dpm($link_auto_promo);
-
     $image_fond = field_get_items("node",$node,'field_image');
     $image_fond_render = field_view_value('node', $node, 'field_image', $image_fond[0], array(
         'type' => 'image',
@@ -45,24 +37,16 @@
       ),
     ));
     //$src = image_style_url("home", $image_fond[0]["uri"]);
-
     $view = views_get_view('offres_speciales');
     $view->set_display('blockhome');
     $view->execute();
-
     $result = $view->result;
-
     $view_ateliers = views_get_view('ateliers');
     $view_ateliers->execute();
-
     $result_ateliers = $view_ateliers->result;
-
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
-
     $fc_textimage = field_get_items('node', $node, 'field_bloc_presentation_l_ilot_');
-
     //dpm($fc_textimage);
-
     if($fc_textimage){
         $idti = array();
         foreach ($fc_textimage as $fc_field) {
@@ -70,35 +54,26 @@
         }
         $collectionsg =  field_collection_item_load_multiple($idti);
     }
-
     //dpm($idti);
 ?>
-
 <div class="home">
-
         <div class="block-all swiper-container">
-
             <div class="swiper-wrapper">
-
                 <?php for($i = 0; $i < count($idti); $i++){
                     $collectiong = $collectionsg[$idti[$i]];
-
                     $image_field = field_get_items('field_collection_item', $collectiong, 'field_imge_presentation');
                     $image_render = field_view_value('field_collection_item', $collectiong, 'field_imge_presentation', $image_field[0], array(
                         'type' => 'image',
                         'settings' => array(
                             'image_style' => 'header',
                         )));
-
                     $image_render_mobile = field_view_value('field_collection_item', $collectiong, 'field_imge_presentation', $image_field[0], array(
                         'type' => 'image',
                         'settings' => array(
                             'image_style' => 'slider',
                         )));
-
                     $titre = field_view_field('field_collection_item', $collectiong, 'field_titre');
                     $chapeau = field_view_field('field_collection_item', $collectiong, 'field_body_presentation');
-
                 ?>
                 <div class="home swiper-slide">
                     <div class="block-img" >
@@ -107,9 +82,7 @@
                     <div class="block-w">
                         <h2 class="title-bienvenue"><?php print render($titre); ?></h2>
                         <div class="par-bienvenue">
-
                             <?php print render($chapeau); ?>
-
                         </div><!--
                         --><div class="ateliers">
                         <!--
@@ -117,18 +90,14 @@
                         foreach($result_ateliers as $key => $value) { ?>
                             --><div class="atelier">
                             <?php
-
                               $n = node_load($value->nid);
-
                               $link =drupal_get_path_alias("node/".$value->nid);
                               $picto = field_view_field("node",$n,'field_picto');
                               $title = field_view_field("node",$n,'field_title');
                               $class = field_view_field("node",$n,'field_class');
-
                               $title_render = render($title);
                               $class_render = render($class);
                               $picto_render = render($picto);
-
                               print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers', $class_render))));
                               $title_render = render($title);
                               echo "<p class=\"title-pictos ".$class_render."\">";
@@ -137,22 +106,15 @@
                               // print l($picto_render,$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));
                             ?>
                             </div><!--
-
                          <?php } ?>
                           -->
                         </div>
-
                     </div>
-
                 </div>
-
                 <?php }  ?>
             </div>
-
         </div>
-
     </div>
-
     <div class="home-body-actu swiper-container">
         <div class="swiper-wrapper">
             <?php foreach($result as $key => $value) { ?>
@@ -192,15 +154,17 @@
     </div>
     <div class="home-body-solidarite home-body-padding ">
         <div class="image_solidarite">
-            <?php print render($im_auto_promo); ?>
+            <?php print render($image); ?>
         </div>
         <div class="body_solidarite">
-            <?php print render($body_auto_promo); ?>
+            <?php print render($body); ?>
+<!--
             <div class="center">
-                <?php $link_auto_promo =drupal_get_path_alias("node/".$auto_promo[0]["entity"]->nid);
+                <?php /*$link_auto_promo =drupal_get_path_alias("node/".$auto_promo[0]["entity"]->nid);
                     print l("En savoir plus", $link_auto_promo,array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
-                ?>
+                */?>
             </div>
+-->
         </div>
         <div class="clear"></div>
     </div>
