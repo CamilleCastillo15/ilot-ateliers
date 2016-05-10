@@ -13,9 +13,15 @@
         }
         .container {
             position:relative;
-            background-color: $grey_3;
+
             text-align:center;
             padding-bottom: 6rem;
+
+             @include breakpoint($laptop) {
+
+                 background-color: $grey_3;
+
+              }
 
             .pictotitlecontainer {
                 display: none;
@@ -107,22 +113,25 @@
         margin-bottom: 7vw;
 
     }
-
     
     .en_savoir_plus {
         position : absolute;
         bottom : 0;
         @include translate(-50%,0);
     }
-
     
+    .bloc-grille-base {
 
-    .wtitle {
+        padding: 0vw 0vw;
+        margin-top:8vw;
+        margin-bottom: 8vw;
 
-      
+        @include breakpoint($laptopl) {
+            padding: 60px 100px;
+            margin-top: 0vw;
+            margin-bottom: 0vw;
+        }
 
     }
-
-   
 
 }
