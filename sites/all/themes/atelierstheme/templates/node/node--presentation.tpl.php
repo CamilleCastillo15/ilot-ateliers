@@ -18,8 +18,9 @@ $build_body = field_view_field('node', $node, 'body', 'teaser');
     <div class="flag"><?php print render($flag); ?></div>
     <div class="logo"><?php print render($logo); ?></div>
 </a>
-*/?>
+*/
 
+?>
 
 <div class="presentation bkg-blanc">
 

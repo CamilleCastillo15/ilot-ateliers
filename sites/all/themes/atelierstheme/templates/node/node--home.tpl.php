@@ -158,13 +158,11 @@
         </div>
         <div class="body_solidarite">
             <?php print render($body); ?>
-<!--
             <div class="center">
-                <?php /*$link_auto_promo =drupal_get_path_alias("node/".$auto_promo[0]["entity"]->nid);
+                <?php $link_auto_promo =drupal_get_path_alias("node/".$auto_promo[0]["entity"]->nid);
                     print l("En savoir plus", $link_auto_promo,array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
-                */?>
+                ?>
             </div>
--->
         </div>
         <div class="clear"></div>
     </div>

@@ -41,7 +41,6 @@ $body = field_view_field("node",$node,'body',array(
               'type' => 'text_summary_or_trimmed',
               'settings'=>array('trim_length' => 150),
         ));
-
 ?>
 
     <div class="bloc-grille-base offre-speciale actus teaser <?php print 'offre'.$node->nid ?>">
