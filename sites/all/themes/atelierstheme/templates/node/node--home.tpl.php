@@ -117,6 +117,7 @@
         </div>
     </div>
 </div>
+
 <div class="home-body-actu swiper-container">
     <div class="swiper-wrapper">
         <?php foreach($result as $key => $value) { ?>
@@ -154,6 +155,7 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
 </div>
+
 <div class="home-body-solidarite home-body-padding ">
     <div class="image_solidarite">
         <?php print render($image); ?>
