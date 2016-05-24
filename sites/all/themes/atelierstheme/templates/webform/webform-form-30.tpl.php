@@ -1,17 +1,5 @@
 <?php
 
-$theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
-
-$base = base_path();
-
-$visuel_contact = variable_get("ateliersmod_fsvisuels_contact");
-//dpm($visuel_contact);
-
-$file = file_load($visuel_contact);
-//dpm($file->uri);
-
-$img = image_style_url("header", $file->uri);
-
     /**
      * @file
      * Default theme implementation to display a node.
@@ -90,53 +78,29 @@ $img = image_style_url("header", $file->uri);
      * @see template_process()
      */
 
-?>
+?><div class="text-contact">
 
-<div class="imagetitle">
-
-    <div class="image">
-
-        <img src="<?php print $img; ?>" alt="header" title="header" />
-
-    </div>
-
-    <div class="title">Contact</div>
+    Contactez - nous ! <br />
+    Devis gradtdtdftdfttuit. Réponse garantie sous 48 heures.ftyft
 
 </div>
+cfgcgcgv
+<?php
+  // Print out the progress bar at the top of the page
+  print drupal_render($form['progressbar']);
 
-<div class="bloc-grille-base">
+  // Print out the preview message if on the preview page.
+  if (isset($form['preview_message'])) {
+    print '<div class="messages warning">';
+    print drupal_render($form['preview_message']);
+    print '</div>';
+  }
 
-    <div class="block-contact">
+  // Print out the main part of the form.
+  // Feel free to break this up and move the pieces within the array.
+  print drupal_render($form['submitted']);
 
-       <div class="block-contact-detail">
-
-            <img class="mailbox" src="<?php print $theme ?>/images/mailbox_blanc.svg" alt="logo" title="logo" />
-
-           <div class="contactez-nous">
-
-               Contactez - nous !
-
-           </div>
-
-        </div>
-
-    </div>
-
-    <article<?php print $attributes; ?>>
-
-       <div<?php print $content_attributes; ?>>
-
-         <?php
-          // We hide the comments and links now so that we can render them later.
-          hide($content['comments']);
-          hide($content['links']);
-          print render($content);
-
-        ?>
-      </div>
-
-    </article>
-
-</div>
-
+  // Always print out the entire $form. This renders the remaining pieces of the
+  // form that haven't yet been rendered above (buttons, hidden elements, etc).
+  print drupal_render_children($form);
 

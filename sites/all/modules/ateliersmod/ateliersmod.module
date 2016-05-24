@@ -321,8 +321,3 @@ function ateliersmod_theme($existing, $type, $theme, $path){
 function ateliersmod_form(&$form, &$form_state, $form_id) {
     dpm($form);
 }
-/*
-
-function zapimod_preprocess_html(&$variables) {
-    drupal_add_css(drupal_get_path('module', 'zapimod') . '/css/zapimod.css');
-}l

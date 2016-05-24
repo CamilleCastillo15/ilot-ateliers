@@ -114,7 +114,7 @@ $img = image_style_url("header", $file->uri);
 
            <div class="contactez-nous">
 
-               Contactez - nous !
+               cvcbcb - nous !
 
            </div>
 
@@ -125,7 +125,7 @@ $img = image_style_url("header", $file->uri);
     <article<?php print $attributes; ?>>
 
        <div<?php print $content_attributes; ?>>
-
+gg
          <?php
           // We hide the comments and links now so that we can render them later.
           hide($content['comments']);

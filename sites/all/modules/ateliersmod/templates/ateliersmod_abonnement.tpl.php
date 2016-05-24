@@ -14,6 +14,9 @@
                 s'abonner
             </a>
         </div>
+        <?php $form = node_load(30);
+
+         $view = node_view($form); print render($view); ?>
 
         <div class="clear"></div>
     </div>
