@@ -102,27 +102,33 @@
         stroke: white;
     }
 
-
     .block-contact-detail {
         text-align: center;
     }
 
 }
 
-.webform-confirmation {
-    border-right: 20px solid white;
-    border-left: 20px solid white;
-    padding: 200px 0 117px 0;
-}
+.webform-30-confirmation {
 
-.webform-confirmation-link {
+    .webform-confirmation {
 
-    .links {
-        @include btn($green);
-        display: block;
-        margin:0 auto;
-        a {
-            text-decoration: none;
+        border-right: 20px solid white;
+        border-left: 20px solid white;
+        padding: 200px 0 117px 0;
+
+    }
+
+    .webform-confirmation-link {
+
+        .links {
+            @include btn($green);
+            display: block;
+            margin:0 auto;
+            a {
+                text-decoration: none;
+            }
         }
     }
+
 }
+

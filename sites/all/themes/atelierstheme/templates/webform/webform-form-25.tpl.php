@@ -1,7 +1,7 @@
 <div class="text-contact">
 
     Contactez - nous ! <br />
-    Devis gratuit. Réponse garantie sous 48 heures.ftyft
+    Devis gratuit. Réponse garantie sous 48 heures.
 
 </div>
 

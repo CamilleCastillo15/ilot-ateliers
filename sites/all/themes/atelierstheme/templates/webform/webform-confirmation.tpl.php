@@ -4,11 +4,9 @@ $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
 
 $base = base_path();
 
-$visuel_contact = variable_get(ateliersmod_fsvisuels_contact);
-dpm($visuel_contact);
+$visuel_contact = variable_get("ateliersmod_fsvisuels_contact");
 
 $file = file_load($visuel_contact);
-dpm($file->uri);
 
 $img = image_style_url("header", $file->uri);
 
@@ -32,50 +30,56 @@ $img = image_style_url("header", $file->uri);
  */
 ?>
 
-<div class="imagetitle">
+<div class="webform-30-confirmation">
 
-    <div class="image">
+    <div class="imagetitle">
 
-        <img src="<?php print $img; ?>" alt="header" title="header" />
+        <div class="image">
+
+            <img src="<?php print $img; ?>" alt="header" title="header" />
+
+        </div>
+
+        <div class="title">Contact</div>
 
     </div>
 
-    <div class="title">Contact</div>
+    <div class="bloc-grille-base">
 
-</div>
+        <div class="block-contact">
 
-<div class="bloc-grille-base">
+           <div class="block-contact-detail">
 
-    <div class="block-contact">
+                <img class="mailbox" src="<?php print $theme ?>/images/mailbox_blanc.svg" alt="logo" title="logo" />
 
-       <div class="block-contact-detail">
+               <div class="contactez-nous">
 
-            <img class="mailbox" src="<?php print $theme ?>/images/mailbox_blanc.svg" alt="logo" title="logo" />
+                   Vous nous avez contactés
 
-           <div class="contactez-nous">
+               </div>
 
-               Vous nous avez contactés
+            </div>
 
-           </div>
+        </div>
 
+    <?php print $progressbar; ?>
+
+    <div class="webform-confirmation">
+      <?php if ($confirmation_message): ?>
+        <?php print $confirmation_message ?>
+      <?php else: ?>
+        <p><?php print t('Thank you, your submission has been received.'); ?></p>
+      <?php endif; ?>
+    </div>
+
+    <div class="webform-confirmation-link">
+
+        <div class="links">
+          <a href="<?php print $url; ?>"><?php print t('Go back to the form') ?></a>
         </div>
 
     </div>
 
-<?php print $progressbar; ?>
-
-<div class="webform-confirmation">
-  <?php if ($confirmation_message): ?>
-    <?php print $confirmation_message ?>
-  <?php else: ?>
-    <p><?php print t('Thank you, your submission has been received.'); ?></p>
-  <?php endif; ?>
 </div>
 
-<div class="webform-confirmation-link">
 
-    <div class="links">
-      <a href="<?php print $url; ?>"><?php print t('Go back to the form') ?></a>
-    </div>
-
-</div>
