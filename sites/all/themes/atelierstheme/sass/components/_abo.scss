@@ -23,7 +23,7 @@
             @include grid-span(5,1);
         }
         .don-txt {
-            @include grid-span(7,5);
+            @include grid-span(6,5);
             float: none;
             color: black;
 
@@ -36,7 +36,7 @@
         }
 
         .don-btn {
-             @include grid-span(9,5);
+             @include grid-span(6,5);
 //            a {
 //                @include btn_don($green);
 //
@@ -45,6 +45,13 @@
 //
 //
 //            }
+
+            .webform-client-form .webform-submit {
+
+                width: 100%;
+
+            }
+
         }
         @include breakpoint($tablet) {
 

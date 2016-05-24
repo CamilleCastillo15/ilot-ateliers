@@ -33,27 +33,34 @@ $img = image_style_url("header", $file->uri);
 ?>
 
 <div class="imagetitle">
+
     <div class="image">
+
         <img src="<?php print $img; ?>" alt="header" title="header" />
+
     </div>
+
     <div class="title">Contact</div>
+
 </div>
 
-<div class="block-contact">
+<div class="bloc-grille-base">
 
-   <div class="block-contact-detail">
+    <div class="block-contact">
 
-        <img class="mailbox" src="<?php print $theme ?>/images/mailbox_blanc.svg" alt="logo" title="logo" />
+       <div class="block-contact-detail">
 
-       <div class="contactez-nous">
+            <img class="mailbox" src="<?php print $theme ?>/images/mailbox_blanc.svg" alt="logo" title="logo" />
 
-           Vous nous avez contacté
+           <div class="contactez-nous">
 
-       </div>
+               Vous nous avez contactés
+
+           </div>
+
+        </div>
 
     </div>
-
-</div>
 
 <?php print $progressbar; ?>
 
