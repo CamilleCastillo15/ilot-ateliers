@@ -3,6 +3,22 @@
 @import "../variables/variables";
 @import "../variables/mixin";
 
+.form-node-30 {
+
+    .webform-client-form {
+
+        max-width: 570px;
+        width:100%;
+        margin: 0 auto;
+        background-color: transparent;
+        padding: 0px;
+        border-right: none;
+        border-left: none;
+
+    }
+
+}
+
 .webform-client-form {
 
     max-width: 570px;

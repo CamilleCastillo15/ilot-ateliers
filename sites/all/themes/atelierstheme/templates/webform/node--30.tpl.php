@@ -92,40 +92,12 @@ $img = image_style_url("header", $file->uri);
 
 ?>
 
-<div class="imagetitle">
-
-    <div class="image">
-
-        <img src="<?php print $img; ?>" alt="header" title="header" />
-
-    </div>
-
-    <div class="title">Contact</div>
-
-</div>
-
-<div class="bloc-grille-base">
-
-    <div class="block-contact">
-
-       <div class="block-contact-detail">
-
-            <img class="mailbox" src="<?php print $theme ?>/images/mailbox_blanc.svg" alt="logo" title="logo" />
-
-           <div class="contactez-nous">
-
-               cvcbcb - nous !
-
-           </div>
-
-        </div>
-
-    </div>
+<div class="form-node-30">
 
     <article<?php print $attributes; ?>>
 
        <div<?php print $content_attributes; ?>>
-gg
+
          <?php
           // We hide the comments and links now so that we can render them later.
           hide($content['comments']);

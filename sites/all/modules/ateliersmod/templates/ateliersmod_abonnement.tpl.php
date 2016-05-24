@@ -10,14 +10,9 @@
             Aux offres spéciales!</h2>
         </div>
         <div class="don-btn">
-            <a href="http://www.soutien.ilot.asso.fr/checkout/7555" target="_blank" class="don">
-                s'abonner
-            </a>
+            <?php $form = node_load(30);
+             $view = node_view($form); print render($view); ?>
         </div>
-        <?php $form = node_load(30);
-
-         $view = node_view($form); print render($view); ?>
-
         <div class="clear"></div>
     </div>
 </div>

@@ -36,15 +36,15 @@
         }
 
         .don-btn {
-             @include grid-span(7,5);
-            a {
-                @include btn_don($green);
-
-                margin: 0px 0 0 0;
-                width: 200px;
-
-
-            }
+             @include grid-span(9,5);
+//            a {
+//                @include btn_don($green);
+//
+//                margin: 0px 0 0 0;
+//                width: 200px;
+//
+//
+//            }
         }
         @include breakpoint($tablet) {
 
