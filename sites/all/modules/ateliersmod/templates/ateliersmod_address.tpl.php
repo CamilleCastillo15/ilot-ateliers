@@ -7,8 +7,6 @@
 
 <div class="bloc2">
 
-  
-        
         <h1>
 
             Vous êtes un particulier ?

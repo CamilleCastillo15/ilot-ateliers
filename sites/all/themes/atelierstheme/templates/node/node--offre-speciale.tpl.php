@@ -49,7 +49,7 @@
         <div class="date">
             <div class="day"><span class=""><?php print render($date_day); ?></span><?php print render($date_month); ?></div>
             <div class="year"><?php print render($date_fullyear); ?></div>
-            <div class="socials"><div class="fb-share-button" data-href="<?php print $link;?>" data-layout="icon_link" data-mobile-iframe="true"></div></div>
+            <div class="socials"><div class="fb-share-button" data-href="<?php print $link;?>" data-layout="button_count" data-mobile-iframe="true"></div></div>
         </div>
         <div class="text-actus">
             <h1> <?php print render($title); ?> </h1>
