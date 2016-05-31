@@ -100,5 +100,21 @@
 
     }
 
+    .bloc-grille-base {
+
+        padding: 5vw 0 0 8vw;
+
+        .img-actu {
+
+             line-height: 0;
+
+        }
+
+        @include breakpoint($laptopl) {
+            padding: 60px 0 0 100px;
+        }
+
+    }
+
 }
 

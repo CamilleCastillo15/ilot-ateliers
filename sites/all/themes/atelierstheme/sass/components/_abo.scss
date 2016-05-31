@@ -37,14 +37,6 @@
 
         .don-btn {
              @include grid-span(6,5);
-//            a {
-//                @include btn_don($green);
-//
-//                margin: 0px 0 0 0;
-//                width: 200px;
-//
-//
-//            }
 
             .webform-client-form .webform-submit {
 
@@ -64,10 +56,73 @@
 
             }
             .don-btn {
-                @include grid-span(2,10);
+                @include grid-span(4,10);
 
             }
 
         }
     }
+
+    .webform-30 {
+
+        width: 100%;
+
+        @include breakpoint($tablet) {
+
+            width:195px;
+
+        }
+
+        @include breakpoint($laptopl) {
+
+            width: 300px;
+
+        }
+
+        label[for=edit-submitted-email]
+        {
+
+            display: none;
+
+        }
+
+        .email {
+
+            @include breakpoint($tablet){
+
+                width:195px;
+
+            }
+
+            @include breakpoint($laptopl) {
+
+                @include grid-span(10,1);
+
+            }
+
+            input {
+
+                padding: 7.5px 0px;
+                text-align: center;
+                color: $green;
+
+            }
+
+        }
+
+        .submit {
+
+            max-width: 150px;
+            margin: 0 auto;
+
+            @include breakpoint($laptopl) {
+
+                @include grid-span(6,11);
+
+            }
+
+        }
+
+    }
+
 }

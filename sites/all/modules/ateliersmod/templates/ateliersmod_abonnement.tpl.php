@@ -11,7 +11,8 @@
         </div>
         <div class="don-btn">
             <?php $form = node_load(30);
-             $view = node_view($form); print render($view); ?>
+             $view = node_view($form);
+            print render($view); ?>
         </div>
         <div class="clear"></div>
     </div>

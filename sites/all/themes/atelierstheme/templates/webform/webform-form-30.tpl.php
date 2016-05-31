@@ -105,8 +105,18 @@
   ?>
 
      <div class="webform-30">
+        <div class="email"> <?php
+            print drupal_render($form['submitted']['email']);
+         ?></div>
+         <div class="submit">
 
-         <?php print drupal_render($form['submitted']); ?>
+             <?php
+            print drupal_render($form['actions']);
+         ?>
+
+         </div><?php
+            print drupal_render($form['submitted']);
+         ?>
 
      </div>
 
