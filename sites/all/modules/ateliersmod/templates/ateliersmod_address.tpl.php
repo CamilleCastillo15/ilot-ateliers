@@ -1,39 +1,23 @@
 <?php
 
-    //$theme = drupal_get_path("theme",$GLOBALS['theme']) ;
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
+
+    $view_adresses = views_get_view('adresses');
+    $view_adresses->execute();
+
+    $result_adresses = $view_adresses->result;
 
 ?>
 
 <div class="bloc2">
 
-        <h1>
+        <?php foreach($result_adresses as $key => $value) { ?>
 
-            Vous êtes un particulier ?
-            <br /> Une entreprise ?
-            <br />
+        <?php $n = node_load($value->nid);
+                      $link =drupal_get_path_alias("node/".$value->nid);
+                      $texte = field_view_field("node",$n,'body'); ?>
 
-        </h1>
-
-        <br /> Nous vous accueillons du lundi au vendredi,
-        <br /> <?php print $variables["body"]; ?> 
-        <br /> ZA Montières - Espace Alliance
-        <br /> 30 route d'Abbeville
-        <br /> 80 000 Amiens
-        <br />
-
-        <img class="tel" src="<?php print $theme; ?>/images/telephone_blanc.svg" alt="telephone" title="telephone" /> 03 59 99 08 80
-
-        <div class="petit">
-
-            (numéro non surtaxé)
-
-        </div>
-
-        <br /> les-ateliers@ilot.asso.fr
-
-        <br /> ateliers.ilot.asso.fr
-       
-   
+                      <?php print render($texte); ?>
+       <?php } ?>
 
 </div>

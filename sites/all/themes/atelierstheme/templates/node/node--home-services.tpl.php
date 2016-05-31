@@ -1,6 +1,7 @@
 <?php
 
     $img_fond = field_view_field("node",$node,'field_image_fond');
+    $title = field_view_field("node",$node,'field_titre');
 
     $view = views_get_view('ateliers');
     $view->execute();
@@ -18,7 +19,7 @@
             
             <div class="imagetitle">
                 <div class="image"><?php print render($img_fond); ?></div>
-                <div class="title">Nos Services</div>
+                <div class="title"><?php print render($title); ?></div>
             </div>
             
             <div class="container-containers bloc-grille-base">

@@ -36,7 +36,14 @@
         }
 
         .don-btn {
-             @include grid-span(6,5);
+
+            @include breakpoint($laptopl) {
+
+                padding: 1.5rem 0 0 0;
+
+            }
+
+            @include grid-span(6,5);
 
             .webform-client-form .webform-submit {
 
