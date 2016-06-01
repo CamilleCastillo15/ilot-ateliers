@@ -137,7 +137,7 @@
                 <div class="im_offres">
                     <?php print render($im_offre_r); ?>
                 </div><!--
-               --><div class="body_offres ">
+             --><div class="body_offres ">
                     <?php
                         echo "<h1>".render($title_offres)."</h1>";
                         print render($body_offres);
@@ -146,7 +146,7 @@
                       <?php
                         print l("En savoir plus", $link,array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
                        ?>
-                      </div>
+                     </div>
                 </div>
             </div>
         <?php  } ?>
