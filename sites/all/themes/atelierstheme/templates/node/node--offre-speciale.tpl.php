@@ -13,7 +13,7 @@
     $imgactu_render = field_view_value('node', $node, 'field_image', $imgactu_petite[0], array(
         'type' => 'image',
         'settings' => array(
-        'image_style' => 'medium',
+        'image_style' => 'actu',
       ),
     ));
     $couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];

@@ -20,7 +20,7 @@
         $imgactu_render = field_view_value('node', $node, 'field_image', $imgactu[0], array(
                 'type' => 'image',
                 'settings' => array(
-                'image_style' => 'medium'),
+                'image_style' => 'actu'),
         ));
 
     $date_day = format_date($node->created, 'custom','d');
