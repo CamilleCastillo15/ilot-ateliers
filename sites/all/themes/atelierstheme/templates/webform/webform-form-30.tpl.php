@@ -110,9 +110,9 @@
          ?></div>
          <div class="submit">
 
-             <?php
-            print drupal_render($form['actions']);
-         ?>
+            <?php
+                print drupal_render($form['actions']);
+            ?>
 
          </div><?php
             print drupal_render($form['submitted']);

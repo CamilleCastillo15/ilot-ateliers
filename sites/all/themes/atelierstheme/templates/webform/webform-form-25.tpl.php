@@ -5,6 +5,9 @@
 
 </div>
 
+<?php $view = views_embed_view('contact', 'default', $node->nid);
+            print $view ?>
+
 <?php
 
     /**
@@ -49,7 +52,7 @@
 
   <div class="asterix">
 
-      <div class="rouge"> * </div>: La saisie de ces champs sont obligatoires.
+      <div class="rouge"> * </div> La saisie de ces champs est obligatoire.
       <br /><br />
 
   </div>
