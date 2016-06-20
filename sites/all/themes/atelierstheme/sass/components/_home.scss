@@ -51,6 +51,7 @@
         width:100%;
         transform : translate(-50%,-50%);
         padding: 2rem;
+        min-height: 405px;
 
         .title-bienvenue {
             font-family: PermanentMarker;
@@ -63,13 +64,13 @@
             @include breakpoint($tablet) {
                 font-size: 3rem;
             }
-           
+
         }
 
         .par-bienvenue {
             font-family: 'SourceSansProLight';            
             margin: 2rem 0;
-            //font-size:21px;
+            font-size: 1.5rem;
             text-align: center;
             
             @include breakpoint($tablet) {

@@ -29,7 +29,7 @@
             prevButton: '.swiper-button-prev',
             spaceBetween: 30,
 //            autoHeight:true,
-            autoplay : 5000
+            autoplay : 10000
 
         });
         
