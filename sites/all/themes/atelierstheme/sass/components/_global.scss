@@ -294,28 +294,29 @@
 .retour {
    @include btn_retour($green);
 
-    margin: 0 auto;
+    margin: 30px auto;
     display: block;
 
     @include breakpoint($tablet) {
-        margin: 0 0 0 60px;
+//        margin: 0 0 0 60px;
+        margin:60px;
         display: inline-block;
     }
 
     @include breakpoint($laptopl) {
-        margin-left: 0;
-        margin-top:60px;
+        margin:60px;
     }
 
 }
 
 .offre_suivante {
 
-    margin: 0 auto;
+    margin: 30px auto;
     display: block;
 
     @include breakpoint($tablet) {
-        margin: 0 0 0 60px;
+//      margin: 0 0 0 60px;
+        margin:60px;
         display: inline-block;
     }
 
@@ -324,7 +325,7 @@
     }
 
     @include breakpoint($laptopl) {
-        margin-top:60px;
+        margin:60px;
     }
 }
 

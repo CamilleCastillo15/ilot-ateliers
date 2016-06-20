@@ -30,7 +30,13 @@
     $date_fullyear = format_date($node->created, 'custom','Y');
     $link = url('node/'.$node->nid, array('absolute' => TRUE));
     $nid = $node->nid;
-    $link_prev = prev_next_nid($link, 'prev');
+    dpm($nid);
+    $nid_prev = prev_next_nid($node->nid, 'prev');
+    dpm($nid_prev);
+
+    $link_prev = url('node/'.$nid_prev, array('absolute' => TRUE));
+    $nid_next = prev_next_nid($nid, 'next');
+    $link_next = url('node/'.$nid_next, array('absolute' => TRUE));
     $linke = drupal_get_path_alias('node/'.$node->nid);
 ?>
 
@@ -66,8 +72,8 @@
         </div>
         <div class="title">offres spéciales</div>
     </div>
-    <?php print l("Retour", "/offres-speciales", array("html"=>true, 'attributes' => array('class' => array('retour')))); ?>
     <div class="offre-speciale-detail bloc-grille-base <?php print 'offre-detail'.$node->nid ?>">
+       <?php print l("Retour", "/offres-speciales", array("html"=>true, 'attributes' => array('class' => array('retour')))); ?>
         <div class="offres-speciales-header">
             <?php print render($imgactu); ?>
             <div class="text-presentation">
@@ -117,7 +123,7 @@
             </div>
         </div>
         <?php } ?>
+            <?php print l("Offre précédente", $link_prev, array("html"=>true, 'attributes' => array('class' => array('retour', 'offre_precedente')))); ?>
+            <?php print l("Offre suivante", $link_next, array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus', 'offre_suivante')))); ?>
     </div>
-    <?php print l("Offre précédente", $link_prev, array("html"=>true, 'attributes' => array('class' => array('retour', 'offre_precedente')))); ?>
-    <?php print l("Offre suivante", "/content/présentation", array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus', 'offre_suivante')))); ?>
 <?php } ?>
