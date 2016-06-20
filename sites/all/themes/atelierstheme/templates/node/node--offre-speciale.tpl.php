@@ -18,19 +18,19 @@
     ));
     $couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
     $gallerie = field_get_items("node",$node,'field_image_multi');
-    //    drupal_add_css('.offre'.$node->nid.' {padding: 0 0 100px 0;} ', 'inline');
+
     drupal_add_css('.offre'.$node->nid.' {border-bottom: 3px solid'.$couleur.';} ', 'inline');
-    //    drupal_add_css('.offre'.$node->nid.' .title-offre-speciale{color:'.$couleur.';} ', 'inline');
-    //    drupal_add_css('.offre'.$node->nid.' .wtitle {color:'.$couleur.';} ', 'inline');
-    //    drupal_add_css('.offre'.$node->nid.' .wsubtitle {color:'.$couleur.';} ', 'inline');
+
     drupal_add_css('.offre-speciale .plus:hover{background-color:#00a886 !important; border: 2px solid #00a886 !important;} ', 'inline');
-    //    drupal_add_css('.offre'.$node->nid.' .readmore:hover{background-color: '.$couleur.' !important; border:2px solid '.$couleur.' !important} ', 'inline');
+
     $link = drupal_get_path_alias("node/".$node->nid);
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
     $date_day = format_date($node->created, 'custom','d');
     $date_month = format_date($node->created, 'custom','F');
     $date_fullyear = format_date($node->created, 'custom','Y');
     $link = url('node/'.$node->nid, array('absolute' => TRUE));
+    $nid = $node->nid;
+    $link_prev = prev_next_nid($link, 'prev');
     $linke = drupal_get_path_alias('node/'.$node->nid);
 ?>
 
@@ -66,7 +66,7 @@
         </div>
         <div class="title">offres spéciales</div>
     </div>
-        <?php print l("Retour", "/content/présentation", array("html"=>true, 'attributes' => array('class' => array('retour')))); ?>
+    <?php print l("Retour", "/offres-speciales", array("html"=>true, 'attributes' => array('class' => array('retour')))); ?>
     <div class="offre-speciale-detail bloc-grille-base <?php print 'offre-detail'.$node->nid ?>">
         <div class="offres-speciales-header">
             <?php print render($imgactu); ?>
@@ -118,6 +118,6 @@
         </div>
         <?php } ?>
     </div>
-    <?php print l("Offre précédente", "/content/présentation", array("html"=>true, 'attributes' => array('class' => array('retour')))); ?>
+    <?php print l("Offre précédente", $link_prev, array("html"=>true, 'attributes' => array('class' => array('retour', 'offre_precedente')))); ?>
     <?php print l("Offre suivante", "/content/présentation", array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus', 'offre_suivante')))); ?>
 <?php } ?>

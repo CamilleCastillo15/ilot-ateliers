@@ -18,12 +18,36 @@
 
 }
 
-.offre-speciale-detail img {
+.offre-speciale-detail {
 
-    padding: 0 0 5vw 0;
+    .text-presentation {
 
-    @include breakpoint($laptopl) {
-        padding: 0 0 60px 0;
+        text-align: center;
+
+        @include breakpoint($tablet) {
+            text-align: left;
+        }
+    }
+
+    img {
+
+        display: block;
+        margin: 0 auto;
+//        float: none;
+
+        @include breakpoint($tablet) {
+//            float: right;
+        }
+
+        @include breakpoint($laptopl) {
+            padding: 0 0 5vw 5vw;
+            margin-left: 60px;
+        }
+
+        @include breakpoint($laptopl) {
+            padding: 0 0 60px 0;
+        }
+
     }
 
 }
