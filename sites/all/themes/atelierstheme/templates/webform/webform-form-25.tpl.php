@@ -1,12 +1,12 @@
 <div class="text-contact">
 
-    Contactez - nous ! <br />
-    Devis gratuit. Réponse garantie sous 48 heures.
+<?php $var_contact = variable_get('ateliersmod_fscontact_text');
+//dpm($var_contact);
+      print $var_contact['value']; ?>
 
 </div>
 
-<?php $view = views_embed_view('contact', 'default', $node->nid);
-            print $view ?>
+
 
 <?php
 

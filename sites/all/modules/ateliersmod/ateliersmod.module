@@ -102,6 +102,12 @@ function ateliersmod_admin() {
         '#collapsible' => TRUE, // Added
         '#collapsed' => FALSE,  // Added
     );
+        $form['ateliersmod_fscontact'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Paramétrage de la page contact'),
+        '#collapsible' => TRUE, // Added
+        '#collapsed' => FALSE,  // Added
+    );
 
     $defaults = array(
         'value' => '',
@@ -150,6 +156,16 @@ function ateliersmod_admin() {
         '#title' => t('Texte du bloc'),
         '#format' => $var1["format"],
         '#default_value' =>$var1["value"],
+        '#description' => t("Texte présent dans le footer du site"),
+        '#required' => FALSE,
+       
+    );
+    $var3 = variable_get('ateliersmod_fscontact_text');
+    $form['ateliersmod_fscontact']['ateliersmod_fscontact_text'] = array(
+        '#type' => 'text_format',
+        '#title' => t('Texte du bloc'),
+        '#format' => $var3["format"],
+        '#default_value' =>$var3["value"],
         '#description' => t("Texte présent dans le footer du site"),
         '#required' => FALSE,
        

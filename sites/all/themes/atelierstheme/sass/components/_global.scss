@@ -292,6 +292,16 @@
    @include btn($green);
 }
 
+.retour {
+   @include btn_retour($green);
+}
+
+.offre_suivante {
+
+    float: right;
+
+}
+
 .reseaux {
     position:absolute;
     right:1rem;

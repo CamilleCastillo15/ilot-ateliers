@@ -66,6 +66,7 @@
         </div>
         <div class="title">offres spéciales</div>
     </div>
+        <?php print l("Retour", "/content/présentation", array("html"=>true, 'attributes' => array('class' => array('retour')))); ?>
     <div class="offre-speciale-detail bloc-grille-base <?php print 'offre-detail'.$node->nid ?>">
         <div class="offres-speciales-header">
             <?php print render($imgactu); ?>
@@ -117,4 +118,6 @@
         </div>
         <?php } ?>
     </div>
+    <?php print l("Offre précédente", "/content/présentation", array("html"=>true, 'attributes' => array('class' => array('retour')))); ?>
+    <?php print l("Offre suivante", "/content/présentation", array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus', 'offre_suivante')))); ?>
 <?php } ?>
