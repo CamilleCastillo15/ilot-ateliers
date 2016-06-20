@@ -27,7 +27,7 @@
             float: none;
             color: black;
 
-            h2{
+            h2 {
                 font-family: 'SourceSansProLight';
                 font-size:1.5rem;
                 //line-height: 0.7;
@@ -95,9 +95,11 @@
 
         .email {
 
+            min-width:230px;
+
             @include breakpoint($tablet){
 
-                width:195px;
+                width:230px;
 
             }
 
@@ -125,6 +127,7 @@
             @include breakpoint($laptopl) {
 
                 @include grid-span(6,11);
+
 
             }
 

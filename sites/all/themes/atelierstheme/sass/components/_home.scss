@@ -139,7 +139,6 @@
 
 .logo-img {
     position: absolute;
-    /* float: left; */
     left: 0;
     right: 0;
     @include breakpoint($mobiles) {
@@ -191,7 +190,6 @@
             @include grid-span(6,1);
         }
     }
-
 }
 
 .home-body-solidarite {
@@ -202,8 +200,6 @@
         @include breakpoint($tablet) {
            @include grid-span(6,7);
         }
-       
-       
     }
     .image_solidarite {
         display: block;
@@ -211,5 +207,13 @@
           @include grid-span(6,1);
         }
     }
+}
+
+.block-w {
+
+    .title-pictos {
+        text-transform: uppercase;
+    }
     
 }
+

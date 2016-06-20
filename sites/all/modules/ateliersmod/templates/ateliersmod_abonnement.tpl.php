@@ -6,8 +6,8 @@
             <img src="<?php print $theme; ?>/images/paperplane.svg" alt="don" />
         </div>
         <div class="don-txt">
-            <h2>S'abonner <br />
-            Aux offres spéciales!</h2>
+            <h2>Recevez nos offres spéciales <br />
+            par courriel</h2>
         </div>
         <div class="don-btn">
             <?php $form = node_load(30);
