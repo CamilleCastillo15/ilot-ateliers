@@ -30,9 +30,9 @@
     $date_fullyear = format_date($node->created, 'custom','Y');
     $link = url('node/'.$node->nid, array('absolute' => TRUE));
     $nid = $node->nid;
-    dpm($nid);
+//    dpm($nid);
     $nid_prev = prev_next_nid($node->nid, 'prev');
-    dpm($nid_prev);
+//    dpm($nid_prev);
 
     $link_prev = url('node/'.$nid_prev, array('absolute' => TRUE));
     $nid_next = prev_next_nid($nid, 'next');
@@ -123,7 +123,12 @@
             </div>
         </div>
         <?php } ?>
-            <?php print l("Offre précédente", $link_prev, array("html"=>true, 'attributes' => array('class' => array('retour', 'offre_precedente')))); ?>
-            <?php print l("Offre suivante", $link_next, array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus', 'offre_suivante')))); ?>
+            <?php
+            if($nid_prev != 0){
+                print l("Offre précédente", $link_prev, array("html"=>true, 'attributes' => array('class' => array('retour', 'offre_precedente'))));
+            }
+            if($nid_next != 0){
+                print l("Offre suivante", $link_next, array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus', 'offre_suivante'))));
+            }?>
     </div>
 <?php } ?>
