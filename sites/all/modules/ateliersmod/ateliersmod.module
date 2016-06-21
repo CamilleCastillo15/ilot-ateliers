@@ -45,6 +45,14 @@ function ateliersmod_menu() {
         'page arguments' => array(0,1),        
         'type' => MENU_NORMAL_ITEM,
     );
+    $items['toute-l-actu'] = array(
+        'title' => 'Toute l\'actu' ,
+        'description' => 'Toutes les actualites',
+        'access callback' => TRUE,
+         'page callback' => 'ateliersmod_toute_actus',
+        'page arguments' => array(0,1),        
+        'type' => MENU_NORMAL_ITEM,
+    );
 	return $items;
 }
 
@@ -70,17 +78,25 @@ function ateliersmod_pageactus($arg,$hop){
    // return 'hop '.$arg . " ".$hop;
 }
 function ateliersmod_pageoffres($arg,$hop){
-
-    
     
     $view = views_embed_view('offres_speciales', 'block');
     //return $view;
     return theme('ateliersmod_offres', array('view' => $view));
 
-    
     //return NULL;
    // return 'hop '.$arg . " ".$hop;
 }
+
+function ateliersmod_toute_actus($arg,$hop){
+    
+    $view = views_embed_view('toute_l_actu', 'block');
+    //return $view;
+    return theme('ateliersmod_toute_actus', array('view' => $view));
+
+    //return NULL;
+   // return 'hop '.$arg . " ".$hop;
+}
+
 
 function ateliersmod_admin() {
     drupal_load('module', 'google_map_field');
@@ -193,16 +209,12 @@ function ateliersmod_admin() {
             ),
         )
     );
-        
-    
-    
     
 /*
     $form['submit'] = array(
     '#type' => 'submit', 
     '#value' => t('Submit'),
-  );*/
-    
+  );*/ 
   
   return system_settings_form($form);
 }
@@ -301,6 +313,10 @@ function ateliersmod_theme($existing, $type, $theme, $path){
   return array(
     'ateliersmod_offres' => array(
         'template' => 'templates/ateliersmod_offres', // Change this to the template file name.
+        'variables' => array('view' => NULL), // This is the list of the variables that will be passed to the template file. 
+    ),
+    'ateliersmod_toute_actus' => array(
+        'template' => 'templates/ateliersmod_toute_actus', // Change this to the template file name.
         'variables' => array('view' => NULL), // This is the list of the variables that will be passed to the template file. 
     ),
     'ateliersmod_actus' => array(

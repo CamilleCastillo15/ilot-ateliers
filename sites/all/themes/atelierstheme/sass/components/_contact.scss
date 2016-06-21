@@ -53,6 +53,7 @@
         color:white;
         text-transform: uppercase;
         with:100px !important;
+        padding-right: 15px;
 
         @include breakpoint($tablet) {
             width:40%;
