@@ -87,16 +87,15 @@ function ateliersmod_pageoffres($arg,$hop){
    // return 'hop '.$arg . " ".$hop;
 }
 
-function ateliersmod_toute_actus($arg,$hop){
+function ateliersmod_toute_actus (){
     
     $view = views_embed_view('toute_l_actu', 'block');
-    //return $view;
+    dpm($view);
     return theme('ateliersmod_toute_actus', array('view' => $view));
 
     //return NULL;
    // return 'hop '.$arg . " ".$hop;
 }
-
 
 function ateliersmod_admin() {
     drupal_load('module', 'google_map_field');
@@ -190,7 +189,6 @@ function ateliersmod_admin() {
     $form['ateliersmod_fsgoogle_map'] = array(
         '#type' => 'location_element', 
         '#title' => t('Adresse'),      
-        
         
         '#default_value' =>$var2,
         '#description' => t("Plan des ateliers"),
