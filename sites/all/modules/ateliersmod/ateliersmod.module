@@ -87,11 +87,17 @@ function ateliersmod_pageoffres($arg,$hop){
    // return 'hop '.$arg . " ".$hop;
 }
 
+
 function ateliersmod_toute_actus (){
+    //print "cucou";
     
+        
     $view = views_embed_view('toute_l_actu', 'block');
     dpm($view);
-    return theme('ateliersmod_toute_actus', array('view' => $view));
+    print $view;
+    //print $view;
+    //*/
+    //return theme('ateliersmod_toute_actus', array('view' => $view));
 
     //return NULL;
    // return 'hop '.$arg . " ".$hop;
