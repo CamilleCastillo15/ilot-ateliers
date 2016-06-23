@@ -3,6 +3,7 @@
     $title = field_view_field("node",$node,'field_title');
     $imgactu = field_get_items("node",$node,'field_image');
     $atelier = field_get_items("node",$node,'field_atelier')[0]["entity"];
+
     $ftitle = field_view_field("node",$atelier,'field_title');
     $picto = field_view_field("node",$atelier,'field_picto');
     $img = field_view_field("node",$atelier,'field_image');

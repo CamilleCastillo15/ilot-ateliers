@@ -94,10 +94,10 @@ function ateliersmod_toute_actus (){
         
     $view = views_embed_view('toute_l_actu', 'block');
     dpm($view);
-    print $view;
+//    print $view;
     //print $view;
     //*/
-    //return theme('ateliersmod_toute_actus', array('view' => $view));
+    return theme('ateliersmod_toute_actus', array('view' => $view));
 
     //return NULL;
    // return 'hop '.$arg . " ".$hop;
