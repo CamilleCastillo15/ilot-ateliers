@@ -1,5 +1,4 @@
 
-<?php print $view; ?>
 
 
 COUCOU

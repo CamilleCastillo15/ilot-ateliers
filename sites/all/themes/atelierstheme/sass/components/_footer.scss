@@ -73,6 +73,7 @@
             background-position: bottom;
             width:1.5rem;
             margin: 0 0.15rem;
+            vertical-align: bottom;
 
             &:hover {
 
@@ -88,23 +89,31 @@
 
         }
 
-        .linkedin-img {
-            display: inline-block;
-            background: url("../images/linkedin_vert.svg") no-repeat;
-            background-position: bottom;
-            width:1.5rem;
-            margin: 0 0.15rem;
-            &:hover {
+        a {
 
-                background: url("../images/linkedin_blanc.svg") no-repeat;
+            vertical-align: middle;
+
+            .linkedin-img {
+                display: inline-block;
+                background: url("../images/linkedin_vert.svg") no-repeat;
                 background-position: bottom;
+                width:1.5rem;
+                margin: 0 0.15rem;
+                vertical-align: middle;
+                &:hover {
+
+                    background: url("../images/linkedin_blanc.svg") no-repeat;
+                    background-position: bottom;
+
+                }
+
+                @include breakpoint($tablet) {
+                    width:2rem;
+                    margin: 0 0.5rem;
+                }
 
             }
 
-            @include breakpoint($tablet) {
-                width:2rem;
-                margin: 0 0.5rem;
-            }
 
         }
 

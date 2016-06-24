@@ -90,13 +90,14 @@ function ateliersmod_pageoffres($arg,$hop){
 
 function ateliersmod_toute_actus (){
     //print "cucou";
-    
-        
-    $view = views_embed_view('toute_l_actu', 'block');
-    dpm($view);
+   $view = views_embed_view('toute_l_actu', 'block');
+       
+    //$//view = views_embed_view('toute_l_actu');
+    //dpm($view);
 //    print $view;
     //print $view;
     //*/
+   // print "dfdgdfg";
     return theme('ateliersmod_toute_actus', array('view' => $view));
 
     //return NULL;
