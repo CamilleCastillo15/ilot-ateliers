@@ -12,7 +12,7 @@
     drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
     drupal_add_css('.atelier .triangle-left,.atelier .triangle-right{border-bottom-color:'.$couleur.' !important;} ', 'inline');
     drupal_add_css('.pager__item--current{background-color:#00a886;} ', 'inline');
-    drupal_add_css('.actus{border-bottom: 3px solid '.$couleur.';} ', 'inline');
+//    drupal_add_css('.actus{border-bottom: 3px solid '.$couleur.';} ', 'inline');
     drupal_add_css('.actus .views-field-view-node:hover{background-color:'.$couleur.' !important; border: 2px solid '.$couleur.' !important;} ', 'inline');
 
     $lservice = drupal_get_path_alias("node/".$node->nid);
@@ -20,7 +20,7 @@
 
 ?>
 
-<div class="atelier">
+<div class="offres-speciales">
 
     <div class="atelier-header pictotitlecontainer">
 
@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <div class="bloc-grille-base">
+    <div class="bloc-grille-base-offres">
 
         <?php print $view; ?>
 

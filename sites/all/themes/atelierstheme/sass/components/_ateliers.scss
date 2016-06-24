@@ -2,7 +2,7 @@
 @import "breakpoint";
 @import "../variables/variables";
 
-.atelier {
+.atelier-header {
     font-family: 'SourceSansProRegular';
 
     .triangles{
@@ -89,6 +89,19 @@
               top: 75%;
         }
     }
+
+    .bloc-grille-base {
+
+        padding: 0;
+        margin: 5vw 5vw 0px 8vw;
+
+        @include breakpoint($laptopl) {
+            padding: 0;
+            margin: 60px 60px 0px 100px;
+        }
+
+    }
+
 }
 
 .atelier-liens {

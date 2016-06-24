@@ -1,5 +1,9 @@
-<?php
+
+  <?php
    
+    $nid = $node -> nid;
+    dpm($nid);
+
     $title = field_view_field("node",$node,'field_title');
     $imgactu = field_get_items("node",$node,'field_image');
 
@@ -14,19 +18,23 @@
         drupal_add_css('.atelier .wtitle, .atelier .wsubtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
         drupal_add_css('.atelier .wtitle, .atelier .wsubtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
         drupal_add_css('.atelier .triangle-left,.atelier .triangle-right{border-bottom-color:'.$couleur.' !important;} ', 'inline');
+        drupal_add_css('.actus.numb_'.$node->nid.' {border-bottom: 3px solid '.$couleur.';} ', 'inline');
         $lservice = drupal_get_path_alias("node/".$atelier->nid);
 
-    }
-    dpm($atelier);
+    } else {
 
-//    drupal_add_css('.atelier .triangle-left,.atelier .triangle-right{border-bottom-color:grey !important;} ', 'inline');
+        drupal_add_css('.actus.numb_'.$node->nid.' {border-bottom: 3px solid grey;} ', 'inline');
+
+    }
+
+    //dpm($atelier);
 
     if($teaser){
-        $imgactu_render = field_view_value('node', $node, 'field_image', $imgactu[0], array(
-                'type' => 'image',
-                'settings' => array(
-                'image_style' => 'actu'),
-        ));
+    $imgactu_render = field_view_value('node', $node, 'field_image', $imgactu[0], array(
+            'type' => 'image',
+            'settings' => array(
+            'image_style' => 'actu'),
+    ));
 
     $date_day = format_date($node->created, 'custom','d');
     $date_month = format_date($node->created, 'custom','F');
@@ -35,28 +43,30 @@
     $linke = drupal_get_path_alias('node/'.$node->nid);
 ?> 
 
-<div class="atelier actu-detail">
-    <div class="img-actu">
-        <?php print render($imgactu_render); ?>
-    </div>
-    <div class="date">
-        <div class="day"><span class=""><?php print render($date_day); ?></span><?php print render($date_month); ?></div>
-        <div class="year"><?php print render($date_fullyear); ?></div>
-        <div class="socials"><div class="fb-share-button" data-href="<?php print $link;?>" data-layout="button_count" data-mobile-iframe="true"></div></div>
-    </div>
-    <div class="text-actus">
-        <h1><?php print render($title); ?></h1>
-        <div class="text-detail"> <?php
+<div class="bloc-grille-base offre-speciale actus teaser numb_<?php print $nid ?>">
+    <div class="offres-speciales-header">
+        <div class="img-actu">
+            <?php print render($imgactu_render); ?>
+        </div>
+        <div class="date">
+            <div class="day"><span class=""><?php print render($date_day); ?></span><?php print render($date_month); ?></div>
+            <div class="year"><?php print render($date_fullyear); ?></div>
+            <div class="socials"><div class="fb-share-button" data-href="<?php print $link;?>" data-layout="button_count" data-mobile-iframe="true"></div></div>
+        </div>
+        <div class="text-actus">
+            <h1><?php print render($title); ?></h1>
+            <div class="text-detail"> <?php
 
-        $body = field_view_field("node",$node,'body',array(
-              'label'=>'hidden',
-              'type' => 'text_summary_or_trimmed',
-              'settings'=>array('trim_length' => 50),
-        ));
+            $body = field_view_field("node",$node,'body',array(
+                  'label'=>'hidden',
+                  'type' => 'text_summary_or_trimmed',
+                  'settings'=>array('trim_length' => 50),
+            ));
 
-        print render($body); ?> </div>
-        <div class="readmore">
-             <?php print l("Lire la suite",$linke , array("html"=>true, 'attributes' => array('class' => array()))); ?>
+            print render($body); ?> </div>
+            <div class="readmore">
+                 <?php print l("Lire la suite",$linke , array("html"=>true, 'attributes' => array('class' => array()))); ?>
+            </div>
         </div>
     </div>
 </div>
@@ -111,12 +121,5 @@
 </div>
 
 <?php
-
-    //        $block = module_invoke('user', 'block_view');
-    //print render($block['content']);
-    //
-    //    $block = module_invoke('ateliersmod',  'block_view','ateliersmod_autres_services');
-    //        dpm($block);
-    //print render($block['content']);
 
 } ?>

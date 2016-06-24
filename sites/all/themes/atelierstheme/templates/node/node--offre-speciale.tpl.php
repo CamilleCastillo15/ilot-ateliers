@@ -5,7 +5,6 @@
     $img_header = image_style_url("header", $file->uri);
     $imgactu = field_view_field("node",$node,'field_image');
     $title = field_view_field("node",$node,'field_title');
-    //$picto = field_view_field("node",$node,'field_picto');
     $atelier_id = field_get_items("node",$node,'field_atelier')[0]["target_id"];
     $atelier = node_load($atelier_id);
     $ftitle = field_view_field("node",$atelier,'field_title');
@@ -30,9 +29,7 @@
     $date_fullyear = format_date($node->created, 'custom','Y');
     $link = url('node/'.$node->nid, array('absolute' => TRUE));
     $nid = $node->nid;
-//    dpm($nid);
     $nid_prev = prev_next_nid($node->nid, 'prev');
-//    dpm($nid_prev);
 
     $link_prev = url('node/'.$nid_prev, array('absolute' => TRUE));
     $nid_next = prev_next_nid($nid, 'next');
