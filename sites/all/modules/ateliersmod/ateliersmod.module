@@ -171,6 +171,24 @@ function ateliersmod_admin() {
         '#required' => FALSE,
        
     );
+    $fid3 = variable_get('ateliersmod_fsvisuels_actualites');
+    $form['ateliersmod_fsvisuels']['ateliersmod_fsvisuels_actualites'] = array(
+        '#type' => 'media',
+        '#tree' => TRUE,
+        '#title' => t('Image header des actualités'),
+        '#default_value' => $fid3,
+        '#media_options' => array(
+            'global' => array(
+                'file_extensions' => 'jpg png', // File extensions
+                'max_filesize' => '100 MB',
+                'file_directory' => 'config', // Will be a subdirectory of the files directory
+                'types' => array('image'), // Refers to a file_entity bundle (such as audio, video, image, etc.)
+            ),  
+        ),  
+        '#description' => t("Image générique sur la partie actualités (générales)"),
+        '#required' => FALSE,
+       
+    );
    
     $var1 = variable_get('ateliersmod_fsadress_text');
     $form['ateliersmod_fsadress']['ateliersmod_fsadress_text'] = array(

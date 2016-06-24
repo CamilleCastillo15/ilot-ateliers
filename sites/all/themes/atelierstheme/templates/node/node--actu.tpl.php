@@ -4,20 +4,22 @@
     $imgactu = field_get_items("node",$node,'field_image');
 
     $atelier = field_get_items("node",$node,'field_atelier')[0]["entity"];
+
+    if($atelier){
+
+        $ftitle = field_view_field("node",$atelier,'field_title');
+        $picto = field_view_field("node",$atelier,'field_picto');
+        $img = field_view_field("node",$atelier,'field_image');
+        $couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
+        drupal_add_css('.atelier .wtitle, .atelier .wsubtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
+        drupal_add_css('.atelier .wtitle, .atelier .wsubtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
+        drupal_add_css('.atelier .triangle-left,.atelier .triangle-right{border-bottom-color:'.$couleur.' !important;} ', 'inline');
+        $lservice = drupal_get_path_alias("node/".$atelier->nid);
+
+    }
     dpm($atelier);
 
-    $ftitle = field_view_field("node",$atelier,'field_title');
-    $picto = field_view_field("node",$atelier,'field_picto');
-    $img = field_view_field("node",$atelier,'field_image');
-    $couleur = field_get_items("node",$atelier,'field_couleur')[0]['rgb'];
-
-    drupal_add_css('.atelier .wtitle, .atelier .wsubtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
-    drupal_add_css('.atelier .wtitle, .atelier .wsubtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
-    drupal_add_css('.atelier .triangle-left,.atelier .triangle-right{border-bottom-color:'.$couleur.' !important;} ', 'inline');
-
-    // drupal_add_css('.atelier .actus .readmore:hover{background-color: '.$couleur.' !important; border:2px solid '.$couleur.' !important} ', 'inline');
-
-    $lservice = drupal_get_path_alias("node/".$atelier->nid);
+//    drupal_add_css('.atelier .triangle-left,.atelier .triangle-right{border-bottom-color:grey !important;} ', 'inline');
 
     if($teaser){
         $imgactu_render = field_view_value('node', $node, 'field_image', $imgactu[0], array(
@@ -80,6 +82,7 @@
         <div class="title">
             <?php print render($ftitle); ?>
         </div>
+        <?php if($atelier) { ?>
         <div class="triangles">
             <div class="triangle-left"></div><!--
              --><div class="triangle-right"></div>
@@ -92,6 +95,7 @@
                 <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites', 'active')))); ?>
             </div>
         </div>
+        <?php } ?>
     </div>
 </div>
 
