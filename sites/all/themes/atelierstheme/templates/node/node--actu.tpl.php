@@ -79,9 +79,13 @@
                     'image_style' => 'large',
                 )
         ));
+    $visuel_actu = variable_get("ateliersmod_fsvisuels_actualites");
+    $file = file_load($visuel_actu);
+    $img_header = image_style_url("header", $file->uri);
 ?>
 
 <div class="atelier">
+   <?php if($atelier) { ?>
     <div class="atelier-header pictotitlecontainer">
         <div class="atelier-header-bg image">
             <?php print render($img); ?>
@@ -92,7 +96,6 @@
         <div class="title">
             <?php print render($ftitle); ?>
         </div>
-        <?php if($atelier) { ?>
         <div class="triangles">
             <div class="triangle-left"></div><!--
              --><div class="triangle-right"></div>
@@ -104,6 +107,13 @@
             --><div class="actualites-lien">
                 <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites', 'active')))); ?>
             </div>
+        </div>
+        <?php } else { ?>
+        <div class="imagetitle">
+            <div class="image">
+                <img src="<?php print $img_header; ?>" alt="header" title="header" />
+            </div>
+            <div class="title">actualités</div>
         </div>
         <?php } ?>
     </div>

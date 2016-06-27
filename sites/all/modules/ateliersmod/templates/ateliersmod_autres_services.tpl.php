@@ -24,12 +24,12 @@
         if(count($b) > 1) {
 
             $url = $b[0]."/".$b[1];
-            //dpm($url);
+//            dpm($url);
             $source_url = drupal_lookup_path('source', $url);
-            //dpm($b);
-            //dpm($id);
+//            dpm($b);
+//            dpm($id);
             $c = explode("/", $source_url);
-            //dpm($c);
+//            dpm($c);
             $nid = $c[1];
 
         } else {
