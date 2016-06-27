@@ -2,7 +2,6 @@
   <?php
    
     $nid = $node -> nid;
-    dpm($nid);
 
     $title = field_view_field("node",$node,'field_title');
     $imgactu = field_get_items("node",$node,'field_image');

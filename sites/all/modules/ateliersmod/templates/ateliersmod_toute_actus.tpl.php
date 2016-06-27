@@ -6,10 +6,6 @@
     $file = file_load($visuel_offre);
     $img = image_style_url("header", $file->uri);
 
-    $couleur = ['field_couleur'];
-
-    print render($couleur);
-
 ?>
 
 <div class="offres-speciales">
