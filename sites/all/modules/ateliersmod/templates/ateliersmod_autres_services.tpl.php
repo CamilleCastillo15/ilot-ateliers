@@ -30,7 +30,6 @@
 //            dpm($id);
             $c = explode("/", $source_url);
 //            dpm($c);
-
             if(count($c) > 1) {
                 $nid = $c[1];
             }

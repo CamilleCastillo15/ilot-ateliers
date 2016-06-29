@@ -1,5 +1,4 @@
 <?php
-
     $ftitle = field_view_field("node",$node,'field_title');
     $picto = field_view_field("node",$node,'field_picto');
 
@@ -27,9 +26,8 @@
 
     $lservice = drupal_get_path_alias("node/".$node->nid);
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']);
-
-
 ?>
+
 <div class="atelier">
         <div class="atelier-header pictotitlecontainer">
 

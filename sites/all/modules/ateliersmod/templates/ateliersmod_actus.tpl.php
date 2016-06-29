@@ -48,13 +48,6 @@
             <div class="triangle-left"></div><!--
          --><div class="triangle-right"></div>
         </div>
-        <div class="atelier-liens">                
-            <div class="services-lien">
-                   <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
-               </div><!--
-                --><div class="actualites-lien">
-                    <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites', 'active')))); ?>
-                </div>
 
         <div class="atelier-liens">
 
