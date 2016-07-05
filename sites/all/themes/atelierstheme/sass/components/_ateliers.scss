@@ -2,7 +2,9 @@
 @import "breakpoint";
 @import "../variables/variables";
 
-.atelier-header {
+.atelier {
+
+    .atelier-header {
     font-family: 'SourceSansProRegular';
 
     .triangles{
@@ -11,6 +13,86 @@
         @include breakpoint($tablet) {
             margin-top:-60px;
         }
+    }
+
+
+    .atelier-header-bg {
+       img{
+            display:block;
+        }
+    }
+
+    .block-orange {
+        width: 100%;
+        height: 10vw;
+        background-color: #f7941d;
+    }
+
+    .atelier-color {
+        text-align:left;
+
+            &.text {
+                h1 {
+                    padding: 0 0 1rem 0;
+                }
+                h2 {
+                    padding: 1.25rem 0;
+                }
+                ul {
+                    margin-left: 15px;
+                    li {
+                        position: relative;
+                        &:before{
+                            content:"";
+                            height: 7px;
+                            width: 7px;
+                            position:absolute;
+                            top:5px;
+                            left:-15px;
+                            border-radius:50%;
+                        }
+                        margin-left:15px;
+                        list-style: none inside none;
+                    }
+                }
+                   em {
+                        font-family: 'SourceSansProItalic';
+                    }
+                strong {
+                    //font-family: "SourceSansProBold";
+                    font-weight: 900;
+                }
+            }
+        }
+        a {
+            text-decoration: none;
+            padding-bottom: 15px;
+        }
+        .pictotitlecontainer .pictotitle {
+            top: 30%;
+            @include breakpoint($tablet) {
+                top: 37%;
+            }
+        }
+        .pictotitlecontainer .title {
+            top: 67%;
+            @include breakpoint($tablet) {
+                  top: 75%;
+            }
+        }
+
+        .bloc-grille-base {
+
+            padding: 0;
+            margin: 5vw 5vw 0px 8vw;
+
+            @include breakpoint($laptopl) {
+                padding: 0;
+                margin: 60px 60px 0px 100px;
+            }
+
+        }
+
     }
 
     .contact {
@@ -25,84 +107,8 @@
         }
     }
 
-    .atelier-header-bg {
-       img{
-            display:block;
-        }
-    }
-
-    .block-orange {
-        width: 100%;
-        height: 10vw;
-        background-color: #f7941d;
-    }
-
-.atelier-color {
-    text-align:left;
-
-        &.text {
-            h1 {
-                padding: 0 0 1rem 0;
-            }
-            h2 {
-                padding: 1.25rem 0;
-            }
-            ul {
-                margin-left: 15px;
-                li {
-                    position: relative;
-                    &:before{
-                        content:"";
-                        height: 7px;
-                        width: 7px;
-                        position:absolute;
-                        top:5px;
-                        left:-15px;
-                        border-radius:50%;
-                    }
-                    margin-left:15px;
-                    list-style: none inside none;
-                }
-            }
-               em {
-                    font-family: 'SourceSansProItalic';
-                }
-            strong {
-                //font-family: "SourceSansProBold";
-                font-weight: 900;
-            }
-        }
-    }
-    a {
-        text-decoration: none;
-        padding-bottom: 15px;
-    }
-    .pictotitlecontainer .pictotitle {
-        top: 30%;
-        @include breakpoint($tablet) {
-            top: 37%;
-        }
-    }
-    .pictotitlecontainer .title {
-        top: 67%;
-        @include breakpoint($tablet) {
-              top: 75%;
-        }
-    }
-
-    .bloc-grille-base {
-
-        padding: 0;
-        margin: 5vw 5vw 0px 8vw;
-
-        @include breakpoint($laptopl) {
-            padding: 0;
-            margin: 60px 60px 0px 100px;
-        }
-
-    }
-
 }
+
 
 .atelier-liens {
 
@@ -140,3 +146,4 @@
     }
     
 }
+

@@ -18,6 +18,7 @@
         .img-actu {
 
                 @include grid-span(3,1);
+                line-height:0;
 
             img {
 

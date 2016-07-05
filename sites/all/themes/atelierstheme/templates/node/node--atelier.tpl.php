@@ -60,13 +60,12 @@
             <?php print render($body); ?>
         </div>
 
-        <div class="contact">
-            <a href="/content/formulaire-de-contact" >
+<!--        <div class="contact">-->
+            <?php
+            print l("Contactez - nous !", "/content/formulaire-de-contact",array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus', 'contact'))));
+           ?>
 
-                Contactez - nous !
-
-            </a>
-        </div>
+<!--        </div>-->
 
         <div class="atelier-gallerie">
 

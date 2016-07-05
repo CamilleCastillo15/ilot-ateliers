@@ -5,17 +5,9 @@
     $body = field_view_field("node",$node,'field_body');
     $gallerie = field_get_items("node",$node,'field_image_multi');
     $image = field_view_field("node",$node,'field_image');
-    /*
-        $im_solidarite =  field_get_items("node",$node,'field_image');
-        $im_solidarite_r = field_view_value('node', $node, 'field_image', $im_solidarite[0], array(
-            'type' => 'image',
-            'settings' => array(
-                'image_style' => 'slider',
-            ),
-        ));
-    */
+
     $auto_promo = field_get_items("node",$node,"field_auto_promo");
-    //dpm($auto_promo[0]["entity"]);
+
     $im_auto_promo =  field_get_items("node",$auto_promo[0]["entity"],'field_image');
     $im_auto_promo = field_view_value('node', $auto_promo[0]["entity"], 'field_image', $im_auto_promo[0], array(
         'type' => 'image',
@@ -37,7 +29,7 @@
         'image_style' => 'header',
       ),
     ));
-    //$src = image_style_url("home", $image_fond[0]["uri"]);
+
     $view = views_get_view('offres_speciales');
     $view->set_display('blockhome');
     $view->execute();
@@ -55,7 +47,7 @@
         }
         $collectionsg =  field_collection_item_load_multiple($idti);
     }
-    //dpm($idti);
+
 ?>
 
 <div class="home">
@@ -105,7 +97,6 @@
                           echo "<p class=\"title-pictos ".$class_render."\">";
                             print l($title_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers'))));
                             echo "</p>";
-                          // print l($picto_render,$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));
                         ?>
                         </div><!--
                      <?php } ?>

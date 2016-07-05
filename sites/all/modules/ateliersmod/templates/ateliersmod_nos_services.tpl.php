@@ -28,7 +28,7 @@
                       $title_render = render($title);
                       $picto_render = render($picto);
                     print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('img-block', $class_render)))); ?>
-                        <h2 class="title-pictos <?php/* ca fait planter print $class_render ?> */?>">
+                        <h2 class="title-pictos">
                       <?php print l($title_render, $link,array("html"=>true)); ?>
                     </h2>
                 </div><!--

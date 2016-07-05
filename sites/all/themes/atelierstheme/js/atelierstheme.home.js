@@ -14,10 +14,8 @@
         });
         var swiper = new Swiper('.block-all.swiper-container', {
 
-
             effect:"fade",
             spaceBetween: 0,
-//            autoHeight:true,
             autoplay : 5000
 
         });
@@ -28,7 +26,6 @@
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
             spaceBetween: 30,
-//            autoHeight:true,
             autoplay : 10000
 
         });
