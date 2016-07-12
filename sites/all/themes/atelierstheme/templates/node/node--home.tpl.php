@@ -155,7 +155,7 @@
         <?php print render($body); ?>
         <div class="center">
             <?php //$theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
-                print l("En savoir plus", "/content/présentation", array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
+                print l("En savoir plus", "/présentation", array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
             ?>
         </div>
     </div>

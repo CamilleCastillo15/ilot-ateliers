@@ -9,8 +9,6 @@
     $gallerie = field_get_items("node",$node,'field_image_multi');
     $couleur = field_get_items("node",$node,'field_couleur')[0]['rgb'];
 
-    dpm($couleur);
-
     drupal_add_css('.atelier-color .wtitle {color:'.$couleur.';} .atelier-color .wsubtitle {color:'.$couleur.';} ', 'inline');
     drupal_add_css('.offres-speciales .triangle-left,.offres-speciales .triangle-right{border-bottom-color:'.$couleur.' !important;} ', 'inline');
     drupal_add_css('.pager__item--current{background-color:#00a886;} ', 'inline');
@@ -22,7 +20,7 @@
 
 ?>
 
-<div class="offres-speciales">
+<div class="offres-speciales atelier">
     <div class="atelier-header pictotitlecontainer">
         <div class="atelier-header-bg image">
             <?php print render($img); ?>
