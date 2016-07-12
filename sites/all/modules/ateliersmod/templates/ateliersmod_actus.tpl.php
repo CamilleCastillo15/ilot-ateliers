@@ -23,49 +23,30 @@
 ?>
 
 <div class="offres-speciales">
-
     <div class="atelier-header pictotitlecontainer">
-
         <div class="atelier-header-bg image">
-
             <?php print render($img); ?>
-
         </div>
-
         <div class="picto pictotitle">
-
             <?php print render($picto); ?>
-
         </div>
-
         <div class="title">
-
             <?php print render($ftitle); ?>
-
         </div>
-
         <div class="triangles">
             <div class="triangle-left"></div><!--
          --><div class="triangle-right"></div>
         </div>
-
         <div class="atelier-liens">
-
            <div class="services-lien">
                <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services')))); ?>
            </div><!--
          --><div class="actualites-lien">
                 <?php print l("actualités",$lservice."/actus" , array("html"=>true, 'attributes' => array('class' => array('actualites', 'active')))); ?>
             </div>
-
         </div>
-
     </div>
-
     <div class="bloc-grille-base-offres">
-
         <?php print $view; ?>
-
     </div>
-
 </div>
