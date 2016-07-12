@@ -42,12 +42,12 @@
     <div class="text-actus">
         <h1><?php print render($title); ?></h1>
         <div class="text-detail"> <?php
-
         $body = field_view_field("node",$node,'body',array(
               'label'=>'hidden',
               'type' => 'text_summary_or_trimmed',
-              'settings'=>array('trim_length' => 50),
+              'settings'=>array('trim_length' => 150),
         ));
+       
 
         print render($body); ?> </div>
         <div class="readmore">
