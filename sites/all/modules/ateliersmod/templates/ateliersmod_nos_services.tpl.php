@@ -1,4 +1,4 @@
-<?php
+ <?php
 
     $styles  = drupal_get_css();
 

@@ -232,13 +232,7 @@ function ateliersmod_admin() {
             ),
         )
     );
-    
-/*
-    $form['submit'] = array(
-    '#type' => 'submit', 
-    '#value' => t('Submit'),
-  );*/ 
-  
+
   return system_settings_form($form);
 }
 
@@ -309,7 +303,7 @@ function ateliersmod_block_view($delta='') {
 	       );            
 		break;    
         case 'ateliersmod_autres_services':
-			$block['subject'] = "";//t('Block Name 1');
+			'variables' => array('login' => NULL,"machin"=> NULL), 'Block Name 1');
 			$block['content']['ateliersmod_autres_services'] = array(
 		        '#theme' => 'ateliersmod_autres_services'   
 	       );            

@@ -28,18 +28,14 @@
                 }
                 text-decoration: none;
             }
-
-
             @include breakpoint($laptop) {
                 font-size: 1.2rem;
                 margin: 0 0.8rem;
             }
-
             @include breakpoint($laptopl) {
                 font-size: 1.4rem;
                 margin: 0 1.2rem;
             }
-
         }
 
         li.expanded {
@@ -153,7 +149,7 @@
             border: none;
             list-style: none;
             text-align: left;
-            margin-top:1rem;
+            margin-top: 1rem;
 
         a {
             color: white;
@@ -231,49 +227,32 @@
             }
 
             &:after {
-
                 content:"";
                 border-bottom: solid 1px white;
                 margin:0 2rem;
                 display: block;
-
             }
 
             ul {
-
                 margin-top:0rem;
-
                 li {
-
                     font-size:0.9rem;
-
                     a {
-
                         padding: 4.5% 3% 4.5% 6%;
-
                         &:after {
-
                             content:"";
                             border-bottom: none;
                             display: block;
-
                         }
-
                     }
 
                     &:after {
-
                         content:"";
                         border-bottom: none;
-
                     }
-
                 }
-
             }
-
         }
-
     }
 
     @include breakpoint($laptop) {

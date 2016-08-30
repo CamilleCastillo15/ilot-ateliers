@@ -16,7 +16,7 @@
 
             effect:"fade",
             spaceBetween: 0,
-            autoplay : 5000
+            autoplay : 7000
 
         });
          var swiper2 = new Swiper('.home-body-actu.swiper-container', {
