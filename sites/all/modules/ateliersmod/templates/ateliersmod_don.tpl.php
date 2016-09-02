@@ -9,7 +9,7 @@
             <h2>à l'association l'îlot</h2>
         </div>
         <div class="don-btn">
-            <a href="http://www.soutien.ilot.asso.fr/checkout/7555" target="_blank" class="don">
+            <a href="http://ilotsoutien.dinde.pro/faire-un-don" target="_blank" class="don">
                 accéder au formulaire
             </a>    
         </div>

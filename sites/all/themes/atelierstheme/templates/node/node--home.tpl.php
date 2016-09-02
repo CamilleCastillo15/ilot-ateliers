@@ -94,9 +94,9 @@
                           $picto_render = render($picto);
                           print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers', $class_render))));
                           $title_render = render($title);
-                          echo "<p class=\"title-pictos ".$class_render."\">";
+                          echo "<div class=\"title-pictos ".$class_render."\">";
                             print l($title_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers'))));
-                            echo "</p>";
+                          echo "</div>";
                         ?>
                         </div><!--
                      <?php } ?>

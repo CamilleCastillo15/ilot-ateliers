@@ -15,28 +15,30 @@
         }
     }
 
-
-    .atelier-header-bg {
-       img{
+.atelier-header-bg {
+    img {
             display:block;
         }
     }
-
     .block-orange {
         width: 100%;
         height: 10vw;
         background-color: #f7941d;
     }
+}
 
-    .atelier-color {
-        text-align:left;
-
-            &.text {
+.atelier-color {
+    text-align:left;
+//            &.text {
+                p {
+                    margin: 1rem 0;
+                }
                 h1 {
                     padding: 0 0 1rem 0;
                 }
                 h2 {
-                    padding: 1.25rem 0;
+//                  padding: 1.25rem 0;
+                    padding: 1.25rem 0 0 0;
                 }
                 ul {
                     margin-left: 15px;
@@ -47,22 +49,23 @@
                             height: 7px;
                             width: 7px;
                             position:absolute;
-                            top:5px;
-                            left:-15px;
-                            border-radius:50%;
+                            top: 50%;
+                            left: -15px;
+                            border-radius: 50%;
+                            @include translate(0%, -50%);
                         }
                         margin-left:15px;
                         list-style: none inside none;
                     }
                 }
-                   em {
-                        font-family: 'SourceSansProItalic';
-                    }
+               em {
+                    font-family: 'SourceSansProItalic';
+                }
                 strong {
                     //font-family: "SourceSansProBold";
                     font-weight: 900;
                 }
-            }
+//          }
         }
         a {
             text-decoration: none;
@@ -80,7 +83,6 @@
                   top: 75%;
             }
         }
-
         .bloc-grille-base {
 
             padding: 0;
@@ -93,8 +95,6 @@
 
         }
 
-    }
-
     .contact {
         @include btn($green);
         margin-left:auto;
@@ -106,9 +106,7 @@
             cursor:pointer;
         }
     }
-
 }
-
 
 .atelier-liens {
 

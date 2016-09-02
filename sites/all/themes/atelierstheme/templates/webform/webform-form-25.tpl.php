@@ -9,7 +9,6 @@
 
 
 <?php
-
     /**
      * @file
      * Customize the display of a complete webform.
@@ -30,7 +29,6 @@
      * - $form['preview_message']: The preview message renderable.
      * - $form['preview']: A renderable representing the entire submission preview.
      */
-
 ?>
 
 <?php
@@ -47,20 +45,15 @@
   // Print out the main part of the form.
   // Feel free to break this up and move the pieces within the array.
   print drupal_render($form['submitted']);
-
-  ?>
+?>
 
   <div class="asterix">
-
       <div class="rouge"> * </div> La saisie de ces champs est obligatoire.
       <br /><br />
-
   </div>
 
   <?php
-
-  // Always print out the entire $form. This renders the remaining pieces of the
-  // form that haven't yet been rendered above (buttons, hidden elements, etc).
-  print drupal_render_children($form);
-
+      // Always print out the entire $form. This renders the remaining pieces of the
+      // form that haven't yet been rendered above (buttons, hidden elements, etc).
+      print drupal_render_children($form);
   ?>

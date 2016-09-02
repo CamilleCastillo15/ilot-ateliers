@@ -24,9 +24,9 @@
 
         text-align: center;
 
-        @include breakpoint($tablet) {
-            text-align: left;
-        }
+//        @include breakpoint($tablet) {
+//            text-align: left;
+//        }
     }
 
     img {

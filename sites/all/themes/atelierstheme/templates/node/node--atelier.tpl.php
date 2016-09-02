@@ -62,7 +62,7 @@
 
 <!--        <div class="contact">-->
             <?php
-            print l("Contactez - nous !", "/content/formulaire-de-contact",array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus', 'contact'))));
+            print l("Contactez-nous !", "/content/formulaire-de-contact",array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus', 'contact'))));
            ?>
 
 <!--        </div>-->

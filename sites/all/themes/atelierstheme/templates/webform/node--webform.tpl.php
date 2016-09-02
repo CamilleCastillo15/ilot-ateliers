@@ -114,7 +114,7 @@ $img = image_style_url("header", $file->uri);
 
            <div class="contactez-nous">
 
-               Contactez - nous !
+               Contactez-nous !
 
            </div>
 
