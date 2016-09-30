@@ -114,7 +114,7 @@ $img = image_style_url("header", $file->uri);
 
            <div class="contactez-nous">
 
-               Contactez - nous !
+               Contactez-nous !
 
            </div>
 
@@ -131,12 +131,10 @@ $img = image_style_url("header", $file->uri);
           hide($content['comments']);
           hide($content['links']);
           print render($content);
-        ?>
 
+        ?>
       </div>
 
     </article>
 
 </div>
-
-

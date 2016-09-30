@@ -9,7 +9,7 @@
             display: table;
             margin: 0px auto;
             vertical-align: middle;
-            
+
         }
         .container {
             position:relative;
@@ -29,7 +29,7 @@
                  top:0px;
 
             }
-            
+
              .picto{
 
                     margin-top : -20%;
@@ -64,7 +64,7 @@
             @include breakpoint($laptop) {
                 border:1rem solid white;
                 padding-bottom: 6rem;
-                display:table-cell;  
+                display:table-cell;
                 position: relative;
                 margin-top: 0%;
                 max-width: 424px;
@@ -102,7 +102,7 @@
                 }
 
             }
-            
+
         }
 
     }
@@ -113,25 +113,12 @@
         margin-bottom: 7vw;
 
     }
-    
+
     .en_savoir_plus {
         position : absolute;
         bottom : 0;
         @include translate(-50%,0);
     }
-    
-    .bloc-grille-base {
-
-        padding: 0vw 0vw;
-        margin-top:8vw;
-        margin-bottom: 8vw;
-
-        @include breakpoint($laptopl) {
-            padding: 60px 100px;
-            margin-top: 0vw;
-            margin-bottom: 0vw;
-        }
-
-    }
+  
 
 }

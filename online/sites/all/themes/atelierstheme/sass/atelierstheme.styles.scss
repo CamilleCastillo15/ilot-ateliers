@@ -1,0 +1,36 @@
+// Import variables, abstractions, base styles and components.
+// Uncomment the next lines and adjust them to your needs.
+//@import "variables/{YOUR FILE NAME HERE}";
+//@import "abstractions/{YOUR FILE NAME HERE}";
+//@import "base/{YOUR FILE NAME HERE}";
+
+@import "atelierstheme.reset";
+@import "layouts/onecolumn.layout";
+@import "variables/variables";
+@import "variables/mixin";
+@import "variables/typos";
+
+@import "components/menu";
+@import "components/imagetitle";
+@import "components/home";
+@import "components/presentation";
+@import "components/home-services";
+@import "components/ateliers";
+@import "components/atelier-actus";
+@import "components/autres-services";
+@import "components/don";
+@import "components/abo";
+@import "components/contact";
+@import "components/contact-confirmation";
+@import "components/footer";
+@import "components/global";
+@import "components/swiper";
+@import "components/gallerie";
+@import "components/drop-down-menu";
+@import "components/map";
+@import "components/offres-speciales";
+@import "components/date";
+@import "components/user";
+@import "components/adresses";
+@import "components/bloc-grille-base";
+

@@ -1,0 +1,361 @@
+@import "singularitygs";
+@import "breakpoint";
+@import "../variables/variables";
+
+.l-header {
+
+    .menu {
+        $h: 100px;
+        height: $h;
+        @include grid-span(9,3);
+
+        li {
+             transition:all 0ms;
+            text-transform: uppercase;
+            display: inline-block;
+            line-height: $h;
+            font-size: 1rem;
+            margin: 0 0.4rem;
+
+            a {
+                transition:all 400ms;
+                 padding-bottom: 1rem;
+                 border-bottom: 3px solid white;
+                &:hover,
+                &.active{
+                   
+                    border-bottom: 3px solid $green;
+                }
+                text-decoration: none;
+            }
+
+
+            @include breakpoint($laptop) {
+                font-size: 1.2rem;
+                margin: 0 0.8rem;
+            }
+
+            @include breakpoint($laptopl) {
+                font-size: 1.4rem;
+                margin: 0 1.2rem;
+            }
+
+        }
+
+        li.expanded {
+
+                position: relative;
+
+                .menu {
+
+                @include grid-span(18,1);
+                font-size:0.5rem;
+                left: 50%;
+                transform: translate(-50%,0);
+                z-index: 10;
+
+                li {
+
+                    font-size: 0.7rem;
+                    line-height: 50px;
+
+                    @include breakpoint($laptop) {
+                        font-size: 0.9rem;
+                        margin: 0;
+                        line-height: 60px;
+                    }
+
+                    @include breakpoint($laptopl) {
+                        font-size: 1.1rem;
+                        margin: 0;
+                        line-height: 70px;
+                    }
+
+                    &:hover,
+                    &.active {
+
+                        background-color:$green;
+                    }
+
+                    a {
+
+                        &:hover,
+                        &.active {
+
+                            border-bottom:none !important;
+                        }
+
+                        text-decoration: none;
+                    }
+
+                    &.active-trail {
+
+                        background-color: $green;
+
+                    }
+
+                }
+
+                &:before {
+
+                    content:"";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 16px 28px 16px;
+
+                    @include breakpoint($laptop) {
+                        border-width: 0 32px 56px 32px;
+                    }
+
+                    @include breakpoint($laptopl) {
+                        border-width: 0 39px 78px 39px;
+                    }
+
+                    border-color: transparent transparent $grey transparent;
+                    z-index: 10000;
+                    position: absolute;
+
+                    margin-top: -20px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    right: 0;
+                    left:0;
+
+                    //margin-left: -48px;
+
+                    @include breakpoint($laptop) {
+
+                        margin-top: -21px;
+
+                    }
+
+                    @include breakpoint($laptopl) {
+
+                        margin-top: -24px;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.l-off {
+
+    .menu {
+
+            border: none;
+            list-style: none;
+            text-align: left;
+            margin-top:1rem;
+
+        a {
+            color: white;
+
+            &:hover, &:link, &:active, &:visited {
+
+                text-decoration: none;
+
+            }
+
+            &.active {
+
+                color:$green;
+
+                &:hover {
+
+                    color:white;
+
+                }
+
+            }
+
+        }
+
+
+        li.leaf {
+
+            list-style-type: none;
+            list-style-image: none;
+
+            a {
+
+                padding: 4.5% 3% 4.5% 3%;
+                display: block;
+                margin:auto;
+
+                &:hover {
+
+                    background-color:$green;
+
+                }
+
+            }
+
+            &:after {
+
+                content:"";
+                border-bottom: solid 1px white;
+                margin:0 2rem;
+                display: block;
+
+            }
+
+        }
+
+        li.expanded {
+
+            list-style-type: none;
+            list-style-image: none;
+            position: relative;
+
+            a {
+
+                padding: 4.5% 3% 4.5% 3%;
+                display: block;
+                margin-left: auto;
+
+
+                &:hover {
+
+                    background-color:$green;
+
+                }
+
+            }
+
+            &:after {
+
+                content:"";
+                border-bottom: solid 1px white;
+                margin:0 2rem;
+                display: block;
+
+            }
+
+            ul {
+
+                margin-top:0rem;
+
+                li {
+
+                    font-size:0.9rem;
+
+                    a {
+
+                        padding: 4.5% 3% 4.5% 6%;
+
+                        &:after {
+
+                            content:"";
+                            border-bottom: none;
+                            display: block;
+
+                        }
+
+                    }
+
+                    &:after {
+
+                        content:"";
+                        border-bottom: none;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    @include breakpoint($laptop) {
+        //@include grid-span(6,1);
+        display: none;
+    }
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 375ms ease-in-out;
+    -moz-transition: all 375ms ease-in-out;
+    transition: all 375ms ease-in-out;
+    display: block;
+    @include breakpoint($mobilel){
+        width:70%;
+    }
+    &.h {
+        visibility: hidden;
+        left: -100%;
+    }
+    &.o {
+        left: 0px;
+    }
+    background-color: #4b4b4b;
+    text-transform: uppercase;
+
+
+.logo {
+        width: 26%;
+        margin: 0 auto;
+        display: block;
+        margin-top: 5%;
+    }
+
+    .reseaux {
+        display: block;
+        text-align: center;
+        padding-top: 5%;
+        color:white;
+        font-size: 2rem;
+        position: relative;
+
+        div {
+
+            &.twitter-img {
+
+                    &:after {
+
+                    content:"  | ";
+                    padding:0 50px;
+                    font-size:1.5rem;
+                    color:white;
+                    font-size: 37px;
+
+                }
+
+            }
+
+            &.linkedin-img {
+
+                //padding:0 35px;
+
+            }
+
+        }
+
+        a {
+
+            &:hover,
+            &:link,
+            &:active,
+            &:visited {
+
+                color: transparent;
+
+            }
+
+        }
+
+    }
+
+}
+

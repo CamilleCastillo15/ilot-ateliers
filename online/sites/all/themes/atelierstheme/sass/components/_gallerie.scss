@@ -1,0 +1,118 @@
+.atelier-gallerie {
+
+    max-width: 900px;
+    with:100%;
+    height: auto;
+
+    margin: 20px auto 20px auto;
+
+    @include breakpoint($laptop) {
+
+        margin: 30px auto 30px auto;
+
+    }
+
+    @include breakpoint($laptopl) {
+
+        margin: 40px auto 40px auto;
+
+    }
+
+    .atelier-gallerie-big {
+
+        img {
+
+            display: block;
+            margin: 0 auto;
+
+        }
+
+    }
+
+    .atelier-gallerie-thumbnails {
+
+        display: inline-block;
+        cursor: pointer;
+
+
+        img {
+
+            width:6em;
+
+            @include breakpoint($mobilel) {
+
+                width:7em;
+            }
+
+            @include breakpoint($tablet) {
+
+                width:8em
+
+            }
+
+            @include breakpoint($laptop) {
+
+                width:8em;
+
+            }
+
+        }
+
+
+        .atelier-gallerie-image {
+
+            display: inline-block;
+
+        }
+
+    }
+
+}
+
+
+.offres-speciales-gallerie {
+
+    max-width: 900px;
+    with:100%;
+    height: auto;
+
+    margin: 20px auto 20px auto;
+
+    @include breakpoint($laptop) {
+
+        margin: 30px auto 30px auto;
+
+    }
+
+    @include breakpoint($laptopl) {
+
+        margin: 40px auto 40px auto;
+
+    }
+    
+    .offres-speciales-gallerie-image {
+        
+        img {
+            
+            display: block;
+            margin: 0 auto;
+            float: none;
+            
+        }
+        
+    }
+
+}
+
+.offres-speciales-gallerie-thumbnails {
+
+    display: inline-block;
+    cursor: pointer;
+
+    .offres-speciales-gallerie-image {
+
+        display: inline-block;
+
+    }
+
+}

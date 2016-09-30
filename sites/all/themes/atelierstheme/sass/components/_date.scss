@@ -4,7 +4,14 @@
 
      //@include breakpoint($tablet) {
         text-align: center;
-        @include grid-span(2,11);
+        text-transform: uppercase;
+
+        /* width: 16.66667%; */
+        float: right;
+        margin-left: 0;
+        margin-right: 0;
+        clear: none;
+        font-size: 17px;
      //}
 
         @include breakpoint($tablet) {

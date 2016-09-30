@@ -3,8 +3,71 @@
     -webkit-transform : translate($x,$y);
     transform : translate($x,$y);
 }
+@mixin links(){
+  a:link,
+  a:active,
+  a:visited {
+      color: #000000 !important;
 
+        }
+  a:hover {
+        color: white !important;
+
+   }
+
+}
 @mixin btn($color) {
+    background-color: transparent;
+    cursor:pointer;
+    transition: all 200ms;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    margin:20px 0;
+
+    @include breakpoint($laptop) {
+      margin-top:30px;
+    }
+
+    @include breakpoint($laptopl) {
+
+        margin-top:40px;
+
+    }
+
+    padding: 10px 30px;
+    text-align: center;
+
+    background-repeat: no-repeat;
+
+    background-size : 15% 40%;
+    background-position: 100% center;
+    color: #000000;
+    position: relative;
+    border : 2px solid #000000;
+    background-image : url(../images/f_noires/f_g_droite.svg);
+
+    width:230px;
+   &:link,
+   &:active,
+   &:visited {
+       color: #000000 !important;
+
+         }
+    &:hover {
+        color: white !important;
+        background-color: $color;
+        border : 2px solid $color;
+        background-image : url(../images/f_blanches/f_droite.svg);
+    }
+
+    &:hover > a {
+        color: white;
+    }
+
+}
+
+@mixin btn_retour($color) {
     background-color: transparent;
     cursor:pointer;
     transition: all 200ms;
@@ -27,23 +90,23 @@
 
     padding: 10px 30px;
     text-align: center;
-    
+
     background-repeat: no-repeat;
 
     background-size : 15% 40%;
-    background-position: 100% center;
+    background-position: 0% center;
     color: #000000;
     position: relative;
     border : 2px solid #000000;
-    background-image : url(../images/f_noires/f_g_droite.svg);
-    
+    background-image : url(../images/f_noires/f_g_gauche.svg);
+
     width:230px;
 
     &:hover {
         color: white;
         background-color: $color;
         border : 2px solid $color;
-        background-image : url(../images/f_blanches/f_droite.svg);
+        background-image : url(../images/f_blanches/f_gauche.svg);
     }
 
     &:hover > a {
@@ -87,7 +150,7 @@
 
         @include breakpoint($laptopl) {
             width: 150px;
-           
+
         }
 
     }
@@ -105,7 +168,7 @@
         height: 0;
         width: 50%;
 
-     
+
         //z-index: 100000;
 
         position: relative;
@@ -115,7 +178,7 @@
             border-bottom-width: 36px;
             border-left: -40px solid transparent;
             border-right: 102px solid transparent;
-            
+
         }
 
         @include breakpoint($tablet) {
@@ -123,7 +186,7 @@
             border-bottom-width: 46px;
             border-left: -40px solid transparent;
             border-right: 102px solid transparent;
-          
+
         }
 
         @include breakpoint($laptop) {
@@ -131,7 +194,7 @@
             border-bottom-width: 56px;
             border-left: -40px solid transparent;
             border-right: 102px solid transparent;
-           
+
         }
 
         @include breakpoint($laptopl) {
@@ -139,7 +202,7 @@
             border-bottom-width: 66px;
             border-left: -40px solid transparent;
             border-right: 102px solid transparent;
-           
+
 
         }
 
@@ -154,7 +217,7 @@
         border-right: 0px solid transparent;
         height: 0;
         width: 50%;
-        
+
         position: relative;
 
         @include breakpoint($mobilem) {
@@ -162,7 +225,7 @@
             border-bottom-width: 36px;
             border-left: 102px solid transparent;
             border-right: 0px solid transparent;
-           
+
         }
 
         @include breakpoint($tablet) {
@@ -170,7 +233,7 @@
             border-bottom-width: 46px;
             border-left: 102px solid transparent;
             border-right: 0px solid transparent;
-           
+
 
         }
 
@@ -179,7 +242,7 @@
             border-bottom-width: 56px;
             border-left: 102px solid transparent;
             border-right: 0px solid transparent;
-           
+
 
         }
 
@@ -188,7 +251,7 @@
             border-bottom-width: 66px;
             border-left: 102px solid transparent;
             border-right: 0px solid transparent;
-           
+
 
         }
 }

@@ -1,0 +1,39 @@
+@import "breakpoint";
+@import "singularitygs";
+@import "../variables/variables";
+@import "../variables/mixin";
+.autres_services {
+    //@include grid-span(12, 1);
+     background-color: $grey_3;
+    .inner {
+        padding:1rem 0 2rem 0; ;
+        max-width:$laptop;
+        margin:auto;
+        text-align:center;
+        
+        .atelier {
+            @include atelier();
+        }
+       
+    }
+    .triangles{
+        @include triangles(white,$grey_3);
+    }
+    a{
+
+        &:hover {
+
+            color:black;
+
+        }
+
+    }
+
+    h1 {
+
+        font-family: 'SourceSansProSemiBold';
+        margin: 1rem 0 2.5rem 0;
+
+    }
+
+}

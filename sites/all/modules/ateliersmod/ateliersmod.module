@@ -45,6 +45,14 @@ function ateliersmod_menu() {
         'page arguments' => array(0,1),        
         'type' => MENU_NORMAL_ITEM,
     );
+    $items['toute-l-actu'] = array(
+        'title' => 'Toute l\'actu' ,
+        'description' => 'Toutes les actualites',
+        'access callback' => TRUE,
+         'page callback' => 'ateliersmod_toute_actus',
+        'page arguments' => array(0,1),        
+        'type' => MENU_NORMAL_ITEM,
+    );
 	return $items;
 }
 
@@ -77,7 +85,23 @@ function ateliersmod_pageoffres($arg,$hop){
     //return $view;
     return theme('ateliersmod_offres', array('view' => $view));
 
-    
+    //return NULL;
+   // return 'hop '.$arg . " ".$hop;
+}
+
+
+function ateliersmod_toute_actus (){
+    //print "cucou";
+   $view = views_embed_view('toute_l_actu', 'block');
+       
+    //$//view = views_embed_view('toute_l_actu');
+    //dpm($view);
+//    print $view;
+    //print $view;
+    //*/
+   // print "dfdgdfg";
+    return theme('ateliersmod_toute_actus', array('view' => $view));
+
     //return NULL;
    // return 'hop '.$arg . " ".$hop;
 }
@@ -99,6 +123,12 @@ function ateliersmod_admin() {
     $form['ateliersmod_fsadress'] = array(
         '#type' => 'fieldset',
         '#title' => t('Paramétrage de l\'adresse'),
+        '#collapsible' => TRUE, // Added
+        '#collapsed' => FALSE,  // Added
+    );
+        $form['ateliersmod_fscontact'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Paramétrage de la page contact'),
         '#collapsible' => TRUE, // Added
         '#collapsed' => FALSE,  // Added
     );
@@ -143,6 +173,24 @@ function ateliersmod_admin() {
         '#required' => FALSE,
        
     );
+    $fid3 = variable_get('ateliersmod_fsvisuels_actualites');
+    $form['ateliersmod_fsvisuels']['ateliersmod_fsvisuels_actualites'] = array(
+        '#type' => 'media',
+        '#tree' => TRUE,
+        '#title' => t('Image header des actualités'),
+        '#default_value' => $fid3,
+        '#media_options' => array(
+            'global' => array(
+                'file_extensions' => 'jpg png', // File extensions
+                'max_filesize' => '100 MB',
+                'file_directory' => 'config', // Will be a subdirectory of the files directory
+                'types' => array('image'), // Refers to a file_entity bundle (such as audio, video, image, etc.)
+            ),  
+        ),  
+        '#description' => t("Image générique sur la partie actualités (générales)"),
+        '#required' => FALSE,
+       
+    );
    
     $var1 = variable_get('ateliersmod_fsadress_text');
     $form['ateliersmod_fsadress']['ateliersmod_fsadress_text'] = array(
@@ -150,6 +198,16 @@ function ateliersmod_admin() {
         '#title' => t('Texte du bloc'),
         '#format' => $var1["format"],
         '#default_value' =>$var1["value"],
+        '#description' => t("Texte présent dans le footer du site"),
+        '#required' => FALSE,
+       
+    );
+    $var3 = variable_get('ateliersmod_fscontact_text');
+    $form['ateliersmod_fscontact']['ateliersmod_fscontact_text'] = array(
+        '#type' => 'text_format',
+        '#title' => t('Texte du bloc'),
+        '#format' => $var3["format"],
+        '#default_value' =>$var3["value"],
         '#description' => t("Texte présent dans le footer du site"),
         '#required' => FALSE,
        
@@ -185,8 +243,7 @@ function ateliersmod_admin() {
     $form['submit'] = array(
     '#type' => 'submit', 
     '#value' => t('Submit'),
-  );*/
-    
+  );*/ 
   
   return system_settings_form($form);
 }
@@ -287,6 +344,10 @@ function ateliersmod_theme($existing, $type, $theme, $path){
         'template' => 'templates/ateliersmod_offres', // Change this to the template file name.
         'variables' => array('view' => NULL), // This is the list of the variables that will be passed to the template file. 
     ),
+    'ateliersmod_toute_actus' => array(
+        'template' => 'templates/ateliersmod_toute_actus', // Change this to the template file name.
+        'variables' => array('view' => NULL), // This is the list of the variables that will be passed to the template file. 
+    ),
     'ateliersmod_actus' => array(
         'template' => 'templates/ateliersmod_actus', // Change this to the template file name.
         'variables' => array('id' => NULL), // This is the list of the variables that will be passed to the template file. 
@@ -321,5 +382,8 @@ function ateliersmod_theme($existing, $type, $theme, $path){
 function ateliersmod_form(&$form, &$form_state, $form_id) {
     dpm($form);
 }
+/*
 
-
+function zapimod_preprocess_html(&$variables) {
+    drupal_add_css(drupal_get_path('module', 'zapimod') . '/css/zapimod.css');
+}l

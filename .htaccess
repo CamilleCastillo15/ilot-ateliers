@@ -1,3 +1,16 @@
+Redirect 301 /services/auto-bleue /services/service-auto-bleue
+Redirect 301 /services/id/2 /services/service-auto-bleue
+
+Redirect 301 /services/ilot-gourmand /services/service-ilot-gourmand
+Redirect 301 /services/id/4 /services/service-menuiserie
+
+Redirect 301 /services/menuiserie /services/service-menuiserie
+Redirect 301 /services/id/3 /services/service-menuiserie
+
+Redirect 301 /offresspeciales /offres-speciales
+Redirect 301 /accueil /
+
+
 #
 # Apache/PHP/Drupal settings:
 #
@@ -145,5 +158,8 @@ DirectoryIndex index.php index.html index.htm
 # Add headers to all responses.
 <IfModule mod_headers.c>
   # Disable content sniffing, since it's an attack vector.
-  Header always set X-Content-Type-Options nosniff
+ # Header always set X-Content-Type-Options nosniff
+  Header set Access-Control-Allow-Origin * 
+  Header set Access-Control-Allow-Credentials true
 </IfModule>
+

@@ -1,0 +1,372 @@
+<?php
+
+/**
+ * @file
+ * A block module that displays a footer
+ */
+function ateliersmod_help($path, $arg) {
+  switch ($path) {
+    case "admin/help#ateliersmod":
+      return '<p>'.t("Module qui contient des blocks pour le site ateliers de l'îlot").'</p>';
+      break;
+  }
+ }
+function ateliersmod_permission() {
+    return array(
+        'access ateliersmod admin' => array(
+            'title' => "Acceder à l'interface d'administration du site ateliers"
+        )
+    );
+}
+
+function ateliersmod_menu() {	
+    $items = array();
+    $items['admin/settings/ateliers'] = array(
+        'title' => 'Configuration du site' ,
+        'description' => 'Configuration de l\'adresse, du google map, etc..',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('ateliersmod_admin'),    
+        'access arguments' => array('access ateliersmod admin'),
+        'type' => MENU_NORMAL_ITEM,
+    );
+    $items['services/%/actus'] = array(
+        'title' => 'Actualités de l\'atelier' ,
+        'description' => 'les actus de l\'atelier',
+        'access callback' => TRUE,
+         'page callback' => 'ateliersmod_pageactus',
+        'page arguments' => array(0,1),        
+        'type' => MENU_NORMAL_ITEM,
+    );
+    $items['offres-speciales'] = array(
+        'title' => 'Offres speciales' ,
+        'description' => 'Toutes les offres spéciales',
+        'access callback' => TRUE,
+         'page callback' => 'ateliersmod_pageoffres',
+        'page arguments' => array(0,1),        
+        'type' => MENU_NORMAL_ITEM,
+    );
+    $items['toute-l-actu'] = array(
+        'title' => 'Toute l\'actu' ,
+        'description' => 'Toutes les actualites',
+        'access callback' => TRUE,
+         'page callback' => 'ateliersmod_toute_actus',
+        'page arguments' => array(0,1),        
+        'type' => MENU_NORMAL_ITEM,
+    );
+	return $items;
+}
+
+function ateliersmod_pageactus($arg,$hop){
+    
+    $view = views_get_view("atelier_id");
+    $view->set_arguments(array($hop));
+    $view->execute();
+    $result = $view->result;
+    if(count($result)==0){
+        //redirection
+        return "Cet atelier n'existe pas";
+        
+    }else{
+        $result[0];
+        $node = node_load($result[0]->nid);
+        $view = views_embed_view('actus', 'page_1', $result[0]->nid);
+        //return $view;
+        return theme('ateliersmod_actus', array('view' => $view, 'node'=>$node));
+    }
+    
+    //return NULL;
+   // return 'hop '.$arg . " ".$hop;
+}
+function ateliersmod_pageoffres($arg,$hop){
+    
+    $view = views_embed_view('offres_speciales', 'block');
+    //return $view;
+    return theme('ateliersmod_offres', array('view' => $view));
+
+    //return NULL;
+   // return 'hop '.$arg . " ".$hop;
+}
+
+
+function ateliersmod_toute_actus (){
+    //print "cucou";
+   $view = views_embed_view('toute_l_actu', 'block');
+       
+    //$//view = views_embed_view('toute_l_actu');
+    //dpm($view);
+//    print $view;
+    //print $view;
+    //*/
+   // print "dfdgdfg";
+    return theme('ateliersmod_toute_actus', array('view' => $view));
+
+    //return NULL;
+   // return 'hop '.$arg . " ".$hop;
+}
+
+function ateliersmod_admin() {
+    drupal_load('module', 'google_map_field');
+    module_load_include('inc', 'google_map_field');
+ 
+    $theme = drupal_get_path("theme","atelierstheme");
+    
+    drupal_add_css($theme."/css/admin.css");
+    $form = array();
+    $form['ateliersmod_fsvisuels'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Paramétrage des visuels génériques du site'),
+        '#collapsible' => TRUE, // Added
+        '#collapsed' => FALSE,  // Added
+    );
+    $form['ateliersmod_fsadress'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Paramétrage de l\'adresse'),
+        '#collapsible' => TRUE, // Added
+        '#collapsed' => FALSE,  // Added
+    );
+        $form['ateliersmod_fscontact'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Paramétrage de la page contact'),
+        '#collapsible' => TRUE, // Added
+        '#collapsed' => FALSE,  // Added
+    );
+
+    $defaults = array(
+        'value' => '',
+        'format' => 'full_html',
+    );
+    $fid = variable_get('ateliersmod_fsvisuels_offres');
+    $form['ateliersmod_fsvisuels']['ateliersmod_fsvisuels_offres'] = array(
+        '#type' => 'media',
+        '#tree' => TRUE,
+        '#title' => t('Image offres spéciales'),
+        '#default_value' => $fid,
+        '#media_options' => array(
+            'global' => array(
+                'file_extensions' => 'jpg png', // File extensions
+                'max_filesize' => '100 MB',
+                'file_directory' => 'config', // Will be a subdirectory of the files directory
+                'types' => array('image'), // Refers to a file_entity bundle (such as audio, video, image, etc.)
+            ),  
+        ),  
+        '#description' => t("Image générique dans la partie offres spéciales"),
+        '#required' => FALSE,
+       
+    );
+    $fid2 = variable_get('ateliersmod_fsvisuels_contact');
+    $form['ateliersmod_fsvisuels']['ateliersmod_fsvisuels_contact'] = array(
+        '#type' => 'media',
+        '#tree' => TRUE,
+        '#title' => t('Image header du contact'),
+        '#default_value' => $fid2,
+        '#media_options' => array(
+            'global' => array(
+                'file_extensions' => 'jpg png', // File extensions
+                'max_filesize' => '100 MB',
+                'file_directory' => 'config', // Will be a subdirectory of the files directory
+                'types' => array('image'), // Refers to a file_entity bundle (such as audio, video, image, etc.)
+            ),  
+        ),  
+        '#description' => t("Image générique sur le forum contact"),
+        '#required' => FALSE,
+       
+    );
+    $fid3 = variable_get('ateliersmod_fsvisuels_actualites');
+    $form['ateliersmod_fsvisuels']['ateliersmod_fsvisuels_actualites'] = array(
+        '#type' => 'media',
+        '#tree' => TRUE,
+        '#title' => t('Image header des actualités'),
+        '#default_value' => $fid3,
+        '#media_options' => array(
+            'global' => array(
+                'file_extensions' => 'jpg png', // File extensions
+                'max_filesize' => '100 MB',
+                'file_directory' => 'config', // Will be a subdirectory of the files directory
+                'types' => array('image'), // Refers to a file_entity bundle (such as audio, video, image, etc.)
+            ),  
+        ),  
+        '#description' => t("Image générique sur la partie actualités (générales)"),
+        '#required' => FALSE,
+       
+    );
+   
+    $var1 = variable_get('ateliersmod_fsadress_text');
+    $form['ateliersmod_fsadress']['ateliersmod_fsadress_text'] = array(
+        '#type' => 'text_format',
+        '#title' => t('Texte du bloc'),
+        '#format' => $var1["format"],
+        '#default_value' =>$var1["value"],
+        '#description' => t("Texte présent dans le footer du site"),
+        '#required' => FALSE,
+       
+    );
+    $var3 = variable_get('ateliersmod_fscontact_text');
+    $form['ateliersmod_fscontact']['ateliersmod_fscontact_text'] = array(
+        '#type' => 'text_format',
+        '#title' => t('Texte du bloc'),
+        '#format' => $var3["format"],
+        '#default_value' =>$var3["value"],
+        '#description' => t("Texte présent dans le footer du site"),
+        '#required' => FALSE,
+       
+    );
+    $var2 = variable_get('ateliersmod_fsgoogle_map');    
+    $form['ateliersmod_fsgoogle_map'] = array(
+        '#type' => 'location_element', 
+        '#title' => t('Adresse'),      
+        
+        '#default_value' =>$var2,
+        '#description' => t("Plan des ateliers"),
+        '#required' => FALSE,
+        '#location_settings' => array (
+            'form' => array(
+                'fields' => array (
+                    'name' => array('collect' => 1, 'weight' => 0),
+                    'country' => array('collect' => 1, 'weight' => 2, 'default' => 'fr'),
+                    'street'  => array('collect' => 1, 'weight' => 4),
+                    'additional'    => array('collect' => 1, 'weight' => 6),
+                    'city'          => array('collect' => 1, 'weight' => 8),
+                    'postal_code'   => array('collect' => 1, 'weight' => 12),
+                    'locpick'       => array('collect' => 4, 'weight' => 14),                   
+                ),
+            ),
+        )
+    );
+
+  return system_settings_form($form);
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function ateliersmod_block_info() {
+  $blocks['ateliersmod_address'] = array(
+    'info' => t('Ateliers block adresse'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+  );
+  $blocks['ateliersmod_map'] = array(
+    'info' => t('Ateliers block map'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+  );
+  $blocks['ateliersmod_don'] = array(
+    'info' => t('Ateliers block don'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+  );
+  $blocks['ateliersmod_autres_services'] = array(
+    'info' => t('Ateliers block autres services'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+  );
+  $blocks['ateliersmod_abonnement'] = array(
+    'info' => t('Ateliers block abonnement offres spéciales'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+  );
+  $blocks['ateliersmod_nos_services'] = array(
+    'info' => t('Ateliers block nos services'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+  );
+  return $blocks;
+}
+
+
+/**
+  * Implementation of hook_block_view().
+  */
+function ateliersmod_block_view($delta='') {
+	$block = array();
+	switch ($delta) {
+		case 'ateliersmod_address':
+			$block['subject'] = "";//t('Block Name 1');
+			$block['content']['ateliersmod_address'] = array(
+		        '#theme' => 'ateliersmod_address'
+	       );            
+		break;
+        case 'ateliersmod_map':
+			$block['subject'] = "";//t('Block Name 1');
+			$block['content']['ateliersmod_map'] = array(
+		        '#theme' => 'ateliersmod_map',
+                  '#attached' => array(
+                    'js' => array(
+                        
+                       'https://maps.googleapis.com/maps/api/js?key=AIzaSyA-mhBDQt-3OHL8nDWFlKi3zfJH4s9CCMM&' => array(
+                            'type' => 'external',
+                        ),
+                        drupal_get_path('module', 'ateliersmod') . '/js/ateliersmod_map.js'
+                        
+                    ),
+                )
+	       );            
+		break;
+        case 'ateliersmod_don':
+			$block['subject'] = "";//t('Block Name 1');
+			$block['content']['ateliersmod_don'] = array(
+		        '#theme' => 'ateliersmod_don'
+	       );            
+		break;    
+        case 'ateliersmod_autres_services':
+			$block['subject'] = "";//t('Block Name 1');
+			$block['content']['ateliersmod_autres_services'] = array(
+		        '#theme' => 'ateliersmod_autres_services'   
+	       );            
+		break;
+        case 'ateliersmod_abonnement':
+			$block['subject'] = "";//t('Block Name 1');
+			$block['content']['ateliersmod_abonnement'] = array(
+		        '#theme' => 'ateliersmod_abonnement'   
+	       );            
+		break;
+        case 'ateliersmod_nos_services':
+			$block['subject'] = "";//t('Block Name 1');
+			$block['content']['ateliersmod_nos_services'] = array(
+		        '#theme' => 'ateliersmod_nos_services'   
+	       );            
+		break;
+    }
+    return $block;
+}
+
+function ateliersmod_theme($existing, $type, $theme, $path){
+  $themez = drupal_get_path("theme",$GLOBALS['theme']);
+  $bodyaddress = variable_get('ateliersmod_fsadress_text');
+  return array(
+    'ateliersmod_offres' => array(
+        'template' => 'templates/ateliersmod_offres', // Change this to the template file name.
+        'variables' => array('view' => NULL), // This is the list of the variables that will be passed to the template file. 
+    ),
+    'ateliersmod_toute_actus' => array(
+        'template' => 'templates/ateliersmod_toute_actus', // Change this to the template file name.
+        'variables' => array('view' => NULL), // This is the list of the variables that will be passed to the template file. 
+    ),
+    'ateliersmod_actus' => array(
+        'template' => 'templates/ateliersmod_actus', // Change this to the template file name.
+        'variables' => array('id' => NULL), // This is the list of the variables that will be passed to the template file. 
+    ),  
+    'ateliersmod_address' => array(
+      'template' => 'templates/ateliersmod_address',
+      'variables'=> array('ateliers_theme' => $themez, 'body' => check_markup($bodyaddress["value"],$bodyaddress["format"]) )
+    ),
+    'ateliersmod_map' => array(
+      'template' => 'templates/ateliersmod_map',
+      'variables'=> array('ateliers_theme' => $themez)
+    ),
+    'ateliersmod_don' => array(
+      'template' => 'templates/ateliersmod_don',
+      'variables'=> array('ateliers_theme' => $themez)
+    ),
+    'ateliersmod_autres_services' => array(
+      'template' => 'templates/ateliersmod_autres_services',
+      'variables'=> array('ateliers_theme' => $themez)
+    ),
+    'ateliersmod_abonnement' => array(
+      'template' => 'templates/ateliersmod_abonnement',
+      'variables'=> array('ateliers_theme' => $themez)
+    ),
+    'ateliersmod_nos_services' => array(
+      'template' => 'templates/ateliersmod_nos_services',
+      'variables'=> array('ateliers_theme' => $themez)
+    )
+  );
+}
+
+function ateliersmod_form(&$form, &$form_state, $form_id) {
+    dpm($form);
+}

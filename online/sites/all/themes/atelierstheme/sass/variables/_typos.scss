@@ -1,0 +1,28 @@
+body{
+
+    @include breakpoint($tablet) {
+
+            font-size:19px;
+        }
+
+    font-size: 15px;
+    line-height: 1.3em;
+    font-family: 'SourceSansProRegular';
+}
+
+h1{
+   text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.75rem;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0.5rem 0;
+    line-height: 1.5em;
+}
+

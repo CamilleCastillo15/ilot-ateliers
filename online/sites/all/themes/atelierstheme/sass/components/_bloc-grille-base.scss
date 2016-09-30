@@ -1,0 +1,53 @@
+.bloc-grille-base {
+
+    padding: 5vw 8vw;
+
+    @include breakpoint($laptopl) {
+        padding: 60px 100px;
+    }
+
+}
+
+.bloc-grille-base-offres {
+
+    padding: 0 0 5vw 0;
+
+    @include breakpoint($laptopl) {
+        padding: 0 0 60px 0;
+    }
+
+}
+
+.offre-speciale-detail {
+    
+    .text-presentation {
+        
+        text-align: center;
+        
+        @include breakpoint($tablet) {
+            text-align: left;
+        }
+    }
+    
+    img {
+
+        display: block;
+        margin: 0 auto;
+//        float: none;
+
+        @include breakpoint($tablet) {
+//            float: right;
+        }
+            
+        @include breakpoint($laptopl) {
+            padding: 0 0 5vw 5vw;
+            margin-left: 60px;
+        }
+
+        @include breakpoint($laptopl) {
+            padding: 0 0 60px 0;
+        }
+        
+    }
+
+}

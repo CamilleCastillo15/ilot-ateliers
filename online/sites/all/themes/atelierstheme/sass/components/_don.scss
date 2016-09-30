@@ -1,0 +1,112 @@
+@import "breakpoint";
+@import "../variables/variables";
+@import "../variables/mixin";
+
+.bloc_don {
+    background-color:$lightgrey;
+    padding:1rem;
+    .inner {
+        margin : auto;
+        max-width:$tablet;
+       
+        font-family: 'SourceSansProRegular';
+        text-transform: uppercase;
+        color: #9D2537;
+        text-align: center;
+        .don-img {
+            text-align: center;
+            img{
+                 max-width:90px;
+            }
+            @include grid-span(12,1);
+        }
+        .don-txt {
+            @include grid-span(12,1);
+            margin : 1rem 0;
+            h1{
+               font-family: 'PermanentMarker';
+                font-size:2rem;
+            }
+            h2{
+                font-size:1.25rem; 
+            }
+           
+        }
+        .don-btn {
+            @include grid-span(12,1);
+            a {
+                @include btn_don(#9D2537);
+
+                margin: 0px 0 0 0;
+                width: 300px;
+
+               
+            }
+        }
+        @include breakpoint($mobilel){
+            .don-img {
+                img{
+                     max-width:110px;
+                }
+                 @include grid-span(7,1);
+            }
+            .don-txt {
+                @include grid-span(8,5);
+                margin : 1rem 0;
+                h1, h1.wtitle {
+                   font-family: 'PermanentMarker';
+                    font-size:2.35rem;
+                }
+                h2{
+                    font-size:1.25rem;
+                }
+           
+            }
+            .don-btn {
+                @include grid-span(8,5);
+          
+            }
+            
+        }
+         @include breakpoint($laptop){
+            .don-img {
+                img{
+                     max-width:110px;
+                }
+                 @include grid-span(2,1);
+            }
+            .don-txt {
+                @include grid-span(7,3);
+                //margin : 1rem 0;
+                h1, h1.wtitle {
+                   font-family: 'PermanentMarker';
+                    font-size:2.5rem;
+                }
+                h2{
+                    font-size:1.5rem; 
+                }
+           
+            }
+            .don-btn {
+                @include grid-span(2,10)
+          
+            }
+            
+        }
+    }
+}
+
+
+.bloc2{
+    font-family: "SourceSansProLight";
+    color: #ffffff;
+    text-align: center;
+    padding:1rem;
+  
+    .petit {
+        font-size: 15px;
+    }
+    .tel {
+        width: 1.05em;
+    }
+}

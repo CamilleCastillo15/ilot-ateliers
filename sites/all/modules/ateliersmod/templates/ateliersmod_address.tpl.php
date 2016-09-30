@@ -1,41 +1,49 @@
 <?php
 
-    //$theme = drupal_get_path("theme",$GLOBALS['theme']) ;
     $theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
+
+    $view_adresses = views_get_view('adresses');
+    $view_adresses->execute();
+
+    $result_adresses = $view_adresses->result;
 
 ?>
 
 <div class="bloc2">
 
-  
-        
-        <h1>
+        <?php foreach($result_adresses as $key => $value) { ?>
 
-            Vous êtes un particulier ?
-            <br /> Une entreprise ?
-            <br />
+        <?php $n = node_load($value->nid);
+              $link =drupal_get_path_alias("node/".$value->nid);
+              $titre = field_view_field("node",$n,'field_titre');
+              $horaires = field_view_field("node",$n,'field_texte_horaires');
+              $adresse = field_view_field("node",$n,'field_texte_adresse');
+              $picto_tel = field_view_field("node",$n,'field_image');
+              $telephone = field_view_field("node",$n,'field_texte_telephone');
+              $emails = field_view_field("node",$n,'field_texte_emails');
+         ?>
+                  <h1>
+                      <?php print render($titre); ?>
+                  </h1>
+                  <br />
+                  <div class="horaires">
+                      <?php print render($horaires); ?>
+                  </div>
+                  <br />
+                  <div class="adresse">
+                      <?php print render($adresse); ?>
+                  </div>
+                  <br />
+                    <?php print render($picto_tel); ?>
+                  <div class="telephone">
+                      <?php print render($telephone); ?>
+                  </div>
+                  <br />
+                  <br />
+                  <div class="emails">
+                      <?php print render($emails); ?>
+                  </div>
 
-        </h1>
-
-        <br /> Nous vous accueillons du lundi au vendredi,
-        <br /> <?php print $variables["body"]; ?> 
-        <br /> ZA Montières - Espace Alliance
-        <br /> 30 route d'Abbeville
-        <br /> 80 000 Amiens
-        <br />
-
-        <img class="tel" src="<?php print $theme; ?>/images/telephone_blanc.svg" alt="telephone" title="telephone" /> 03 59 99 08 80
-
-        <div class="petit">
-
-            (numéro non surtaxé)
-
-        </div>
-
-        <br /> les-ateliers@ilot.asso.fr
-
-        <br /> ateliers.ilot.asso.fr
-       
-   
+       <?php } ?>
 
 </div>

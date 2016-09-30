@@ -1,0 +1,369 @@
+@import "breakpoint";
+@import "../variables/variables";
+@import "../variables/mixin";
+
+.bkg-blanc {
+    background-color:white;
+}
+
+.left {
+    float:left;
+}
+
+.text-presentation {
+
+    h1, h1.wtitle {
+       text-transform: uppercase;
+       font-family: 'SourceSansProSemiBold';
+       font-size:20px;
+       padding: 20px 0;
+        @include breakpoint($laptop) {
+
+            font-size:25px;
+            padding: 1.5vw 0;
+        }
+         @include breakpoint($laptopl) {
+            font-size:30px;
+            padding: 25px 0
+        }
+    }
+
+    h2, h2.wsubtitle {
+       text-transform: uppercase;
+       font-family: 'SourceSansProSemiBold';
+       font-size:15px;
+       padding: 20px 0;
+        @include breakpoint($laptop) {
+
+            font-size:20px;
+            padding: 1.5vw 0;
+        }
+         @include breakpoint($laptopl) {
+            font-size:25px;
+            padding: 25px 0;
+        }
+    }
+
+    em {
+        font-family: 'SourceSansProItalic';
+    }
+
+   strong {
+
+        font-family: "SourceSansProBold";
+
+    }
+
+    ol {
+        list-style: decimal;
+        padding:0 4vw;
+    }
+
+    ul {
+        list-style: initial;
+        padding:0 4vw;
+    }
+
+}
+
+.text-presentation-block {
+
+    padding: 4vw 7vw 0 7vw;
+    display: inline-block;
+
+    h1 {
+
+        @include breakpoint($laptop) {
+            font-size:45px;
+        }
+
+         @include breakpoint($laptopl) {
+            font-size:50px;
+
+        }
+
+    }
+
+    h2 {
+
+        padding-top:1.5vw;
+
+        @include breakpoint($tablet) {
+            font-size:20px;
+        }
+
+        @include breakpoint($laptop) {
+            font-size:25px;
+        }
+
+         @include breakpoint($laptopl) {
+            font-size:30px;
+        }
+
+    }
+
+    .formulaire {
+
+        font-family: 'SourceSansProLight';
+        background-color: #9D2537;
+        padding: 15px 35px;
+        color: white;
+        font-size:15px;
+
+        margin: 30px auto;
+        font-size: 15px;
+        width: 247px;
+
+        position: relative;
+
+        @include breakpoint($tablet) {
+
+            display: inline;
+            position: absolute;
+            margin:-50px 0 0 142px;
+
+        }
+
+        @include breakpoint($laptop) {
+
+            font-size:20x;
+            margin:-50px 0 0 242px;
+
+        }
+
+         @include breakpoint($laptopl) {
+
+            font-size:25px;
+             margin: -50px 0 0 300px;
+             width: 338px;
+
+        }
+
+        .f_g_droite {
+
+            position: absolute;
+            width: 10px;
+            left: 217px;
+            bottom: 12px;
+
+            @include breakpoint($tablet) {
+                width: 9px;
+                left: 216px;
+                bottom: 13px;
+            }
+
+            @include breakpoint($laptop) {
+                width: 10px;
+                left: 220px;
+                bottom: 12px
+            }
+
+            @include breakpoint($laptopl) {
+                width: 12px;
+                left: 312px;
+                bottom: 15px;
+            }
+
+        }
+
+    }
+
+}
+
+.pictotitlecontainer {
+
+        width:100%;
+        position: relative;
+
+        .image {
+            width:100%;
+        }
+
+        .pictotitle {
+            @include translate(-50%,-50%);
+            position:absolute;
+            top: 37%;
+            left: 50%;
+
+            img {
+
+                width:16vw;
+
+                @include breakpoint($mobilel) {
+                    width:18vw;
+                }
+
+                @include breakpoint($laptop) {
+                    width:20vw;
+                }
+
+                 @include breakpoint($laptopl) {
+                    width:250px;
+                }
+
+            }
+
+        }
+
+        .title {
+
+            @include translate(-50%,-50%);
+            position:absolute;
+            top: 75%;
+            left: 50%;
+            text-transform: uppercase;
+            color: white;
+
+            font-size: 1.05rem;
+
+            @include breakpoint($mobilel) {
+                font-size:25px;
+            }
+
+            @include breakpoint($laptop) {
+                font-size:35px;
+            }
+
+             @include breakpoint($laptopl) {
+                font-size:40px;
+            }
+
+        }
+
+    }
+
+.pager {
+
+    clear: both;
+    padding: 0;
+    text-align: right;
+    margin-top: 50px;
+
+    .pager__item--current {
+
+        padding: 1.5px 13.5px;
+        text-align: center;
+        color: white;
+
+    }
+
+}
+
+.offre-speciale {
+
+    .left {
+
+        img {
+
+             width:220px;
+             height:84px;
+
+            @include breakpoint($laptop) {
+
+                float: left;
+
+            }
+
+        }
+        
+    }
+
+}
+
+.contact {
+
+    position: relative;
+
+}
+
+.center{
+    text-align: center;
+}
+
+.home-body-actu {
+
+  .center{
+        margin-top: 16%;
+    }
+}
+
+.en_savoir_plus {
+   @include btn($green);
+}
+
+.retour {
+   @include btn_retour($green);
+
+    margin: 30px auto;
+    display: block;
+
+    @include breakpoint($tablet) {
+//        margin: 0 0 0 60px;
+        margin:60px;
+        display: inline-block;
+    }
+
+    @include breakpoint($laptopl) {
+        margin:60px;
+    }
+
+}
+
+.offre_suivante {
+
+    margin: 30px auto;
+    display: block;
+
+    @include breakpoint($tablet) {
+//      margin: 0 0 0 60px;
+        margin:60px;
+        display: inline-block;
+    }
+
+    @include breakpoint($laptop) {
+        float: right;
+    }
+
+    @include breakpoint($laptopl) {
+        margin:60px;
+    }
+}
+
+.reseaux {
+    position:absolute;
+    right:1rem;
+    top:1.5rem;
+
+    img {
+        margin: 0 1rem;
+    }
+
+    .twitter-img {
+        display: inline-block;
+        background: url("../images/twitter_blanc.svg") no-repeat;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin: 0 5%;
+        &:hover {
+            background: url("../images/twitter_vert.svg") no-repeat;
+        }
+        margin-left: 10%;
+    }
+
+    .linkedin-img {
+        display: inline-block;
+        background: url("../images/linkedin_blanc.svg") no-repeat;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin: 0 6%;
+
+        &:hover {
+            background: url("../images/linkedin_vert.svg") no-repeat;
+        }
+    }
+}
+
+.ajax-progress {
+    display: none;
+}
+

@@ -5,17 +5,9 @@
     $body = field_view_field("node",$node,'field_body');
     $gallerie = field_get_items("node",$node,'field_image_multi');
     $image = field_view_field("node",$node,'field_image');
-    /*
-        $im_solidarite =  field_get_items("node",$node,'field_image');
-        $im_solidarite_r = field_view_value('node', $node, 'field_image', $im_solidarite[0], array(
-            'type' => 'image',
-            'settings' => array(
-                'image_style' => 'slider',
-            ),
-        ));
-    */
+
     $auto_promo = field_get_items("node",$node,"field_auto_promo");
-    //dpm($auto_promo[0]["entity"]);
+
     $im_auto_promo =  field_get_items("node",$auto_promo[0]["entity"],'field_image');
     $im_auto_promo = field_view_value('node', $auto_promo[0]["entity"], 'field_image', $im_auto_promo[0], array(
         'type' => 'image',
@@ -37,9 +29,8 @@
         'image_style' => 'header',
       ),
     ));
-    //$src = image_style_url("home", $image_fond[0]["uri"]);
-    $view = views_get_view('offres_speciales');
-    $view->set_display('blockhome');
+
+    $view = views_get_view('home');
     $view->execute();
     $result = $view->result;
     $view_ateliers = views_get_view('ateliers');
@@ -55,7 +46,7 @@
         }
         $collectionsg =  field_collection_item_load_multiple($idti);
     }
-    //dpm($idti);
+
 ?>
 
 <div class="home">
@@ -93,7 +84,7 @@
                         --><div class="atelier">
                         <?php
                           $n = node_load($value->nid);
-                          $link =drupal_get_path_alias("node/".$value->nid);
+                          $link = drupal_get_path_alias("node/".$value->nid);
                           $picto = field_view_field("node",$n,'field_picto');
                           $title = field_view_field("node",$n,'field_title');
                           $class = field_view_field("node",$n,'field_class');
@@ -105,7 +96,6 @@
                           echo "<p class=\"title-pictos ".$class_render."\">";
                             print l($title_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers'))));
                             echo "</p>";
-                          // print l($picto_render,$link,array("html"=>true, 'attributes' => array('class' => array('plus'))));
                         ?>
                         </div><!--
                      <?php } ?>
@@ -120,24 +110,33 @@
 
 <div class="home-body-actu swiper-container">
     <div class="swiper-wrapper">
-        <?php foreach($result as $key => $value) { ?>
+        <?php foreach($result as $key => $value) {
+            $link = drupal_get_path_alias("node/".$value->nid);
+            ?>
            <div class="home-body-padding actu-gallerie-images swiper-slide">
                <?php
                     $n = node_load($value->nid);
                     $im_offre = field_get_items("node",$n,'field_image');
-                    $im_offre_r = field_view_value('node', $n, 'field_image', $im_offre[0], array(
-                        'type' => 'image',
-                        'settings' => array(
-                            'image_style' => 'slider',
-                        ),
-                    ));
+                    $im_offre_r = -1;
+
+                    if(field_view_field("node",$n,'field_image')){
+                      $im_offre_r = field_view_value('node', $n, 'field_image', $im_offre[0], array(
+                          'type' => 'image',
+                          'settings' => array(
+                              'image_style' => 'slider',
+                          ),
+                      ));
+                    }
                     $title_offres = field_view_field("node",$n,'field_title');
-                    $body_offres = field_view_field("node",$n,'field_chapeau');
+                    $body_offres = field_view_field("node",$n,"body",array(
+                      'type' => 'text_summary_or_trimmed',
+                    ));
                ?>
                 <div class="im_offres">
-                    <?php print render($im_offre_r); ?>
+
+                    <?php if($im_offre_r!=-1){ print render($im_offre_r); } ?>
                 </div><!--
-               --><div class="body_offres ">
+             --><div class="body_offres ">
                     <?php
                         echo "<h1>".render($title_offres)."</h1>";
                         print render($body_offres);
@@ -146,7 +145,7 @@
                       <?php
                         print l("En savoir plus", $link,array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
                        ?>
-                      </div>
+                     </div>
                 </div>
             </div>
         <?php  } ?>
@@ -164,7 +163,7 @@
         <?php print render($body); ?>
         <div class="center">
             <?php //$theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
-                print l("En savoir plus", "/content/présentation", array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
+                print l("En savoir plus", "/presentation", array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
             ?>
         </div>
     </div>

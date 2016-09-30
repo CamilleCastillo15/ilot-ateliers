@@ -230,7 +230,6 @@
 
         }
 
-       
     }
 
 .pager {
@@ -238,7 +237,7 @@
     clear: both;
     padding: 0;
     text-align: right;
-    margin: 50px 50px 0 50px;
+    margin-top: 50px;
 
     .pager__item--current {
 
@@ -266,7 +265,7 @@
             }
 
         }
-        
+
     }
 
 }
@@ -292,13 +291,51 @@
    @include btn($green);
 }
 
+.retour {
+   @include btn_retour($green);
+
+    margin: 30px auto;
+    display: block;
+
+    @include breakpoint($tablet) {
+//        margin: 0 0 0 60px;
+      //  margin:60px;
+        display: inline-block;
+    }
+
+    @include breakpoint($laptopl) {
+        //margin:60px;
+    }
+
+}
+
+.offre_suivante {
+
+    margin: 30px auto;
+    display: block;
+
+    @include breakpoint($tablet) {
+//      margin: 0 0 0 60px;
+      //  margin:60px;
+      float: right;
+        display: inline-block;
+    }
+
+    @include breakpoint($laptop) {
+
+    }
+
+    @include breakpoint($laptopl) {
+        //margin:60px;
+    }
+}
+
 .reseaux {
     position:absolute;
     right:1rem;
     top:1.5rem;
 
     img {
-        //width: 2vw;
         margin: 0 1rem;
     }
 
@@ -330,4 +367,3 @@
 .ajax-progress {
     display: none;
 }
-

@@ -9,7 +9,7 @@
 @import "variables/variables";
 @import "variables/mixin";
 @import "variables/typos";
-
+@import "components/bloc-grille-base";
 @import "components/menu";
 @import "components/imagetitle";
 @import "components/home";
@@ -31,5 +31,38 @@
 @import "components/offres-speciales";
 @import "components/date";
 @import "components/user";
-@import "components/bloc-grille-base";
+@import "components/adresses";
 
+
+strong{
+  font-weight: bold;
+}
+.l-content{
+  p{
+    margin-top:1rem;
+    margin-bottom:1rem;
+  }
+  ul{
+    margin:1rem;
+    list-style: disc;
+    li{
+      margin:0 1rem;
+    }
+    &.tabs{
+      list-style: none;
+      li{
+        margin:0 0rem;
+      }
+    }
+  }
+  a {
+
+           &:hover,
+           &:link,
+           &:active,
+           &:visited {
+               color: $green;
+           }
+
+       }
+}

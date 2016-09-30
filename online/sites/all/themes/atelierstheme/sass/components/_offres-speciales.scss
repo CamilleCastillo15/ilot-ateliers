@@ -1,0 +1,26 @@
+.offre-speciale-detail {
+
+    img {
+
+        margin: auto;
+        display: block;
+
+    }
+
+}
+
+.offres-speciales {
+
+    .bloc-grille-base {
+
+        padding: 0;
+        margin: 5vw 5vw 0px 8vw;
+
+        @include breakpoint($laptopl) {
+            padding: 0;
+            margin: 60px 60px 0px 100px;
+        }
+
+    }
+
+}
