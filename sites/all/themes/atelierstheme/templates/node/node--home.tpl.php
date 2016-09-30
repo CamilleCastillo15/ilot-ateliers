@@ -30,7 +30,8 @@
       ),
     ));
 
-    $view = views_get_view('home');
+    $view = views_get_view('offres_speciales');
+    $view->set_display('blockhome');
     $view->execute();
     $result = $view->result;
     $view_ateliers = views_get_view('ateliers');
@@ -84,7 +85,7 @@
                         --><div class="atelier">
                         <?php
                           $n = node_load($value->nid);
-                          $link = drupal_get_path_alias("node/".$value->nid);
+                          $link =drupal_get_path_alias("node/".$value->nid);
                           $picto = field_view_field("node",$n,'field_picto');
                           $title = field_view_field("node",$n,'field_title');
                           $class = field_view_field("node",$n,'field_class');
@@ -93,9 +94,9 @@
                           $picto_render = render($picto);
                           print l($picto_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers', $class_render))));
                           $title_render = render($title);
-                          echo "<p class=\"title-pictos ".$class_render."\">";
+                          echo "<div class=\"title-pictos ".$class_render."\">";
                             print l($title_render, $link,array("html"=>true, 'attributes' => array('class' => array('picto_ateliers'))));
-                            echo "</p>";
+                          echo "</div>";
                         ?>
                         </div><!--
                      <?php } ?>
@@ -131,6 +132,7 @@
                     $body_offres = field_view_field("node",$n,"body",array(
                       'type' => 'text_summary_or_trimmed',
                     ));
+                    
                ?>
                 <div class="im_offres">
 
@@ -163,7 +165,7 @@
         <?php print render($body); ?>
         <div class="center">
             <?php //$theme = base_path() . drupal_get_path("theme",$GLOBALS['theme']) ;
-                print l("En savoir plus", "/presentation", array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
+                print l("En savoir plus", "/content/présentation", array("html"=>true, 'attributes' => array('class' => array('en_savoir_plus'))));
             ?>
         </div>
     </div>

@@ -18,13 +18,12 @@
        font-size:20px;
        padding: 20px 0;
         @include breakpoint($laptop) {
-
             font-size:25px;
             padding: 1.5vw 0;
         }
          @include breakpoint($laptopl) {
             font-size:30px;
-            padding: 25px 0
+            padding: 25px 0;
         }
     }
 
@@ -34,7 +33,6 @@
        font-size:15px;
        padding: 20px 0;
         @include breakpoint($laptop) {
-
             font-size:20px;
             padding: 1.5vw 0;
         }
@@ -49,9 +47,8 @@
     }
 
    strong {
-
-        font-family: "SourceSansProBold";
-
+//      font-family: "SourceSansProBold";
+        font-weight: 900;
     }
 
     ol {
@@ -72,34 +69,25 @@
     display: inline-block;
 
     h1 {
-
         @include breakpoint($laptop) {
             font-size:45px;
         }
-
          @include breakpoint($laptopl) {
             font-size:50px;
-
         }
-
     }
 
     h2 {
-
         padding-top:1.5vw;
-
         @include breakpoint($tablet) {
             font-size:20px;
         }
-
         @include breakpoint($laptop) {
             font-size:25px;
         }
-
-         @include breakpoint($laptopl) {
+        @include breakpoint($laptopl) {
             font-size:30px;
         }
-
     }
 
     .formulaire {
@@ -271,9 +259,7 @@
 }
 
 .contact {
-
     position: relative;
-
 }
 
 .center{
@@ -367,3 +353,36 @@
 .ajax-progress {
     display: none;
 }
+<<<<<<< HEAD
+=======
+
+strong {
+
+//        font-family: "SourceSansProBold";
+        font-weight: 900;
+
+    }
+
+p {
+        margin: 1rem 0;
+    }
+
+.l-content {
+
+    p {
+
+        a {
+            &:hover,
+            &:link,
+            &:active,
+            &:visited {
+                color: #05aa88;
+                text-decoration: underline;
+            }
+
+        }
+
+    }
+
+}
+>>>>>>> b4f4facca818ff4c267bf36a3f8d045dd839cc67

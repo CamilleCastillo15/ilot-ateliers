@@ -46,7 +46,7 @@
                 <div class="triangle-left"></div><!--
              --><div class="triangle-right"></div>
             </div>
-            <div class="atelier-liens">
+            <div class="atelier-liens">                
                <div class="services-lien">
                    <?php print l("service" ,$lservice  , array("html"=>true, 'attributes' => array('class' => array('services', 'active')))); ?>
                </div><!--

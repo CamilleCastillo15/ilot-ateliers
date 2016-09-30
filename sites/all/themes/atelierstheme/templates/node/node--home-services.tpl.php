@@ -49,18 +49,37 @@
 
                         $tx = field_view_field("node",$n,'field_texte_presentation');
                         $picto = field_view_field("node",$n,'field_picto');
+<<<<<<< HEAD
                         $title = field_view_field("node",$n,'field_title'); ?>
 
+=======
+                        $title = field_view_field("node",$n,'field_title');
+
+
+                        $im_hr_render = render($im_hr);
+                        $picto_render = render($picto);
+                ?>
+                
+>>>>>>> b4f4facca818ff4c267bf36a3f8d045dd839cc67
                         <div class="container">
                             <div class="inner">
                                 <div class="pictomobile">
                                     <?php print render($im_hr); ?>
                                 </div>
+<<<<<<< HEAD
                                 <div class="picto">
                                   <a href="<?php print $link; ?>">
                                    <?php print render($picto); ?>
                                  </a>
                                 </div>
+=======
+                                <?php print l("<div class='picto'>
+                                                ".$picto_render."
+                                               </div>",$link,array("html"=>true)); ?>
+<!--                                <div class="picto">-->
+                                   <?php //print render($picto); ?>
+<!--                                </div>-->
+>>>>>>> b4f4facca818ff4c267bf36a3f8d045dd839cc67
                                 <h1 class="title">
                                    <?php print render($title); ?>
                                 </h1>

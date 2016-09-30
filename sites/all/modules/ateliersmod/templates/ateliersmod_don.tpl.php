@@ -11,7 +11,7 @@
         <div class="don-btn">
             <a href="http://ilot.asso.fr/faire-un-don" target="_blank" class="don">
                 accéder au formulaire
-            </a>
+            </a>    
         </div>
         <div class="clear"></div>
     </div>

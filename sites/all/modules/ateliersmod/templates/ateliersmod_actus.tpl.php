@@ -1,4 +1,5 @@
 <?php
+
     $base = base_path();
     $ftitle = field_view_field("node",$node,'field_title');
     $picto = field_view_field("node",$node,'field_picto');
@@ -21,7 +22,7 @@
 
 ?>
 
-<div class="offres-speciales">
+<div class="offres-speciales atelier">
     <div class="atelier-header pictotitlecontainer">
         <div class="atelier-header-bg image">
           <?php if($img){ ?>

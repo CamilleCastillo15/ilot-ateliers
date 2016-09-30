@@ -16,8 +16,7 @@
           speed:1000,
             effect:"fade",
             spaceBetween: 0,
-            autoplay : 5000
-
+            autoplay : 7000
         });
          var swiper2 = new Swiper('.home-body-actu.swiper-container', {
            speed:1000,
@@ -26,7 +25,7 @@
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
             spaceBetween: 30,
-            autoplay : 10000
+            autoplay : 15000
 
         });
 

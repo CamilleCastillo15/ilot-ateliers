@@ -14,14 +14,12 @@
                 burger.setAttribute("class", "burger");
                 l_off.setAttribute("class", "l-off h");
                 toggle = 1;
-                
             })
             $(".l-shield").on(clickmethod, function () {
                  l_shield.setAttribute("class", "l-shield");
                 burger.setAttribute("class", "burger");
                 l_off.setAttribute("class", "l-off h");
                 toggle = 1;
-                
             })
             $(".burger").on(clickmethod, function () {
               
@@ -31,17 +29,13 @@
                     burger.setAttribute("class", "burger o");
                     l_off.setAttribute("class", "l-off o");
                     toggle = 0;
-
                 } else {
                     l_shield.setAttribute("class", "l-shield");
                     burger.setAttribute("class", "burger");
                     l_off.setAttribute("class", "l-off h");
                     toggle = 1;
-
                 }
             });
         }
     }
-
-
 })(jQuery);
